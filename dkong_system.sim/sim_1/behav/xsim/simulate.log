@@ -1,0 +1,52 @@
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module fb_tb.dkong.cpu_rom.inst.inst.native_mem_module.blk_mem_gen_v8_4_3_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module fb_tb.dkong.vid.tile.prom_2n.inst.native_mem_module.blk_mem_gen_v8_4_3_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module fb_tb.dkong.vid.tile.rom_3p.inst.native_mem_module.blk_mem_gen_v8_4_3_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module fb_tb.dkong.vid.tile.rom_3n.inst.native_mem_module.blk_mem_gen_v8_4_3_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module fb_tb.dkong.vid.pal.prom_2e.inst.native_mem_module.blk_mem_gen_v8_4_3_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module fb_tb.dkong.vid.pal.prom_2f.inst.native_mem_module.blk_mem_gen_v8_4_3_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module fb_tb.fd.gen_mem[0].mem.inst.native_mem_module.blk_mem_gen_v8_4_3_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module fb_tb.fd.gen_mem[1].mem.inst.native_mem_module.blk_mem_gen_v8_4_3_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+blk_mem_gen_v8_4_3 collision detected at time: 1475100000, Instance: fb_tb.fd.gen_mem[0].mem.inst.native_mem_module.blk_mem_gen_v8_4_3_inst, A write address: 0, B  read address: 0
+blk_mem_gen_v8_4_3 collision detected at time: 70963740000, Instance: fb_tb.fd.gen_mem[0].mem.inst.native_mem_module.blk_mem_gen_v8_4_3_inst, A write address: 4b00, B  read address: 4b00
+blk_mem_gen_v8_4_3 collision detected at time: 71025180000, Instance: fb_tb.fd.gen_mem[0].mem.inst.native_mem_module.blk_mem_gen_v8_4_3_inst, A write address: 4c00, B  read address: 4c00
+blk_mem_gen_v8_4_3 collision detected at time: 71030300000, Instance: fb_tb.fd.gen_mem[0].mem.inst.native_mem_module.blk_mem_gen_v8_4_3_inst, A write address: 4c20, B  read address: 4c20
+blk_mem_gen_v8_4_3 collision detected at time: 71086620000, Instance: fb_tb.fd.gen_mem[0].mem.inst.native_mem_module.blk_mem_gen_v8_4_3_inst, A write address: 4d00, B  read address: 4d00
+blk_mem_gen_v8_4_3 collision detected at time: 71096860000, Instance: fb_tb.fd.gen_mem[0].mem.inst.native_mem_module.blk_mem_gen_v8_4_3_inst, A write address: 4d40, B  read address: 4d40
+blk_mem_gen_v8_4_3 collision detected at time: 71148060000, Instance: fb_tb.fd.gen_mem[0].mem.inst.native_mem_module.blk_mem_gen_v8_4_3_inst, A write address: 4e00, B  read address: 4e00
+blk_mem_gen_v8_4_3 collision detected at time: 71163420000, Instance: fb_tb.fd.gen_mem[0].mem.inst.native_mem_module.blk_mem_gen_v8_4_3_inst, A write address: 4e60, B  read address: 4e60
+blk_mem_gen_v8_4_3 collision detected at time: 71209500000, Instance: fb_tb.fd.gen_mem[0].mem.inst.native_mem_module.blk_mem_gen_v8_4_3_inst, A write address: 4f00, B  read address: 4f00
+blk_mem_gen_v8_4_3 collision detected at time: 71229980000, Instance: fb_tb.fd.gen_mem[0].mem.inst.native_mem_module.blk_mem_gen_v8_4_3_inst, A write address: 4f80, B  read address: 4f80
+blk_mem_gen_v8_4_3 collision detected at time: 71296540000, Instance: fb_tb.fd.gen_mem[0].mem.inst.native_mem_module.blk_mem_gen_v8_4_3_inst, A write address: 50a0, B  read address: 50a0
+blk_mem_gen_v8_4_3 collision detected at time: 71363100000, Instance: fb_tb.fd.gen_mem[0].mem.inst.native_mem_module.blk_mem_gen_v8_4_3_inst, A write address: 51c0, B  read address: 51c0
+blk_mem_gen_v8_4_3 collision detected at time: 71429660000, Instance: fb_tb.fd.gen_mem[0].mem.inst.native_mem_module.blk_mem_gen_v8_4_3_inst, A write address: 52e0, B  read address: 52e0
+blk_mem_gen_v8_4_3 collision detected at time: 71762460000, Instance: fb_tb.fd.gen_mem[0].mem.inst.native_mem_module.blk_mem_gen_v8_4_3_inst, A write address: 5800, B  read address: 5800
+blk_mem_gen_v8_4_3 collision detected at time: 71765020000, Instance: fb_tb.fd.gen_mem[0].mem.inst.native_mem_module.blk_mem_gen_v8_4_3_inst, A write address: 5810, B  read address: 5810
+blk_mem_gen_v8_4_3 collision detected at time: 71823900000, Instance: fb_tb.fd.gen_mem[0].mem.inst.native_mem_module.blk_mem_gen_v8_4_3_inst, A write address: 5900, B  read address: 5900
+blk_mem_gen_v8_4_3 collision detected at time: 71831580000, Instance: fb_tb.fd.gen_mem[0].mem.inst.native_mem_module.blk_mem_gen_v8_4_3_inst, A write address: 5930, B  read address: 5930
+blk_mem_gen_v8_4_3 collision detected at time: 71885340000, Instance: fb_tb.fd.gen_mem[0].mem.inst.native_mem_module.blk_mem_gen_v8_4_3_inst, A write address: 5a00, B  read address: 5a00
+blk_mem_gen_v8_4_3 collision detected at time: 71898140000, Instance: fb_tb.fd.gen_mem[0].mem.inst.native_mem_module.blk_mem_gen_v8_4_3_inst, A write address: 5a50, B  read address: 5a50
+blk_mem_gen_v8_4_3 collision detected at time: 71946780000, Instance: fb_tb.fd.gen_mem[0].mem.inst.native_mem_module.blk_mem_gen_v8_4_3_inst, A write address: 5b00, B  read address: 5b00
+blk_mem_gen_v8_4_3 collision detected at time: 71964700000, Instance: fb_tb.fd.gen_mem[0].mem.inst.native_mem_module.blk_mem_gen_v8_4_3_inst, A write address: 5b70, B  read address: 5b70
+blk_mem_gen_v8_4_3 collision detected at time: 72008220000, Instance: fb_tb.fd.gen_mem[0].mem.inst.native_mem_module.blk_mem_gen_v8_4_3_inst, A write address: 5c00, B  read address: 5c00
+blk_mem_gen_v8_4_3 collision detected at time: 72031260000, Instance: fb_tb.fd.gen_mem[0].mem.inst.native_mem_module.blk_mem_gen_v8_4_3_inst, A write address: 5c90, B  read address: 5c90
+blk_mem_gen_v8_4_3 collision detected at time: 72097820000, Instance: fb_tb.fd.gen_mem[0].mem.inst.native_mem_module.blk_mem_gen_v8_4_3_inst, A write address: 5db0, B  read address: 5db0
+blk_mem_gen_v8_4_3 collision detected at time: 72164380000, Instance: fb_tb.fd.gen_mem[0].mem.inst.native_mem_module.blk_mem_gen_v8_4_3_inst, A write address: 5ed0, B  read address: 5ed0
+blk_mem_gen_v8_4_3 collision detected at time: 72230940000, Instance: fb_tb.fd.gen_mem[0].mem.inst.native_mem_module.blk_mem_gen_v8_4_3_inst, A write address: 5ff0, B  read address: 5ff0
+blk_mem_gen_v8_4_3 collision detected at time: 82575900000, Instance: fb_tb.fd.gen_mem[1].mem.inst.native_mem_module.blk_mem_gen_v8_4_3_inst, A write address: 0, B  read address: 0
+blk_mem_gen_v8_4_3 collision detected at time: 98796060000, Instance: fb_tb.fd.gen_mem[0].mem.inst.native_mem_module.blk_mem_gen_v8_4_3_inst, A write address: 0, B  read address: 0
+blk_mem_gen_v8_4_3 collision detected at time: 115016220000, Instance: fb_tb.fd.gen_mem[1].mem.inst.native_mem_module.blk_mem_gen_v8_4_3_inst, A write address: 0, B  read address: 0
+blk_mem_gen_v8_4_3 collision detected at time: 131236380000, Instance: fb_tb.fd.gen_mem[0].mem.inst.native_mem_module.blk_mem_gen_v8_4_3_inst, A write address: 0, B  read address: 0

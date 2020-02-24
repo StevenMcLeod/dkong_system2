@@ -1,0 +1,756 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x171DEAD3660D60F3",
+      "device": "xc7z020clg484-1",
+      "name": "dkong",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2019.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "processing_system7_0": "",
+      "proc_sys_reset_0": "",
+      "mux4_0": "",
+      "clk_wiz_0": "",
+      "proc_sys_reset_1": "",
+      "framedoubler_slow_0": "",
+      "dkong_system_wrapper_0": ""
+    },
+    "interface_ports": {
+      "FIXED_IO": {
+        "mode": "Master",
+        "vlnv": "xilinx.com:display_processing_system7:fixedio_rtl:1.0",
+        "parameters": {
+          "CAN_DEBUG": {
+            "value": "false",
+            "value_src": "default"
+          }
+        }
+      }
+    },
+    "ports": {
+      "BTNU": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_HIGH"
+          }
+        }
+      },
+      "DIPSW": {
+        "direction": "I",
+        "left": "1",
+        "right": "0"
+      },
+      "LD": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      },
+      "VGA_R": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "VGA_G": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "VGA_B": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "VGA_HS": {
+        "direction": "O"
+      },
+      "VGA_VS": {
+        "direction": "O"
+      },
+      "BTNL": {
+        "direction": "I"
+      },
+      "BTNC": {
+        "direction": "I"
+      },
+      "BTND": {
+        "direction": "I"
+      },
+      "BTNR": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_HIGH"
+          }
+        }
+      }
+    },
+    "components": {
+      "processing_system7_0": {
+        "vlnv": "xilinx.com:ip:processing_system7:5.5",
+        "xci_name": "dkong_processing_system7_0_0",
+        "parameters": {
+          "PCW_ACT_APU_PERIPHERAL_FREQMHZ": {
+            "value": "666.666687"
+          },
+          "PCW_ACT_CAN_PERIPHERAL_FREQMHZ": {
+            "value": "10.000000"
+          },
+          "PCW_ACT_DCI_PERIPHERAL_FREQMHZ": {
+            "value": "10.158730"
+          },
+          "PCW_ACT_ENET0_PERIPHERAL_FREQMHZ": {
+            "value": "10.000000"
+          },
+          "PCW_ACT_ENET1_PERIPHERAL_FREQMHZ": {
+            "value": "10.000000"
+          },
+          "PCW_ACT_FPGA0_PERIPHERAL_FREQMHZ": {
+            "value": "100.000000"
+          },
+          "PCW_ACT_FPGA1_PERIPHERAL_FREQMHZ": {
+            "value": "10.000000"
+          },
+          "PCW_ACT_FPGA2_PERIPHERAL_FREQMHZ": {
+            "value": "10.000000"
+          },
+          "PCW_ACT_FPGA3_PERIPHERAL_FREQMHZ": {
+            "value": "10.000000"
+          },
+          "PCW_ACT_PCAP_PERIPHERAL_FREQMHZ": {
+            "value": "200.000000"
+          },
+          "PCW_ACT_QSPI_PERIPHERAL_FREQMHZ": {
+            "value": "10.000000"
+          },
+          "PCW_ACT_SDIO_PERIPHERAL_FREQMHZ": {
+            "value": "10.000000"
+          },
+          "PCW_ACT_SMC_PERIPHERAL_FREQMHZ": {
+            "value": "10.000000"
+          },
+          "PCW_ACT_SPI_PERIPHERAL_FREQMHZ": {
+            "value": "10.000000"
+          },
+          "PCW_ACT_TPIU_PERIPHERAL_FREQMHZ": {
+            "value": "200.000000"
+          },
+          "PCW_ACT_TTC0_CLK0_PERIPHERAL_FREQMHZ": {
+            "value": "111.111115"
+          },
+          "PCW_ACT_TTC0_CLK1_PERIPHERAL_FREQMHZ": {
+            "value": "111.111115"
+          },
+          "PCW_ACT_TTC0_CLK2_PERIPHERAL_FREQMHZ": {
+            "value": "111.111115"
+          },
+          "PCW_ACT_TTC1_CLK0_PERIPHERAL_FREQMHZ": {
+            "value": "111.111115"
+          },
+          "PCW_ACT_TTC1_CLK1_PERIPHERAL_FREQMHZ": {
+            "value": "111.111115"
+          },
+          "PCW_ACT_TTC1_CLK2_PERIPHERAL_FREQMHZ": {
+            "value": "111.111115"
+          },
+          "PCW_ACT_UART_PERIPHERAL_FREQMHZ": {
+            "value": "100.000000"
+          },
+          "PCW_ACT_WDT_PERIPHERAL_FREQMHZ": {
+            "value": "111.111115"
+          },
+          "PCW_CLK0_FREQ": {
+            "value": "100000000"
+          },
+          "PCW_CLK1_FREQ": {
+            "value": "10000000"
+          },
+          "PCW_CLK2_FREQ": {
+            "value": "10000000"
+          },
+          "PCW_CLK3_FREQ": {
+            "value": "10000000"
+          },
+          "PCW_EN_DDR": {
+            "value": "0"
+          },
+          "PCW_EN_EMIO_UART0": {
+            "value": "1"
+          },
+          "PCW_EN_UART0": {
+            "value": "1"
+          },
+          "PCW_FPGA0_PERIPHERAL_FREQMHZ": {
+            "value": "100"
+          },
+          "PCW_FPGA_FCLK0_ENABLE": {
+            "value": "1"
+          },
+          "PCW_UART0_GRP_FULL_ENABLE": {
+            "value": "0"
+          },
+          "PCW_UART0_PERIPHERAL_ENABLE": {
+            "value": "1"
+          },
+          "PCW_UART0_UART0_IO": {
+            "value": "EMIO"
+          },
+          "PCW_UART_PERIPHERAL_FREQMHZ": {
+            "value": "100"
+          },
+          "PCW_UART_PERIPHERAL_VALID": {
+            "value": "1"
+          },
+          "PCW_UIPARAM_ACT_DDR_FREQ_MHZ": {
+            "value": "533.333374"
+          },
+          "PCW_UIPARAM_DDR_ENABLE": {
+            "value": "0"
+          },
+          "PCW_USE_M_AXI_GP0": {
+            "value": "0"
+          }
+        }
+      },
+      "proc_sys_reset_0": {
+        "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
+        "xci_name": "dkong_proc_sys_reset_0_0",
+        "parameters": {
+          "C_AUX_RESET_HIGH": {
+            "value": "1"
+          }
+        }
+      },
+      "mux4_0": {
+        "vlnv": "xilinx.com:module_ref:mux4:1.0",
+        "xci_name": "dkong_mux4_0_0",
+        "parameters": {
+          "WIDTH": {
+            "value": "8"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "mux4",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "sel": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "ina": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "inb": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "inc": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "ind": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "outy": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "dkong_clk_wiz_0_0",
+        "parameters": {
+          "CLKOUT1_JITTER": {
+            "value": "253.110"
+          },
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "303.436"
+          },
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "25.175"
+          },
+          "CLKOUT2_JITTER": {
+            "value": "218.660"
+          },
+          "CLKOUT2_PHASE_ERROR": {
+            "value": "303.436"
+          },
+          "CLKOUT2_REQUESTED_OUT_FREQ": {
+            "value": "61.44"
+          },
+          "CLKOUT2_USED": {
+            "value": "true"
+          },
+          "CLK_OUT1_PORT": {
+            "value": "vgaclk"
+          },
+          "CLK_OUT2_PORT": {
+            "value": "coreclk"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "58.375"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "46.375"
+          },
+          "MMCM_CLKOUT1_DIVIDE": {
+            "value": "19"
+          },
+          "MMCM_DIVCLK_DIVIDE": {
+            "value": "5"
+          },
+          "NUM_OUT_CLKS": {
+            "value": "2"
+          },
+          "RESET_PORT": {
+            "value": "resetn"
+          },
+          "RESET_TYPE": {
+            "value": "ACTIVE_LOW"
+          },
+          "USE_LOCKED": {
+            "value": "false"
+          },
+          "USE_RESET": {
+            "value": "false"
+          }
+        }
+      },
+      "proc_sys_reset_1": {
+        "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
+        "xci_name": "dkong_proc_sys_reset_1_0"
+      },
+      "framedoubler_slow_0": {
+        "vlnv": "xilinx.com:module_ref:framedoubler_slow:1.0",
+        "xci_name": "dkong_framedoubler_slow_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "framedoubler_slow",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "in_rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "out_rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "masterclk": {
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              },
+              "FREQ_HZ": {
+                "value": "61447368",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "in_pixclk": {
+            "direction": "I"
+          },
+          "in_valid": {
+            "direction": "I"
+          },
+          "in_r": {
+            "direction": "I",
+            "left": "2",
+            "right": "0"
+          },
+          "in_g": {
+            "direction": "I",
+            "left": "2",
+            "right": "0"
+          },
+          "in_b": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "out_pixclk": {
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              },
+              "FREQ_HZ": {
+                "value": "25175202",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "out_r": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "out_g": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "out_b": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "hsync": {
+            "direction": "O"
+          },
+          "vsync": {
+            "direction": "O"
+          }
+        }
+      },
+      "dkong_system_wrapper_0": {
+        "vlnv": "xilinx.com:module_ref:dkong_system_wrapper:1.0",
+        "xci_name": "dkong_dkong_system_wrapper_0_0",
+        "parameters": {
+          "IN2_ENA": {
+            "value": "1"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "dkong_system_wrapper",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "masterclk": {
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              },
+              "FREQ_HZ": {
+                "value": "61447368",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "ser_in": {
+            "direction": "I"
+          },
+          "ser_out": {
+            "direction": "O"
+          },
+          "pixelclk": {
+            "direction": "O"
+          },
+          "video_valid": {
+            "direction": "O"
+          },
+          "r_sig": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
+          "g_sig": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
+          "b_sig": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "p1_sw": {
+            "direction": "I"
+          },
+          "p2_sw": {
+            "direction": "I"
+          },
+          "coin_sw": {
+            "direction": "I"
+          },
+          "debug_wait": {
+            "direction": "I"
+          },
+          "debug_ahi": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "debug_alo": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "debug_dmaster": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "debug_dslave": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "debug_cpu_sig": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "debug_enables": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "interface_nets": {
+      "processing_system7_0_FIXED_IO": {
+        "interface_ports": [
+          "FIXED_IO",
+          "processing_system7_0/FIXED_IO"
+        ]
+      }
+    },
+    "nets": {
+      "processing_system7_0_FCLK_RESET0_N": {
+        "ports": [
+          "processing_system7_0/FCLK_RESET0_N",
+          "proc_sys_reset_0/ext_reset_in",
+          "proc_sys_reset_1/ext_reset_in"
+        ]
+      },
+      "sel_0_1": {
+        "ports": [
+          "DIPSW",
+          "mux4_0/sel"
+        ]
+      },
+      "mux4_0_outy": {
+        "ports": [
+          "mux4_0/outy",
+          "LD"
+        ]
+      },
+      "proc_sys_reset_0_peripheral_aresetn": {
+        "ports": [
+          "proc_sys_reset_0/peripheral_aresetn",
+          "framedoubler_slow_0/in_rst_n",
+          "dkong_system_wrapper_0/rst_n"
+        ]
+      },
+      "dkong_system_wrapper_0_debug_alo": {
+        "ports": [
+          "dkong_system_wrapper_0/debug_alo",
+          "mux4_0/ina"
+        ]
+      },
+      "dkong_system_wrapper_0_debug_ahi": {
+        "ports": [
+          "dkong_system_wrapper_0/debug_ahi",
+          "mux4_0/inb"
+        ]
+      },
+      "dkong_system_wrapper_0_debug_cpu_sig": {
+        "ports": [
+          "dkong_system_wrapper_0/debug_cpu_sig",
+          "mux4_0/ind"
+        ]
+      },
+      "dkong_system_wrapper_0_ser_out": {
+        "ports": [
+          "dkong_system_wrapper_0/ser_out",
+          "processing_system7_0/UART0_RX"
+        ]
+      },
+      "processing_system7_0_UART0_TX": {
+        "ports": [
+          "processing_system7_0/UART0_TX",
+          "dkong_system_wrapper_0/ser_in"
+        ]
+      },
+      "dkong_system_wrapper_0_debug_enables": {
+        "ports": [
+          "dkong_system_wrapper_0/debug_enables",
+          "mux4_0/inc"
+        ]
+      },
+      "BTNC_1": {
+        "ports": [
+          "BTNU",
+          "proc_sys_reset_0/aux_reset_in"
+        ]
+      },
+      "clk_wiz_0_vgaclk": {
+        "ports": [
+          "clk_wiz_0/vgaclk",
+          "proc_sys_reset_1/slowest_sync_clk",
+          "framedoubler_slow_0/out_pixclk"
+        ]
+      },
+      "processing_system7_0_FCLK_CLK0": {
+        "ports": [
+          "processing_system7_0/FCLK_CLK0",
+          "clk_wiz_0/clk_in1"
+        ]
+      },
+      "clk_wiz_0_coreclk": {
+        "ports": [
+          "clk_wiz_0/coreclk",
+          "proc_sys_reset_0/slowest_sync_clk",
+          "framedoubler_slow_0/masterclk",
+          "dkong_system_wrapper_0/masterclk"
+        ]
+      },
+      "proc_sys_reset_1_peripheral_aresetn": {
+        "ports": [
+          "proc_sys_reset_1/peripheral_aresetn",
+          "framedoubler_slow_0/out_rst_n"
+        ]
+      },
+      "dkong_system_wrapper_0_b_sig": {
+        "ports": [
+          "dkong_system_wrapper_0/b_sig",
+          "framedoubler_slow_0/in_b"
+        ]
+      },
+      "dkong_system_wrapper_0_g_sig": {
+        "ports": [
+          "dkong_system_wrapper_0/g_sig",
+          "framedoubler_slow_0/in_g"
+        ]
+      },
+      "dkong_system_wrapper_0_r_sig": {
+        "ports": [
+          "dkong_system_wrapper_0/r_sig",
+          "framedoubler_slow_0/in_r"
+        ]
+      },
+      "dkong_system_wrapper_0_video_valid": {
+        "ports": [
+          "dkong_system_wrapper_0/video_valid",
+          "framedoubler_slow_0/in_valid"
+        ]
+      },
+      "dkong_system_wrapper_0_pixelclk": {
+        "ports": [
+          "dkong_system_wrapper_0/pixelclk",
+          "framedoubler_slow_0/in_pixclk"
+        ]
+      },
+      "framedoubler_slow_0_out_r": {
+        "ports": [
+          "framedoubler_slow_0/out_r",
+          "VGA_R"
+        ]
+      },
+      "framedoubler_slow_0_out_g": {
+        "ports": [
+          "framedoubler_slow_0/out_g",
+          "VGA_G"
+        ]
+      },
+      "framedoubler_slow_0_out_b": {
+        "ports": [
+          "framedoubler_slow_0/out_b",
+          "VGA_B"
+        ]
+      },
+      "framedoubler_slow_0_hsync": {
+        "ports": [
+          "framedoubler_slow_0/hsync",
+          "VGA_HS"
+        ]
+      },
+      "framedoubler_slow_0_vsync": {
+        "ports": [
+          "framedoubler_slow_0/vsync",
+          "VGA_VS"
+        ]
+      },
+      "p1_sw_0_1": {
+        "ports": [
+          "BTNL",
+          "dkong_system_wrapper_0/p1_sw"
+        ]
+      },
+      "p2_sw_0_1": {
+        "ports": [
+          "BTNC",
+          "dkong_system_wrapper_0/p2_sw"
+        ]
+      },
+      "coin_sw_0_1": {
+        "ports": [
+          "BTND",
+          "dkong_system_wrapper_0/coin_sw"
+        ]
+      },
+      "aux_reset_in_0_1": {
+        "ports": [
+          "BTNR",
+          "proc_sys_reset_1/aux_reset_in"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../z80_system_sources/hdl" --include "../../../../dkong_system.srcs/sources_1/bd/dkong/ipshared/ec67/hdl" --include "../../../../dkong_system.srcs/sources_1/bd/dkong/ipshared/8c62/hdl" --include "../../../../dkong_system.srcs/sources_1/bd/dkong/ipshared/c923" --include "C:/Xilinx/Vivado/2019.1/data/xilinx_vip/include" -d "SIM_CLEAR_RAM=" \
+"../../../../dkong_system.srcs/sources_1/ip/framedoubler_mem/sim/framedoubler_mem.v" \
+"../../../../dkong_system.srcs/sources_1/ip/palette_2f_prom/sim/palette_2f_prom.v" \
+"../../../../dkong_system.srcs/sources_1/ip/palette_2e_prom/sim/palette_2e_prom.v" \
+"../../../../dkong_system.srcs/sources_1/ip/tile_3n_rom/sim/tile_3n_rom.v" \
+"../../../../dkong_system.srcs/sources_1/ip/tile_3p_rom/sim/tile_3p_rom.v" \
+"../../../../dkong_system.srcs/sources_1/ip/tile_2n_prom/sim/tile_2n_prom.v" \
+"../../../../dkong_system.srcs/sources_1/ip/cpu_program_rom/sim/cpu_program_rom.v" \
+"../../../../../z80_system_sources/hdl/video/framedoubler_slow.v" \
+"../../../../../z80_system_sources/hdl/tv80/rtl/core/tv80_alu.v" \
+"../../../../../z80_system_sources/hdl/tv80/rtl/core/tv80_core.v" \
+"../../../../../z80_system_sources/hdl/tv80/rtl/core/tv80_mcode.v" \
+"../../../../../z80_system_sources/hdl/tv80/rtl/core/tv80_reg.v" \
+"../../../../../z80_system_sources/hdl/tv80/rtl/core/tv80s.v" \
+
+sv xil_defaultlib  --include "../../../../../z80_system_sources/hdl" --include "../../../../dkong_system.srcs/sources_1/bd/dkong/ipshared/ec67/hdl" --include "../../../../dkong_system.srcs/sources_1/bd/dkong/ipshared/8c62/hdl" --include "../../../../dkong_system.srcs/sources_1/bd/dkong/ipshared/c923" --include "C:/Xilinx/Vivado/2019.1/data/xilinx_vip/include" -d "SIM_CLEAR_RAM=" \
+"../../../../../z80_system_sources/hdl/addr_decoder.sv" \
+"../../../../../z80_system_sources/hdl/dkong_system.sv" \
+"../../../../../z80_system_sources/hdl/video/dkong_video.sv" \
+"../../../../../z80_system_sources/hdl/video/paletter.sv" \
+"../../../../../z80_system_sources/hdl/prio_encoder.sv" \
+"../../../../../z80_system_sources/hdl/wrappers/program_rom_wrapper.sv" \
+"../../../../../z80_system_sources/hdl/ram.sv" \
+"../../../../../z80_system_sources/hdl/sysmux.sv" \
+"../../../../../z80_system_sources/hdl/video/tilegen.sv" \
+"../../../../../z80_system_sources/hdl/z80ram.sv" \
+"../../../../../z80_system_sources/hdl/z80uart.sv" \
+"../../../../../z80_system_sources/hdl/video/fd_tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

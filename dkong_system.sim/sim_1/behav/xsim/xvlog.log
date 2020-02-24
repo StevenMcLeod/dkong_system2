@@ -1,0 +1,34 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/addr_decoder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module addr_decoder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/dkong_system.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dkong_system
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/video/dkong_video.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dkong_video
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/video/paletter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module paletter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/prio_encoder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module prio_encoder
+WARNING: [VRFC 10-3467] initial value of parameter 'INPUT_QTY' is omitted [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/prio_encoder.sv:2]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/wrappers/program_rom_wrapper.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module program_rom_wrapper
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/ram.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram
+WARNING: [VRFC 10-3467] initial value of parameter 'ADDR_W' is omitted [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/ram.sv:2]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/sysmux.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sysmux
+WARNING: [VRFC 10-3467] initial value of parameter 'MASTER_QTY' is omitted [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/sysmux.sv:6]
+WARNING: [VRFC 10-3467] initial value of parameter 'SLAVE_QTY' is omitted [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/sysmux.sv:7]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/video/tilegen.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tilegen
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/z80ram.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module z80ram
+WARNING: [VRFC 10-3467] initial value of parameter 'ADDR_W' is omitted [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/z80ram.sv:4]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/z80uart.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module z80_uart
+WARNING: [VRFC 10-3467] initial value of parameter 'CLKS_PER_BIT' is omitted [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/z80uart.sv:4]
+INFO: [VRFC 10-311] analyzing module uart_rx
+WARNING: [VRFC 10-3467] initial value of parameter 'CLKS_PER_BIT' is omitted [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/z80uart.sv:78]
+INFO: [VRFC 10-311] analyzing module uart_tx
+WARNING: [VRFC 10-3467] initial value of parameter 'CLKS_PER_BIT' is omitted [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/z80uart.sv:237]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/video/fd_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fb_tb

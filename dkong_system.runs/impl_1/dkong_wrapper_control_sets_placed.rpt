@@ -1,0 +1,117 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Sun Feb 23 23:53:55 2020
+| Host         : Steven-Win10-2 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file dkong_wrapper_control_sets_placed.rpt
+| Design       : dkong_wrapper
+| Device       : xc7z020
+------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    39 |
+|    Minimum number of control sets                        |    39 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    95 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    39 |
+| >= 0 to < 4        |     1 |
+| >= 4 to < 6        |     3 |
+| >= 6 to < 8        |     3 |
+| >= 8 to < 10       |    16 |
+| >= 10 to < 12      |     4 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    12 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             141 |           67 |
+| No           | No                    | Yes                    |              46 |           31 |
+| No           | Yes                   | No                     |              36 |           20 |
+| Yes          | No                    | No                     |              36 |           10 |
+| Yes          | No                    | Yes                    |             139 |           57 |
+| Yes          | Yes                   | No                     |              99 |           33 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------------------------------------------+--------------------------------------------------------------------------------+-------------------------------------------------------------------+------------------+----------------+
+|                    Clock Signal                    |                                  Enable Signal                                 |                          Set/Reset Signal                         | Slice Load Count | Bel Load Count |
++----------------------------------------------------+--------------------------------------------------------------------------------+-------------------------------------------------------------------+------------------+----------------+
+|  dkong_i/clk_wiz_0/inst/vgaclk                     |                                                                                | dkong_i/framedoubler_slow_0/inst/RSTC                             |                1 |              1 |
+|  dkong_i/clk_wiz_0/inst/coreclk                    | dkong_i/dkong_system_wrapper_0/inst/inst/vid/tile/tile_col[3]_i_1_n_0          |                                                                   |                1 |              4 |
+|  dkong_i/clk_wiz_0/inst/coreclk                    |                                                                                | dkong_i/proc_sys_reset_0/U0/EXT_LPF/lpf_int                       |                3 |              4 |
+|  dkong_i/clk_wiz_0/inst/vgaclk                     |                                                                                | dkong_i/proc_sys_reset_1/U0/EXT_LPF/lpf_int                       |                2 |              4 |
+|  dkong_i/clk_wiz_0/inst/vgaclk                     | dkong_i/proc_sys_reset_1/U0/SEQ/seq_cnt_en                                     | dkong_i/proc_sys_reset_1/U0/SEQ/SEQ_COUNTER/clear                 |                1 |              6 |
+|  dkong_i/clk_wiz_0/inst/coreclk                    | dkong_i/proc_sys_reset_0/U0/SEQ/seq_cnt_en                                     | dkong_i/proc_sys_reset_0/U0/SEQ/SEQ_COUNTER/clear                 |                1 |              6 |
+|  dkong_i/dkong_system_wrapper_0/inst/inst/vid/Q[1] | dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/tstate_0            | dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/rst_n_0            |                3 |              7 |
+|  dkong_i/clk_wiz_0/inst/vgaclk                     | dkong_i/framedoubler_slow_0/inst/CEC                                           | dkong_i/framedoubler_slow_0/inst/RSTC                             |                2 |              8 |
+|  dkong_i/dkong_system_wrapper_0/inst/inst/vid/Q[1] | dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/TmpAddr[15]_i_1_n_0 | dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/rst_n_0            |                3 |              8 |
+|  dkong_i/dkong_system_wrapper_0/inst/inst/vid/Q[1] | dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/SP[15]_i_1_n_0      | dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/rst_n_0            |                2 |              8 |
+|  dkong_i/dkong_system_wrapper_0/inst/inst/vid/Q[1] | dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/TmpAddr[7]_i_1_n_0  | dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/rst_n_0            |                3 |              8 |
+|  dkong_i/dkong_system_wrapper_0/inst/inst/vid/Q[1] | dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/SP[7]_i_1_n_0       | dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/rst_n_0            |                4 |              8 |
+|  dkong_i/dkong_system_wrapper_0/inst/inst/vid/Q[1] | dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/dout[7]_i_1_n_0     | dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/rst_n_0            |                2 |              8 |
+|  dkong_i/dkong_system_wrapper_0/inst/inst/vid/Q[1] | dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/tstate_reg[2]_0[0]  | dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/rst_n_0            |                3 |              8 |
+|  dkong_i/dkong_system_wrapper_0/inst/inst/vid/Q[1] | dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/ACC[7]_i_1_n_0      | dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/rst_n_0            |                4 |              8 |
+|  dkong_i/dkong_system_wrapper_0/inst/inst/vid/Q[1] | dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/I                   | dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/rst_n_0            |                2 |              8 |
+|  dkong_i/clk_wiz_0/inst/vgaclk                     | dkong_i/framedoubler_slow_0/inst/CEB2                                          | dkong_i/framedoubler_slow_0/inst/RSTC                             |                2 |              8 |
+|  dkong_i/clk_wiz_0/inst/vgaclk                     | dkong_i/framedoubler_slow_0/inst/out_g[3]_i_1_n_0                              |                                                                   |                2 |              8 |
+|  dkong_i/clk_wiz_0/inst/coreclk                    | dkong_i/dkong_system_wrapper_0/inst/inst/vid/Q[0]                              | dkong_i/dkong_system_wrapper_0/inst/inst/vid/pal/r_sig[2]_i_1_n_0 |                3 |              8 |
+|  dkong_i/clk_wiz_0/inst/coreclk                    | dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/E[0]                |                                                                   |                2 |              8 |
+|  dkong_i/clk_wiz_0/inst/coreclk                    | dkong_i/dkong_system_wrapper_0/inst/inst/uart/tx_dev/r_Tx_Data                 | dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/rst_n_0            |                3 |              8 |
+|  dkong_i/dkong_system_wrapper_0/inst/inst/vid/Q[1] | dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/mcycle_1            | dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/rst_n_0            |                3 |              9 |
+|  dkong_i/clk_wiz_0/inst/coreclk                    | dkong_i/dkong_system_wrapper_0/inst/inst/vid/vtiming[8]_i_1_n_0                | dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/rst_n_0            |                3 |              9 |
+|  dkong_i/dkong_system_wrapper_0/inst/inst/vid/Q[1] | dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/IR[7]_i_1_n_0       | dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/rst_n_0            |                2 |             10 |
+|  dkong_i/clk_wiz_0/inst/vgaclk                     | dkong_i/framedoubler_slow_0/inst/out_hcount[9]_i_2_n_0                         | dkong_i/framedoubler_slow_0/inst/RSTC                             |                4 |             10 |
+|  dkong_i/clk_wiz_0/inst/vgaclk                     | dkong_i/framedoubler_slow_0/inst/out_vcount[9]_i_1_n_0                         | dkong_i/framedoubler_slow_0/inst/RSTC                             |                6 |             10 |
+|  dkong_i/clk_wiz_0/inst/coreclk                    | dkong_i/dkong_system_wrapper_0/inst/inst/vid/htiming[0]_i_2_n_0                | dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/rst_n_0            |                4 |             10 |
+|  dkong_i/dkong_system_wrapper_0/inst/inst/vid/Q[1] | dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/PC[0]_i_1_n_0       | dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/rst_n_0            |                4 |             16 |
+|  dkong_i/dkong_system_wrapper_0/inst/inst/vid/Q[1] | dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/Ap                  | dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/rst_n_0            |                8 |             16 |
+|  dkong_i/clk_wiz_0/inst/coreclk                    | dkong_i/framedoubler_slow_0/inst/in_do_write                                   | dkong_i/framedoubler_slow_0/inst/in_ptr[15]_i_1_n_0               |                4 |             16 |
+|  dkong_i/clk_wiz_0/inst/coreclk                    | dkong_i/dkong_system_wrapper_0/inst/inst/vid/tile/tilerom_buf                  |                                                                   |                5 |             16 |
+|  dkong_i/dkong_system_wrapper_0/inst/inst/vid/Q[1] | dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A[15]_i_1_n_0       | dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/rst_n_0            |               14 |             17 |
+|  dkong_i/clk_wiz_0/inst/coreclk                    |                                                                                | dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/rst_n_0            |               14 |             27 |
+|  dkong_i/dkong_system_wrapper_0/inst/inst/vid/Q[1] | dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/i_reg/RegWEL        |                                                                   |                4 |             32 |
+|  dkong_i/dkong_system_wrapper_0/inst/inst/vid/Q[1] | dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/i_reg/RegWEH        |                                                                   |                4 |             32 |
+|  dkong_i/dkong_system_wrapper_0/inst/inst/vid/Q[1] |                                                                                |                                                                   |               22 |             42 |
+|  dkong_i/dkong_system_wrapper_0/inst/inst/vid/Q[1] |                                                                                | dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/rst_n_0            |               31 |             46 |
+|  dkong_i/clk_wiz_0/inst/vgaclk                     |                                                                                |                                                                   |               22 |             50 |
+|  dkong_i/clk_wiz_0/inst/coreclk                    |                                                                                |                                                                   |               25 |             51 |
++----------------------------------------------------+--------------------------------------------------------------------------------+-------------------------------------------------------------------+------------------+----------------+
+
+

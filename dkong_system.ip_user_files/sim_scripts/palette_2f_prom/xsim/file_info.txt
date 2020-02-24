@@ -1,0 +1,2 @@
+palette_2f_prom.v,verilog,xil_defaultlib,../../../../dkong_system.srcs/sources_1/ip/palette_2f_prom/sim/palette_2f_prom.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

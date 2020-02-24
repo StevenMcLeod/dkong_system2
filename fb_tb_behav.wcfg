@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="fb_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="\$unit_addr_decoder_sv " />
+            <top_module name="fb_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="65640048000000fs"></ZoomStartTime>
+      <ZoomEndTime time="65665808000001fs"></ZoomEndTime>
+      <Cursor1Time time="65642376000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="175"></NameColumnWidth>
+      <ValueColumnWidth column_width="138"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="31" />
+   <wvobject fp_name="/fb_tb/dkong/masterclk" type="logic">
+      <obj_property name="ElementShortName">masterclk</obj_property>
+      <obj_property name="ObjectShortName">masterclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fb_tb/dkong/rst_n" type="logic">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fb_tb/dkong/cpuclk" type="logic">
+      <obj_property name="ElementShortName">cpuclk</obj_property>
+      <obj_property name="ObjectShortName">cpuclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fb_tb/dkong/cpuclk_d" type="logic">
+      <obj_property name="ElementShortName">cpuclk_d</obj_property>
+      <obj_property name="ObjectShortName">cpuclk_d</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fb_tb/dkong/cpu_clk_rise" type="logic">
+      <obj_property name="ElementShortName">cpu_clk_rise</obj_property>
+      <obj_property name="ObjectShortName">cpu_clk_rise</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fb_tb/dkong/cpu_clk_fall" type="logic">
+      <obj_property name="ElementShortName">cpu_clk_fall</obj_property>
+      <obj_property name="ObjectShortName">cpu_clk_fall</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fb_tb/dkong/cpu_mreq" type="logic">
+      <obj_property name="ElementShortName">cpu_mreq</obj_property>
+      <obj_property name="ObjectShortName">cpu_mreq</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fb_tb/dkong/cpu_rd" type="logic">
+      <obj_property name="ElementShortName">cpu_rd</obj_property>
+      <obj_property name="ObjectShortName">cpu_rd</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fb_tb/dkong/cpu_wr" type="logic">
+      <obj_property name="ElementShortName">cpu_wr</obj_property>
+      <obj_property name="ObjectShortName">cpu_wr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fb_tb/dkong/cpu_m1" type="logic">
+      <obj_property name="ElementShortName">cpu_m1</obj_property>
+      <obj_property name="ObjectShortName">cpu_m1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fb_tb/dkong/cpu_wait_p" type="logic">
+      <obj_property name="ElementShortName">cpu_wait_p</obj_property>
+      <obj_property name="ObjectShortName">cpu_wait_p</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fb_tb/dkong/cpu_wait" type="logic">
+      <obj_property name="ElementShortName">cpu_wait</obj_property>
+      <obj_property name="ObjectShortName">cpu_wait</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fb_tb/dkong/cpu_wait_d" type="logic">
+      <obj_property name="ElementShortName">cpu_wait_d</obj_property>
+      <obj_property name="ObjectShortName">cpu_wait_d</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fb_tb/dkong/cpu_nmi" type="logic">
+      <obj_property name="ElementShortName">cpu_nmi</obj_property>
+      <obj_property name="ObjectShortName">cpu_nmi</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fb_tb/dkong/cpu_bus" type="array">
+      <obj_property name="ElementShortName">cpu_bus</obj_property>
+      <obj_property name="ObjectShortName">cpu_bus</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/fb_tb/dkong/master_shared_slave_bus" type="array">
+      <obj_property name="ElementShortName">master_shared_slave_bus</obj_property>
+      <obj_property name="ObjectShortName">master_shared_slave_bus</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/fb_tb/dkong/rom_ena" type="logic">
+      <obj_property name="ElementShortName">rom_ena</obj_property>
+      <obj_property name="ObjectShortName">rom_ena</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fb_tb/dkong/ram_ena" type="logic">
+      <obj_property name="ElementShortName">ram_ena</obj_property>
+      <obj_property name="ObjectShortName">ram_ena</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fb_tb/dkong/obj_ena" type="logic">
+      <obj_property name="ElementShortName">obj_ena</obj_property>
+      <obj_property name="ObjectShortName">obj_ena</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fb_tb/dkong/tile_ena" type="logic">
+      <obj_property name="ElementShortName">tile_ena</obj_property>
+      <obj_property name="ObjectShortName">tile_ena</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fb_tb/dkong/io_ena" type="logic">
+      <obj_property name="ElementShortName">io_ena</obj_property>
+      <obj_property name="ObjectShortName">io_ena</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fb_tb/dkong/oport_ena" type="logic">
+      <obj_property name="ElementShortName">oport_ena</obj_property>
+      <obj_property name="ObjectShortName">oport_ena</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider57950">
+   </wvobject>
+   <wvobject fp_name="/fb_tb/dkong/cpu_ram/ram_imp/ena" type="logic">
+      <obj_property name="ElementShortName">ena</obj_property>
+      <obj_property name="ObjectShortName">ena</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fb_tb/dkong/cpu_ram/ram_imp/rd" type="logic">
+      <obj_property name="ElementShortName">rd</obj_property>
+      <obj_property name="ObjectShortName">rd</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fb_tb/dkong/cpu_ram/ram_imp/wr" type="logic">
+      <obj_property name="ElementShortName">wr</obj_property>
+      <obj_property name="ObjectShortName">wr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fb_tb/dkong/cpu_ram/ram_imp/addr" type="array">
+      <obj_property name="ElementShortName">addr[11:0]</obj_property>
+      <obj_property name="ObjectShortName">addr[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fb_tb/dkong/cpu_ram/ram_imp/din" type="array">
+      <obj_property name="ElementShortName">din[7:0]</obj_property>
+      <obj_property name="ObjectShortName">din[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fb_tb/dkong/cpu_ram/ram_imp/dout" type="array">
+      <obj_property name="ElementShortName">dout[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dout[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fb_tb/dkong/cpu_ram/ram_imp/mem" type="array">
+      <obj_property name="ElementShortName">mem[0:4095][7:0]</obj_property>
+      <obj_property name="ObjectShortName">mem[0:4095][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fb_tb/dkong/cpu_ram/ram_imp/outreg" type="array">
+      <obj_property name="ElementShortName">outreg[7:0]</obj_property>
+      <obj_property name="ObjectShortName">outreg[7:0]</obj_property>
+   </wvobject>
+</wave_config>
