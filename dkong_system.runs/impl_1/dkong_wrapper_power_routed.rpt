@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Sun Feb 23 23:54:23 2020
+| Date             : Tue Feb 25 14:48:07 2020
 | Host             : Steven-Win10-2 running 64-bit major release  (build 9200)
 | Command          : report_power -file dkong_wrapper_power_routed.rpt -pb dkong_wrapper_power_summary_routed.pb -rpx dkong_wrapper_power_routed.rpx
 | Design           : dkong_wrapper
@@ -30,7 +30,7 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.909        |
+| Total On-Chip Power (W)  | 0.908        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
 | Dynamic (W)              | 0.787        |
@@ -53,7 +53,7 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.003 |        7 |       --- |             --- |
-| Slice Logic              |     0.003 |     2651 |       --- |             --- |
+| Slice Logic              |     0.003 |     2649 |       --- |             --- |
 |   LUT as Logic           |     0.003 |     1434 |     53200 |            2.70 |
 |   CARRY4                 |    <0.001 |       30 |     13300 |            0.23 |
 |   LUT as Distributed RAM |    <0.001 |       32 |     17400 |            0.18 |
@@ -61,13 +61,13 @@ Table of Contents
 |   F7/F8 Muxes            |    <0.001 |      100 |     53200 |            0.19 |
 |   Others                 |     0.000 |      287 |       --- |             --- |
 |   LUT as Shift Register  |     0.000 |        2 |     17400 |            0.01 |
-| Signals                  |     0.003 |     2142 |       --- |             --- |
+| Signals                  |     0.003 |     2148 |       --- |             --- |
 | Block RAM                |     0.004 |       36 |       140 |           25.71 |
 | MMCM                     |     0.133 |        1 |         4 |           25.00 |
 | I/O                      |     0.005 |       29 |       200 |           14.50 |
 | PS7                      |     0.635 |        1 |       --- |             --- |
 | Static Power             |     0.122 |          |           |                 |
-| Total                    |     0.909 |          |           |                 |
+| Total                    |     0.908 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -77,7 +77,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.025 |       0.013 |      0.011 |
+| Vccint    |       1.000 |     0.024 |       0.013 |      0.011 |
 | Vccaux    |       1.800 |     0.086 |       0.074 |      0.012 |
 | Vcco33    |       3.300 |     0.003 |       0.002 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |

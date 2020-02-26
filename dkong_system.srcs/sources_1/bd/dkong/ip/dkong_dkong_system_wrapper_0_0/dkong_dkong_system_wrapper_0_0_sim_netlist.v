@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Sun Feb 23 23:46:49 2020
+// Date        : Tue Feb 25 14:46:18 2020
 // Host        : Steven-Win10-2 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_dkong_system_wrapper_0_0/dkong_dkong_system_wrapper_0_0_sim_netlist.v
@@ -315,7 +315,6 @@ module dkong_dkong_system_wrapper_0_0_dkong_system
   input ser_in;
 
   wire [7:0]D;
-  wire \ad/rom_ena0 ;
   wire [1:0]b_sig;
   wire cpu_nmi;
   wire cpu_ram_n_0;
@@ -372,9 +371,10 @@ module dkong_dkong_system_wrapper_0_0_dkong_system
   wire \tile/tileram_wr ;
   wire [7:0]\tile_bus[dslave] ;
   wire uart_n_10;
+  wire vblk;
+  wire vblk_d;
   wire vid_n_12;
-  wire vid_n_13;
-  wire vid_n_8;
+  wire vid_n_9;
   wire video_valid;
   wire vram_busy;
 
@@ -399,16 +399,10 @@ module dkong_dkong_system_wrapper_0_0_dkong_system
         .debug_enables(debug_enables[0]),
         .douta(\rom_bus[dslave] ),
         .masterclk(masterclk));
-  FDSE cpu_wait_d_reg
-       (.C(masterclk),
-        .CE(1'b1),
-        .D(vid_n_13),
-        .Q(\ad/rom_ena0 ),
-        .S(mycpu_n_1));
   FDRE cpu_wait_reg
        (.C(masterclk),
         .CE(1'b1),
-        .D(vid_n_8),
+        .D(vid_n_9),
         .Q(cpu_wait),
         .R(1'b0));
   FDRE cpuclk_d_reg
@@ -525,7 +519,7 @@ module dkong_dkong_system_wrapper_0_0_dkong_system
         .R(1'b0));
   dkong_dkong_system_wrapper_0_0_tv80s mycpu
        (.A({debug_ahi,debug_alo}),
-        .\A_reg[10] (mycpu_n_45),
+        .\A_reg[14] (mycpu_n_45),
         .\A_reg[3] (mycpu_n_32),
         .\A_reg[8] (mycpu_n_43),
         .D(D[7:1]),
@@ -553,7 +547,6 @@ module dkong_dkong_system_wrapper_0_0_dkong_system
         .r_Rx_Byte(r_Rx_Byte),
         .\r_Rx_Byte_reg[0] (D[0]),
         .rd_n_reg_0(mycpu_n_33),
-        .rom_ena0(\ad/rom_ena0 ),
         .rst_n(rst_n),
         .rst_n_0(mycpu_n_1),
         .vram_busy(vram_busy),
@@ -578,6 +571,12 @@ module dkong_dkong_system_wrapper_0_0_dkong_system
         .rst_n(rst_n),
         .ser_in(ser_in),
         .ser_out(ser_out));
+  FDRE vblk_d_reg
+       (.C(masterclk),
+        .CE(1'b1),
+        .D(vblk),
+        .Q(vblk_d),
+        .R(mycpu_n_1));
   dkong_dkong_system_wrapper_0_0_dkong_video vid
        (.A({debug_ahi[1:0],debug_alo}),
         .\DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram (cref),
@@ -589,8 +588,7 @@ module dkong_dkong_system_wrapper_0_0_dkong_system
         .cpu_nmi(cpu_nmi),
         .cpu_rd(cpu_rd),
         .cpu_wait(cpu_wait),
-        .cpu_wait_reg(vid_n_13),
-        .cpu_wait_reg_0(mycpu_n_45),
+        .cpu_wait_reg(mycpu_n_45),
         .cpu_wr(cpu_wr),
         .cpuclk_d(cpuclk_d),
         .dout(debug_dmaster),
@@ -599,10 +597,11 @@ module dkong_dkong_system_wrapper_0_0_dkong_system
         .masterclk(masterclk),
         .nmi_mask(nmi_mask),
         .r_sig(r_sig),
-        .rom_ena0(\ad/rom_ena0 ),
         .rst_n(rst_n),
-        .rst_n_0(vid_n_8),
+        .rst_n_0(vid_n_9),
         .rst_n_1(vid_n_12),
+        .vblk(vblk),
+        .vblk_d(vblk_d),
         .video_valid(video_valid),
         .vram_busy(vram_busy));
 endmodule
@@ -681,11 +680,11 @@ endmodule
 (* ORIG_REF_NAME = "dkong_video" *) 
 module dkong_dkong_system_wrapper_0_0_dkong_video
    (addra,
+    vblk,
     rst_n_0,
     Q,
-    video_valid,
     rst_n_1,
-    cpu_wait_reg,
+    video_valid,
     vram_busy,
     r_sig,
     g_sig,
@@ -697,21 +696,21 @@ module dkong_dkong_system_wrapper_0_0_dkong_video
     SR,
     rst_n,
     cpu_wait,
-    cpu_wait_reg_0,
+    cpuclk_d,
+    cpu_wait_reg,
     flip_ena,
     cpu_rd,
     cpu_wr,
     A,
     nmi_mask,
-    cpu_nmi,
-    cpuclk_d,
-    rom_ena0);
+    vblk_d,
+    cpu_nmi);
   output [7:0]addra;
+  output vblk;
   output rst_n_0;
   output [1:0]Q;
-  output video_valid;
   output rst_n_1;
-  output cpu_wait_reg;
+  output video_valid;
   output vram_busy;
   output [2:0]r_sig;
   output [2:0]g_sig;
@@ -723,15 +722,15 @@ module dkong_dkong_system_wrapper_0_0_dkong_video
   input [0:0]SR;
   input rst_n;
   input cpu_wait;
-  input cpu_wait_reg_0;
+  input cpuclk_d;
+  input cpu_wait_reg;
   input flip_ena;
   input cpu_rd;
   input cpu_wr;
   input [9:0]A;
   input nmi_mask;
+  input vblk_d;
   input cpu_nmi;
-  input cpuclk_d;
-  input rom_ena0;
 
   wire [9:0]A;
   wire [1:0]\DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram ;
@@ -748,7 +747,6 @@ module dkong_dkong_system_wrapper_0_0_dkong_video
   wire cpu_rd;
   wire cpu_wait;
   wire cpu_wait_reg;
-  wire cpu_wait_reg_0;
   wire cpu_wr;
   wire cpuclk_d;
   wire [7:0]dout;
@@ -777,11 +775,11 @@ module dkong_dkong_system_wrapper_0_0_dkong_video
   wire \phi[1]_i_1_n_0 ;
   wire \phi[2]_i_1_n_0 ;
   wire [2:0]r_sig;
-  wire rom_ena0;
   wire rst_n;
   wire rst_n_0;
   wire rst_n_1;
   wire vblk;
+  wire vblk_d;
   wire vblk_i_1_n_0;
   wire vclk;
   wire vclk_i_1_n_0;
@@ -815,14 +813,13 @@ module dkong_dkong_system_wrapper_0_0_dkong_video
         .I4(\htiming[0]_i_2_n_0 ),
         .I5(cmpblk2),
         .O(cmpblk2_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair167" *) 
   LUT2 #(
     .INIT(4'hE)) 
     cmpblk2_i_2
        (.I0(vblk),
         .I1(\htiming_reg_n_0_[9] ),
         .O(cmpblk));
-  (* SOFT_HLUTNM = "soft_lutpair166" *) 
+  (* SOFT_HLUTNM = "soft_lutpair168" *) 
   LUT2 #(
     .INIT(4'h1)) 
     cmpblk2_i_3
@@ -835,32 +832,24 @@ module dkong_dkong_system_wrapper_0_0_dkong_video
         .D(cmpblk2_i_1_n_0),
         .Q(cmpblk2),
         .S(SR));
-  (* SOFT_HLUTNM = "soft_lutpair167" *) 
-  LUT4 #(
-    .INIT(16'h7F77)) 
+  LUT5 #(
+    .INIT(32'hFF7F7777)) 
     cpu_nmi_i_1
        (.I0(rst_n),
         .I1(nmi_mask),
         .I2(vblk),
-        .I3(cpu_nmi),
+        .I3(vblk_d),
+        .I4(cpu_nmi),
         .O(rst_n_1));
-  (* SOFT_HLUTNM = "soft_lutpair166" *) 
-  LUT4 #(
-    .INIT(16'hFB08)) 
-    cpu_wait_d_i_1
-       (.I0(cpu_wait),
-        .I1(cpuclk_d),
-        .I2(Q[1]),
-        .I3(rom_ena0),
-        .O(cpu_wait_reg));
-  LUT5 #(
-    .INIT(32'hFFFDDDFD)) 
+  LUT6 #(
+    .INIT(64'hFDFFFDFDFDDDFDFD)) 
     cpu_wait_i_1
        (.I0(rst_n),
         .I1(vblk),
         .I2(cpu_wait),
         .I3(Q[1]),
-        .I4(cpu_wait_reg_0),
+        .I4(cpuclk_d),
+        .I5(cpu_wait_reg),
         .O(rst_n_0));
   LUT3 #(
     .INIT(8'h40)) 
@@ -874,14 +863,14 @@ module dkong_dkong_system_wrapper_0_0_dkong_video
     \htiming[0]_i_3 
        (.I0(Q[0]),
         .O(htiming[0]));
-  (* SOFT_HLUTNM = "soft_lutpair172" *) 
+  (* SOFT_HLUTNM = "soft_lutpair171" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \htiming[1]_i_1 
        (.I0(Q[0]),
         .I1(Q[1]),
         .O(htiming[1]));
-  (* SOFT_HLUTNM = "soft_lutpair172" *) 
+  (* SOFT_HLUTNM = "soft_lutpair171" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \htiming[2]_i_1 
@@ -889,7 +878,7 @@ module dkong_dkong_system_wrapper_0_0_dkong_video
         .I1(Q[0]),
         .I2(\htiming_reg_n_0_[2] ),
         .O(htiming[2]));
-  (* SOFT_HLUTNM = "soft_lutpair162" *) 
+  (* SOFT_HLUTNM = "soft_lutpair163" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \htiming[3]_i_1 
@@ -898,7 +887,7 @@ module dkong_dkong_system_wrapper_0_0_dkong_video
         .I2(\htiming_reg_n_0_[2] ),
         .I3(\htiming_reg_n_0_[3] ),
         .O(htiming[3]));
-  (* SOFT_HLUTNM = "soft_lutpair162" *) 
+  (* SOFT_HLUTNM = "soft_lutpair163" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \htiming[4]_i_1 
@@ -928,7 +917,6 @@ module dkong_dkong_system_wrapper_0_0_dkong_video
         .I4(\htiming_reg_n_0_[4] ),
         .I5(\htiming_reg_n_0_[6] ),
         .O(htiming[6]));
-  (* SOFT_HLUTNM = "soft_lutpair171" *) 
   LUT2 #(
     .INIT(4'h7)) 
     \htiming[6]_i_2 
@@ -945,7 +933,7 @@ module dkong_dkong_system_wrapper_0_0_dkong_video
         .I4(\htiming_reg_n_0_[5] ),
         .I5(\htiming_reg_n_0_[7] ),
         .O(htiming[7]));
-  (* SOFT_HLUTNM = "soft_lutpair171" *) 
+  (* SOFT_HLUTNM = "soft_lutpair168" *) 
   LUT3 #(
     .INIT(8'h7F)) 
     \htiming[7]_i_2 
@@ -953,7 +941,7 @@ module dkong_dkong_system_wrapper_0_0_dkong_video
         .I1(Q[1]),
         .I2(\htiming_reg_n_0_[3] ),
         .O(\htiming[7]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair169" *) 
+  (* SOFT_HLUTNM = "soft_lutpair167" *) 
   LUT3 #(
     .INIT(8'h89)) 
     \htiming[8]_i_1 
@@ -961,7 +949,7 @@ module dkong_dkong_system_wrapper_0_0_dkong_video
         .I1(\htiming_reg_n_0_[8] ),
         .I2(\htiming_reg_n_0_[9] ),
         .O(htiming[8]));
-  (* SOFT_HLUTNM = "soft_lutpair169" *) 
+  (* SOFT_HLUTNM = "soft_lutpair167" *) 
   LUT3 #(
     .INIT(8'hA4)) 
     \htiming[9]_i_1 
@@ -1104,11 +1092,11 @@ module dkong_dkong_system_wrapper_0_0_dkong_video
         .dout(dout),
         .flip_ena(flip_ena),
         .masterclk(masterclk),
-        .mem_reg({\vtiming_reg_n_0_[7] ,\vtiming_reg_n_0_[6] ,\vtiming_reg_n_0_[5] ,\vtiming_reg_n_0_[4] ,\vtiming_reg_n_0_[3] ,\vtiming_reg_n_0_[2] ,\vtiming_reg_n_0_[1] ,\vtiming_reg_n_0_[0] }),
+        .mem_reg(vblk),
+        .mem_reg_0({\vtiming_reg_n_0_[7] ,\vtiming_reg_n_0_[6] ,\vtiming_reg_n_0_[5] ,\vtiming_reg_n_0_[4] ,\vtiming_reg_n_0_[3] ,\vtiming_reg_n_0_[2] ,\vtiming_reg_n_0_[1] ,\vtiming_reg_n_0_[0] }),
         .\tile_col_reg[3]_0 ({mux_col,mux_vid}),
-        .vblk(vblk),
         .vram_busy(vram_busy));
-  (* SOFT_HLUTNM = "soft_lutpair163" *) 
+  (* SOFT_HLUTNM = "soft_lutpair164" *) 
   LUT5 #(
     .INIT(32'h80FF8000)) 
     vblk_i_1
@@ -1140,20 +1128,20 @@ module dkong_dkong_system_wrapper_0_0_dkong_video
         .D(vclk_i_1_n_0),
         .Q(vclk),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair173" *) 
+  (* SOFT_HLUTNM = "soft_lutpair172" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \vtiming[0]_i_1 
        (.I0(\vtiming_reg_n_0_[0] ),
         .O(vtiming_0[0]));
-  (* SOFT_HLUTNM = "soft_lutpair173" *) 
+  (* SOFT_HLUTNM = "soft_lutpair172" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \vtiming[1]_i_1 
        (.I0(\vtiming_reg_n_0_[1] ),
         .I1(\vtiming_reg_n_0_[0] ),
         .O(\vtiming[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair168" *) 
+  (* SOFT_HLUTNM = "soft_lutpair169" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \vtiming[2]_i_1 
@@ -1171,7 +1159,7 @@ module dkong_dkong_system_wrapper_0_0_dkong_video
         .I4(vtiming),
         .I5(\vtiming[3]_i_3_n_0 ),
         .O(vtiming_0[3]));
-  (* SOFT_HLUTNM = "soft_lutpair168" *) 
+  (* SOFT_HLUTNM = "soft_lutpair169" *) 
   LUT3 #(
     .INIT(8'h7F)) 
     \vtiming[3]_i_2 
@@ -1179,7 +1167,7 @@ module dkong_dkong_system_wrapper_0_0_dkong_video
         .I1(\vtiming_reg_n_0_[0] ),
         .I2(\vtiming_reg_n_0_[2] ),
         .O(\vtiming[3]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair163" *) 
+  (* SOFT_HLUTNM = "soft_lutpair164" *) 
   LUT2 #(
     .INIT(4'h7)) 
     \vtiming[3]_i_3 
@@ -1196,7 +1184,7 @@ module dkong_dkong_system_wrapper_0_0_dkong_video
         .I4(\vtiming_reg_n_0_[7] ),
         .I5(\vtiming_reg_n_0_[6] ),
         .O(vtiming_0[4]));
-  (* SOFT_HLUTNM = "soft_lutpair164" *) 
+  (* SOFT_HLUTNM = "soft_lutpair165" *) 
   LUT4 #(
     .INIT(16'h7FFF)) 
     \vtiming[4]_i_2 
@@ -1214,7 +1202,7 @@ module dkong_dkong_system_wrapper_0_0_dkong_video
         .I3(\vtiming_reg_n_0_[7] ),
         .I4(\vtiming_reg_n_0_[6] ),
         .O(vtiming_0[5]));
-  (* SOFT_HLUTNM = "soft_lutpair164" *) 
+  (* SOFT_HLUTNM = "soft_lutpair165" *) 
   LUT5 #(
     .INIT(32'h7FFFFFFF)) 
     \vtiming[5]_i_2 
@@ -1224,7 +1212,7 @@ module dkong_dkong_system_wrapper_0_0_dkong_video
         .I3(\vtiming_reg_n_0_[2] ),
         .I4(\vtiming_reg_n_0_[4] ),
         .O(\vtiming[5]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair165" *) 
+  (* SOFT_HLUTNM = "soft_lutpair166" *) 
   LUT4 #(
     .INIT(16'hB999)) 
     \vtiming[6]_i_1 
@@ -1233,7 +1221,7 @@ module dkong_dkong_system_wrapper_0_0_dkong_video
         .I2(\vtiming_reg_n_0_[7] ),
         .I3(vtiming),
         .O(vtiming_0[6]));
-  (* SOFT_HLUTNM = "soft_lutpair165" *) 
+  (* SOFT_HLUTNM = "soft_lutpair166" *) 
   LUT4 #(
     .INIT(16'hBA9A)) 
     \vtiming[7]_i_1 
@@ -1739,7 +1727,7 @@ module dkong_dkong_system_wrapper_0_0_paletter
         .D(palette_out[1]),
         .Q(b_sig[1]),
         .R(\r_sig[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair161" *) 
+  (* SOFT_HLUTNM = "soft_lutpair162" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     cmpblk2_d_i_1
@@ -1820,7 +1808,7 @@ module dkong_dkong_system_wrapper_0_0_paletter
         .D(palette_out[7]),
         .Q(r_sig[2]),
         .R(\r_sig[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair161" *) 
+  (* SOFT_HLUTNM = "soft_lutpair162" *) 
   LUT1 #(
     .INIT(2'h1)) 
     video_valid_INST_0
@@ -1973,24 +1961,24 @@ module dkong_dkong_system_wrapper_0_0_ram__parameterized0
     masterclk,
     dout,
     WEA,
-    vblk,
+    mem_reg_0,
     Q,
     cpu_rd,
     cpu_wr,
     flip_ena,
-    mem_reg_0,
+    mem_reg_1,
     A);
   output [7:0]addra;
   output [7:0]flip_ena_reg;
   input masterclk;
   input [7:0]dout;
   input [0:0]WEA;
-  input vblk;
+  input mem_reg_0;
   input [5:0]Q;
   input cpu_rd;
   input cpu_wr;
   input flip_ena;
-  input [4:0]mem_reg_0;
+  input [4:0]mem_reg_1;
   input [9:0]A;
 
   wire [9:0]A;
@@ -2004,9 +1992,9 @@ module dkong_dkong_system_wrapper_0_0_ram__parameterized0
   wire flip_ena;
   wire [7:0]flip_ena_reg;
   wire masterclk;
-  wire [4:0]mem_reg_0;
+  wire mem_reg_0;
+  wire [4:0]mem_reg_1;
   wire tileram_ena;
-  wire vblk;
   wire [15:8]NLW_mem_reg_DOADO_UNCONNECTED;
   wire [15:0]NLW_mem_reg_DOBDO_UNCONNECTED;
   wire [1:0]NLW_mem_reg_DOPADOP_UNCONNECTED;
@@ -2070,7 +2058,7 @@ module dkong_dkong_system_wrapper_0_0_ram__parameterized0
   LUT4 #(
     .INIT(16'h1FFF)) 
     mem_reg_i_1__0
-       (.I0(vblk),
+       (.I0(mem_reg_0),
         .I1(Q[5]),
         .I2(cpu_rd),
         .I3(cpu_wr),
@@ -2079,45 +2067,45 @@ module dkong_dkong_system_wrapper_0_0_ram__parameterized0
     .INIT(32'hF0F0F066)) 
     mem_reg_i_2
        (.I0(flip_ena),
-        .I1(mem_reg_0[1]),
+        .I1(mem_reg_1[1]),
         .I2(A[6]),
-        .I3(vblk),
+        .I3(mem_reg_0),
         .I4(Q[5]),
         .O(addr[6]));
   LUT5 #(
     .INIT(32'hF0F0F066)) 
     mem_reg_i_3
        (.I0(flip_ena),
-        .I1(mem_reg_0[0]),
+        .I1(mem_reg_1[0]),
         .I2(A[5]),
-        .I3(vblk),
+        .I3(mem_reg_0),
         .I4(Q[5]),
         .O(addr[5]));
   LUT5 #(
     .INIT(32'hF0F0F066)) 
     prom_2n_i_1
        (.I0(flip_ena),
-        .I1(mem_reg_0[4]),
+        .I1(mem_reg_1[4]),
         .I2(A[9]),
-        .I3(vblk),
+        .I3(mem_reg_0),
         .I4(Q[5]),
         .O(flip_ena_reg[7]));
   LUT5 #(
     .INIT(32'hF0F0F066)) 
     prom_2n_i_2
        (.I0(flip_ena),
-        .I1(mem_reg_0[3]),
+        .I1(mem_reg_1[3]),
         .I2(A[8]),
-        .I3(vblk),
+        .I3(mem_reg_0),
         .I4(Q[5]),
         .O(flip_ena_reg[6]));
   LUT5 #(
     .INIT(32'hF0F0F066)) 
     prom_2n_i_3
        (.I0(flip_ena),
-        .I1(mem_reg_0[2]),
+        .I1(mem_reg_1[2]),
         .I2(A[7]),
-        .I3(vblk),
+        .I3(mem_reg_0),
         .I4(Q[5]),
         .O(flip_ena_reg[5]));
   LUT5 #(
@@ -2126,7 +2114,7 @@ module dkong_dkong_system_wrapper_0_0_ram__parameterized0
        (.I0(flip_ena),
         .I1(Q[4]),
         .I2(A[4]),
-        .I3(vblk),
+        .I3(mem_reg_0),
         .I4(Q[5]),
         .O(flip_ena_reg[4]));
   LUT5 #(
@@ -2135,7 +2123,7 @@ module dkong_dkong_system_wrapper_0_0_ram__parameterized0
        (.I0(flip_ena),
         .I1(Q[3]),
         .I2(A[3]),
-        .I3(vblk),
+        .I3(mem_reg_0),
         .I4(Q[5]),
         .O(flip_ena_reg[3]));
   LUT5 #(
@@ -2144,7 +2132,7 @@ module dkong_dkong_system_wrapper_0_0_ram__parameterized0
        (.I0(flip_ena),
         .I1(Q[2]),
         .I2(A[2]),
-        .I3(vblk),
+        .I3(mem_reg_0),
         .I4(Q[5]),
         .O(flip_ena_reg[2]));
   LUT5 #(
@@ -2153,7 +2141,7 @@ module dkong_dkong_system_wrapper_0_0_ram__parameterized0
        (.I0(flip_ena),
         .I1(Q[1]),
         .I2(A[1]),
-        .I3(vblk),
+        .I3(mem_reg_0),
         .I4(Q[5]),
         .O(flip_ena_reg[1]));
   LUT5 #(
@@ -2162,7 +2150,7 @@ module dkong_dkong_system_wrapper_0_0_ram__parameterized0
        (.I0(flip_ena),
         .I1(Q[0]),
         .I2(A[0]),
-        .I3(vblk),
+        .I3(mem_reg_0),
         .I4(Q[5]),
         .O(flip_ena_reg[0]));
 endmodule
@@ -2715,10 +2703,10 @@ module dkong_dkong_system_wrapper_0_0_tilegen
     Q,
     \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram ,
     flip_ena,
-    vblk,
+    mem_reg,
     cpu_rd,
     cpu_wr,
-    mem_reg,
+    mem_reg_0,
     A,
     SR);
   output [7:0]addra;
@@ -2730,10 +2718,10 @@ module dkong_dkong_system_wrapper_0_0_tilegen
   input [9:0]Q;
   input \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram ;
   input flip_ena;
-  input vblk;
+  input mem_reg;
   input cpu_rd;
   input cpu_wr;
-  input [7:0]mem_reg;
+  input [7:0]mem_reg_0;
   input [9:0]A;
   input [0:0]SR;
 
@@ -2749,7 +2737,8 @@ module dkong_dkong_system_wrapper_0_0_tilegen
   wire [7:0]dout;
   wire flip_ena;
   wire masterclk;
-  wire [7:0]mem_reg;
+  wire mem_reg;
+  wire [7:0]mem_reg_0;
   wire prom_2e_i_10_n_0;
   wire prom_2e_i_11_n_0;
   wire prom_2e_i_3_n_0;
@@ -2779,9 +2768,8 @@ module dkong_dkong_system_wrapper_0_0_tilegen
   wire \tilerom_buf_reg_n_0_[1][5] ;
   wire \tilerom_buf_reg_n_0_[1][6] ;
   wire \tilerom_buf_reg_n_0_[1][7] ;
-  wire [7:0]\tilerom_out[0]_0 ;
-  wire [7:0]\tilerom_out[1]_1 ;
-  wire vblk;
+  wire [7:0]\tilerom_out[0]_1 ;
+  wire [7:0]\tilerom_out[1]_0 ;
   wire vram_busy;
   wire vram_busy_i_1_n_0;
   wire vram_busy_i_2_n_0;
@@ -2899,7 +2887,7 @@ module dkong_dkong_system_wrapper_0_0_tilegen
   dkong_dkong_system_wrapper_0_0_tile_3n_rom rom_3n
        (.addra({addra,vtiming_f}),
         .clka(masterclk),
-        .douta(\tilerom_out[1]_1 ),
+        .douta(\tilerom_out[0]_1 ),
         .ena(rom_3p_i_1_n_0));
   (* CHECK_LICENSE_TYPE = "tile_3p_rom,blk_mem_gen_v8_4_3,{}" *) 
   (* downgradeipidentifiedwarnings = "yes" *) 
@@ -2907,7 +2895,7 @@ module dkong_dkong_system_wrapper_0_0_tilegen
   dkong_dkong_system_wrapper_0_0_tile_3p_rom rom_3p
        (.addra({addra,vtiming_f}),
         .clka(masterclk),
-        .douta(\tilerom_out[0]_0 ),
+        .douta(\tilerom_out[1]_0 ),
         .ena(rom_3p_i_1_n_0));
   LUT1 #(
     .INIT(2'h1)) 
@@ -2918,19 +2906,19 @@ module dkong_dkong_system_wrapper_0_0_tilegen
     .INIT(4'h6)) 
     rom_3p_i_2
        (.I0(flip_ena),
-        .I1(mem_reg[2]),
+        .I1(mem_reg_0[2]),
         .O(vtiming_f[2]));
   LUT2 #(
     .INIT(4'h6)) 
     rom_3p_i_3
        (.I0(flip_ena),
-        .I1(mem_reg[1]),
+        .I1(mem_reg_0[1]),
         .O(vtiming_f[1]));
   LUT2 #(
     .INIT(4'h6)) 
     rom_3p_i_4
        (.I0(flip_ena),
-        .I1(mem_reg[0]),
+        .I1(mem_reg_0[0]),
         .O(vtiming_f[0]));
   LUT3 #(
     .INIT(8'h01)) 
@@ -2974,8 +2962,8 @@ module dkong_dkong_system_wrapper_0_0_tilegen
         .flip_ena(flip_ena),
         .flip_ena_reg({tileram_addr[9:7],tileram_addr[4:0]}),
         .masterclk(masterclk),
-        .mem_reg_0(mem_reg[7:3]),
-        .vblk(vblk));
+        .mem_reg_0(mem_reg),
+        .mem_reg_1(mem_reg_0[7:3]));
   LUT4 #(
     .INIT(16'h0001)) 
     \tilerom_buf[0][7]_i_1 
@@ -2987,97 +2975,97 @@ module dkong_dkong_system_wrapper_0_0_tilegen
   FDRE \tilerom_buf_reg[0][0] 
        (.C(masterclk),
         .CE(tilerom_buf),
-        .D(\tilerom_out[0]_0 [0]),
+        .D(\tilerom_out[0]_1 [0]),
         .Q(\tilerom_buf_reg_n_0_[0][0] ),
         .R(1'b0));
   FDRE \tilerom_buf_reg[0][1] 
        (.C(masterclk),
         .CE(tilerom_buf),
-        .D(\tilerom_out[0]_0 [1]),
+        .D(\tilerom_out[0]_1 [1]),
         .Q(\tilerom_buf_reg_n_0_[0][1] ),
         .R(1'b0));
   FDRE \tilerom_buf_reg[0][2] 
        (.C(masterclk),
         .CE(tilerom_buf),
-        .D(\tilerom_out[0]_0 [2]),
+        .D(\tilerom_out[0]_1 [2]),
         .Q(\tilerom_buf_reg_n_0_[0][2] ),
         .R(1'b0));
   FDRE \tilerom_buf_reg[0][3] 
        (.C(masterclk),
         .CE(tilerom_buf),
-        .D(\tilerom_out[0]_0 [3]),
+        .D(\tilerom_out[0]_1 [3]),
         .Q(\tilerom_buf_reg_n_0_[0][3] ),
         .R(1'b0));
   FDRE \tilerom_buf_reg[0][4] 
        (.C(masterclk),
         .CE(tilerom_buf),
-        .D(\tilerom_out[0]_0 [4]),
+        .D(\tilerom_out[0]_1 [4]),
         .Q(\tilerom_buf_reg_n_0_[0][4] ),
         .R(1'b0));
   FDRE \tilerom_buf_reg[0][5] 
        (.C(masterclk),
         .CE(tilerom_buf),
-        .D(\tilerom_out[0]_0 [5]),
+        .D(\tilerom_out[0]_1 [5]),
         .Q(\tilerom_buf_reg_n_0_[0][5] ),
         .R(1'b0));
   FDRE \tilerom_buf_reg[0][6] 
        (.C(masterclk),
         .CE(tilerom_buf),
-        .D(\tilerom_out[0]_0 [6]),
+        .D(\tilerom_out[0]_1 [6]),
         .Q(\tilerom_buf_reg_n_0_[0][6] ),
         .R(1'b0));
   FDRE \tilerom_buf_reg[0][7] 
        (.C(masterclk),
         .CE(tilerom_buf),
-        .D(\tilerom_out[0]_0 [7]),
+        .D(\tilerom_out[0]_1 [7]),
         .Q(\tilerom_buf_reg_n_0_[0][7] ),
         .R(1'b0));
   FDRE \tilerom_buf_reg[1][0] 
        (.C(masterclk),
         .CE(tilerom_buf),
-        .D(\tilerom_out[1]_1 [0]),
+        .D(\tilerom_out[1]_0 [0]),
         .Q(\tilerom_buf_reg_n_0_[1][0] ),
         .R(1'b0));
   FDRE \tilerom_buf_reg[1][1] 
        (.C(masterclk),
         .CE(tilerom_buf),
-        .D(\tilerom_out[1]_1 [1]),
+        .D(\tilerom_out[1]_0 [1]),
         .Q(\tilerom_buf_reg_n_0_[1][1] ),
         .R(1'b0));
   FDRE \tilerom_buf_reg[1][2] 
        (.C(masterclk),
         .CE(tilerom_buf),
-        .D(\tilerom_out[1]_1 [2]),
+        .D(\tilerom_out[1]_0 [2]),
         .Q(\tilerom_buf_reg_n_0_[1][2] ),
         .R(1'b0));
   FDRE \tilerom_buf_reg[1][3] 
        (.C(masterclk),
         .CE(tilerom_buf),
-        .D(\tilerom_out[1]_1 [3]),
+        .D(\tilerom_out[1]_0 [3]),
         .Q(\tilerom_buf_reg_n_0_[1][3] ),
         .R(1'b0));
   FDRE \tilerom_buf_reg[1][4] 
        (.C(masterclk),
         .CE(tilerom_buf),
-        .D(\tilerom_out[1]_1 [4]),
+        .D(\tilerom_out[1]_0 [4]),
         .Q(\tilerom_buf_reg_n_0_[1][4] ),
         .R(1'b0));
   FDRE \tilerom_buf_reg[1][5] 
        (.C(masterclk),
         .CE(tilerom_buf),
-        .D(\tilerom_out[1]_1 [5]),
+        .D(\tilerom_out[1]_0 [5]),
         .Q(\tilerom_buf_reg_n_0_[1][5] ),
         .R(1'b0));
   FDRE \tilerom_buf_reg[1][6] 
        (.C(masterclk),
         .CE(tilerom_buf),
-        .D(\tilerom_out[1]_1 [6]),
+        .D(\tilerom_out[1]_0 [6]),
         .Q(\tilerom_buf_reg_n_0_[1][6] ),
         .R(1'b0));
   FDRE \tilerom_buf_reg[1][7] 
        (.C(masterclk),
         .CE(tilerom_buf),
-        .D(\tilerom_out[1]_1 [7]),
+        .D(\tilerom_out[1]_0 [7]),
         .Q(\tilerom_buf_reg_n_0_[1][7] ),
         .R(1'b0));
   LUT4 #(
@@ -3107,33 +3095,32 @@ endmodule
 
 (* ORIG_REF_NAME = "tv80_core" *) 
 module dkong_dkong_system_wrapper_0_0_tv80_core
-   (\mcycle_reg[0]_rep_0 ,
-    \IR_reg[5]_0 ,
+   (\IR_reg[5]_0 ,
+    \mcycle_reg[0]_0 ,
+    E,
+    \mcycle_reg[0]_1 ,
+    \mcycle_reg[0]_2 ,
+    \mcycle_reg[0]_3 ,
     debug_cpu_sig,
     \A_reg[15]_0 ,
     debug_enables,
     \A_reg[3]_0 ,
     rd_n_reg,
     D,
-    E,
-    \A_reg[8]_0 ,
     wr_n_reg,
-    \A_reg[10]_0 ,
+    \A_reg[8]_0 ,
+    wr_n_reg_0,
+    \A_reg[14]_0 ,
     outreg,
     WEA,
     \dout_reg[0]_0 ,
     dout,
     \dout_reg[0]_1 ,
-    \tstate_reg[2]_0 ,
-    \mcycle_reg[0]_0 ,
-    \tstate_reg[2]_1 ,
-    \tstate_reg[1]_0 ,
     Q,
-    \IR_reg[0]_rep__0_0 ,
+    \mcycle_reg[1]_rep_0 ,
     cpu_nmi,
     \F_reg[7]_0 ,
     cpu_wait,
-    rom_ena0,
     mem_reg,
     douta,
     r_Rx_Byte,
@@ -3145,38 +3132,36 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
     outreg0_out,
     addra,
     \io_bus_reg[dslave] ,
-    mreq_n,
     flip_ena,
     nmi_mask,
     \RegAddrB_r[2]_i_7_0 ,
     \dout[1]_i_5 );
-  output \mcycle_reg[0]_rep_0 ;
   output [2:0]\IR_reg[5]_0 ;
+  output \mcycle_reg[0]_0 ;
+  output [0:0]E;
+  output \mcycle_reg[0]_1 ;
+  output \mcycle_reg[0]_2 ;
+  output \mcycle_reg[0]_3 ;
   output [2:0]debug_cpu_sig;
   output [15:0]\A_reg[15]_0 ;
   output [5:0]debug_enables;
   output \A_reg[3]_0 ;
   output rd_n_reg;
   output [7:0]D;
-  output [0:0]E;
+  output [0:0]wr_n_reg;
   output \A_reg[8]_0 ;
-  output wr_n_reg;
-  output \A_reg[10]_0 ;
+  output wr_n_reg_0;
+  output \A_reg[14]_0 ;
   output outreg;
   output [0:0]WEA;
   output \dout_reg[0]_0 ;
   output [7:0]dout;
   output \dout_reg[0]_1 ;
-  output [0:0]\tstate_reg[2]_0 ;
-  output \mcycle_reg[0]_0 ;
-  output \tstate_reg[2]_1 ;
-  output \tstate_reg[1]_0 ;
   input [0:0]Q;
-  input \IR_reg[0]_rep__0_0 ;
+  input \mcycle_reg[1]_rep_0 ;
   input cpu_nmi;
   input [7:0]\F_reg[7]_0 ;
   input cpu_wait;
-  input rom_ena0;
   input mem_reg;
   input [7:0]douta;
   input [7:0]r_Rx_Byte;
@@ -3188,7 +3173,6 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   input [7:0]outreg0_out;
   input [7:0]addra;
   input [2:0]\io_bus_reg[dslave] ;
-  input mreq_n;
   input flip_ena;
   input nmi_mask;
   input \RegAddrB_r[2]_i_7_0 ;
@@ -3366,11 +3350,11 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   wire \A[7]_i_6_n_0 ;
   wire \A[8]_i_5_n_0 ;
   wire \A[9]_i_4_n_0 ;
-  wire \A_reg[10]_0 ;
   wire \A_reg[12]_i_7_n_0 ;
   wire \A_reg[12]_i_7_n_1 ;
   wire \A_reg[12]_i_7_n_2 ;
   wire \A_reg[12]_i_7_n_3 ;
+  wire \A_reg[14]_0 ;
   wire [15:0]\A_reg[15]_0 ;
   wire \A_reg[15]_i_16_n_2 ;
   wire \A_reg[15]_i_16_n_3 ;
@@ -3610,7 +3594,6 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   wire \IR[7]_i_1_n_0 ;
   wire \IR[7]_i_2_n_0 ;
   wire \IR[7]_i_3_n_0 ;
-  wire \IR_reg[0]_rep__0_0 ;
   wire \IR_reg[0]_rep__0_n_0 ;
   wire \IR_reg[0]_rep_n_0 ;
   wire [2:0]\IR_reg[5]_0 ;
@@ -4056,34 +4039,6 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   wire [5:0]debug_enables;
   wire \debug_enables[7]_INST_0_i_1_n_0 ;
   wire \debug_enables[7]_INST_0_i_2_n_0 ;
-  wire \di_reg[7]_i_10_n_0 ;
-  wire \di_reg[7]_i_11_n_0 ;
-  wire \di_reg[7]_i_12_n_0 ;
-  wire \di_reg[7]_i_13_n_0 ;
-  wire \di_reg[7]_i_14_n_0 ;
-  wire \di_reg[7]_i_15_n_0 ;
-  wire \di_reg[7]_i_16_n_0 ;
-  wire \di_reg[7]_i_17_n_0 ;
-  wire \di_reg[7]_i_18_n_0 ;
-  wire \di_reg[7]_i_19_n_0 ;
-  wire \di_reg[7]_i_21_n_0 ;
-  wire \di_reg[7]_i_22_n_0 ;
-  wire \di_reg[7]_i_23_n_0 ;
-  wire \di_reg[7]_i_24_n_0 ;
-  wire \di_reg[7]_i_25_n_0 ;
-  wire \di_reg[7]_i_26_n_0 ;
-  wire \di_reg[7]_i_27_n_0 ;
-  wire \di_reg[7]_i_28_n_0 ;
-  wire \di_reg[7]_i_29_n_0 ;
-  wire \di_reg[7]_i_30_n_0 ;
-  wire \di_reg[7]_i_31_n_0 ;
-  wire \di_reg[7]_i_4_n_0 ;
-  wire \di_reg[7]_i_5_n_0 ;
-  wire \di_reg[7]_i_6_n_0 ;
-  wire \di_reg[7]_i_7_n_0 ;
-  wire \di_reg[7]_i_8_n_0 ;
-  wire \di_reg[7]_i_9_n_0 ;
-  wire \di_reg_reg[7]_i_20_n_0 ;
   wire [7:0]dout;
   wire \dout[0]_i_1_n_0 ;
   wire \dout[0]_i_3_n_0 ;
@@ -4244,11 +4199,12 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   wire \io_bus[dslave][7]_i_4_n_0 ;
   wire [2:0]\io_bus_reg[dslave] ;
   wire iorq;
+  wire iorq_n_inv_i_3_n_0;
+  wire iorq_n_inv_i_4_n_0;
   wire iorq_n_inv_i_5_n_0;
   wire iorq_n_inv_i_6_n_0;
   wire iorq_n_inv_i_7_n_0;
   wire iorq_n_inv_i_8_n_0;
-  wire iorq_n_inv_i_9_n_0;
   wire m1_n_i_1_n_0;
   wire mcycle;
   wire \mcycle[0]_i_1_n_0 ;
@@ -4269,8 +4225,11 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   wire \mcycle[6]_i_6_n_0 ;
   wire mcycle_1;
   wire \mcycle_reg[0]_0 ;
-  wire \mcycle_reg[0]_rep_0 ;
+  wire \mcycle_reg[0]_1 ;
+  wire \mcycle_reg[0]_2 ;
+  wire \mcycle_reg[0]_3 ;
   wire \mcycle_reg[0]_rep_n_0 ;
+  wire \mcycle_reg[1]_rep_0 ;
   wire \mcycle_reg[1]_rep_n_0 ;
   wire \mcycle_reg_n_0_[1] ;
   wire \mcycle_reg_n_0_[2] ;
@@ -4310,7 +4269,6 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   wire \mcycles_reg[2]_i_5_n_0 ;
   wire mem_reg;
   wire mem_reg_0;
-  wire mreq_n;
   wire nmi_mask;
   wire no_read;
   wire out_busy;
@@ -4321,9 +4279,35 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   wire p_3_in108_in;
   wire [1:1]p_5_in;
   wire [7:0]r_Rx_Byte;
-  wire rd_n10_out;
+  wire rd_n_i_10_n_0;
+  wire rd_n_i_11_n_0;
+  wire rd_n_i_12_n_0;
+  wire rd_n_i_13_n_0;
+  wire rd_n_i_14_n_0;
+  wire rd_n_i_15_n_0;
+  wire rd_n_i_16_n_0;
+  wire rd_n_i_17_n_0;
+  wire rd_n_i_18_n_0;
+  wire rd_n_i_19_n_0;
+  wire rd_n_i_21_n_0;
+  wire rd_n_i_22_n_0;
+  wire rd_n_i_23_n_0;
+  wire rd_n_i_24_n_0;
+  wire rd_n_i_25_n_0;
+  wire rd_n_i_26_n_0;
+  wire rd_n_i_27_n_0;
+  wire rd_n_i_28_n_0;
+  wire rd_n_i_29_n_0;
+  wire rd_n_i_30_n_0;
+  wire rd_n_i_31_n_0;
+  wire rd_n_i_4_n_0;
+  wire rd_n_i_5_n_0;
+  wire rd_n_i_6_n_0;
+  wire rd_n_i_7_n_0;
+  wire rd_n_i_8_n_0;
+  wire rd_n_i_9_n_0;
   wire rd_n_reg;
-  wire rom_ena0;
+  wire rd_n_reg_i_20_n_0;
   wire rst_n;
   wire [2:1]tstate;
   wire \tstate[0]_i_1_n_0 ;
@@ -4336,9 +4320,6 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   wire \tstate[6]_i_3_n_0 ;
   wire \tstate[6]_i_4_n_0 ;
   wire tstate_0;
-  wire \tstate_reg[1]_0 ;
-  wire [0:0]\tstate_reg[2]_0 ;
-  wire \tstate_reg[2]_1 ;
   wire \tstate_reg_n_0_[0] ;
   wire \tstate_reg_n_0_[3] ;
   wire \tstate_reg_n_0_[4] ;
@@ -4346,8 +4327,8 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   wire \tstate_reg_n_0_[6] ;
   wire [2:0]tstates;
   wire vram_busy;
-  wire wr_n1__0;
-  wire wr_n_reg;
+  wire [0:0]wr_n_reg;
+  wire wr_n_reg_0;
   wire write;
   wire [3:2]\NLW_A_reg[15]_i_16_CO_UNCONNECTED ;
   wire [3:3]\NLW_A_reg[15]_i_16_O_UNCONNECTED ;
@@ -4357,7 +4338,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   wire [3:3]\NLW_dout_reg[6]_i_15_CO_UNCONNECTED ;
   wire [3:3]\NLW_dout_reg[7]_i_21_CO_UNCONNECTED ;
 
-  (* SOFT_HLUTNM = "soft_lutpair136" *) 
+  (* SOFT_HLUTNM = "soft_lutpair139" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \ACC[0]_i_1 
@@ -4375,7 +4356,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\ACC_reg_n_0_[0] ),
         .I5(ExchangeAF),
         .O(\ACC[0]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair136" *) 
+  (* SOFT_HLUTNM = "soft_lutpair139" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \ACC[1]_i_1 
@@ -4393,7 +4374,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\ACC_reg_n_0_[1] ),
         .I5(ExchangeAF),
         .O(\ACC[1]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair134" *) 
+  (* SOFT_HLUTNM = "soft_lutpair138" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \ACC[2]_i_1 
@@ -4411,7 +4392,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\ACC_reg_n_0_[2] ),
         .I5(ExchangeAF),
         .O(\ACC[2]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair134" *) 
+  (* SOFT_HLUTNM = "soft_lutpair138" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \ACC[3]_i_1 
@@ -4429,7 +4410,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(ExchangeAF),
         .I5(\Ap_reg_n_0_[3] ),
         .O(\ACC[3]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair133" *) 
+  (* SOFT_HLUTNM = "soft_lutpair137" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \ACC[4]_i_1 
@@ -4447,7 +4428,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\ACC_reg_n_0_[4] ),
         .I5(ExchangeAF),
         .O(\ACC[4]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair133" *) 
+  (* SOFT_HLUTNM = "soft_lutpair137" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \ACC[5]_i_1 
@@ -4465,7 +4446,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(ExchangeAF),
         .I5(\Ap_reg_n_0_[5] ),
         .O(\ACC[5]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair131" *) 
+  (* SOFT_HLUTNM = "soft_lutpair135" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \ACC[6]_i_1 
@@ -4492,7 +4473,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I3(\ACC[7]_i_4_n_0 ),
         .I4(\ACC[7]_i_5_n_0 ),
         .O(\ACC[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair131" *) 
+  (* SOFT_HLUTNM = "soft_lutpair135" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \ACC[7]_i_2 
@@ -4519,7 +4500,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I3(\I[7]_i_3_n_0 ),
         .I4(\IR_reg_n_0_[6] ),
         .O(\ACC[7]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair68" *) 
+  (* SOFT_HLUTNM = "soft_lutpair66" *) 
   LUT5 #(
     .INIT(32'h08000000)) 
     \ACC[7]_i_5 
@@ -4543,51 +4524,51 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
        (.C(Q),
         .CE(\ACC[7]_i_1_n_0 ),
         .D(\ACC[0]_i_1_n_0 ),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(\ACC_reg_n_0_[0] ));
   FDPE \ACC_reg[1] 
        (.C(Q),
         .CE(\ACC[7]_i_1_n_0 ),
         .D(\ACC[1]_i_1_n_0 ),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(\ACC_reg_n_0_[1] ));
   FDPE \ACC_reg[2] 
        (.C(Q),
         .CE(\ACC[7]_i_1_n_0 ),
         .D(\ACC[2]_i_1_n_0 ),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(\ACC_reg_n_0_[2] ));
   FDPE \ACC_reg[3] 
        (.C(Q),
         .CE(\ACC[7]_i_1_n_0 ),
         .D(\ACC[3]_i_1_n_0 ),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(\ACC_reg_n_0_[3] ));
   FDPE \ACC_reg[4] 
        (.C(Q),
         .CE(\ACC[7]_i_1_n_0 ),
         .D(\ACC[4]_i_1_n_0 ),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(\ACC_reg_n_0_[4] ));
   FDPE \ACC_reg[5] 
        (.C(Q),
         .CE(\ACC[7]_i_1_n_0 ),
         .D(\ACC[5]_i_1_n_0 ),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(\ACC_reg_n_0_[5] ));
   FDPE \ACC_reg[6] 
        (.C(Q),
         .CE(\ACC[7]_i_1_n_0 ),
         .D(\ACC[6]_i_1_n_0 ),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(\ACC_reg_n_0_[6] ));
   FDPE \ACC_reg[7] 
        (.C(Q),
         .CE(\ACC[7]_i_1_n_0 ),
         .D(\ACC[7]_i_2_n_0 ),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(\ACC_reg_n_0_[7] ));
-  (* SOFT_HLUTNM = "soft_lutpair147" *) 
+  (* SOFT_HLUTNM = "soft_lutpair148" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \ALU_Op_r[0]_i_1 
@@ -4611,7 +4592,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I2(\IR_reg_n_0_[1] ),
         .I3(\IR_reg_n_0_[2] ),
         .I4(\IR_reg[5]_0 [0]),
-        .I5(mcycle),
+        .I5(\mcycle_reg[0]_rep_n_0 ),
         .O(\ALU_Op_r[0]_i_11_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFAFFFFFFF4000)) 
@@ -4621,7 +4602,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I2(\IR_reg_n_0_[1] ),
         .I3(\IR_reg_n_0_[2] ),
         .I4(\IR_reg[5]_0 [0]),
-        .I5(mcycle),
+        .I5(\mcycle_reg[0]_rep_n_0 ),
         .O(\ALU_Op_r[0]_i_12_n_0 ));
   LUT6 #(
     .INIT(64'h50000000BFFF0000)) 
@@ -4631,7 +4612,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I2(\IR_reg_n_0_[1] ),
         .I3(\IR_reg_n_0_[2] ),
         .I4(\IR_reg[5]_0 [0]),
-        .I5(mcycle),
+        .I5(\mcycle_reg[0]_rep_n_0 ),
         .O(\ALU_Op_r[0]_i_13_n_0 ));
   LUT6 #(
     .INIT(64'h75554555FFFF0000)) 
@@ -4641,7 +4622,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I2(\IR_reg_n_0_[1] ),
         .I3(\IR_reg_n_0_[2] ),
         .I4(\IR_reg[5]_0 [0]),
-        .I5(mcycle),
+        .I5(\mcycle_reg[0]_rep_n_0 ),
         .O(\ALU_Op_r[0]_i_14_n_0 ));
   LUT6 #(
     .INIT(64'hBB88BB8BBB88B888)) 
@@ -4688,7 +4669,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
     \ALU_Op_r[0]_i_8 
        (.I0(\IR_reg_n_0_[1] ),
         .I1(\IR_reg_n_0_[0] ),
-        .I2(mcycle),
+        .I2(\mcycle_reg[0]_rep_n_0 ),
         .I3(\IR_reg[5]_0 [2]),
         .I4(\mcycle_reg[1]_rep_n_0 ),
         .I5(\IR_reg[5]_0 [0]),
@@ -4732,11 +4713,11 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\mcycle_reg[1]_rep_n_0 ),
         .I5(\IR_reg[5]_0 [1]),
         .O(\ALU_Op_r[1]_i_11_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair59" *) 
+  (* SOFT_HLUTNM = "soft_lutpair56" *) 
   LUT5 #(
     .INIT(32'h0B000000)) 
     \ALU_Op_r[1]_i_12 
-       (.I0(mcycle),
+       (.I0(\mcycle_reg[0]_rep_n_0 ),
         .I1(\mcycle_reg[1]_rep_n_0 ),
         .I2(\IR_reg[5]_0 [0]),
         .I3(\IR_reg[5]_0 [1]),
@@ -4791,7 +4772,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\IR_reg_n_0_[7] ),
         .I5(\IR_reg[5]_0 [1]),
         .O(\ALU_Op_r[1]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair77" *) 
+  (* SOFT_HLUTNM = "soft_lutpair53" *) 
   LUT5 #(
     .INIT(32'h8F8FCFC0)) 
     \ALU_Op_r[1]_i_5 
@@ -4839,9 +4820,9 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I2(\IR_reg_n_0_[1] ),
         .I3(\IR_reg_n_0_[2] ),
         .I4(\IR_reg[5]_0 [1]),
-        .I5(mcycle),
+        .I5(\mcycle_reg[0]_rep_n_0 ),
         .O(\ALU_Op_r[1]_i_9_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair147" *) 
+  (* SOFT_HLUTNM = "soft_lutpair148" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \ALU_Op_r[2]_i_1 
@@ -4871,7 +4852,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
     .INIT(64'hAAEFAAAA00000000)) 
     \ALU_Op_r[2]_i_12 
        (.I0(\IR_reg_n_0_[1] ),
-        .I1(mcycle),
+        .I1(\mcycle_reg[0]_rep_n_0 ),
         .I2(\mcycle_reg[1]_rep_n_0 ),
         .I3(\IR_reg[5]_0 [0]),
         .I4(\IR_reg[5]_0 [1]),
@@ -4964,7 +4945,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I2(\IR_reg_n_0_[2] ),
         .I3(\IR_reg_n_0_[6] ),
         .O(\ALU_Op_r[3]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair139" *) 
+  (* SOFT_HLUTNM = "soft_lutpair134" *) 
   LUT3 #(
     .INIT(8'h1F)) 
     \ALU_Op_r[3]_i_5 
@@ -4975,7 +4956,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   FDCE \ALU_Op_r_reg[0] 
        (.C(Q),
         .CE(1'b1),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\ALU_Op_r[0]_i_1_n_0 ),
         .Q(ALU_Op_r[0]));
   MUXF7 \ALU_Op_r_reg[0]_i_2 
@@ -4991,13 +4972,13 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   FDCE \ALU_Op_r_reg[1] 
        (.C(Q),
         .CE(1'b1),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\ALU_Op_r[1]_i_1_n_0 ),
         .Q(ALU_Op_r[1]));
   FDCE \ALU_Op_r_reg[2] 
        (.C(Q),
         .CE(1'b1),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\ALU_Op_r[2]_i_1_n_0 ),
         .Q(ALU_Op_r[2]));
   MUXF7 \ALU_Op_r_reg[2]_i_2 
@@ -5018,10 +4999,10 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   FDCE \ALU_Op_r_reg[3] 
        (.C(Q),
         .CE(1'b1),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\ALU_Op_r[3]_i_1_n_0 ),
         .Q(ALU_Op_r[3]));
-  (* SOFT_HLUTNM = "soft_lutpair112" *) 
+  (* SOFT_HLUTNM = "soft_lutpair111" *) 
   LUT3 #(
     .INIT(8'h06)) 
     \A[0]_i_5 
@@ -5029,7 +5010,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I1(data0[0]),
         .I2(\A[15]_i_8_n_0 ),
         .O(\A[0]_i_5_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair144" *) 
+  (* SOFT_HLUTNM = "soft_lutpair140" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \A[10]_i_5 
@@ -5037,6 +5018,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I1(Inc_WZ),
         .I2(\F_reg[7]_0 [2]),
         .O(\A[10]_i_5_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair111" *) 
   LUT4 #(
     .INIT(16'h00E2)) 
     \A[11]_i_4 
@@ -5045,7 +5027,6 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I2(A0[11]),
         .I3(\A[15]_i_8_n_0 ),
         .O(\A[11]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair112" *) 
   LUT4 #(
     .INIT(16'h00E2)) 
     \A[12]_i_4 
@@ -5072,7 +5053,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(mcycles[0]),
         .I5(\mcycle_reg_n_0_[3] ),
         .O(\A[14]_i_10_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair52" *) 
+  (* SOFT_HLUTNM = "soft_lutpair76" *) 
   LUT5 #(
     .INIT(32'hFFEA002A)) 
     \A[14]_i_11 
@@ -5082,7 +5063,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I3(mcycles[2]),
         .I4(\mcycle_reg_n_0_[2] ),
         .O(\A[14]_i_11_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair132" *) 
+  (* SOFT_HLUTNM = "soft_lutpair142" *) 
   LUT3 #(
     .INIT(8'h8F)) 
     \A[14]_i_3 
@@ -5107,7 +5088,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I3(mcycles[1]),
         .I4(\A[14]_i_11_n_0 ),
         .O(\A[14]_i_7_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair70" *) 
+  (* SOFT_HLUTNM = "soft_lutpair75" *) 
   LUT2 #(
     .INIT(4'h1)) 
     \A[14]_i_9 
@@ -5133,14 +5114,14 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(tstates[0]),
         .I5(\tstate_reg_n_0_[0] ),
         .O(\A[15]_i_10_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair138" *) 
+  (* SOFT_HLUTNM = "soft_lutpair128" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \A[15]_i_11 
        (.I0(tstates[1]),
         .I1(tstates[2]),
         .O(\A[15]_i_11_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair138" *) 
+  (* SOFT_HLUTNM = "soft_lutpair128" *) 
   LUT3 #(
     .INIT(8'h8A)) 
     \A[15]_i_12 
@@ -5328,7 +5309,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\A[15]_i_56_n_0 ),
         .I5(\mcycle_reg_n_0_[6] ),
         .O(\A[15]_i_35_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair137" *) 
+  (* SOFT_HLUTNM = "soft_lutpair123" *) 
   LUT3 #(
     .INIT(8'h04)) 
     \A[15]_i_37 
@@ -5336,7 +5317,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I1(\mcycle_reg_n_0_[2] ),
         .I2(\mcycle_reg[1]_rep_n_0 ),
         .O(\A[15]_i_37_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair65" *) 
+  (* SOFT_HLUTNM = "soft_lutpair61" *) 
   LUT5 #(
     .INIT(32'h00001000)) 
     \A[15]_i_38 
@@ -5346,7 +5327,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I3(\mcycle_reg_n_0_[3] ),
         .I4(\mcycle_reg[1]_rep_n_0 ),
         .O(\A[15]_i_38_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair93" *) 
+  (* SOFT_HLUTNM = "soft_lutpair91" *) 
   LUT3 #(
     .INIT(8'h0E)) 
     \A[15]_i_39 
@@ -5411,7 +5392,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I1(\IR_reg_n_0_[2] ),
         .I2(\A[15]_i_63_n_0 ),
         .I3(\IR_reg_n_0_[7] ),
-        .I4(mcycle),
+        .I4(\mcycle_reg[0]_rep_n_0 ),
         .I5(\mcycle_reg_n_0_[6] ),
         .O(\A[15]_i_45_n_0 ));
   LUT6 #(
@@ -5469,7 +5450,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
        (.I0(\A[15]_i_63_n_0 ),
         .I1(\IR_reg_n_0_[2] ),
         .I2(\IR_reg[0]_rep_n_0 ),
-        .I3(mcycle),
+        .I3(\mcycle_reg[0]_rep_n_0 ),
         .I4(\IR_reg_n_0_[1] ),
         .I5(\A[15]_i_71_n_0 ),
         .O(\A[15]_i_51_n_0 ));
@@ -5500,7 +5481,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I1(\IR_reg_n_0_[2] ),
         .I2(\A[15]_i_75_n_0 ),
         .I3(\IR_reg_n_0_[7] ),
-        .I4(mcycle),
+        .I4(\mcycle_reg[0]_rep_n_0 ),
         .I5(\mcycle_reg_n_0_[6] ),
         .O(\A[15]_i_54_n_0 ));
   LUT6 #(
@@ -5528,7 +5509,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
     \A[15]_i_57 
        (.I0(\TmpAddr[15]_i_12_n_0 ),
         .I1(\IR_reg[0]_rep__0_n_0 ),
-        .I2(mcycle),
+        .I2(\mcycle_reg[0]_rep_n_0 ),
         .I3(\mcycle_reg_n_0_[2] ),
         .I4(\mcycle_reg[1]_rep_n_0 ),
         .O(\A[15]_i_57_n_0 ));
@@ -5542,13 +5523,13 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(i_reg_n_23),
         .I5(\mcycle_reg[1]_rep_n_0 ),
         .O(\A[15]_i_58_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair101" *) 
+  (* SOFT_HLUTNM = "soft_lutpair98" *) 
   LUT4 #(
     .INIT(16'hEFFF)) 
     \A[15]_i_59 
        (.I0(\IR_reg[0]_rep__0_n_0 ),
         .I1(\IR_reg[5]_0 [2]),
-        .I2(mcycle),
+        .I2(\mcycle_reg[0]_rep_n_0 ),
         .I3(\IR_reg_n_0_[1] ),
         .O(\A[15]_i_59_n_0 ));
   LUT6 #(
@@ -5577,7 +5558,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
        (.I0(\IR_reg_n_0_[1] ),
         .I1(\IR_reg[5]_0 [0]),
         .I2(\mcycle_reg_n_0_[1] ),
-        .I3(mcycle),
+        .I3(\mcycle_reg[0]_rep_n_0 ),
         .I4(\IR_reg[0]_rep_n_0 ),
         .I5(\A_reg[15]_i_82_n_0 ),
         .O(\A[15]_i_62_n_0 ));
@@ -5589,7 +5570,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I2(\IR_reg[5]_0 [0]),
         .I3(\IR_reg[5]_0 [1]),
         .I4(\mcycle_reg_n_0_[1] ),
-        .I5(mcycle),
+        .I5(\mcycle_reg[0]_rep_n_0 ),
         .O(\A[15]_i_63_n_0 ));
   LUT6 #(
     .INIT(64'h00000000EF00FFFF)) 
@@ -5611,7 +5592,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\mcycle_reg_n_0_[3] ),
         .I5(\mcycle_reg[0]_rep_n_0 ),
         .O(\A[15]_i_65_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair64" *) 
+  (* SOFT_HLUTNM = "soft_lutpair51" *) 
   LUT5 #(
     .INIT(32'h0000AFBF)) 
     \A[15]_i_66 
@@ -5649,9 +5630,9 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I2(\mcycle_reg_n_0_[1] ),
         .I3(\mcycles_reg[1]_i_11_n_0 ),
         .I4(\mcycle_reg_n_0_[2] ),
-        .I5(mcycle),
+        .I5(\mcycle_reg[0]_rep_n_0 ),
         .O(\A[15]_i_69_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair143" *) 
+  (* SOFT_HLUTNM = "soft_lutpair140" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \A[15]_i_7 
@@ -5664,7 +5645,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
     \A[15]_i_70 
        (.I0(\A[15]_i_84_n_0 ),
         .I1(\IR_reg_n_0_[1] ),
-        .I2(mcycle),
+        .I2(\mcycle_reg[0]_rep_n_0 ),
         .I3(i_reg_n_27),
         .I4(\IR_reg[5]_0 [2]),
         .I5(\IR_reg[0]_rep_n_0 ),
@@ -5673,7 +5654,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
     .INIT(64'h1F103F3F1F103030)) 
     \A[15]_i_71 
        (.I0(\IR_reg[5]_0 [0]),
-        .I1(mcycle),
+        .I1(\mcycle_reg[0]_rep_n_0 ),
         .I2(\IR_reg[0]_rep_n_0 ),
         .I3(\A[15]_i_85_n_0 ),
         .I4(\mcycle_reg_n_0_[1] ),
@@ -5696,7 +5677,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I1(\IR_reg_n_0_[1] ),
         .I2(\Read_To_Reg_r[3]_i_13_n_0 ),
         .I3(\IR_reg[0]_rep_n_0 ),
-        .I4(mcycle),
+        .I4(\mcycle_reg[0]_rep_n_0 ),
         .O(\A[15]_i_73_n_0 ));
   LUT6 #(
     .INIT(64'hFFEAFF55FFEAAA00)) 
@@ -5704,7 +5685,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
        (.I0(\IR_reg_n_0_[1] ),
         .I1(\IR_reg[5]_0 [0]),
         .I2(\mcycle_reg_n_0_[1] ),
-        .I3(mcycle),
+        .I3(\mcycle_reg[0]_rep_n_0 ),
         .I4(\IR_reg[0]_rep_n_0 ),
         .I5(\A[15]_i_88_n_0 ),
         .O(\A[15]_i_74_n_0 ));
@@ -5716,7 +5697,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I2(\IR_reg[5]_0 [1]),
         .I3(\IR_reg[5]_0 [0]),
         .I4(\mcycle_reg_n_0_[1] ),
-        .I5(mcycle),
+        .I5(\mcycle_reg[0]_rep_n_0 ),
         .O(\A[15]_i_75_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFFFFF10FF0000)) 
@@ -5738,7 +5719,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\mcycle_reg_n_0_[3] ),
         .I5(\mcycle_reg[0]_rep_n_0 ),
         .O(\A[15]_i_77_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair64" *) 
+  (* SOFT_HLUTNM = "soft_lutpair51" *) 
   LUT5 #(
     .INIT(32'hFFFF5040)) 
     \A[15]_i_78 
@@ -5748,7 +5729,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I3(\mcycle_reg_n_0_[3] ),
         .I4(\mcycle_reg[0]_rep_n_0 ),
         .O(\A[15]_i_78_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair120" *) 
+  (* SOFT_HLUTNM = "soft_lutpair110" *) 
   LUT2 #(
     .INIT(4'h1)) 
     \A[15]_i_79 
@@ -5762,7 +5743,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I1(Set_Addr_To[0]),
         .I2(Set_Addr_To[2]),
         .O(\A[15]_i_8_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair130" *) 
+  (* SOFT_HLUTNM = "soft_lutpair104" *) 
   LUT3 #(
     .INIT(8'hFD)) 
     \A[15]_i_80 
@@ -5788,7 +5769,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I2(\IR_reg[5]_0 [2]),
         .I3(\mcycle_reg_n_0_[2] ),
         .I4(\IR_reg[5]_0 [0]),
-        .I5(mcycle),
+        .I5(\mcycle_reg[0]_rep_n_0 ),
         .O(\A[15]_i_83_n_0 ));
   LUT6 #(
     .INIT(64'h00000000FFFBFFFF)) 
@@ -5798,13 +5779,13 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I2(\IR_reg[5]_0 [1]),
         .I3(\IR_reg[5]_0 [0]),
         .I4(\mcycle_reg_n_0_[2] ),
-        .I5(mcycle),
+        .I5(\mcycle_reg[0]_rep_n_0 ),
         .O(\A[15]_i_84_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair62" *) 
+  (* SOFT_HLUTNM = "soft_lutpair58" *) 
   LUT5 #(
     .INIT(32'h55765575)) 
     \A[15]_i_85 
-       (.I0(mcycle),
+       (.I0(\mcycle_reg[0]_rep_n_0 ),
         .I1(\IR_reg[5]_0 [2]),
         .I2(\IR_reg[5]_0 [1]),
         .I3(\IR_reg[5]_0 [0]),
@@ -5818,7 +5799,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I2(\IR_reg[5]_0 [1]),
         .I3(\IR_reg[5]_0 [0]),
         .I4(NMICycle_reg_n_0),
-        .I5(mcycle),
+        .I5(\mcycle_reg[0]_rep_n_0 ),
         .O(\A[15]_i_86_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFFFFF45004400)) 
@@ -5828,7 +5809,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I2(\mcycle_reg_n_0_[3] ),
         .I3(i_reg_n_26),
         .I4(\mcycle_reg_n_0_[4] ),
-        .I5(mcycle),
+        .I5(\mcycle_reg[0]_rep_n_0 ),
         .O(\A[15]_i_87_n_0 ));
   LUT5 #(
     .INIT(32'hFFFFB888)) 
@@ -5837,7 +5818,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I1(\mcycle_reg_n_0_[1] ),
         .I2(\mcycles[1]_i_10_n_0 ),
         .I3(\mcycle_reg_n_0_[2] ),
-        .I4(mcycle),
+        .I4(\mcycle_reg[0]_rep_n_0 ),
         .O(\A[15]_i_88_n_0 ));
   LUT6 #(
     .INIT(64'h000000001101FFFF)) 
@@ -5847,9 +5828,9 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I2(NMICycle_reg_n_0),
         .I3(\IR_reg[5]_0 [0]),
         .I4(\mcycle_reg_n_0_[2] ),
-        .I5(mcycle),
+        .I5(\mcycle_reg[0]_rep_n_0 ),
         .O(\A[15]_i_89_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair98" *) 
+  (* SOFT_HLUTNM = "soft_lutpair96" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \A[15]_i_9 
@@ -5863,7 +5844,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I1(\IR_reg[5]_0 [0]),
         .I2(\IR_reg[5]_0 [1]),
         .I3(\IR_reg[5]_0 [2]),
-        .I4(mcycle),
+        .I4(\mcycle_reg[0]_rep_n_0 ),
         .O(\A[15]_i_90_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair145" *) 
   LUT3 #(
@@ -5914,7 +5895,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I1(Inc_WZ),
         .I2(data0[6]),
         .O(\A[6]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair128" *) 
+  (* SOFT_HLUTNM = "soft_lutpair131" *) 
   LUT3 #(
     .INIT(8'h02)) 
     \A[7]_i_3 
@@ -5931,7 +5912,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I3(Inc_WZ),
         .I4(data0[7]),
         .O(\A[7]_i_6_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair143" *) 
+  (* SOFT_HLUTNM = "soft_lutpair144" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \A[8]_i_5 
@@ -5950,25 +5931,25 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   FDCE \A_reg[0] 
        (.C(Q),
         .CE(\A[15]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(i_reg_n_98),
         .Q(\A_reg[15]_0 [0]));
   FDCE \A_reg[10] 
        (.C(Q),
         .CE(\A[15]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(i_reg_n_88),
         .Q(\A_reg[15]_0 [10]));
   FDCE \A_reg[11] 
        (.C(Q),
         .CE(\A[15]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(i_reg_n_87),
         .Q(\A_reg[15]_0 [11]));
   FDCE \A_reg[12] 
        (.C(Q),
         .CE(\A[15]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(i_reg_n_86),
         .Q(\A_reg[15]_0 [12]));
   CARRY4 \A_reg[12]_i_7 
@@ -5981,19 +5962,19 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   FDCE \A_reg[13] 
        (.C(Q),
         .CE(\A[15]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(i_reg_n_85),
         .Q(\A_reg[15]_0 [13]));
   FDCE \A_reg[14] 
        (.C(Q),
         .CE(\A[15]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(i_reg_n_84),
         .Q(\A_reg[15]_0 [14]));
   FDCE \A_reg[15] 
        (.C(Q),
         .CE(\A[15]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(i_reg_n_83),
         .Q(\A_reg[15]_0 [15]));
   MUXF7 \A_reg[15]_i_14 
@@ -6031,25 +6012,25 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   FDCE \A_reg[1] 
        (.C(Q),
         .CE(\A[15]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(i_reg_n_97),
         .Q(\A_reg[15]_0 [1]));
   FDCE \A_reg[2] 
        (.C(Q),
         .CE(\A[15]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(i_reg_n_96),
         .Q(\A_reg[15]_0 [2]));
   FDCE \A_reg[3] 
        (.C(Q),
         .CE(\A[15]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(i_reg_n_95),
         .Q(\A_reg[15]_0 [3]));
   FDCE \A_reg[4] 
        (.C(Q),
         .CE(\A[15]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(i_reg_n_94),
         .Q(\A_reg[15]_0 [4]));
   CARRY4 \A_reg[4]_i_7 
@@ -6062,25 +6043,25 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   FDCE \A_reg[5] 
        (.C(Q),
         .CE(\A[15]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(i_reg_n_93),
         .Q(\A_reg[15]_0 [5]));
   FDCE \A_reg[6] 
        (.C(Q),
         .CE(\A[15]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(i_reg_n_92),
         .Q(\A_reg[15]_0 [6]));
   FDCE \A_reg[7] 
        (.C(Q),
         .CE(\A[15]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(i_reg_n_91),
         .Q(\A_reg[15]_0 [7]));
   FDCE \A_reg[8] 
        (.C(Q),
         .CE(\A[15]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(i_reg_n_90),
         .Q(\A_reg[15]_0 [8]));
   CARRY4 \A_reg[8]_i_7 
@@ -6093,7 +6074,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   FDCE \A_reg[9] 
        (.C(Q),
         .CE(\A[15]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(i_reg_n_89),
         .Q(\A_reg[15]_0 [9]));
   LUT6 #(
@@ -6119,7 +6100,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   FDCE Alternate_reg
        (.C(Q),
         .CE(1'b1),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(Alternate_i_1_n_0),
         .Q(Alternate_reg_n_0));
   LUT5 #(
@@ -6154,49 +6135,49 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
        (.C(Q),
         .CE(Ap),
         .D(\ACC_reg_n_0_[0] ),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(\Ap_reg_n_0_[0] ));
   FDPE \Ap_reg[1] 
        (.C(Q),
         .CE(Ap),
         .D(\ACC_reg_n_0_[1] ),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(\Ap_reg_n_0_[1] ));
   FDPE \Ap_reg[2] 
        (.C(Q),
         .CE(Ap),
         .D(\ACC_reg_n_0_[2] ),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(\Ap_reg_n_0_[2] ));
   FDPE \Ap_reg[3] 
        (.C(Q),
         .CE(Ap),
         .D(\ACC_reg_n_0_[3] ),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(\Ap_reg_n_0_[3] ));
   FDPE \Ap_reg[4] 
        (.C(Q),
         .CE(Ap),
         .D(\ACC_reg_n_0_[4] ),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(\Ap_reg_n_0_[4] ));
   FDPE \Ap_reg[5] 
        (.C(Q),
         .CE(Ap),
         .D(\ACC_reg_n_0_[5] ),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(\Ap_reg_n_0_[5] ));
   FDPE \Ap_reg[6] 
        (.C(Q),
         .CE(Ap),
         .D(\ACC_reg_n_0_[6] ),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(\Ap_reg_n_0_[6] ));
   FDPE \Ap_reg[7] 
        (.C(Q),
         .CE(Ap),
         .D(\ACC_reg_n_0_[7] ),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(\Ap_reg_n_0_[7] ));
   LUT5 #(
     .INIT(32'h00000010)) 
@@ -6220,15 +6201,15 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   FDCE Arith16_r_reg
        (.C(Q),
         .CE(1'b1),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(Arith16),
         .Q(Arith16_r));
-  (* SOFT_HLUTNM = "soft_lutpair84" *) 
+  (* SOFT_HLUTNM = "soft_lutpair82" *) 
   LUT5 #(
     .INIT(32'h000088F8)) 
     Auto_Wait_t1_i_1
        (.I0(NMICycle_reg_n_0),
-        .I1(mcycle),
+        .I1(\mcycle_reg[0]_rep_n_0 ),
         .I2(iorq),
         .I3(Auto_Wait_t2),
         .I4(\A[15]_i_3_n_0 ),
@@ -6236,7 +6217,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   FDCE Auto_Wait_t1_reg
        (.C(Q),
         .CE(1'b1),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(Auto_Wait_t1),
         .Q(Auto_Wait_t1_reg_n_0));
   LUT2 #(
@@ -6248,7 +6229,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   FDCE Auto_Wait_t2_reg
        (.C(Q),
         .CE(1'b1),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(Auto_Wait_t20),
         .Q(Auto_Wait_t2));
   LUT3 #(
@@ -6268,7 +6249,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\IR_reg_n_0_[7] ),
         .I5(\ISet_reg_n_0_[1] ),
         .O(I_BTR));
-  (* SOFT_HLUTNM = "soft_lutpair103" *) 
+  (* SOFT_HLUTNM = "soft_lutpair88" *) 
   LUT4 #(
     .INIT(16'h0008)) 
     BTR_r_i_3
@@ -6280,10 +6261,10 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   FDCE BTR_r_reg
        (.C(Q),
         .CE(\A[15]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(BTR_r_i_1_n_0),
         .Q(BTR_r_reg_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair129" *) 
+  (* SOFT_HLUTNM = "soft_lutpair132" *) 
   LUT3 #(
     .INIT(8'h0D)) 
     \BusA[7]_i_2 
@@ -6291,7 +6272,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I1(Set_BusA_To[1]),
         .I2(Set_BusA_To[2]),
         .O(\BusA[7]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair129" *) 
+  (* SOFT_HLUTNM = "soft_lutpair132" *) 
   LUT2 #(
     .INIT(4'h1)) 
     \BusA[7]_i_3 
@@ -6627,7 +6608,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I1(\BusB[7]_i_29_n_0 ),
         .I2(\IR_reg_n_0_[1] ),
         .I3(\IR_reg[5]_0 [0]),
-        .I4(mcycle),
+        .I4(\mcycle_reg[0]_rep_n_0 ),
         .I5(\IR_reg[0]_rep_n_0 ),
         .O(\BusB[7]_i_18_n_0 ));
   LUT6 #(
@@ -6644,17 +6625,17 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
     .INIT(64'h2F2F20202F202020)) 
     \BusB[7]_i_21 
        (.I0(Halt_FF_i_4_n_0),
-        .I1(mcycle),
+        .I1(\mcycle_reg[0]_rep_n_0 ),
         .I2(\mcycle_reg[1]_rep_n_0 ),
         .I3(\mcycle_reg_n_0_[2] ),
         .I4(\TmpAddr[15]_i_12_n_0 ),
         .I5(\mcycle_reg_n_0_[3] ),
         .O(\BusB[7]_i_21_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair105" *) 
+  (* SOFT_HLUTNM = "soft_lutpair147" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \BusB[7]_i_22 
-       (.I0(mcycle),
+       (.I0(\mcycle_reg[0]_rep_n_0 ),
         .I1(\mcycle_reg[1]_rep_n_0 ),
         .O(\BusB[7]_i_22_n_0 ));
   LUT6 #(
@@ -6670,7 +6651,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   LUT5 #(
     .INIT(32'hB833B800)) 
     \BusB[7]_i_24 
-       (.I0(mcycle),
+       (.I0(\mcycle_reg[0]_rep_n_0 ),
         .I1(\IR_reg_n_0_[1] ),
         .I2(\BusB[7]_i_33_n_0 ),
         .I3(\IR_reg[0]_rep_n_0 ),
@@ -6680,17 +6661,17 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
     .INIT(64'h00000A2000000000)) 
     \BusB[7]_i_25 
        (.I0(\mcycle_reg[1]_rep_n_0 ),
-        .I1(mcycle),
+        .I1(\mcycle_reg[0]_rep_n_0 ),
         .I2(\IR_reg[5]_0 [2]),
         .I3(\IR_reg[5]_0 [1]),
         .I4(\IR_reg[5]_0 [0]),
         .I5(\IR_reg[0]_rep_n_0 ),
         .O(\BusB[7]_i_25_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair58" *) 
+  (* SOFT_HLUTNM = "soft_lutpair54" *) 
   LUT5 #(
     .INIT(32'hFBFF0000)) 
     \BusB[7]_i_26 
-       (.I0(mcycle),
+       (.I0(\mcycle_reg[0]_rep_n_0 ),
         .I1(\IR_reg[5]_0 [1]),
         .I2(\IR_reg[5]_0 [0]),
         .I3(\IR_reg[5]_0 [2]),
@@ -6709,7 +6690,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   LUT6 #(
     .INIT(64'h0000000002023202)) 
     \BusB[7]_i_28 
-       (.I0(mcycle),
+       (.I0(\mcycle_reg[0]_rep_n_0 ),
         .I1(\IR_reg[5]_0 [0]),
         .I2(\IR_reg[5]_0 [2]),
         .I3(\mcycle_reg_n_0_[2] ),
@@ -6743,7 +6724,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I2(\IR_reg[5]_0 [1]),
         .I3(\IR_reg[5]_0 [0]),
         .I4(NMICycle_reg_n_0),
-        .I5(mcycle),
+        .I5(\mcycle_reg[0]_rep_n_0 ),
         .O(\BusB[7]_i_30_n_0 ));
   LUT5 #(
     .INIT(32'hC0008000)) 
@@ -6754,7 +6735,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I3(\IR_reg[5]_0 [1]),
         .I4(\mcycle_reg_n_0_[2] ),
         .O(\BusB[7]_i_31_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair65" *) 
+  (* SOFT_HLUTNM = "soft_lutpair53" *) 
   LUT2 #(
     .INIT(4'h7)) 
     \BusB[7]_i_32 
@@ -6769,8 +6750,9 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I2(\IR_reg[5]_0 [2]),
         .I3(\IR_reg[5]_0 [1]),
         .I4(\IR_reg[5]_0 [0]),
-        .I5(mcycle),
+        .I5(\mcycle_reg[0]_rep_n_0 ),
         .O(\BusB[7]_i_33_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair123" *) 
   LUT3 #(
     .INIT(8'h08)) 
     \BusB[7]_i_34 
@@ -6778,7 +6760,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I1(i_reg_n_23),
         .I2(\mcycle_reg[1]_rep_n_0 ),
         .O(\BusB[7]_i_34_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair140" *) 
+  (* SOFT_HLUTNM = "soft_lutpair133" *) 
   LUT3 #(
     .INIT(8'h70)) 
     \BusB[7]_i_35 
@@ -6786,7 +6768,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I1(\IR_reg[5]_0 [2]),
         .I2(\IR_reg[5]_0 [0]),
         .O(\BusB[7]_i_35_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair49" *) 
+  (* SOFT_HLUTNM = "soft_lutpair57" *) 
   LUT5 #(
     .INIT(32'h00020000)) 
     \BusB[7]_i_36 
@@ -6794,7 +6776,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I1(\IR_reg[5]_0 [1]),
         .I2(\IR_reg[5]_0 [0]),
         .I3(\IR_reg[5]_0 [2]),
-        .I4(mcycle),
+        .I4(\mcycle_reg[0]_rep_n_0 ),
         .O(\BusB[7]_i_36_n_0 ));
   LUT6 #(
     .INIT(64'h0000000003332000)) 
@@ -6815,7 +6797,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I3(Set_BusB_To[2]),
         .I4(\ACC_reg_n_0_[7] ),
         .O(\BusB[7]_i_5_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair60" *) 
+  (* SOFT_HLUTNM = "soft_lutpair64" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \BusB[7]_i_6 
@@ -6953,7 +6935,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\F_reg_n_0_[1] ),
         .I5(\F[0]_i_9_n_0 ),
         .O(\i_alu/p_3_in ));
-  (* SOFT_HLUTNM = "soft_lutpair120" *) 
+  (* SOFT_HLUTNM = "soft_lutpair125" *) 
   LUT3 #(
     .INIT(8'hD8)) 
     \F[0]_i_8 
@@ -6999,7 +6981,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I2(\F[5]_i_4_n_0 ),
         .I3(\F[5]_i_6_n_0 ),
         .O(\F[1]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair111" *) 
+  (* SOFT_HLUTNM = "soft_lutpair119" *) 
   LUT4 #(
     .INIT(16'h00E2)) 
     \F[1]_i_4 
@@ -7008,7 +6990,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I2(Fp[1]),
         .I3(\ACC[7]_i_4_n_0 ),
         .O(\F[1]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair87" *) 
+  (* SOFT_HLUTNM = "soft_lutpair85" *) 
   LUT5 #(
     .INIT(32'hBB0B0080)) 
     \F[1]_i_5 
@@ -7046,7 +7028,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\F[2]_i_17_n_0 ),
         .I5(\i_alu/F_Out5_out [2]),
         .O(\F[2]_i_11_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair74" *) 
+  (* SOFT_HLUTNM = "soft_lutpair63" *) 
   LUT4 #(
     .INIT(16'h6996)) 
     \F[2]_i_12 
@@ -7095,7 +7077,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\RegAddrB_r[2]_i_7_0 ),
         .I5(\BusB_reg_n_0_[2] ),
         .O(\F[2]_i_16_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair81" *) 
+  (* SOFT_HLUTNM = "soft_lutpair78" *) 
   LUT3 #(
     .INIT(8'hAE)) 
     \F[2]_i_17 
@@ -7112,7 +7094,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I3(\ISet_reg_n_0_[1] ),
         .I4(\F_reg_n_0_[2] ),
         .O(\i_alu/F_Out5_out [2]));
-  (* SOFT_HLUTNM = "soft_lutpair89" *) 
+  (* SOFT_HLUTNM = "soft_lutpair93" *) 
   LUT4 #(
     .INIT(16'h6996)) 
     \F[2]_i_19 
@@ -7121,7 +7103,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I2(\i_alu/Q_t [0]),
         .I3(\i_alu/Q_t [1]),
         .O(\F[2]_i_19_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair125" *) 
+  (* SOFT_HLUTNM = "soft_lutpair129" *) 
   LUT3 #(
     .INIT(8'hBA)) 
     \F[2]_i_2 
@@ -7165,7 +7147,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\BusB_reg_n_0_[6] ),
         .I5(\F[2]_i_31_n_0 ),
         .O(\F[2]_i_23_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair79" *) 
+  (* SOFT_HLUTNM = "soft_lutpair84" *) 
   LUT5 #(
     .INIT(32'h00230020)) 
     \F[2]_i_24 
@@ -7175,7 +7157,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I3(\IR_reg[5]_0 [1]),
         .I4(\BusB_reg_n_0_[0] ),
         .O(\F[2]_i_24_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair139" *) 
+  (* SOFT_HLUTNM = "soft_lutpair124" *) 
   LUT3 #(
     .INIT(8'h08)) 
     \F[2]_i_25 
@@ -7243,7 +7225,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\i_alu/DAA_Q__1 [1]),
         .I5(i_reg_n_58),
         .O(\F[2]_i_30_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair83" *) 
+  (* SOFT_HLUTNM = "soft_lutpair80" *) 
   LUT5 #(
     .INIT(32'h00B00080)) 
     \F[2]_i_31 
@@ -7253,14 +7235,14 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I3(\IR_reg[5]_0 [1]),
         .I4(\BusB_reg_n_0_[4] ),
         .O(\F[2]_i_31_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair125" *) 
+  (* SOFT_HLUTNM = "soft_lutpair129" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \F[2]_i_4 
        (.I0(\F[6]_i_2_n_0 ),
         .I1(i_reg_n_75),
         .O(\F[2]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair96" *) 
+  (* SOFT_HLUTNM = "soft_lutpair94" *) 
   LUT4 #(
     .INIT(16'h00F7)) 
     \F[2]_i_5 
@@ -7276,7 +7258,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I1(\ACC[7]_i_4_n_0 ),
         .I2(Fp[2]),
         .O(\F[2]_i_7_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair76" *) 
+  (* SOFT_HLUTNM = "soft_lutpair74" *) 
   LUT5 #(
     .INIT(32'h96696996)) 
     \F[2]_i_8 
@@ -7286,7 +7268,6 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I3(\F_reg[7]_0 [6]),
         .I4(\F[2]_i_12_n_0 ),
         .O(\F[2]_i_8_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair51" *) 
   LUT5 #(
     .INIT(32'h00100000)) 
     \F[2]_i_9 
@@ -7335,7 +7316,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\F_reg[3]_i_6_n_0 ),
         .I5(\F[5]_i_4_n_0 ),
         .O(\F[3]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair87" *) 
+  (* SOFT_HLUTNM = "soft_lutpair85" *) 
   LUT3 #(
     .INIT(8'h80)) 
     \F[3]_i_5 
@@ -7383,7 +7364,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\F[6]_i_2_n_0 ),
         .I5(i_reg_n_72),
         .O(\F[4]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair113" *) 
+  (* SOFT_HLUTNM = "soft_lutpair112" *) 
   LUT3 #(
     .INIT(8'h02)) 
     \F[4]_i_3 
@@ -7419,7 +7400,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(ALU_Op_r[2]),
         .I5(\i_alu/p_0_in ),
         .O(\F[4]_i_6_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair81" *) 
+  (* SOFT_HLUTNM = "soft_lutpair78" *) 
   LUT5 #(
     .INIT(32'hCACF0AC0)) 
     \F[4]_i_7 
@@ -7478,7 +7459,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\IR_reg[0]_rep__0_n_0 ),
         .I5(\IR_reg_n_0_[2] ),
         .O(\F[5]_i_12_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair46" *) 
+  (* SOFT_HLUTNM = "soft_lutpair45" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \F[5]_i_13 
@@ -7486,7 +7467,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I1(\IR_reg[5]_0 [0]),
         .I2(\IR_reg[5]_0 [2]),
         .O(\F[5]_i_13_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair55" *) 
+  (* SOFT_HLUTNM = "soft_lutpair59" *) 
   LUT5 #(
     .INIT(32'h20000000)) 
     \F[5]_i_15 
@@ -7525,7 +7506,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I3(\F[5]_i_6_n_0 ),
         .I4(\F[5]_i_7_n_0 ),
         .O(\F[5]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair108" *) 
+  (* SOFT_HLUTNM = "soft_lutpair114" *) 
   LUT4 #(
     .INIT(16'hAABA)) 
     \F[5]_i_3 
@@ -7554,7 +7535,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\ISet_reg_n_0_[1] ),
         .I5(\F[5]_i_6_n_0 ),
         .O(\F[5]_i_5_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair96" *) 
+  (* SOFT_HLUTNM = "soft_lutpair94" *) 
   LUT4 #(
     .INIT(16'h0800)) 
     \F[5]_i_6 
@@ -7602,6 +7583,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I3(\F[7]_i_5_n_0 ),
         .I4(\F_reg_n_0_[6] ),
         .O(\F[6]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair72" *) 
   LUT5 #(
     .INIT(32'h08000000)) 
     \F[6]_i_2 
@@ -7621,7 +7603,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\A[15]_i_3_n_0 ),
         .I5(\F[6]_i_6_n_0 ),
         .O(\F[6]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair113" *) 
+  (* SOFT_HLUTNM = "soft_lutpair112" *) 
   LUT4 #(
     .INIT(16'h74FF)) 
     \F[6]_i_4 
@@ -7630,7 +7612,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I2(Fp[6]),
         .I3(\F[5]_i_4_n_0 ),
         .O(\F[6]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair94" *) 
+  (* SOFT_HLUTNM = "soft_lutpair87" *) 
   LUT3 #(
     .INIT(8'h80)) 
     \F[6]_i_5 
@@ -7638,7 +7620,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I1(\F[7]_i_7_n_0 ),
         .I2(\ISet_reg_n_0_[1] ),
         .O(I_INRC));
-  (* SOFT_HLUTNM = "soft_lutpair74" *) 
+  (* SOFT_HLUTNM = "soft_lutpair63" *) 
   LUT5 #(
     .INIT(32'h00000001)) 
     \F[6]_i_6 
@@ -7657,7 +7639,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I3(\I_reg_n_0_[2] ),
         .I4(\F[6]_i_9_n_0 ),
         .O(\F[6]_i_7_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair76" *) 
+  (* SOFT_HLUTNM = "soft_lutpair74" *) 
   LUT4 #(
     .INIT(16'hFFFE)) 
     \F[6]_i_8 
@@ -7713,7 +7695,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(ALU_Op_r[1]),
         .I5(\F_reg_n_0_[7] ),
         .O(\F[7]_i_13_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair100" *) 
+  (* SOFT_HLUTNM = "soft_lutpair102" *) 
   LUT4 #(
     .INIT(16'h8000)) 
     \F[7]_i_14 
@@ -7732,7 +7714,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\IR_reg_n_0_[6] ),
         .I5(\A[15]_i_3_n_0 ),
         .O(\F[7]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair118" *) 
+  (* SOFT_HLUTNM = "soft_lutpair117" *) 
   LUT4 #(
     .INIT(16'h7FFF)) 
     \F[7]_i_3 
@@ -7741,7 +7723,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I2(\IR_reg_n_0_[6] ),
         .I3(\A[15]_i_3_n_0 ),
         .O(\F[7]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair108" *) 
+  (* SOFT_HLUTNM = "soft_lutpair114" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \F[7]_i_4 
@@ -7777,7 +7759,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\IR_reg_n_0_[1] ),
         .I5(\IR_reg_n_0_[7] ),
         .O(\F[7]_i_7_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair111" *) 
+  (* SOFT_HLUTNM = "soft_lutpair119" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \F[7]_i_8 
@@ -7789,7 +7771,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
     \F[7]_i_9 
        (.I0(\IR_reg_n_0_[7] ),
         .I1(\IR_reg_n_0_[1] ),
-        .I2(iorq_n_inv_i_8_n_0),
+        .I2(iorq_n_inv_i_7_n_0),
         .I3(\IR_reg[0]_rep__0_n_0 ),
         .I4(\IR_reg_n_0_[2] ),
         .I5(\IR_reg_n_0_[6] ),
@@ -7798,7 +7780,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
        (.C(Q),
         .CE(1'b1),
         .D(\F[0]_i_1_n_0 ),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(\F_reg_n_0_[0] ));
   MUXF7 \F_reg[0]_i_3 
        (.I0(\F[0]_i_5_n_0 ),
@@ -7809,13 +7791,13 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
        (.C(Q),
         .CE(1'b1),
         .D(\F[1]_i_1_n_0 ),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(\F_reg_n_0_[1] ));
   FDPE \F_reg[2] 
        (.C(Q),
         .CE(1'b1),
         .D(\F[2]_i_1_n_0 ),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(\F_reg_n_0_[2] ));
   MUXF7 \F_reg[2]_i_6 
        (.I0(\F[2]_i_10_n_0 ),
@@ -7826,7 +7808,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
        (.C(Q),
         .CE(1'b1),
         .D(\F[3]_i_1_n_0 ),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(\F_reg_n_0_[3] ));
   MUXF7 \F_reg[3]_i_6 
        (.I0(\F[3]_i_7_n_0 ),
@@ -7837,13 +7819,13 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
        (.C(Q),
         .CE(1'b1),
         .D(\F[4]_i_1_n_0 ),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(\F_reg_n_0_[4] ));
   FDPE \F_reg[5] 
        (.C(Q),
         .CE(1'b1),
         .D(\F[5]_i_1_n_0 ),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(\F_reg_n_0_[5] ));
   MUXF7 \F_reg[5]_i_14 
        (.I0(\F[5]_i_16_n_0 ),
@@ -7854,13 +7836,13 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
        (.C(Q),
         .CE(1'b1),
         .D(\F[6]_i_1_n_0 ),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(\F_reg_n_0_[6] ));
   FDPE \F_reg[7] 
        (.C(Q),
         .CE(1'b1),
         .D(\F[7]_i_1_n_0 ),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(\F_reg_n_0_[7] ));
   MUXF7 \F_reg[7]_i_11 
        (.I0(\F[7]_i_12_n_0 ),
@@ -7871,49 +7853,49 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
        (.C(Q),
         .CE(Ap),
         .D(\F_reg_n_0_[0] ),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(Fp[0]));
   FDPE \Fp_reg[1] 
        (.C(Q),
         .CE(Ap),
         .D(\F_reg_n_0_[1] ),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(Fp[1]));
   FDPE \Fp_reg[2] 
        (.C(Q),
         .CE(Ap),
         .D(\F_reg_n_0_[2] ),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(Fp[2]));
   FDPE \Fp_reg[3] 
        (.C(Q),
         .CE(Ap),
         .D(\F_reg_n_0_[3] ),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(Fp[3]));
   FDPE \Fp_reg[4] 
        (.C(Q),
         .CE(Ap),
         .D(\F_reg_n_0_[4] ),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(Fp[4]));
   FDPE \Fp_reg[5] 
        (.C(Q),
         .CE(Ap),
         .D(\F_reg_n_0_[5] ),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(Fp[5]));
   FDPE \Fp_reg[6] 
        (.C(Q),
         .CE(Ap),
         .D(\F_reg_n_0_[6] ),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(Fp[6]));
   FDPE \Fp_reg[7] 
        (.C(Q),
         .CE(Ap),
         .D(\F_reg_n_0_[7] ),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(Fp[7]));
   LUT4 #(
     .INIT(16'hD5C0)) 
@@ -7923,7 +7905,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I2(Halt),
         .I3(Halt_FF_reg_n_0),
         .O(Halt_FF_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair94" *) 
+  (* SOFT_HLUTNM = "soft_lutpair87" *) 
   LUT4 #(
     .INIT(16'h0040)) 
     Halt_FF_i_2
@@ -7932,7 +7914,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I2(\IR_reg_n_0_[6] ),
         .I3(\ISet_reg_n_0_[1] ),
         .O(Halt));
-  (* SOFT_HLUTNM = "soft_lutpair45" *) 
+  (* SOFT_HLUTNM = "soft_lutpair48" *) 
   LUT5 #(
     .INIT(32'h00002000)) 
     Halt_FF_i_3
@@ -7953,10 +7935,10 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   FDCE Halt_FF_reg
        (.C(Q),
         .CE(1'b1),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(Halt_FF_i_1_n_0),
         .Q(Halt_FF_reg_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair88" *) 
+  (* SOFT_HLUTNM = "soft_lutpair106" *) 
   LUT4 #(
     .INIT(16'h02AA)) 
     \IR[0]_i_1 
@@ -7981,7 +7963,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I2(Halt_FF_reg_n_0),
         .I3(\IR[7]_i_3_n_0 ),
         .O(\IR[0]_rep_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair102" *) 
+  (* SOFT_HLUTNM = "soft_lutpair109" *) 
   LUT4 #(
     .INIT(16'h02AA)) 
     \IR[1]_i_1 
@@ -7990,7 +7972,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I2(Halt_FF_reg_n_0),
         .I3(\IR[7]_i_3_n_0 ),
         .O(\IR[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair107" *) 
+  (* SOFT_HLUTNM = "soft_lutpair116" *) 
   LUT4 #(
     .INIT(16'h02AA)) 
     \IR[2]_i_1 
@@ -7999,7 +7981,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I2(Halt_FF_reg_n_0),
         .I3(\IR[7]_i_3_n_0 ),
         .O(\IR[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair109" *) 
+  (* SOFT_HLUTNM = "soft_lutpair116" *) 
   LUT4 #(
     .INIT(16'h02AA)) 
     \IR[3]_i_1 
@@ -8008,7 +7990,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I2(Halt_FF_reg_n_0),
         .I3(\IR[7]_i_3_n_0 ),
         .O(\IR[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair109" *) 
+  (* SOFT_HLUTNM = "soft_lutpair106" *) 
   LUT4 #(
     .INIT(16'h02AA)) 
     \IR[4]_i_1 
@@ -8017,7 +7999,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I2(Halt_FF_reg_n_0),
         .I3(\IR[7]_i_3_n_0 ),
         .O(\IR[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair107" *) 
+  (* SOFT_HLUTNM = "soft_lutpair118" *) 
   LUT4 #(
     .INIT(16'h02AA)) 
     \IR[5]_i_1 
@@ -8026,7 +8008,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I2(Halt_FF_reg_n_0),
         .I3(\IR[7]_i_3_n_0 ),
         .O(\IR[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair102" *) 
+  (* SOFT_HLUTNM = "soft_lutpair118" *) 
   LUT4 #(
     .INIT(16'h02AA)) 
     \IR[6]_i_1 
@@ -8038,14 +8020,14 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   LUT6 #(
     .INIT(64'hBAAA000000000000)) 
     \IR[7]_i_1 
-       (.I0(mcycle),
+       (.I0(\mcycle_reg[0]_rep_n_0 ),
         .I1(\ISet_reg_n_0_[1] ),
         .I2(\ISet_reg_n_0_[0] ),
         .I3(\mcycle_reg_n_0_[6] ),
         .I4(cpu_wait),
         .I5(tstate[2]),
         .O(\IR[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair88" *) 
+  (* SOFT_HLUTNM = "soft_lutpair109" *) 
   LUT4 #(
     .INIT(16'h02AA)) 
     \IR[7]_i_2 
@@ -8066,63 +8048,63 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   FDCE \IR_reg[0] 
        (.C(Q),
         .CE(\IR[7]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\IR[0]_i_1_n_0 ),
         .Q(\IR_reg_n_0_[0] ));
   (* ORIG_CELL_NAME = "IR_reg[0]" *) 
   FDCE \IR_reg[0]_rep 
        (.C(Q),
         .CE(\IR[7]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\IR[0]_rep_i_1_n_0 ),
         .Q(\IR_reg[0]_rep_n_0 ));
   (* ORIG_CELL_NAME = "IR_reg[0]" *) 
   FDCE \IR_reg[0]_rep__0 
        (.C(Q),
         .CE(\IR[7]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\IR[0]_rep_i_1__0_n_0 ),
         .Q(\IR_reg[0]_rep__0_n_0 ));
   FDCE \IR_reg[1] 
        (.C(Q),
         .CE(\IR[7]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\IR[1]_i_1_n_0 ),
         .Q(\IR_reg_n_0_[1] ));
   FDCE \IR_reg[2] 
        (.C(Q),
         .CE(\IR[7]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\IR[2]_i_1_n_0 ),
         .Q(\IR_reg_n_0_[2] ));
   FDCE \IR_reg[3] 
        (.C(Q),
         .CE(\IR[7]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\IR[3]_i_1_n_0 ),
         .Q(\IR_reg[5]_0 [0]));
   FDCE \IR_reg[4] 
        (.C(Q),
         .CE(\IR[7]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\IR[4]_i_1_n_0 ),
         .Q(\IR_reg[5]_0 [1]));
   FDCE \IR_reg[5] 
        (.C(Q),
         .CE(\IR[7]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\IR[5]_i_1_n_0 ),
         .Q(\IR_reg[5]_0 [2]));
   FDCE \IR_reg[6] 
        (.C(Q),
         .CE(\IR[7]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\IR[6]_i_1_n_0 ),
         .Q(\IR_reg_n_0_[6] ));
   FDCE \IR_reg[7] 
        (.C(Q),
         .CE(\IR[7]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\IR[7]_i_2_n_0 ),
         .Q(\IR_reg_n_0_[7] ));
   LUT6 #(
@@ -8145,7 +8127,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(Prefix[0]),
         .I5(\ISet_reg_n_0_[1] ),
         .O(\ISet[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair104" *) 
+  (* SOFT_HLUTNM = "soft_lutpair92" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \ISet[1]_i_2 
@@ -8193,13 +8175,13 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   FDCE \ISet_reg[0] 
        (.C(Q),
         .CE(1'b1),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\ISet[0]_i_1_n_0 ),
         .Q(\ISet_reg_n_0_[0] ));
   FDCE \ISet_reg[1] 
        (.C(Q),
         .CE(1'b1),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\ISet[1]_i_1_n_0 ),
         .Q(\ISet_reg_n_0_[1] ));
   LUT6 #(
@@ -8232,7 +8214,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\IR_reg_n_0_[1] ),
         .I5(\IR_reg_n_0_[7] ),
         .O(\I[7]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair118" *) 
+  (* SOFT_HLUTNM = "soft_lutpair117" *) 
   LUT3 #(
     .INIT(8'h80)) 
     \I[7]_i_4 
@@ -8253,49 +8235,49 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   FDCE \I_reg[0] 
        (.C(Q),
         .CE(I),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\ACC_reg_n_0_[0] ),
         .Q(\I_reg_n_0_[0] ));
   FDCE \I_reg[1] 
        (.C(Q),
         .CE(I),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\ACC_reg_n_0_[1] ),
         .Q(\I_reg_n_0_[1] ));
   FDCE \I_reg[2] 
        (.C(Q),
         .CE(I),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\ACC_reg_n_0_[2] ),
         .Q(\I_reg_n_0_[2] ));
   FDCE \I_reg[3] 
        (.C(Q),
         .CE(I),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\ACC_reg_n_0_[3] ),
         .Q(\I_reg_n_0_[3] ));
   FDCE \I_reg[4] 
        (.C(Q),
         .CE(I),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\ACC_reg_n_0_[4] ),
         .Q(\I_reg_n_0_[4] ));
   FDCE \I_reg[5] 
        (.C(Q),
         .CE(I),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\ACC_reg_n_0_[5] ),
         .Q(\I_reg_n_0_[5] ));
   FDCE \I_reg[6] 
        (.C(Q),
         .CE(I),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\ACC_reg_n_0_[6] ),
         .Q(\I_reg_n_0_[6] ));
   FDCE \I_reg[7] 
        (.C(Q),
         .CE(I),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\ACC_reg_n_0_[7] ),
         .Q(p_2_in));
   LUT5 #(
@@ -8333,7 +8315,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(ALU_Op_r[1]),
         .I5(\F_reg_n_0_[6] ),
         .O(IncDecZ_i_14_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair89" *) 
+  (* SOFT_HLUTNM = "soft_lutpair93" *) 
   LUT4 #(
     .INIT(16'hFFFE)) 
     IncDecZ_i_15
@@ -8511,6 +8493,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I1(IncDecZ_i_14_n_0),
         .O(IncDecZ_reg_i_7_n_0),
         .S(IncDecZ_i_12_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair92" *) 
   LUT4 #(
     .INIT(16'h0F08)) 
     IntE_FF2_i_1
@@ -8539,7 +8522,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\IR_reg_n_0_[7] ),
         .I5(\ISet_reg_n_0_[0] ),
         .O(IntE_FF2_i_3_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair46" *) 
+  (* SOFT_HLUTNM = "soft_lutpair45" *) 
   LUT5 #(
     .INIT(32'h80000000)) 
     IntE_FF2_i_4
@@ -8562,7 +8545,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   FDCE IntE_FF2_reg
        (.C(Q),
         .CE(1'b1),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(IntE_FF2_i_1_n_0),
         .Q(p_5_in));
   LUT6 #(
@@ -8575,7 +8558,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\tstate[6]_i_4_n_0 ),
         .I5(NMICycle_reg_n_0),
         .O(NMICycle_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair116" *) 
+  (* SOFT_HLUTNM = "soft_lutpair115" *) 
   LUT4 #(
     .INIT(16'h0040)) 
     NMICycle_i_2
@@ -8587,7 +8570,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   FDCE NMICycle_reg
        (.C(Q),
         .CE(1'b1),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(NMICycle_i_1_n_0),
         .Q(NMICycle_reg_n_0));
   LUT4 #(
@@ -8601,7 +8584,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   FDCE NMI_s_reg
        (.C(Q),
         .CE(1'b1),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(NMI_s_i_1_n_0),
         .Q(NMI_s_reg_n_0));
   LUT6 #(
@@ -8636,13 +8619,13 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   FDCE No_BTR_reg
        (.C(Q),
         .CE(1'b1),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(No_BTR0),
         .Q(No_BTR));
   FDCE Oldnmi_n_reg
        (.C(Q),
         .CE(1'b1),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(cpu_nmi),
         .Q(Oldnmi_n));
   LUT5 #(
@@ -8660,7 +8643,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
        (.I0(\PC[0]_i_23_n_0 ),
         .I1(\ISet_reg_n_0_[1] ),
         .O(Call));
-  (* SOFT_HLUTNM = "soft_lutpair95" *) 
+  (* SOFT_HLUTNM = "soft_lutpair89" *) 
   LUT3 #(
     .INIT(8'h04)) 
     \PC[0]_i_14 
@@ -8678,7 +8661,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\ISet_reg_n_0_[1] ),
         .I5(\PC[0]_i_26_n_0 ),
         .O(\PC[0]_i_15_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair142" *) 
+  (* SOFT_HLUTNM = "soft_lutpair143" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \PC[0]_i_16 
@@ -8686,7 +8669,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I1(JumpE),
         .I2(BTR_r_reg_n_0),
         .O(B[3]));
-  (* SOFT_HLUTNM = "soft_lutpair142" *) 
+  (* SOFT_HLUTNM = "soft_lutpair141" *) 
   LUT3 #(
     .INIT(8'h2E)) 
     \PC[0]_i_21 
@@ -8734,7 +8717,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\IR_reg_n_0_[6] ),
         .I5(\PC[0]_i_38_n_0 ),
         .O(\PC[0]_i_26_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair128" *) 
+  (* SOFT_HLUTNM = "soft_lutpair131" *) 
   LUT3 #(
     .INIT(8'h7F)) 
     \PC[0]_i_27 
@@ -8784,7 +8767,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I2(JumpE),
         .I3(BTR_r_reg_n_0),
         .O(\PC[0]_i_31_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair132" *) 
+  (* SOFT_HLUTNM = "soft_lutpair142" *) 
   LUT3 #(
     .INIT(8'h80)) 
     \PC[0]_i_32 
@@ -8807,7 +8790,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
     \PC[0]_i_36 
        (.I0(\mcycle_reg_n_0_[2] ),
         .I1(\IR_reg[5]_0 [0]),
-        .I2(mcycle),
+        .I2(\mcycle_reg[0]_rep_n_0 ),
         .I3(\IR_reg[5]_0 [1]),
         .I4(\IR_reg[5]_0 [2]),
         .I5(\mcycle_reg[1]_rep_n_0 ),
@@ -8871,7 +8854,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\IR_reg_n_0_[1] ),
         .I5(\PC[0]_i_43_n_0 ),
         .O(\PC[0]_i_42_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair61" *) 
+  (* SOFT_HLUTNM = "soft_lutpair60" *) 
   LUT5 #(
     .INIT(32'h3F302020)) 
     \PC[0]_i_43 
@@ -8886,7 +8869,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
     .INIT(16'hFFB0)) 
     \PC[0]_i_44 
        (.I0(\IR_reg[5]_0 [0]),
-        .I1(mcycle),
+        .I1(\mcycle_reg[0]_rep_n_0 ),
         .I2(\IR_reg[5]_0 [1]),
         .I3(\IR_reg[5]_0 [2]),
         .O(\PC[0]_i_44_n_0 ));
@@ -8963,7 +8946,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I1(JumpE),
         .I2(BTR_r_reg_n_0),
         .O(B[15]));
-  (* SOFT_HLUTNM = "soft_lutpair141" *) 
+  (* SOFT_HLUTNM = "soft_lutpair143" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \PC[4]_i_15 
@@ -9061,7 +9044,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   FDCE \PC_reg[0] 
        (.C(Q),
         .CE(\PC[0]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(i_reg_n_150),
         .Q(\PC_reg_n_0_[0] ));
   CARRY4 \PC_reg[0]_i_18 
@@ -9079,19 +9062,19 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   FDCE \PC_reg[10] 
        (.C(Q),
         .CE(\PC[0]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(i_reg_n_156),
         .Q(data7[2]));
   FDCE \PC_reg[11] 
        (.C(Q),
         .CE(\PC[0]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(i_reg_n_155),
         .Q(data7[3]));
   FDCE \PC_reg[12] 
        (.C(Q),
         .CE(\PC[0]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(i_reg_n_162),
         .Q(data7[4]));
   CARRY4 \PC_reg[12]_i_10 
@@ -9104,43 +9087,43 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   FDCE \PC_reg[13] 
        (.C(Q),
         .CE(\PC[0]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(i_reg_n_161),
         .Q(data7[5]));
   FDCE \PC_reg[14] 
        (.C(Q),
         .CE(\PC[0]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(i_reg_n_160),
         .Q(data7[6]));
   FDCE \PC_reg[15] 
        (.C(Q),
         .CE(\PC[0]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(i_reg_n_159),
         .Q(data7[7]));
   FDCE \PC_reg[1] 
        (.C(Q),
         .CE(\PC[0]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(i_reg_n_149),
         .Q(\PC_reg_n_0_[1] ));
   FDCE \PC_reg[2] 
        (.C(Q),
         .CE(\PC[0]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(i_reg_n_148),
         .Q(\PC_reg_n_0_[2] ));
   FDCE \PC_reg[3] 
        (.C(Q),
         .CE(\PC[0]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(i_reg_n_147),
         .Q(\PC_reg_n_0_[3] ));
   FDCE \PC_reg[4] 
        (.C(Q),
         .CE(\PC[0]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(i_reg_n_154),
         .Q(\PC_reg_n_0_[4] ));
   CARRY4 \PC_reg[4]_i_12 
@@ -9153,25 +9136,25 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   FDCE \PC_reg[5] 
        (.C(Q),
         .CE(\PC[0]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(i_reg_n_153),
         .Q(\PC_reg_n_0_[5] ));
   FDCE \PC_reg[6] 
        (.C(Q),
         .CE(\PC[0]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(i_reg_n_152),
         .Q(\PC_reg_n_0_[6] ));
   FDCE \PC_reg[7] 
        (.C(Q),
         .CE(\PC[0]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(i_reg_n_151),
         .Q(\PC_reg_n_0_[7] ));
   FDCE \PC_reg[8] 
        (.C(Q),
         .CE(\PC[0]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(i_reg_n_158),
         .Q(data7[0]));
   CARRY4 \PC_reg[8]_i_10 
@@ -9184,7 +9167,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   FDCE \PC_reg[9] 
        (.C(Q),
         .CE(\PC[0]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(i_reg_n_157),
         .Q(data7[1]));
   LUT5 #(
@@ -9234,7 +9217,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\mcycle_reg_n_0_[4] ),
         .I5(\mcycle_reg_n_0_[3] ),
         .O(\Pre_XY_F_M[1]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair91" *) 
+  (* SOFT_HLUTNM = "soft_lutpair108" *) 
   LUT4 #(
     .INIT(16'h7FFF)) 
     \Pre_XY_F_M[1]_i_4 
@@ -9243,7 +9226,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I2(\IR_reg[5]_0 [2]),
         .I3(\IR_reg_n_0_[2] ),
         .O(\Pre_XY_F_M[1]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair110" *) 
+  (* SOFT_HLUTNM = "soft_lutpair90" *) 
   LUT4 #(
     .INIT(16'hBF80)) 
     \Pre_XY_F_M[2]_i_1 
@@ -9264,19 +9247,19 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   FDCE \Pre_XY_F_M_reg[0] 
        (.C(Q),
         .CE(1'b1),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\Pre_XY_F_M[0]_i_1_n_0 ),
         .Q(\Pre_XY_F_M_reg_n_0_[0] ));
   FDCE \Pre_XY_F_M_reg[1] 
        (.C(Q),
         .CE(1'b1),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\Pre_XY_F_M[1]_i_1_n_0 ),
         .Q(\Pre_XY_F_M_reg_n_0_[1] ));
   FDCE \Pre_XY_F_M_reg[2] 
        (.C(Q),
         .CE(1'b1),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\Pre_XY_F_M[2]_i_1_n_0 ),
         .Q(\Pre_XY_F_M_reg_n_0_[2] ));
   LUT6 #(
@@ -9299,11 +9282,11 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\IR_reg_n_0_[2] ),
         .I5(\IR_reg_n_0_[6] ),
         .O(PreserveC_r_i_3_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair59" *) 
+  (* SOFT_HLUTNM = "soft_lutpair56" *) 
   LUT5 #(
     .INIT(32'hFF4FFFFF)) 
     PreserveC_r_i_4
-       (.I0(mcycle),
+       (.I0(\mcycle_reg[0]_rep_n_0 ),
         .I1(\mcycle_reg[1]_rep_n_0 ),
         .I2(\IR_reg[5]_0 [1]),
         .I3(\IR_reg[5]_0 [0]),
@@ -9312,7 +9295,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   FDCE PreserveC_r_reg
        (.C(Q),
         .CE(1'b1),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(PreserveC),
         .Q(PreserveC_r));
   MUXF7 PreserveC_r_reg_i_1
@@ -9332,7 +9315,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
     .INIT(64'h0302020202020202)) 
     \Read_To_Reg_r[0]_i_11 
        (.I0(\mcycle_reg[1]_rep_n_0 ),
-        .I1(mcycle),
+        .I1(\mcycle_reg[0]_rep_n_0 ),
         .I2(\IR_reg[5]_0 [0]),
         .I3(\IR_reg[5]_0 [1]),
         .I4(\IR_reg[5]_0 [2]),
@@ -9368,7 +9351,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\mcycle_reg_n_0_[3] ),
         .I5(\mcycle_reg[1]_rep_n_0 ),
         .O(\Read_To_Reg_r[0]_i_14_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair47" *) 
+  (* SOFT_HLUTNM = "soft_lutpair62" *) 
   LUT4 #(
     .INIT(16'h0800)) 
     \Read_To_Reg_r[0]_i_15 
@@ -9413,7 +9396,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I1(\IR_reg_n_0_[1] ),
         .I2(\mcycle_reg[1]_rep_n_0 ),
         .I3(\IR_reg[5]_0 [0]),
-        .I4(mcycle),
+        .I4(\mcycle_reg[0]_rep_n_0 ),
         .I5(\IR_reg[0]_rep_n_0 ),
         .O(\Read_To_Reg_r[0]_i_5_n_0 ));
   LUT6 #(
@@ -9445,7 +9428,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\mcycle_reg_n_0_[4] ),
         .I5(\mcycle_reg_n_0_[2] ),
         .O(\Read_To_Reg_r[0]_i_9_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair121" *) 
+  (* SOFT_HLUTNM = "soft_lutpair122" *) 
   LUT3 #(
     .INIT(8'hA8)) 
     \Read_To_Reg_r[1]_i_1 
@@ -9483,7 +9466,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\mcycle_reg_n_0_[4] ),
         .I5(\mcycle_reg_n_0_[2] ),
         .O(\Read_To_Reg_r[1]_i_13_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair83" *) 
+  (* SOFT_HLUTNM = "soft_lutpair80" *) 
   LUT3 #(
     .INIT(8'hB0)) 
     \Read_To_Reg_r[1]_i_14 
@@ -9491,18 +9474,18 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I1(\IR_reg[5]_0 [2]),
         .I2(\IR_reg[5]_0 [1]),
         .O(\Read_To_Reg_r[1]_i_14_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair140" *) 
+  (* SOFT_HLUTNM = "soft_lutpair134" *) 
   LUT3 #(
     .INIT(8'h04)) 
     \Read_To_Reg_r[1]_i_15 
        (.I0(\IR_reg[5]_0 [0]),
         .I1(\IR_reg[5]_0 [1]),
-        .I2(mcycle),
+        .I2(\mcycle_reg[0]_rep_n_0 ),
         .O(\Read_To_Reg_r[1]_i_15_n_0 ));
   LUT5 #(
     .INIT(32'hF4FF0000)) 
     \Read_To_Reg_r[1]_i_16 
-       (.I0(mcycle),
+       (.I0(\mcycle_reg[0]_rep_n_0 ),
         .I1(\mcycle_reg[1]_rep_n_0 ),
         .I2(\IR_reg[5]_0 [0]),
         .I3(\IR_reg[5]_0 [2]),
@@ -9553,7 +9536,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I1(\IR_reg_n_0_[1] ),
         .I2(\mcycle_reg[1]_rep_n_0 ),
         .I3(\Read_To_Reg_r[1]_i_14_n_0 ),
-        .I4(mcycle),
+        .I4(\mcycle_reg[0]_rep_n_0 ),
         .I5(\IR_reg[0]_rep__0_n_0 ),
         .O(\Read_To_Reg_r[1]_i_7_n_0 ));
   LUT6 #(
@@ -9583,7 +9566,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I1(Set_BusA_To[2]),
         .I2(Read_To_Acc),
         .O(\Read_To_Reg_r[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair122" *) 
+  (* SOFT_HLUTNM = "soft_lutpair121" *) 
   LUT3 #(
     .INIT(8'h08)) 
     \Read_To_Reg_r[3]_i_1 
@@ -9621,7 +9604,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\mcycle_reg[1]_rep_n_0 ),
         .I5(\IR_reg[0]_rep__0_n_0 ),
         .O(\Read_To_Reg_r[3]_i_12_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair99" *) 
+  (* SOFT_HLUTNM = "soft_lutpair84" *) 
   LUT3 #(
     .INIT(8'h80)) 
     \Read_To_Reg_r[3]_i_13 
@@ -9629,7 +9612,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I1(\IR_reg[5]_0 [0]),
         .I2(\IR_reg[5]_0 [2]),
         .O(\Read_To_Reg_r[3]_i_13_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair95" *) 
+  (* SOFT_HLUTNM = "soft_lutpair89" *) 
   LUT4 #(
     .INIT(16'h88B8)) 
     \Read_To_Reg_r[3]_i_3 
@@ -9696,24 +9679,24 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\IR_reg[0]_rep__0_n_0 ),
         .I5(\IR_reg_n_0_[2] ),
         .O(\Read_To_Reg_r[3]_i_9_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair116" *) 
+  (* SOFT_HLUTNM = "soft_lutpair115" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \Read_To_Reg_r[4]_i_1 
        (.I0(\A[15]_i_3_n_0 ),
         .I1(\Read_To_Reg_r[4]_i_2_n_0 ),
         .O(\Read_To_Reg_r[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair54" *) 
+  (* SOFT_HLUTNM = "soft_lutpair47" *) 
   LUT5 #(
     .INIT(32'h03020000)) 
     \Read_To_Reg_r[4]_i_10 
        (.I0(\mcycle_reg_n_0_[2] ),
-        .I1(mcycle),
+        .I1(\mcycle_reg[0]_rep_n_0 ),
         .I2(\IR_reg[5]_0 [0]),
         .I3(\mcycle_reg[1]_rep_n_0 ),
         .I4(\IR_reg[0]_rep__0_n_0 ),
         .O(\Read_To_Reg_r[4]_i_10_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair135" *) 
+  (* SOFT_HLUTNM = "soft_lutpair124" *) 
   LUT3 #(
     .INIT(8'hDF)) 
     \Read_To_Reg_r[4]_i_11 
@@ -9729,7 +9712,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I2(Save_ALU_r_i_12_n_0),
         .I3(\IR_reg[0]_rep_n_0 ),
         .I4(\RegAddrB_r[2]_i_7_0 ),
-        .I5(mcycle),
+        .I5(\mcycle_reg[0]_rep_n_0 ),
         .O(\Read_To_Reg_r[4]_i_12_n_0 ));
   LUT6 #(
     .INIT(64'hBFBF8F8F808F8080)) 
@@ -9737,7 +9720,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
        (.I0(\ALU_Op_r[3]_i_5_n_0 ),
         .I1(\IR_reg[0]_rep__0_n_0 ),
         .I2(\IR_reg_n_0_[1] ),
-        .I3(mcycle),
+        .I3(\mcycle_reg[0]_rep_n_0 ),
         .I4(\mcycle_reg[1]_rep_n_0 ),
         .I5(\Read_To_Reg_r[4]_i_11_n_0 ),
         .O(\Read_To_Reg_r[4]_i_13_n_0 ));
@@ -9810,7 +9793,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\mcycle_reg[0]_rep_n_0 ),
         .I5(\IR_reg[0]_rep_n_0 ),
         .O(\Read_To_Reg_r[4]_i_8_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair71" *) 
+  (* SOFT_HLUTNM = "soft_lutpair65" *) 
   LUT5 #(
     .INIT(32'h40000000)) 
     \Read_To_Reg_r[4]_i_9 
@@ -9823,7 +9806,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   FDCE \Read_To_Reg_r_reg[0] 
        (.C(Q),
         .CE(1'b1),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\Read_To_Reg_r[0]_i_1_n_0 ),
         .Q(Read_To_Reg_r[0]));
   MUXF7 \Read_To_Reg_r_reg[0]_i_8 
@@ -9834,7 +9817,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   FDCE \Read_To_Reg_r_reg[1] 
        (.C(Q),
         .CE(1'b1),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\Read_To_Reg_r[1]_i_1_n_0 ),
         .Q(Read_To_Reg_r[1]));
   MUXF7 \Read_To_Reg_r_reg[1]_i_11 
@@ -9855,13 +9838,13 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   FDCE \Read_To_Reg_r_reg[2] 
        (.C(Q),
         .CE(1'b1),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\Read_To_Reg_r[2]_i_1_n_0 ),
         .Q(Read_To_Reg_r[2]));
   FDCE \Read_To_Reg_r_reg[3] 
        (.C(Q),
         .CE(1'b1),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\Read_To_Reg_r[3]_i_1_n_0 ),
         .Q(Read_To_Reg_r[3]));
   MUXF7 \Read_To_Reg_r_reg[3]_i_2 
@@ -9872,7 +9855,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   FDCE \Read_To_Reg_r_reg[4] 
        (.C(Q),
         .CE(1'b1),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\Read_To_Reg_r[4]_i_1_n_0 ),
         .Q(Read_To_Reg_r[4]));
   MUXF7 \Read_To_Reg_r_reg[4]_i_7 
@@ -9880,7 +9863,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I1(\Read_To_Reg_r[4]_i_13_n_0 ),
         .O(\Read_To_Reg_r_reg[4]_i_7_n_0 ),
         .S(\IR_reg_n_0_[2] ));
-  (* SOFT_HLUTNM = "soft_lutpair70" *) 
+  (* SOFT_HLUTNM = "soft_lutpair75" *) 
   LUT5 #(
     .INIT(32'hFFFF0E00)) 
     \RegAddrA_r[0]_i_1 
@@ -9916,7 +9899,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I1(\IR_reg[5]_0 [2]),
         .I2(\IR_reg[5]_0 [0]),
         .I3(\IR_reg[5]_0 [1]),
-        .I4(mcycle),
+        .I4(\mcycle_reg[0]_rep_n_0 ),
         .I5(\IR_reg[0]_rep_n_0 ),
         .O(\RegAddrA_r[1]_i_11_n_0 ));
   LUT6 #(
@@ -9933,7 +9916,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
     .INIT(64'h3030100000000000)) 
     \RegAddrA_r[1]_i_13 
        (.I0(\mcycle_reg_n_0_[2] ),
-        .I1(mcycle),
+        .I1(\mcycle_reg[0]_rep_n_0 ),
         .I2(i_reg_n_26),
         .I3(\mcycle_reg_n_0_[3] ),
         .I4(\mcycle_reg[1]_rep_n_0 ),
@@ -9944,19 +9927,19 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
     \RegAddrA_r[1]_i_14 
        (.I0(\IR_reg[5]_0 [1]),
         .I1(\mcycle_reg[1]_rep_n_0 ),
-        .I2(mcycle),
+        .I2(\mcycle_reg[0]_rep_n_0 ),
         .I3(\IR_reg[5]_0 [2]),
         .I4(\IR_reg[5]_0 [0]),
         .I5(\mcycle_reg_n_0_[2] ),
         .O(\RegAddrA_r[1]_i_14_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair115" *) 
+  (* SOFT_HLUTNM = "soft_lutpair107" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \RegAddrA_r[1]_i_15 
        (.I0(\IR_reg[5]_0 [1]),
         .I1(\IR_reg[5]_0 [0]),
         .O(\RegAddrA_r[1]_i_15_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair53" *) 
+  (* SOFT_HLUTNM = "soft_lutpair52" *) 
   LUT5 #(
     .INIT(32'h626E222A)) 
     \RegAddrA_r[1]_i_16 
@@ -9966,11 +9949,11 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I3(\IR_reg[5]_0 [1]),
         .I4(\mcycle_reg[1]_rep_n_0 ),
         .O(\RegAddrA_r[1]_i_16_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair75" *) 
+  (* SOFT_HLUTNM = "soft_lutpair70" *) 
   LUT5 #(
     .INIT(32'hFF4F0000)) 
     \RegAddrA_r[1]_i_17 
-       (.I0(mcycle),
+       (.I0(\mcycle_reg[0]_rep_n_0 ),
         .I1(\mcycle_reg[1]_rep_n_0 ),
         .I2(\IR_reg[5]_0 [1]),
         .I3(\IR_reg[5]_0 [0]),
@@ -10032,7 +10015,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
        (.I0(\IR_reg_n_0_[2] ),
         .I1(\mcycle_reg[1]_rep_n_0 ),
         .I2(\IR_reg[5]_0 [2]),
-        .I3(mcycle),
+        .I3(\mcycle_reg[0]_rep_n_0 ),
         .I4(\IR_reg_n_0_[1] ),
         .I5(\IR_reg_n_0_[7] ),
         .O(\RegAddrA_r[1]_i_6_n_0 ));
@@ -10056,7 +10039,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\RegAddrA_r[1]_i_15_n_0 ),
         .I5(\IR_reg[5]_0 [2]),
         .O(\RegAddrA_r[1]_i_8_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair72" *) 
+  (* SOFT_HLUTNM = "soft_lutpair68" *) 
   LUT5 #(
     .INIT(32'hFF75FFFF)) 
     \RegAddrA_r[1]_i_9 
@@ -10099,7 +10082,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .D(\RegAddrA_r[2]_i_1_n_0 ),
         .Q(RegAddrA_r[2]),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair60" *) 
+  (* SOFT_HLUTNM = "soft_lutpair64" *) 
   LUT5 #(
     .INIT(32'hAEAEAEAA)) 
     \RegAddrB_r[0]_i_1 
@@ -10109,7 +10092,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I3(\XY_State_reg_n_0_[0] ),
         .I4(\XY_State_reg_n_0_[1] ),
         .O(\RegAddrB_r[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair92" *) 
+  (* SOFT_HLUTNM = "soft_lutpair99" *) 
   LUT4 #(
     .INIT(16'hAEFF)) 
     \RegAddrB_r[1]_i_10 
@@ -10118,7 +10101,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I2(\mcycle_reg[0]_rep_n_0 ),
         .I3(\IR_reg_n_0_[1] ),
         .O(\RegAddrB_r[1]_i_10_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair53" *) 
+  (* SOFT_HLUTNM = "soft_lutpair52" *) 
   LUT5 #(
     .INIT(32'h00002000)) 
     \RegAddrB_r[1]_i_11 
@@ -10138,7 +10121,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\mcycles[0]_i_8_n_0 ),
         .I5(\mcycle_reg_n_0_[2] ),
         .O(\RegAddrB_r[1]_i_13_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair71" *) 
+  (* SOFT_HLUTNM = "soft_lutpair65" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \RegAddrB_r[1]_i_14 
@@ -10157,7 +10140,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   LUT6 #(
     .INIT(64'hEFE0CFCFEFE0C0C0)) 
     \RegAddrB_r[1]_i_16 
-       (.I0(mcycle),
+       (.I0(\mcycle_reg[0]_rep_n_0 ),
         .I1(\mcycle_reg[1]_rep_n_0 ),
         .I2(\IR_reg_n_0_[1] ),
         .I3(\RegAddrB_r[1]_i_21_n_0 ),
@@ -10172,23 +10155,23 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I2(\IR_reg[0]_rep_n_0 ),
         .I3(\mcycle_reg[1]_rep_n_0 ),
         .I4(i_reg_n_28),
-        .I5(mcycle),
+        .I5(\mcycle_reg[0]_rep_n_0 ),
         .O(\RegAddrB_r[1]_i_17_n_0 ));
   LUT6 #(
     .INIT(64'h00000000222222E2)) 
     \RegAddrB_r[1]_i_18 
        (.I0(\RegAddrB_r[1]_i_22_n_0 ),
         .I1(\mcycle_reg[1]_rep_n_0 ),
-        .I2(mcycle),
+        .I2(\mcycle_reg[0]_rep_n_0 ),
         .I3(\IR_reg[5]_0 [0]),
         .I4(\IR_reg[5]_0 [2]),
         .I5(\IR_reg[0]_rep_n_0 ),
         .O(\RegAddrB_r[1]_i_18_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair75" *) 
+  (* SOFT_HLUTNM = "soft_lutpair100" *) 
   LUT4 #(
     .INIT(16'h0034)) 
     \RegAddrB_r[1]_i_19 
-       (.I0(mcycle),
+       (.I0(\mcycle_reg[0]_rep_n_0 ),
         .I1(\IR_reg[5]_0 [2]),
         .I2(\IR_reg[5]_0 [1]),
         .I3(\IR_reg[5]_0 [0]),
@@ -10210,13 +10193,13 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I1(\IR_reg[5]_0 [2]),
         .I2(\IR_reg[5]_0 [0]),
         .I3(\IR_reg[5]_0 [1]),
-        .I4(mcycle),
+        .I4(\mcycle_reg[0]_rep_n_0 ),
         .I5(\mcycle_reg_n_0_[2] ),
         .O(\RegAddrB_r[1]_i_20_n_0 ));
   LUT6 #(
     .INIT(64'h0B00FFFF0B000000)) 
     \RegAddrB_r[1]_i_21 
-       (.I0(mcycle),
+       (.I0(\mcycle_reg[0]_rep_n_0 ),
         .I1(\IR_reg[5]_0 [1]),
         .I2(\IR_reg[5]_0 [0]),
         .I3(\IR_reg[5]_0 [2]),
@@ -10231,7 +10214,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I2(\mcycle_reg_n_0_[3] ),
         .I3(\IR_reg[5]_0 [2]),
         .I4(\IR_reg[5]_0 [0]),
-        .I5(mcycle),
+        .I5(\mcycle_reg[0]_rep_n_0 ),
         .O(\RegAddrB_r[1]_i_22_n_0 ));
   LUT6 #(
     .INIT(64'h00FF320000003200)) 
@@ -10241,7 +10224,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I2(\mcycle_reg_n_0_[3] ),
         .I3(\IR_reg[5]_0 [0]),
         .I4(\IR_reg[5]_0 [2]),
-        .I5(mcycle),
+        .I5(\mcycle_reg[0]_rep_n_0 ),
         .O(\RegAddrB_r[1]_i_23_n_0 ));
   LUT6 #(
     .INIT(64'hF003F000F808F808)) 
@@ -10283,7 +10266,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\RegAddrB_r[1]_i_14_n_0 ),
         .I5(\IR_reg[0]_rep__0_n_0 ),
         .O(\RegAddrB_r[1]_i_6_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair137" *) 
+  (* SOFT_HLUTNM = "soft_lutpair136" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \RegAddrB_r[1]_i_7 
@@ -10291,14 +10274,14 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I1(\IR_reg[5]_0 [2]),
         .I2(\mcycle_reg[1]_rep_n_0 ),
         .O(\RegAddrB_r[1]_i_7_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair62" *) 
+  (* SOFT_HLUTNM = "soft_lutpair70" *) 
   LUT4 #(
     .INIT(16'hFFDF)) 
     \RegAddrB_r[1]_i_9 
        (.I0(\IR_reg[5]_0 [2]),
         .I1(\IR_reg[5]_0 [0]),
         .I2(\IR_reg[5]_0 [1]),
-        .I3(mcycle),
+        .I3(\mcycle_reg[0]_rep_n_0 ),
         .O(\RegAddrB_r[1]_i_9_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFFBFF00004040)) 
@@ -10340,7 +10323,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
     .INIT(64'h00500040AAAA0000)) 
     \RegAddrB_r[2]_i_14 
        (.I0(\IR_reg_n_0_[1] ),
-        .I1(mcycle),
+        .I1(\mcycle_reg[0]_rep_n_0 ),
         .I2(\IR_reg[5]_0 [1]),
         .I3(\IR_reg[5]_0 [0]),
         .I4(\mcycle_reg[1]_rep_n_0 ),
@@ -10354,7 +10337,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I2(\RegAddrB_r[2]_i_19_n_0 ),
         .I3(\IR_reg[0]_rep_n_0 ),
         .I4(\RegAddrB_r[2]_i_7_0 ),
-        .I5(mcycle),
+        .I5(\mcycle_reg[0]_rep_n_0 ),
         .O(\RegAddrB_r[2]_i_15_n_0 ));
   LUT6 #(
     .INIT(64'h4700333333333333)) 
@@ -10381,9 +10364,9 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I2(\mcycle_reg_n_0_[2] ),
         .I3(\IR_reg[5]_0 [2]),
         .I4(\IR_reg[5]_0 [0]),
-        .I5(mcycle),
+        .I5(\mcycle_reg[0]_rep_n_0 ),
         .O(\RegAddrB_r[2]_i_18_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair47" *) 
+  (* SOFT_HLUTNM = "soft_lutpair73" *) 
   LUT5 #(
     .INIT(32'h30002000)) 
     \RegAddrB_r[2]_i_19 
@@ -10427,7 +10410,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
     .INIT(64'hEF00FFFFEF000000)) 
     \RegAddrB_r[2]_i_6 
        (.I0(\IR_reg[0]_rep_n_0 ),
-        .I1(iorq_n_inv_i_8_n_0),
+        .I1(iorq_n_inv_i_7_n_0),
         .I2(\IR_reg_n_0_[2] ),
         .I3(\IR_reg_n_0_[1] ),
         .I4(\IR_reg_n_0_[7] ),
@@ -10549,7 +10532,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I3(\IR_reg_n_0_[7] ),
         .I4(\RegAddrC[0]_i_20_n_0 ),
         .O(\RegAddrC[0]_i_13_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair45" *) 
+  (* SOFT_HLUTNM = "soft_lutpair48" *) 
   LUT5 #(
     .INIT(32'hFF73FFFF)) 
     \RegAddrC[0]_i_14 
@@ -10601,7 +10584,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   LUT6 #(
     .INIT(64'hFFFFFFFFF3FFF7FF)) 
     \RegAddrC[0]_i_19 
-       (.I0(mcycle),
+       (.I0(\mcycle_reg[0]_rep_n_0 ),
         .I1(\IR_reg[5]_0 [1]),
         .I2(\IR_reg[5]_0 [0]),
         .I3(\IR_reg[5]_0 [2]),
@@ -10617,23 +10600,23 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I3(\ISet_reg_n_0_[1] ),
         .I4(\RegAddrC[0]_i_5_n_0 ),
         .O(Set_Addr_To[0]));
-  (* SOFT_HLUTNM = "soft_lutpair67" *) 
+  (* SOFT_HLUTNM = "soft_lutpair98" *) 
   LUT4 #(
     .INIT(16'hDFFF)) 
     \RegAddrC[0]_i_20 
        (.I0(\IR_reg_n_0_[1] ),
         .I1(\IR_reg[0]_rep__0_n_0 ),
-        .I2(mcycle),
+        .I2(\mcycle_reg[0]_rep_n_0 ),
         .I3(\IR_reg_n_0_[2] ),
         .O(\RegAddrC[0]_i_20_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair101" *) 
+  (* SOFT_HLUTNM = "soft_lutpair136" *) 
   LUT2 #(
     .INIT(4'h7)) 
     \RegAddrC[0]_i_21 
        (.I0(\IR_reg[5]_0 [2]),
         .I1(\mcycle_reg[0]_rep_n_0 ),
         .O(\RegAddrC[0]_i_21_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair103" *) 
+  (* SOFT_HLUTNM = "soft_lutpair88" *) 
   LUT3 #(
     .INIT(8'h37)) 
     \RegAddrC[0]_i_22 
@@ -10666,12 +10649,12 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
     .INIT(32'hFF57FFFF)) 
     \RegAddrC[0]_i_25 
        (.I0(\IR_reg_n_0_[1] ),
-        .I1(mcycle),
+        .I1(\mcycle_reg[0]_rep_n_0 ),
         .I2(\mcycle_reg[1]_rep_n_0 ),
         .I3(\IR_reg[0]_rep__0_n_0 ),
         .I4(\IR_reg_n_0_[2] ),
         .O(\RegAddrC[0]_i_25_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair56" *) 
+  (* SOFT_HLUTNM = "soft_lutpair50" *) 
   LUT5 #(
     .INIT(32'hFF8CFF8F)) 
     \RegAddrC[0]_i_26 
@@ -10679,19 +10662,19 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I1(\IR_reg_n_0_[1] ),
         .I2(\mcycle_reg[1]_rep_n_0 ),
         .I3(\Read_To_Reg_r[4]_i_11_n_0 ),
-        .I4(mcycle),
+        .I4(\mcycle_reg[0]_rep_n_0 ),
         .O(\RegAddrC[0]_i_26_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFFFFF30007555)) 
     \RegAddrC[0]_i_27 
-       (.I0(mcycle),
+       (.I0(\mcycle_reg[0]_rep_n_0 ),
         .I1(\IR_reg[5]_0 [0]),
         .I2(\IR_reg[5]_0 [1]),
         .I3(\IR_reg[5]_0 [2]),
         .I4(\mcycle_reg[1]_rep_n_0 ),
         .I5(\IR_reg[0]_rep__0_n_0 ),
         .O(\RegAddrC[0]_i_27_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair50" *) 
+  (* SOFT_HLUTNM = "soft_lutpair62" *) 
   LUT5 #(
     .INIT(32'h7FF07FFF)) 
     \RegAddrC[0]_i_28 
@@ -10699,9 +10682,9 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I1(\mcycle_reg_n_0_[2] ),
         .I2(\IR_reg[5]_0 [2]),
         .I3(\IR_reg[5]_0 [1]),
-        .I4(mcycle),
+        .I4(\mcycle_reg[0]_rep_n_0 ),
         .O(\RegAddrC[0]_i_28_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair73" *) 
+  (* SOFT_HLUTNM = "soft_lutpair77" *) 
   LUT5 #(
     .INIT(32'h5F105F1F)) 
     \RegAddrC[0]_i_29 
@@ -10709,7 +10692,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I1(\mcycle_reg_n_0_[3] ),
         .I2(\IR_reg[5]_0 [2]),
         .I3(\IR_reg[5]_0 [1]),
-        .I4(mcycle),
+        .I4(\mcycle_reg[0]_rep_n_0 ),
         .O(\RegAddrC[0]_i_29_n_0 ));
   LUT5 #(
     .INIT(32'hB8BBB888)) 
@@ -10738,7 +10721,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I3(\mcycle_reg_n_0_[6] ),
         .I4(\RegAddrC[0]_i_15_n_0 ),
         .O(\RegAddrC[0]_i_6_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair93" *) 
+  (* SOFT_HLUTNM = "soft_lutpair91" *) 
   LUT4 #(
     .INIT(16'h00E2)) 
     \RegAddrC[0]_i_7 
@@ -10767,7 +10750,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\IR_reg_n_0_[2] ),
         .I5(\mcycle_reg_n_0_[6] ),
         .O(\RegAddrC[0]_i_9_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair98" *) 
+  (* SOFT_HLUTNM = "soft_lutpair96" *) 
   LUT4 #(
     .INIT(16'hFFFE)) 
     \RegAddrC[1]_i_1 
@@ -10794,7 +10777,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I2(\RegAddrC[1]_i_15_n_0 ),
         .I3(\mcycle_reg_n_0_[3] ),
         .I4(\IR_reg[5]_0 [0]),
-        .I5(mcycle),
+        .I5(\mcycle_reg[0]_rep_n_0 ),
         .O(\RegAddrC[1]_i_12_n_0 ));
   LUT5 #(
     .INIT(32'hBB888F8F)) 
@@ -10803,7 +10786,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I1(\IR_reg[0]_rep__0_n_0 ),
         .I2(\mcycle_reg[1]_rep_n_0 ),
         .I3(\mcycles_reg[1]_i_11_n_0 ),
-        .I4(mcycle),
+        .I4(\mcycle_reg[0]_rep_n_0 ),
         .O(\RegAddrC[1]_i_13_n_0 ));
   LUT6 #(
     .INIT(64'hEE2EE22EFFFFFFFF)) 
@@ -10815,16 +10798,16 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\IR_reg[5]_0 [0]),
         .I5(\IR_reg[0]_rep__0_n_0 ),
         .O(\RegAddrC[1]_i_14_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair50" *) 
+  (* SOFT_HLUTNM = "soft_lutpair54" *) 
   LUT4 #(
     .INIT(16'hDDD1)) 
     \RegAddrC[1]_i_15 
-       (.I0(mcycle),
+       (.I0(\mcycle_reg[0]_rep_n_0 ),
         .I1(\IR_reg[5]_0 [0]),
         .I2(\IR_reg[5]_0 [1]),
         .I3(\IR_reg[5]_0 [2]),
         .O(\RegAddrC[1]_i_15_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair79" *) 
+  (* SOFT_HLUTNM = "soft_lutpair73" *) 
   LUT3 #(
     .INIT(8'hC8)) 
     \RegAddrC[1]_i_16 
@@ -10840,7 +10823,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I2(\IR_reg[5]_0 [2]),
         .I3(\IR_reg[5]_0 [1]),
         .I4(\IR_reg[5]_0 [0]),
-        .I5(mcycle),
+        .I5(\mcycle_reg[0]_rep_n_0 ),
         .O(\RegAddrC[1]_i_17_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFFFFFFFFEAFFE)) 
@@ -10868,7 +10851,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I1(\RegAddrC[1]_i_9_n_0 ),
         .I2(\IR_reg_n_0_[1] ),
         .I3(\IR_reg[5]_0 [2]),
-        .I4(mcycle),
+        .I4(\mcycle_reg[0]_rep_n_0 ),
         .I5(\IR_reg_n_0_[2] ),
         .O(\RegAddrC[1]_i_5_n_0 ));
   LUT6 #(
@@ -10909,7 +10892,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I2(\IR_reg[5]_0 [0]),
         .I3(\IR_reg[5]_0 [1]),
         .I4(\IR_reg[5]_0 [2]),
-        .I5(mcycle),
+        .I5(\mcycle_reg[0]_rep_n_0 ),
         .O(\RegAddrC[1]_i_9_n_0 ));
   LUT6 #(
     .INIT(64'hFF01FF55FE00FE00)) 
@@ -11096,7 +11079,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I3(\IR_reg_n_0_[6] ),
         .I4(\ISet_reg_n_0_[1] ),
         .O(LDSPHL));
-  (* SOFT_HLUTNM = "soft_lutpair97" *) 
+  (* SOFT_HLUTNM = "soft_lutpair113" *) 
   LUT4 #(
     .INIT(16'hF888)) 
     \SP[15]_i_4 
@@ -11105,7 +11088,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I2(\tstate_reg_n_0_[4] ),
         .I3(\mcycle_reg[0]_rep_n_0 ),
         .O(\SP[15]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair69" *) 
+  (* SOFT_HLUTNM = "soft_lutpair66" *) 
   LUT5 #(
     .INIT(32'h00080000)) 
     \SP[15]_i_7 
@@ -11135,7 +11118,6 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(i_reg_n_65),
         .I5(\SP[7]_i_3_n_0 ),
         .O(\SP[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair69" *) 
   LUT5 #(
     .INIT(32'h00001000)) 
     \SP[7]_i_3 
@@ -11149,97 +11131,97 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
        (.C(Q),
         .CE(\SP[7]_i_1_n_0 ),
         .D(i_reg_n_130),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(\SP_reg_n_0_[0] ));
   FDPE \SP_reg[10] 
        (.C(Q),
         .CE(\SP[15]_i_1_n_0 ),
         .D(i_reg_n_120),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(data4[2]));
   FDPE \SP_reg[11] 
        (.C(Q),
         .CE(\SP[15]_i_1_n_0 ),
         .D(i_reg_n_119),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(data4[3]));
   FDPE \SP_reg[12] 
        (.C(Q),
         .CE(\SP[15]_i_1_n_0 ),
         .D(i_reg_n_118),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(data4[4]));
   FDPE \SP_reg[13] 
        (.C(Q),
         .CE(\SP[15]_i_1_n_0 ),
         .D(i_reg_n_117),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(data4[5]));
   FDPE \SP_reg[14] 
        (.C(Q),
         .CE(\SP[15]_i_1_n_0 ),
         .D(i_reg_n_116),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(data4[6]));
   FDPE \SP_reg[15] 
        (.C(Q),
         .CE(\SP[15]_i_1_n_0 ),
         .D(i_reg_n_115),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(data4[7]));
   FDPE \SP_reg[1] 
        (.C(Q),
         .CE(\SP[7]_i_1_n_0 ),
         .D(i_reg_n_129),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(\SP_reg_n_0_[1] ));
   FDPE \SP_reg[2] 
        (.C(Q),
         .CE(\SP[7]_i_1_n_0 ),
         .D(i_reg_n_128),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(\SP_reg_n_0_[2] ));
   FDPE \SP_reg[3] 
        (.C(Q),
         .CE(\SP[7]_i_1_n_0 ),
         .D(i_reg_n_127),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(\SP_reg_n_0_[3] ));
   FDPE \SP_reg[4] 
        (.C(Q),
         .CE(\SP[7]_i_1_n_0 ),
         .D(i_reg_n_126),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(\SP_reg_n_0_[4] ));
   FDPE \SP_reg[5] 
        (.C(Q),
         .CE(\SP[7]_i_1_n_0 ),
         .D(i_reg_n_125),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(\SP_reg_n_0_[5] ));
   FDPE \SP_reg[6] 
        (.C(Q),
         .CE(\SP[7]_i_1_n_0 ),
         .D(i_reg_n_124),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(\SP_reg_n_0_[6] ));
   FDPE \SP_reg[7] 
        (.C(Q),
         .CE(\SP[7]_i_1_n_0 ),
         .D(i_reg_n_123),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(\SP_reg_n_0_[7] ));
   FDPE \SP_reg[8] 
        (.C(Q),
         .CE(\SP[15]_i_1_n_0 ),
         .D(i_reg_n_122),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(data4[0]));
   FDPE \SP_reg[9] 
        (.C(Q),
         .CE(\SP[15]_i_1_n_0 ),
         .D(i_reg_n_121),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(data4[1]));
   LUT6 #(
     .INIT(64'hFFE200E200000000)) 
@@ -11269,9 +11251,9 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I2(\mcycle_reg_n_0_[2] ),
         .I3(\IR_reg[0]_rep__0_n_0 ),
         .I4(\RegAddrB_r[2]_i_7_0 ),
-        .I5(mcycle),
+        .I5(\mcycle_reg[0]_rep_n_0 ),
         .O(Save_ALU_r_i_11_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair52" *) 
+  (* SOFT_HLUTNM = "soft_lutpair60" *) 
   LUT2 #(
     .INIT(4'hE)) 
     Save_ALU_r_i_12
@@ -11297,7 +11279,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I3(\mcycle_reg_n_0_[6] ),
         .I4(Save_ALU_r_i_8_n_0),
         .O(Save_ALU_r_i_3_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair56" *) 
+  (* SOFT_HLUTNM = "soft_lutpair50" *) 
   LUT3 #(
     .INIT(8'h40)) 
     Save_ALU_r_i_5
@@ -11315,7 +11297,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(Save_ALU_r_i_11_n_0),
         .I5(\IR_reg_n_0_[1] ),
         .O(Save_ALU_r_i_6_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair90" *) 
+  (* SOFT_HLUTNM = "soft_lutpair68" *) 
   LUT4 #(
     .INIT(16'hBF00)) 
     Save_ALU_r_i_7
@@ -11324,7 +11306,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I2(\IR_reg_n_0_[2] ),
         .I3(\mcycle_reg[0]_rep_n_0 ),
         .O(Save_ALU_r_i_7_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair72" *) 
+  (* SOFT_HLUTNM = "soft_lutpair67" *) 
   LUT5 #(
     .INIT(32'hAFFF4000)) 
     Save_ALU_r_i_8
@@ -11347,7 +11329,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   FDCE Save_ALU_r_reg
        (.C(Q),
         .CE(1'b1),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(Save_ALU_r),
         .Q(Save_ALU_r_reg_n_0));
   MUXF7 Save_ALU_r_reg_i_4
@@ -11427,14 +11409,14 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\mcycle_reg[1]_rep_n_0 ),
         .I5(\IR_reg_n_0_[2] ),
         .O(\TmpAddr[15]_i_10_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair61" *) 
+  (* SOFT_HLUTNM = "soft_lutpair76" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \TmpAddr[15]_i_11 
        (.I0(\mcycle_reg_n_0_[2] ),
         .I1(\mcycle_reg[1]_rep_n_0 ),
         .O(\TmpAddr[15]_i_11_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair55" *) 
+  (* SOFT_HLUTNM = "soft_lutpair59" *) 
   LUT3 #(
     .INIT(8'h04)) 
     \TmpAddr[15]_i_12 
@@ -11539,7 +11521,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I3(\TmpAddr[7]_i_3_n_0 ),
         .I4(\F_reg[7]_0 [3]),
         .O(\TmpAddr[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair106" *) 
+  (* SOFT_HLUTNM = "soft_lutpair110" *) 
   LUT4 #(
     .INIT(16'hBF80)) 
     \TmpAddr[3]_i_2 
@@ -11557,7 +11539,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I3(\TmpAddr[7]_i_3_n_0 ),
         .I4(\F_reg[7]_0 [4]),
         .O(\TmpAddr[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair115" *) 
+  (* SOFT_HLUTNM = "soft_lutpair107" *) 
   LUT4 #(
     .INIT(16'hBF80)) 
     \TmpAddr[4]_i_2 
@@ -11575,7 +11557,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I3(\TmpAddr[7]_i_3_n_0 ),
         .I4(\F_reg[7]_0 [5]),
         .O(\TmpAddr[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair114" *) 
+  (* SOFT_HLUTNM = "soft_lutpair105" *) 
   LUT4 #(
     .INIT(16'hBF80)) 
     \TmpAddr[5]_i_2 
@@ -11603,7 +11585,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I3(Halt_FF_reg_n_0),
         .I4(NMICycle_reg_n_0),
         .O(\TmpAddr[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair130" *) 
+  (* SOFT_HLUTNM = "soft_lutpair102" *) 
   LUT3 #(
     .INIT(8'h01)) 
     \TmpAddr[7]_i_10 
@@ -11631,7 +11613,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\IR_reg_n_0_[6] ),
         .I5(\TmpAddr[7]_i_6_n_0 ),
         .O(\TmpAddr[7]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair78" *) 
+  (* SOFT_HLUTNM = "soft_lutpair46" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \TmpAddr[7]_i_4 
@@ -11688,6 +11670,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\IR_reg_n_0_[1] ),
         .I5(\IR_reg_n_0_[7] ),
         .O(\TmpAddr[7]_i_9_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair46" *) 
   LUT5 #(
     .INIT(32'hF0800080)) 
     \TmpAddr[8]_i_1 
@@ -11697,7 +11680,6 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I3(LDW),
         .I4(\F_reg[7]_0 [0]),
         .O(\TmpAddr[8]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair78" *) 
   LUT5 #(
     .INIT(32'hB8008800)) 
     \TmpAddr[9]_i_1 
@@ -11710,43 +11692,43 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   FDCE \TmpAddr_reg[0] 
        (.C(Q),
         .CE(\TmpAddr[7]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\TmpAddr[0]_i_1_n_0 ),
         .Q(data0[0]));
   FDCE \TmpAddr_reg[10] 
        (.C(Q),
         .CE(\TmpAddr[15]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\TmpAddr[10]_i_1_n_0 ),
         .Q(\TmpAddr_reg_n_0_[10] ));
   FDCE \TmpAddr_reg[11] 
        (.C(Q),
         .CE(\TmpAddr[15]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\TmpAddr[11]_i_1_n_0 ),
         .Q(\TmpAddr_reg_n_0_[11] ));
   FDCE \TmpAddr_reg[12] 
        (.C(Q),
         .CE(\TmpAddr[15]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\TmpAddr[12]_i_1_n_0 ),
         .Q(\TmpAddr_reg_n_0_[12] ));
   FDCE \TmpAddr_reg[13] 
        (.C(Q),
         .CE(\TmpAddr[15]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\TmpAddr[13]_i_1_n_0 ),
         .Q(\TmpAddr_reg_n_0_[13] ));
   FDCE \TmpAddr_reg[14] 
        (.C(Q),
         .CE(\TmpAddr[15]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\TmpAddr[14]_i_1_n_0 ),
         .Q(\TmpAddr_reg_n_0_[14] ));
   FDCE \TmpAddr_reg[15] 
        (.C(Q),
         .CE(\TmpAddr[15]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\TmpAddr[15]_i_2_n_0 ),
         .Q(\TmpAddr_reg_n_0_[15] ));
   MUXF7 \TmpAddr_reg[15]_i_4 
@@ -11757,55 +11739,55 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   FDCE \TmpAddr_reg[1] 
        (.C(Q),
         .CE(\TmpAddr[7]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\TmpAddr[1]_i_1_n_0 ),
         .Q(data0[1]));
   FDCE \TmpAddr_reg[2] 
        (.C(Q),
         .CE(\TmpAddr[7]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\TmpAddr[2]_i_1_n_0 ),
         .Q(data0[2]));
   FDCE \TmpAddr_reg[3] 
        (.C(Q),
         .CE(\TmpAddr[7]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\TmpAddr[3]_i_1_n_0 ),
         .Q(data0[3]));
   FDCE \TmpAddr_reg[4] 
        (.C(Q),
         .CE(\TmpAddr[7]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\TmpAddr[4]_i_1_n_0 ),
         .Q(data0[4]));
   FDCE \TmpAddr_reg[5] 
        (.C(Q),
         .CE(\TmpAddr[7]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\TmpAddr[5]_i_1_n_0 ),
         .Q(data0[5]));
   FDCE \TmpAddr_reg[6] 
        (.C(Q),
         .CE(\TmpAddr[7]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\TmpAddr[6]_i_1_n_0 ),
         .Q(data0[6]));
   FDCE \TmpAddr_reg[7] 
        (.C(Q),
         .CE(\TmpAddr[7]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\TmpAddr[7]_i_2_n_0 ),
         .Q(data0[7]));
   FDCE \TmpAddr_reg[8] 
        (.C(Q),
         .CE(\TmpAddr[15]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\TmpAddr[8]_i_1_n_0 ),
         .Q(\TmpAddr_reg_n_0_[8] ));
   FDCE \TmpAddr_reg[9] 
        (.C(Q),
         .CE(\TmpAddr[15]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\TmpAddr[9]_i_1_n_0 ),
         .Q(\TmpAddr_reg_n_0_[9] ));
   LUT5 #(
@@ -11817,7 +11799,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I3(XY_Ind_i_2_n_0),
         .I4(XY_Ind_reg_n_0),
         .O(XY_Ind_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair48" *) 
+  (* SOFT_HLUTNM = "soft_lutpair113" *) 
   LUT3 #(
     .INIT(8'h80)) 
     XY_Ind_i_2
@@ -11828,7 +11810,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   FDCE XY_Ind_reg
        (.C(Q),
         .CE(1'b1),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(XY_Ind_i_1_n_0),
         .Q(XY_Ind_reg_n_0));
   LUT5 #(
@@ -11852,13 +11834,13 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   FDCE \XY_State_reg[0] 
        (.C(Q),
         .CE(1'b1),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\XY_State[0]_i_1_n_0 ),
         .Q(\XY_State_reg_n_0_[0] ));
   FDCE \XY_State_reg[1] 
        (.C(Q),
         .CE(1'b1),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\XY_State[1]_i_1_n_0 ),
         .Q(\XY_State_reg_n_0_[1] ));
   LUT5 #(
@@ -11873,26 +11855,25 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   FDCE Z16_r_reg
        (.C(Q),
         .CE(1'b1),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(Z16_r0),
         .Q(Z16_r));
   LUT6 #(
-    .INIT(64'hFFFFFFDFFFFFFFFF)) 
+    .INIT(64'hFFDFFFFFFFFFFFFF)) 
     cpu_wait_i_2
-       (.I0(\A_reg[15]_0 [10]),
-        .I1(mreq_n),
-        .I2(vram_busy),
-        .I3(cpu_wait_i_3_n_0),
-        .I4(\A_reg[15]_0 [11]),
-        .I5(\A_reg[15]_0 [12]),
-        .O(\A_reg[10]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair117" *) 
-  LUT3 #(
-    .INIT(8'hDF)) 
-    cpu_wait_i_3
        (.I0(\A_reg[15]_0 [14]),
         .I1(\A_reg[15]_0 [15]),
         .I2(\A_reg[15]_0 [13]),
+        .I3(cpu_wait_i_3_n_0),
+        .I4(vram_busy),
+        .I5(\A_reg[15]_0 [10]),
+        .O(\A_reg[14]_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair97" *) 
+  LUT2 #(
+    .INIT(4'hB)) 
+    cpu_wait_i_3
+       (.I0(\A_reg[15]_0 [11]),
+        .I1(\A_reg[15]_0 [12]),
         .O(cpu_wait_i_3_n_0));
   LUT3 #(
     .INIT(8'h40)) 
@@ -11900,7 +11881,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
        (.I0(mem_reg_0),
         .I1(\A_reg[15]_0 [7]),
         .I2(debug_enables[4]),
-        .O(wr_n_reg));
+        .O(wr_n_reg_0));
   LUT6 #(
     .INIT(64'h0000000010000000)) 
     \cref[1]_i_2 
@@ -12115,12 +12096,13 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\A_reg[15]_0 [10]),
         .I5(\A_reg[15]_0 [12]),
         .O(\debug_dslave[7]_INST_0_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair95" *) 
   LUT3 #(
     .INIT(8'h10)) 
     \debug_enables[0]_INST_0 
        (.I0(\A_reg[15]_0 [15]),
         .I1(\A_reg[15]_0 [14]),
-        .I2(rom_ena0),
+        .I2(cpu_wait),
         .O(debug_enables[0]));
   LUT4 #(
     .INIT(16'h0015)) 
@@ -12130,7 +12112,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I2(\A_reg[15]_0 [11]),
         .I3(\debug_enables[7]_INST_0_i_1_n_0 ),
         .O(debug_enables[1]));
-  (* SOFT_HLUTNM = "soft_lutpair57" *) 
+  (* SOFT_HLUTNM = "soft_lutpair69" *) 
   LUT4 #(
     .INIT(16'h0010)) 
     \debug_enables[2]_INST_0 
@@ -12139,6 +12121,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I2(\A_reg[15]_0 [12]),
         .I3(\debug_enables[7]_INST_0_i_1_n_0 ),
         .O(debug_enables[2]));
+  (* SOFT_HLUTNM = "soft_lutpair97" *) 
   LUT4 #(
     .INIT(16'h0040)) 
     \debug_enables[3]_INST_0 
@@ -12147,7 +12130,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I2(\A_reg[15]_0 [12]),
         .I3(\A_reg[15]_0 [11]),
         .O(debug_enables[3]));
-  (* SOFT_HLUTNM = "soft_lutpair57" *) 
+  (* SOFT_HLUTNM = "soft_lutpair69" *) 
   LUT5 #(
     .INIT(32'h00400000)) 
     \debug_enables[6]_INST_0 
@@ -12167,16 +12150,16 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\debug_enables[7]_INST_0_i_1_n_0 ),
         .I5(\debug_enables[7]_INST_0_i_2_n_0 ),
         .O(debug_enables[5]));
-  (* SOFT_HLUTNM = "soft_lutpair117" *) 
+  (* SOFT_HLUTNM = "soft_lutpair95" *) 
   LUT4 #(
     .INIT(16'hDFFF)) 
     \debug_enables[7]_INST_0_i_1 
        (.I0(\A_reg[15]_0 [13]),
         .I1(\A_reg[15]_0 [15]),
         .I2(\A_reg[15]_0 [14]),
-        .I3(rom_ena0),
+        .I3(cpu_wait),
         .O(\debug_enables[7]_INST_0_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair119" *) 
+  (* SOFT_HLUTNM = "soft_lutpair101" *) 
   LUT4 #(
     .INIT(16'hFFFE)) 
     \debug_enables[7]_INST_0_i_2 
@@ -12195,286 +12178,16 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\A_reg[15]_0 [3]),
         .I5(\A_reg[15]_0 [4]),
         .O(\A_reg[8]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair63" *) 
+  (* SOFT_HLUTNM = "soft_lutpair103" *) 
   LUT4 #(
-    .INIT(16'h0020)) 
+    .INIT(16'h1000)) 
     \di_reg[7]_i_1 
-       (.I0(tstate[2]),
-        .I1(no_read),
-        .I2(cpu_wait),
-        .I3(write),
-        .O(\tstate_reg[2]_0 ));
-  LUT6 #(
-    .INIT(64'h8383030000000000)) 
-    \di_reg[7]_i_10 
-       (.I0(\F[5]_i_13_n_0 ),
-        .I1(\IR_reg_n_0_[2] ),
-        .I2(\IR_reg[0]_rep__0_n_0 ),
-        .I3(\mcycle_reg_n_0_[2] ),
-        .I4(\mcycle_reg[1]_rep_n_0 ),
-        .I5(\IR_reg_n_0_[1] ),
-        .O(\di_reg[7]_i_10_n_0 ));
-  LUT5 #(
-    .INIT(32'h8B888888)) 
-    \di_reg[7]_i_11 
-       (.I0(\di_reg[7]_i_9_n_0 ),
-        .I1(\mcycle_reg_n_0_[6] ),
-        .I2(\IR_reg_n_0_[2] ),
-        .I3(\di_reg[7]_i_17_n_0 ),
-        .I4(\IR_reg_n_0_[7] ),
-        .O(\di_reg[7]_i_11_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000002000000000)) 
-    \di_reg[7]_i_12 
-       (.I0(\IR_reg_n_0_[1] ),
-        .I1(\mcycle_reg[1]_rep_n_0 ),
-        .I2(\mcycle_reg_n_0_[2] ),
-        .I3(\mcycle_reg[0]_rep_n_0 ),
-        .I4(\IR_reg[0]_rep_n_0 ),
-        .I5(\IR_reg_n_0_[2] ),
-        .O(\di_reg[7]_i_12_n_0 ));
-  LUT5 #(
-    .INIT(32'hA0A0CFC0)) 
-    \di_reg[7]_i_13 
-       (.I0(\di_reg[7]_i_18_n_0 ),
-        .I1(\di_reg[7]_i_19_n_0 ),
-        .I2(\IR_reg_n_0_[6] ),
-        .I3(\di_reg_reg[7]_i_20_n_0 ),
-        .I4(\IR_reg_n_0_[7] ),
-        .O(\di_reg[7]_i_13_n_0 ));
-  LUT6 #(
-    .INIT(64'hB833B80030003000)) 
-    \di_reg[7]_i_14 
-       (.I0(\A[15]_i_38_n_0 ),
-        .I1(\IR_reg_n_0_[2] ),
-        .I2(\di_reg[7]_i_21_n_0 ),
-        .I3(\IR_reg_n_0_[1] ),
-        .I4(iorq_n_inv_i_8_n_0),
-        .I5(\IR_reg[0]_rep_n_0 ),
-        .O(\di_reg[7]_i_14_n_0 ));
-  LUT6 #(
-    .INIT(64'h0200000003000000)) 
-    \di_reg[7]_i_15 
-       (.I0(\IR_reg_n_0_[1] ),
-        .I1(\mcycle_reg[1]_rep_n_0 ),
-        .I2(\mcycle_reg[0]_rep_n_0 ),
-        .I3(\IR_reg[5]_0 [2]),
-        .I4(\mcycle_reg_n_0_[2] ),
-        .I5(\IR_reg[0]_rep_n_0 ),
-        .O(\di_reg[7]_i_15_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair54" *) 
-  LUT3 #(
-    .INIT(8'hC8)) 
-    \di_reg[7]_i_16 
-       (.I0(\mcycle_reg[1]_rep_n_0 ),
-        .I1(\IR_reg[5]_0 [0]),
-        .I2(\mcycle_reg_n_0_[2] ),
-        .O(\di_reg[7]_i_16_n_0 ));
-  LUT6 #(
-    .INIT(64'h000000004F004000)) 
-    \di_reg[7]_i_17 
-       (.I0(\IR_reg_n_0_[1] ),
-        .I1(\IR_reg[0]_rep__0_n_0 ),
-        .I2(\mcycle_reg_n_0_[2] ),
-        .I3(\di_reg[7]_i_22_n_0 ),
-        .I4(\mcycle_reg_n_0_[3] ),
-        .I5(\mcycle_reg[1]_rep_n_0 ),
-        .O(\di_reg[7]_i_17_n_0 ));
-  LUT6 #(
-    .INIT(64'hAFA0A0A0C0C0C0C0)) 
-    \di_reg[7]_i_18 
-       (.I0(i_reg_n_20),
-        .I1(\di_reg[7]_i_23_n_0 ),
-        .I2(\IR_reg_n_0_[2] ),
-        .I3(\IR_reg[0]_rep_n_0 ),
-        .I4(\di_reg[7]_i_24_n_0 ),
-        .I5(\IR_reg_n_0_[1] ),
-        .O(\di_reg[7]_i_18_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair66" *) 
-  LUT5 #(
-    .INIT(32'hBF000000)) 
-    \di_reg[7]_i_19 
-       (.I0(\IR_reg[0]_rep_n_0 ),
-        .I1(\IR_reg_n_0_[1] ),
-        .I2(\IR_reg_n_0_[2] ),
-        .I3(Halt_FF_i_4_n_0),
-        .I4(\mcycle_reg[1]_rep_n_0 ),
-        .O(\di_reg[7]_i_19_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000111000000000)) 
-    \di_reg[7]_i_21 
-       (.I0(\mcycle_reg[1]_rep_n_0 ),
-        .I1(\IR_reg[5]_0 [0]),
-        .I2(\mcycle_reg_n_0_[3] ),
-        .I3(\mcycle_reg_n_0_[4] ),
-        .I4(\mcycle_reg_n_0_[2] ),
-        .I5(\IR_reg[0]_rep_n_0 ),
-        .O(\di_reg[7]_i_21_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair114" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    \di_reg[7]_i_22 
-       (.I0(\IR_reg[5]_0 [2]),
-        .I1(\mcycle_reg[0]_rep_n_0 ),
-        .O(\di_reg[7]_i_22_n_0 ));
-  LUT6 #(
-    .INIT(64'h888888888B8B8B88)) 
-    \di_reg[7]_i_23 
-       (.I0(\di_reg[7]_i_27_n_0 ),
-        .I1(\IR_reg[0]_rep_n_0 ),
-        .I2(\mcycle_reg_n_0_[2] ),
-        .I3(\mcycle_reg_n_0_[3] ),
-        .I4(\mcycle_reg_n_0_[4] ),
-        .I5(\mcycle_reg[1]_rep_n_0 ),
-        .O(\di_reg[7]_i_23_n_0 ));
-  LUT6 #(
-    .INIT(64'h00000000FF080008)) 
-    \di_reg[7]_i_24 
-       (.I0(\mcycle_reg_n_0_[4] ),
-        .I1(i_reg_n_25),
-        .I2(\mcycle_reg_n_0_[3] ),
-        .I3(\mcycle_reg_n_0_[2] ),
-        .I4(\RegAddrB_r[1]_i_19_n_0 ),
-        .I5(\mcycle_reg[1]_rep_n_0 ),
-        .O(\di_reg[7]_i_24_n_0 ));
-  LUT6 #(
-    .INIT(64'h00000000BB88B888)) 
-    \di_reg[7]_i_25 
-       (.I0(\di_reg[7]_i_28_n_0 ),
-        .I1(\IR_reg_n_0_[1] ),
-        .I2(\mcycle_reg_n_0_[2] ),
-        .I3(\di_reg[7]_i_29_n_0 ),
-        .I4(\mcycle_reg[1]_rep_n_0 ),
-        .I5(\IR_reg[0]_rep_n_0 ),
-        .O(\di_reg[7]_i_25_n_0 ));
-  LUT6 #(
-    .INIT(64'h4000400040007000)) 
-    \di_reg[7]_i_26 
-       (.I0(\IR_reg[0]_rep_n_0 ),
-        .I1(\IR_reg_n_0_[1] ),
-        .I2(\mcycle_reg_n_0_[2] ),
-        .I3(Halt_FF_i_4_n_0),
-        .I4(mcycle),
-        .I5(\mcycle_reg[1]_rep_n_0 ),
-        .O(\di_reg[7]_i_26_n_0 ));
-  LUT6 #(
-    .INIT(64'h3737323237323232)) 
-    \di_reg[7]_i_27 
-       (.I0(\mcycle_reg[1]_rep_n_0 ),
-        .I1(\di_reg[7]_i_30_n_0 ),
-        .I2(\mcycle_reg_n_0_[2] ),
-        .I3(\mcycle_reg_n_0_[4] ),
-        .I4(\TmpAddr[15]_i_12_n_0 ),
-        .I5(\mcycle_reg_n_0_[3] ),
-        .O(\di_reg[7]_i_27_n_0 ));
-  LUT6 #(
-    .INIT(64'h0007FFFF00070000)) 
-    \di_reg[7]_i_28 
-       (.I0(\IR_reg[5]_0 [1]),
-        .I1(mcycle),
-        .I2(\IR_reg[5]_0 [0]),
-        .I3(\IR_reg[5]_0 [2]),
-        .I4(\mcycle_reg[1]_rep_n_0 ),
-        .I5(\di_reg[7]_i_31_n_0 ),
-        .O(\di_reg[7]_i_28_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair49" *) 
-  LUT5 #(
-    .INIT(32'h00000002)) 
-    \di_reg[7]_i_29 
-       (.I0(NMICycle_reg_n_0),
-        .I1(\IR_reg[5]_0 [1]),
-        .I2(\IR_reg[5]_0 [0]),
-        .I3(\IR_reg[5]_0 [2]),
-        .I4(mcycle),
-        .O(\di_reg[7]_i_29_n_0 ));
-  LUT2 #(
-    .INIT(4'hE)) 
-    \di_reg[7]_i_30 
-       (.I0(\IR_reg[5]_0 [0]),
-        .I1(mcycle),
-        .O(\di_reg[7]_i_30_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000000008080C08)) 
-    \di_reg[7]_i_31 
-       (.I0(\mcycle_reg_n_0_[3] ),
-        .I1(\IR_reg[5]_0 [2]),
-        .I2(\IR_reg[5]_0 [0]),
-        .I3(\mcycle_reg_n_0_[4] ),
-        .I4(\IR_reg[5]_0 [1]),
-        .I5(\mcycle_reg_n_0_[2] ),
-        .O(\di_reg[7]_i_31_n_0 ));
-  LUT5 #(
-    .INIT(32'h0000CCE2)) 
-    \di_reg[7]_i_4 
-       (.I0(\di_reg[7]_i_8_n_0 ),
-        .I1(\mcycle_reg_n_0_[6] ),
-        .I2(\di_reg[7]_i_9_n_0 ),
-        .I3(\IR_reg_n_0_[6] ),
-        .I4(\ISet_reg_n_0_[0] ),
-        .O(\di_reg[7]_i_4_n_0 ));
-  LUT5 #(
-    .INIT(32'hF4FFF400)) 
-    \di_reg[7]_i_5 
-       (.I0(\IR_reg_n_0_[7] ),
-        .I1(\di_reg[7]_i_10_n_0 ),
-        .I2(\mcycle_reg_n_0_[6] ),
-        .I3(\IR_reg_n_0_[6] ),
-        .I4(\di_reg[7]_i_11_n_0 ),
-        .O(\di_reg[7]_i_5_n_0 ));
-  LUT6 #(
-    .INIT(64'h00B0FFFF00B00000)) 
-    \di_reg[7]_i_6 
-       (.I0(\IR_reg_n_0_[7] ),
-        .I1(\IR_reg_n_0_[6] ),
-        .I2(\di_reg[7]_i_12_n_0 ),
-        .I3(\mcycle_reg_n_0_[6] ),
-        .I4(\ISet_reg_n_0_[0] ),
-        .I5(\di_reg[7]_i_13_n_0 ),
-        .O(\di_reg[7]_i_6_n_0 ));
-  LUT5 #(
-    .INIT(32'h03008888)) 
-    \di_reg[7]_i_7 
-       (.I0(\di_reg[7]_i_14_n_0 ),
-        .I1(\IR_reg_n_0_[6] ),
-        .I2(\IR_reg_n_0_[2] ),
-        .I3(\di_reg[7]_i_15_n_0 ),
-        .I4(\IR_reg_n_0_[7] ),
-        .O(\di_reg[7]_i_7_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000000000005404)) 
-    \di_reg[7]_i_8 
-       (.I0(\IR_reg_n_0_[2] ),
-        .I1(\PC[0]_i_36_n_0 ),
-        .I2(\IR_reg[0]_rep__0_n_0 ),
-        .I3(\di_reg[7]_i_16_n_0 ),
-        .I4(\IR_reg_n_0_[1] ),
-        .I5(\IR_reg_n_0_[7] ),
-        .O(\di_reg[7]_i_8_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFFFDFF)) 
-    \di_reg[7]_i_9 
-       (.I0(\IR_reg_n_0_[2] ),
-        .I1(\IR_reg[0]_rep__0_n_0 ),
-        .I2(\Read_To_Reg_r[4]_i_11_n_0 ),
-        .I3(\IR_reg_n_0_[1] ),
-        .I4(\IR_reg_n_0_[7] ),
-        .O(\di_reg[7]_i_9_n_0 ));
-  MUXF7 \di_reg_reg[7]_i_2 
-       (.I0(\di_reg[7]_i_4_n_0 ),
-        .I1(\di_reg[7]_i_5_n_0 ),
-        .O(no_read),
-        .S(\ISet_reg_n_0_[1] ));
-  MUXF7 \di_reg_reg[7]_i_20 
-       (.I0(\di_reg[7]_i_25_n_0 ),
-        .I1(\di_reg[7]_i_26_n_0 ),
-        .O(\di_reg_reg[7]_i_20_n_0 ),
-        .S(\IR_reg_n_0_[2] ));
-  MUXF7 \di_reg_reg[7]_i_3 
-       (.I0(\di_reg[7]_i_6_n_0 ),
-        .I1(\di_reg[7]_i_7_n_0 ),
-        .O(write),
-        .S(\ISet_reg_n_0_[1] ));
-  (* SOFT_HLUTNM = "soft_lutpair123" *) 
+       (.I0(no_read),
+        .I1(write),
+        .I2(tstate[2]),
+        .I3(cpu_wait),
+        .O(E));
+  (* SOFT_HLUTNM = "soft_lutpair120" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \dout[0]_i_1 
@@ -12482,7 +12195,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I1(\dout[7]_i_3_n_0 ),
         .I2(\dout[0]_i_3_n_0 ),
         .O(\dout[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair80" *) 
+  (* SOFT_HLUTNM = "soft_lutpair86" *) 
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \dout[0]_i_3 
@@ -12492,7 +12205,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I3(I_RLD),
         .I4(\BusB_reg_n_0_[0] ),
         .O(\dout[0]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair124" *) 
+  (* SOFT_HLUTNM = "soft_lutpair130" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \dout[1]_i_1 
@@ -12500,7 +12213,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I1(\dout[7]_i_3_n_0 ),
         .I2(\dout[1]_i_3_n_0 ),
         .O(\dout[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair85" *) 
+  (* SOFT_HLUTNM = "soft_lutpair81" *) 
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \dout[1]_i_3 
@@ -12510,7 +12223,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I3(I_RLD),
         .I4(\BusB_reg_n_0_[1] ),
         .O(\dout[1]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair126" *) 
+  (* SOFT_HLUTNM = "soft_lutpair130" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \dout[2]_i_1 
@@ -12518,7 +12231,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I1(\dout[7]_i_3_n_0 ),
         .I2(\dout[2]_i_3_n_0 ),
         .O(\dout[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair86" *) 
+  (* SOFT_HLUTNM = "soft_lutpair83" *) 
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \dout[2]_i_3 
@@ -12536,7 +12249,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I1(\dout[7]_i_3_n_0 ),
         .I2(\dout[3]_i_3_n_0 ),
         .O(\dout[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair82" *) 
+  (* SOFT_HLUTNM = "soft_lutpair79" *) 
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \dout[3]_i_3 
@@ -12554,7 +12267,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I1(\dout[7]_i_3_n_0 ),
         .I2(\dout[4]_i_3_n_0 ),
         .O(\dout[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair80" *) 
+  (* SOFT_HLUTNM = "soft_lutpair86" *) 
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \dout[4]_i_3 
@@ -12572,7 +12285,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I1(\dout[7]_i_3_n_0 ),
         .I2(\dout[5]_i_3_n_0 ),
         .O(\dout[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair85" *) 
+  (* SOFT_HLUTNM = "soft_lutpair81" *) 
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \dout[5]_i_3 
@@ -12582,7 +12295,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I3(I_RLD),
         .I4(\BusB_reg_n_0_[5] ),
         .O(\dout[5]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair124" *) 
+  (* SOFT_HLUTNM = "soft_lutpair126" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \dout[6]_i_1 
@@ -12624,7 +12337,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
        (.I0(\BusA_reg_n_0_[4] ),
         .I1(\BusA_reg_n_0_[5] ),
         .O(\dout[6]_i_21_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair86" *) 
+  (* SOFT_HLUTNM = "soft_lutpair83" *) 
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \dout[6]_i_3 
@@ -12661,7 +12374,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\mcycle_reg_n_0_[1] ),
         .I5(\IR_reg_n_0_[1] ),
         .O(\dout[7]_i_14_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair123" *) 
+  (* SOFT_HLUTNM = "soft_lutpair120" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \dout[7]_i_2 
@@ -12704,7 +12417,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I3(\BusA_reg_n_0_[1] ),
         .I4(\BusA_reg_n_0_[4] ),
         .O(\dout[7]_i_29_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair68" *) 
+  (* SOFT_HLUTNM = "soft_lutpair72" *) 
   LUT5 #(
     .INIT(32'h00004000)) 
     \dout[7]_i_3 
@@ -12714,7 +12427,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I3(i_reg_n_64),
         .I4(Read_To_Reg_r[0]),
         .O(\dout[7]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair82" *) 
+  (* SOFT_HLUTNM = "soft_lutpair79" *) 
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \dout[7]_i_5 
@@ -12745,43 +12458,43 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   FDCE \dout_reg[0] 
        (.C(Q),
         .CE(\dout[7]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\dout[0]_i_1_n_0 ),
         .Q(dout[0]));
   FDCE \dout_reg[1] 
        (.C(Q),
         .CE(\dout[7]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\dout[1]_i_1_n_0 ),
         .Q(dout[1]));
   FDCE \dout_reg[2] 
        (.C(Q),
         .CE(\dout[7]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\dout[2]_i_1_n_0 ),
         .Q(dout[2]));
   FDCE \dout_reg[3] 
        (.C(Q),
         .CE(\dout[7]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\dout[3]_i_1_n_0 ),
         .Q(dout[3]));
   FDCE \dout_reg[4] 
        (.C(Q),
         .CE(\dout[7]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\dout[4]_i_1_n_0 ),
         .Q(dout[4]));
   FDCE \dout_reg[5] 
        (.C(Q),
         .CE(\dout[7]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\dout[5]_i_1_n_0 ),
         .Q(dout[5]));
   FDCE \dout_reg[6] 
        (.C(Q),
         .CE(\dout[7]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\dout[6]_i_1_n_0 ),
         .Q(dout[6]));
   CARRY4 \dout_reg[6]_i_13 
@@ -12801,7 +12514,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   FDCE \dout_reg[7] 
        (.C(Q),
         .CE(\dout[7]_i_1_n_0 ),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\dout[7]_i_2_n_0 ),
         .Q(dout[7]));
   CARRY4 \dout_reg[7]_i_21 
@@ -12818,7 +12531,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I1(\A_reg[8]_0 ),
         .I2(\A_reg[15]_0 [1]),
         .I3(\A_reg[15]_0 [2]),
-        .I4(wr_n_reg),
+        .I4(wr_n_reg_0),
         .I5(flip_ena),
         .O(\dout_reg[0]_0 ));
   dkong_dkong_system_wrapper_0_0_tv80_reg i_reg
@@ -12978,7 +12691,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .RegsH_reg_0_7_0_1_i_8_0({\tstate_reg_n_0_[4] ,\tstate_reg_n_0_[3] ,tstate}),
         .RegsL_reg_0_7_0_1_i_1_0(\mcycle_reg[0]_rep_n_0 ),
         .SP16(SP16),
-        .\SP[15]_i_25_0 ({\mcycle_reg_n_0_[4] ,\mcycle_reg_n_0_[3] ,\mcycle_reg_n_0_[2] ,mcycle}),
+        .\SP[15]_i_25_0 ({\mcycle_reg_n_0_[4] ,\mcycle_reg_n_0_[3] ,\mcycle_reg_n_0_[2] }),
         .\SP_reg[10] (\BusB_reg_n_0_[2] ),
         .\SP_reg[11] (\SP[15]_i_7_n_0 ),
         .\SP_reg[12] (\BusB_reg_n_0_[4] ),
@@ -13045,90 +12758,79 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I1(\A_reg[15]_0 [3]),
         .I2(\A_reg[15]_0 [0]),
         .O(\io_bus[dslave][7]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair119" *) 
+  (* SOFT_HLUTNM = "soft_lutpair101" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \io_bus[dslave][7]_i_4 
        (.I0(\A_reg[15]_0 [1]),
         .I1(\A_reg[15]_0 [2]),
         .O(\io_bus[dslave][7]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair105" *) 
-  LUT4 #(
-    .INIT(16'h4440)) 
+  LUT6 #(
+    .INIT(64'h0000000044440040)) 
     iorq_n_inv_i_1
        (.I0(mcycle),
         .I1(iorq),
-        .I2(rd_n10_out),
-        .I3(wr_n1__0),
-        .O(\mcycle_reg[0]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair63" *) 
-  LUT5 #(
-    .INIT(32'h000000F2)) 
+        .I2(tstate[2]),
+        .I3(cpu_wait),
+        .I4(tstate[1]),
+        .I5(iorq_n_inv_i_3_n_0),
+        .O(\mcycle_reg[0]_1 ));
+  (* SOFT_HLUTNM = "soft_lutpair103" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
     iorq_n_inv_i_3
-       (.I0(tstate[2]),
-        .I1(cpu_wait),
-        .I2(tstate[1]),
-        .I3(no_read),
-        .I4(write),
-        .O(rd_n10_out));
-  (* SOFT_HLUTNM = "soft_lutpair104" *) 
-  LUT4 #(
-    .INIT(16'hF200)) 
-    iorq_n_inv_i_4
-       (.I0(tstate[2]),
-        .I1(cpu_wait),
-        .I2(tstate[1]),
-        .I3(write),
-        .O(wr_n1__0));
+       (.I0(no_read),
+        .I1(write),
+        .O(iorq_n_inv_i_3_n_0));
   LUT5 #(
     .INIT(32'h00002000)) 
-    iorq_n_inv_i_5
+    iorq_n_inv_i_4
        (.I0(\IR_reg_n_0_[6] ),
         .I1(\IR_reg_n_0_[2] ),
-        .I2(iorq_n_inv_i_7_n_0),
+        .I2(iorq_n_inv_i_6_n_0),
         .I3(\IR_reg_n_0_[7] ),
         .I4(\ISet_reg_n_0_[0] ),
-        .O(iorq_n_inv_i_5_n_0));
+        .O(iorq_n_inv_i_4_n_0));
   LUT6 #(
     .INIT(64'h000F000000200020)) 
-    iorq_n_inv_i_6
-       (.I0(iorq_n_inv_i_8_n_0),
+    iorq_n_inv_i_5
+       (.I0(iorq_n_inv_i_7_n_0),
         .I1(\IR_reg_n_0_[1] ),
         .I2(\IR_reg_n_0_[6] ),
         .I3(\IR_reg_n_0_[2] ),
-        .I4(iorq_n_inv_i_9_n_0),
+        .I4(iorq_n_inv_i_8_n_0),
         .I5(\IR_reg_n_0_[7] ),
-        .O(iorq_n_inv_i_6_n_0));
+        .O(iorq_n_inv_i_5_n_0));
   LUT6 #(
     .INIT(64'h0000008000000000)) 
-    iorq_n_inv_i_7
+    iorq_n_inv_i_6
        (.I0(\IR_reg_n_0_[0] ),
         .I1(\mcycle_reg_n_0_[2] ),
         .I2(\IR_reg[5]_0 [1]),
         .I3(\IR_reg[5]_0 [2]),
         .I4(\mcycle_reg[1]_rep_n_0 ),
         .I5(\IR_reg_n_0_[1] ),
-        .O(iorq_n_inv_i_7_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair92" *) 
+        .O(iorq_n_inv_i_6_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair99" *) 
   LUT2 #(
     .INIT(4'h2)) 
-    iorq_n_inv_i_8
+    iorq_n_inv_i_7
        (.I0(\mcycle_reg[1]_rep_n_0 ),
         .I1(\mcycle_reg[0]_rep_n_0 ),
-        .O(iorq_n_inv_i_8_n_0));
+        .O(iorq_n_inv_i_7_n_0));
   LUT6 #(
     .INIT(64'h0408000800000000)) 
-    iorq_n_inv_i_9
+    iorq_n_inv_i_8
        (.I0(\mcycle_reg[1]_rep_n_0 ),
         .I1(\IR_reg[5]_0 [2]),
         .I2(\mcycle_reg[0]_rep_n_0 ),
         .I3(\IR_reg[0]_rep__0_n_0 ),
         .I4(\mcycle_reg_n_0_[2] ),
         .I5(\IR_reg_n_0_[1] ),
-        .O(iorq_n_inv_i_9_n_0));
+        .O(iorq_n_inv_i_8_n_0));
   MUXF7 iorq_n_reg_inv_i_2
-       (.I0(iorq_n_inv_i_5_n_0),
-        .I1(iorq_n_inv_i_6_n_0),
+       (.I0(iorq_n_inv_i_4_n_0),
+        .I1(iorq_n_inv_i_5_n_0),
         .O(iorq),
         .S(\ISet_reg_n_0_[1] ));
   LUT6 #(
@@ -13145,7 +12847,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
        (.C(Q),
         .CE(1'b1),
         .D(m1_n_i_1_n_0),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(cpu_m1));
   LUT6 #(
     .INIT(64'h0404040404040454)) 
@@ -13167,7 +12869,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\Pre_XY_F_M_reg_n_0_[0] ),
         .I5(\Pre_XY_F_M_reg_n_0_[1] ),
         .O(\mcycle[0]_rep_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair150" *) 
+  (* SOFT_HLUTNM = "soft_lutpair151" *) 
   LUT2 #(
     .INIT(4'h1)) 
     \mcycle[1]_i_1 
@@ -13200,7 +12902,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\Pre_XY_F_M_reg_n_0_[1] ),
         .I5(\mcycle[2]_i_2_n_0 ),
         .O(\mcycle[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair110" *) 
+  (* SOFT_HLUTNM = "soft_lutpair90" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \mcycle[2]_i_2 
@@ -13217,7 +12919,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\Pre_XY_F_M_reg_n_0_[0] ),
         .I5(\mcycle_reg_n_0_[2] ),
         .O(\mcycle[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair150" *) 
+  (* SOFT_HLUTNM = "soft_lutpair151" *) 
   LUT2 #(
     .INIT(4'h1)) 
     \mcycle[4]_i_1 
@@ -13290,7 +12992,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\IR_reg[0]_rep__0_n_0 ),
         .I5(\Pre_XY_F_M[1]_i_2_n_0 ),
         .O(\mcycle[6]_i_5_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair91" *) 
+  (* SOFT_HLUTNM = "soft_lutpair108" *) 
   LUT4 #(
     .INIT(16'hFFFD)) 
     \mcycle[6]_i_6 
@@ -13304,57 +13006,57 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
        (.C(Q),
         .CE(mcycle_1),
         .D(\mcycle[0]_i_1_n_0 ),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(mcycle));
   (* ORIG_CELL_NAME = "mcycle_reg[0]" *) 
   FDPE \mcycle_reg[0]_rep 
        (.C(Q),
         .CE(mcycle_1),
         .D(\mcycle[0]_rep_i_1_n_0 ),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(\mcycle_reg[0]_rep_n_0 ));
   (* ORIG_CELL_NAME = "mcycle_reg[1]" *) 
   FDCE \mcycle_reg[1] 
        (.C(Q),
         .CE(mcycle_1),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\mcycle[1]_i_1_n_0 ),
         .Q(\mcycle_reg_n_0_[1] ));
   (* ORIG_CELL_NAME = "mcycle_reg[1]" *) 
   FDCE \mcycle_reg[1]_rep 
        (.C(Q),
         .CE(mcycle_1),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\mcycle[1]_rep_i_1_n_0 ),
         .Q(\mcycle_reg[1]_rep_n_0 ));
   FDCE \mcycle_reg[2] 
        (.C(Q),
         .CE(mcycle_1),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\mcycle[2]_i_1_n_0 ),
         .Q(\mcycle_reg_n_0_[2] ));
   FDCE \mcycle_reg[3] 
        (.C(Q),
         .CE(mcycle_1),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\mcycle[3]_i_1_n_0 ),
         .Q(\mcycle_reg_n_0_[3] ));
   FDCE \mcycle_reg[4] 
        (.C(Q),
         .CE(mcycle_1),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\mcycle[4]_i_1_n_0 ),
         .Q(\mcycle_reg_n_0_[4] ));
   FDCE \mcycle_reg[5] 
        (.C(Q),
         .CE(mcycle_1),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\mcycle[5]_i_1_n_0 ),
         .Q(\mcycle_reg_n_0_[5] ));
   FDCE \mcycle_reg[6] 
        (.C(Q),
         .CE(mcycle_1),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\mcycle[6]_i_2_n_0 ),
         .Q(\mcycle_reg_n_0_[6] ));
   LUT6 #(
@@ -13386,7 +13088,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\IR_reg[5]_0 [0]),
         .I5(\IR_reg[5]_0 [2]),
         .O(\mcycles[0]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair51" *) 
+  (* SOFT_HLUTNM = "soft_lutpair49" *) 
   LUT3 #(
     .INIT(8'hDF)) 
     \mcycles[0]_i_5 
@@ -13414,7 +13116,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\IR_reg[0]_rep__0_n_0 ),
         .I5(\IR_reg_n_0_[7] ),
         .O(\mcycles[0]_i_7_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair73" *) 
+  (* SOFT_HLUTNM = "soft_lutpair61" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \mcycles[0]_i_8 
@@ -13431,7 +13133,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\IR_reg[5]_0 [0]),
         .I5(\mcycle_reg[1]_rep_n_0 ),
         .O(\mcycles[0]_i_9_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair99" *) 
+  (* SOFT_HLUTNM = "soft_lutpair104" *) 
   LUT4 #(
     .INIT(16'hFFF4)) 
     \mcycles[1]_i_10 
@@ -13440,7 +13142,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I2(\IR_reg[5]_0 [1]),
         .I3(\IR_reg[5]_0 [2]),
         .O(\mcycles[1]_i_10_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair135" *) 
+  (* SOFT_HLUTNM = "soft_lutpair133" *) 
   LUT3 #(
     .INIT(8'h0D)) 
     \mcycles[1]_i_12 
@@ -13492,7 +13194,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I3(\IR_reg_n_0_[7] ),
         .I4(\mcycles[1]_i_9_n_0 ),
         .O(\mcycles[1]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair66" *) 
+  (* SOFT_HLUTNM = "soft_lutpair55" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \mcycles[1]_i_5 
@@ -13599,7 +13301,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   FDCE \mcycles_reg[0] 
        (.C(Q),
         .CE(1'b1),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(mcycles_d[0]),
         .Q(mcycles[0]));
   MUXF7 \mcycles_reg[0]_i_1 
@@ -13610,7 +13312,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   FDCE \mcycles_reg[1] 
        (.C(Q),
         .CE(1'b1),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(mcycles_d[1]),
         .Q(mcycles[1]));
   MUXF7 \mcycles_reg[1]_i_1 
@@ -13626,7 +13328,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
   FDCE \mcycles_reg[2] 
        (.C(Q),
         .CE(1'b1),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(mcycles_d[2]),
         .Q(mcycles[2]));
   MUXF7 \mcycles_reg[2]_i_1 
@@ -13652,15 +13354,15 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I1(mem_reg_0),
         .O(WEA));
   LUT6 #(
-    .INIT(64'h1F1F10101F1F101F)) 
-    mreq_n_i_1
-       (.I0(\tstate[6]_i_4_n_0 ),
-        .I1(tstate[1]),
-        .I2(\mcycle_reg[0]_rep_n_0 ),
-        .I3(wr_n1__0),
-        .I4(iorq),
-        .I5(rd_n10_out),
-        .O(\tstate_reg[1]_0 ));
+    .INIT(64'hAAAA00A0BBBB00B0)) 
+    mreq_n_inv_i_1
+       (.I0(mcycle),
+        .I1(iorq),
+        .I2(tstate[2]),
+        .I3(cpu_wait),
+        .I4(tstate[1]),
+        .I5(iorq_n_inv_i_3_n_0),
+        .O(\mcycle_reg[0]_2 ));
   LUT6 #(
     .INIT(64'hFFEFFFFF00200000)) 
     nmi_mask_i_1
@@ -13668,7 +13370,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I1(\A_reg[8]_0 ),
         .I2(\A_reg[15]_0 [2]),
         .I3(\A_reg[15]_0 [1]),
-        .I4(wr_n_reg),
+        .I4(wr_n_reg_0),
         .I5(nmi_mask),
         .O(\dout_reg[0]_1 ));
   LUT4 #(
@@ -13678,31 +13380,303 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I1(rst_n),
         .I2(out_busy),
         .I3(debug_enables[5]),
-        .O(E));
-  (* SOFT_HLUTNM = "soft_lutpair48" *) 
-  LUT5 #(
-    .INIT(32'h0D000DFF)) 
+        .O(wr_n_reg));
+  LUT6 #(
+    .INIT(64'h0EFF0E0E0EFF0EFF)) 
     rd_n_i_1
-       (.I0(tstate[2]),
-        .I1(cpu_wait),
-        .I2(tstate[1]),
+       (.I0(no_read),
+        .I1(write),
+        .I2(mcycle),
+        .I3(tstate[1]),
+        .I4(cpu_wait),
+        .I5(tstate[2]),
+        .O(\mcycle_reg[0]_0 ));
+  LUT6 #(
+    .INIT(64'h8383030000000000)) 
+    rd_n_i_10
+       (.I0(\F[5]_i_13_n_0 ),
+        .I1(\IR_reg_n_0_[2] ),
+        .I2(\IR_reg[0]_rep__0_n_0 ),
+        .I3(\mcycle_reg_n_0_[2] ),
+        .I4(\mcycle_reg[1]_rep_n_0 ),
+        .I5(\IR_reg_n_0_[1] ),
+        .O(rd_n_i_10_n_0));
+  LUT5 #(
+    .INIT(32'h8B888888)) 
+    rd_n_i_11
+       (.I0(rd_n_i_9_n_0),
+        .I1(\mcycle_reg_n_0_[6] ),
+        .I2(\IR_reg_n_0_[2] ),
+        .I3(rd_n_i_17_n_0),
+        .I4(\IR_reg_n_0_[7] ),
+        .O(rd_n_i_11_n_0));
+  LUT6 #(
+    .INIT(64'h0000002000000000)) 
+    rd_n_i_12
+       (.I0(\IR_reg_n_0_[1] ),
+        .I1(\mcycle_reg[1]_rep_n_0 ),
+        .I2(\mcycle_reg_n_0_[2] ),
         .I3(\mcycle_reg[0]_rep_n_0 ),
-        .I4(rd_n10_out),
-        .O(\tstate_reg[2]_1 ));
+        .I4(\IR_reg[0]_rep_n_0 ),
+        .I5(\IR_reg_n_0_[2] ),
+        .O(rd_n_i_12_n_0));
+  LUT5 #(
+    .INIT(32'hA0A0CFC0)) 
+    rd_n_i_13
+       (.I0(rd_n_i_18_n_0),
+        .I1(rd_n_i_19_n_0),
+        .I2(\IR_reg_n_0_[6] ),
+        .I3(rd_n_reg_i_20_n_0),
+        .I4(\IR_reg_n_0_[7] ),
+        .O(rd_n_i_13_n_0));
+  LUT6 #(
+    .INIT(64'hB833B80030003000)) 
+    rd_n_i_14
+       (.I0(\A[15]_i_38_n_0 ),
+        .I1(\IR_reg_n_0_[2] ),
+        .I2(rd_n_i_21_n_0),
+        .I3(\IR_reg_n_0_[1] ),
+        .I4(iorq_n_inv_i_7_n_0),
+        .I5(\IR_reg[0]_rep_n_0 ),
+        .O(rd_n_i_14_n_0));
+  LUT6 #(
+    .INIT(64'h0200000003000000)) 
+    rd_n_i_15
+       (.I0(\IR_reg_n_0_[1] ),
+        .I1(\mcycle_reg[1]_rep_n_0 ),
+        .I2(\mcycle_reg[0]_rep_n_0 ),
+        .I3(\IR_reg[5]_0 [2]),
+        .I4(\mcycle_reg_n_0_[2] ),
+        .I5(\IR_reg[0]_rep_n_0 ),
+        .O(rd_n_i_15_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair47" *) 
+  LUT3 #(
+    .INIT(8'hC8)) 
+    rd_n_i_16
+       (.I0(\mcycle_reg[1]_rep_n_0 ),
+        .I1(\IR_reg[5]_0 [0]),
+        .I2(\mcycle_reg_n_0_[2] ),
+        .O(rd_n_i_16_n_0));
+  LUT6 #(
+    .INIT(64'h000000004F004000)) 
+    rd_n_i_17
+       (.I0(\IR_reg_n_0_[1] ),
+        .I1(\IR_reg[0]_rep__0_n_0 ),
+        .I2(\mcycle_reg_n_0_[2] ),
+        .I3(rd_n_i_22_n_0),
+        .I4(\mcycle_reg_n_0_[3] ),
+        .I5(\mcycle_reg[1]_rep_n_0 ),
+        .O(rd_n_i_17_n_0));
+  LUT6 #(
+    .INIT(64'hAFA0A0A0C0C0C0C0)) 
+    rd_n_i_18
+       (.I0(i_reg_n_20),
+        .I1(rd_n_i_23_n_0),
+        .I2(\IR_reg_n_0_[2] ),
+        .I3(\IR_reg[0]_rep_n_0 ),
+        .I4(rd_n_i_24_n_0),
+        .I5(\IR_reg_n_0_[1] ),
+        .O(rd_n_i_18_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair55" *) 
+  LUT5 #(
+    .INIT(32'hBF000000)) 
+    rd_n_i_19
+       (.I0(\IR_reg[0]_rep_n_0 ),
+        .I1(\IR_reg_n_0_[1] ),
+        .I2(\IR_reg_n_0_[2] ),
+        .I3(Halt_FF_i_4_n_0),
+        .I4(\mcycle_reg[1]_rep_n_0 ),
+        .O(rd_n_i_19_n_0));
+  LUT6 #(
+    .INIT(64'h0000111000000000)) 
+    rd_n_i_21
+       (.I0(\mcycle_reg[1]_rep_n_0 ),
+        .I1(\IR_reg[5]_0 [0]),
+        .I2(\mcycle_reg_n_0_[3] ),
+        .I3(\mcycle_reg_n_0_[4] ),
+        .I4(\mcycle_reg_n_0_[2] ),
+        .I5(\IR_reg[0]_rep_n_0 ),
+        .O(rd_n_i_21_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair147" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
+    rd_n_i_22
+       (.I0(\IR_reg[5]_0 [2]),
+        .I1(\mcycle_reg[0]_rep_n_0 ),
+        .O(rd_n_i_22_n_0));
+  LUT6 #(
+    .INIT(64'h888888888B8B8B88)) 
+    rd_n_i_23
+       (.I0(rd_n_i_27_n_0),
+        .I1(\IR_reg[0]_rep_n_0 ),
+        .I2(\mcycle_reg_n_0_[2] ),
+        .I3(\mcycle_reg_n_0_[3] ),
+        .I4(\mcycle_reg_n_0_[4] ),
+        .I5(\mcycle_reg[1]_rep_n_0 ),
+        .O(rd_n_i_23_n_0));
+  LUT6 #(
+    .INIT(64'h00000000FF080008)) 
+    rd_n_i_24
+       (.I0(\mcycle_reg_n_0_[4] ),
+        .I1(i_reg_n_25),
+        .I2(\mcycle_reg_n_0_[3] ),
+        .I3(\mcycle_reg_n_0_[2] ),
+        .I4(\RegAddrB_r[1]_i_19_n_0 ),
+        .I5(\mcycle_reg[1]_rep_n_0 ),
+        .O(rd_n_i_24_n_0));
+  LUT6 #(
+    .INIT(64'h00000000BB88B888)) 
+    rd_n_i_25
+       (.I0(rd_n_i_28_n_0),
+        .I1(\IR_reg_n_0_[1] ),
+        .I2(\mcycle_reg_n_0_[2] ),
+        .I3(rd_n_i_29_n_0),
+        .I4(\mcycle_reg[1]_rep_n_0 ),
+        .I5(\IR_reg[0]_rep_n_0 ),
+        .O(rd_n_i_25_n_0));
+  LUT6 #(
+    .INIT(64'h4000400040007000)) 
+    rd_n_i_26
+       (.I0(\IR_reg[0]_rep_n_0 ),
+        .I1(\IR_reg_n_0_[1] ),
+        .I2(\mcycle_reg_n_0_[2] ),
+        .I3(Halt_FF_i_4_n_0),
+        .I4(\mcycle_reg[0]_rep_n_0 ),
+        .I5(\mcycle_reg[1]_rep_n_0 ),
+        .O(rd_n_i_26_n_0));
+  LUT6 #(
+    .INIT(64'h3737323237323232)) 
+    rd_n_i_27
+       (.I0(\mcycle_reg[1]_rep_n_0 ),
+        .I1(rd_n_i_30_n_0),
+        .I2(\mcycle_reg_n_0_[2] ),
+        .I3(\mcycle_reg_n_0_[4] ),
+        .I4(\TmpAddr[15]_i_12_n_0 ),
+        .I5(\mcycle_reg_n_0_[3] ),
+        .O(rd_n_i_27_n_0));
+  LUT6 #(
+    .INIT(64'h0007FFFF00070000)) 
+    rd_n_i_28
+       (.I0(\IR_reg[5]_0 [1]),
+        .I1(\mcycle_reg[0]_rep_n_0 ),
+        .I2(\IR_reg[5]_0 [0]),
+        .I3(\IR_reg[5]_0 [2]),
+        .I4(\mcycle_reg[1]_rep_n_0 ),
+        .I5(rd_n_i_31_n_0),
+        .O(rd_n_i_28_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair57" *) 
+  LUT5 #(
+    .INIT(32'h00000002)) 
+    rd_n_i_29
+       (.I0(NMICycle_reg_n_0),
+        .I1(\IR_reg[5]_0 [1]),
+        .I2(\IR_reg[5]_0 [0]),
+        .I3(\IR_reg[5]_0 [2]),
+        .I4(\mcycle_reg[0]_rep_n_0 ),
+        .O(rd_n_i_29_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair125" *) 
+  LUT2 #(
+    .INIT(4'hE)) 
+    rd_n_i_30
+       (.I0(\IR_reg[5]_0 [0]),
+        .I1(\mcycle_reg[0]_rep_n_0 ),
+        .O(rd_n_i_30_n_0));
+  LUT6 #(
+    .INIT(64'h0000000008080C08)) 
+    rd_n_i_31
+       (.I0(\mcycle_reg_n_0_[3] ),
+        .I1(\IR_reg[5]_0 [2]),
+        .I2(\IR_reg[5]_0 [0]),
+        .I3(\mcycle_reg_n_0_[4] ),
+        .I4(\IR_reg[5]_0 [1]),
+        .I5(\mcycle_reg_n_0_[2] ),
+        .O(rd_n_i_31_n_0));
+  LUT5 #(
+    .INIT(32'h0000CCE2)) 
+    rd_n_i_4
+       (.I0(rd_n_i_8_n_0),
+        .I1(\mcycle_reg_n_0_[6] ),
+        .I2(rd_n_i_9_n_0),
+        .I3(\IR_reg_n_0_[6] ),
+        .I4(\ISet_reg_n_0_[0] ),
+        .O(rd_n_i_4_n_0));
+  LUT5 #(
+    .INIT(32'hF4FFF400)) 
+    rd_n_i_5
+       (.I0(\IR_reg_n_0_[7] ),
+        .I1(rd_n_i_10_n_0),
+        .I2(\mcycle_reg_n_0_[6] ),
+        .I3(\IR_reg_n_0_[6] ),
+        .I4(rd_n_i_11_n_0),
+        .O(rd_n_i_5_n_0));
+  LUT6 #(
+    .INIT(64'h00B0FFFF00B00000)) 
+    rd_n_i_6
+       (.I0(\IR_reg_n_0_[7] ),
+        .I1(\IR_reg_n_0_[6] ),
+        .I2(rd_n_i_12_n_0),
+        .I3(\mcycle_reg_n_0_[6] ),
+        .I4(\ISet_reg_n_0_[0] ),
+        .I5(rd_n_i_13_n_0),
+        .O(rd_n_i_6_n_0));
+  LUT5 #(
+    .INIT(32'h03008888)) 
+    rd_n_i_7
+       (.I0(rd_n_i_14_n_0),
+        .I1(\IR_reg_n_0_[6] ),
+        .I2(\IR_reg_n_0_[2] ),
+        .I3(rd_n_i_15_n_0),
+        .I4(\IR_reg_n_0_[7] ),
+        .O(rd_n_i_7_n_0));
+  LUT6 #(
+    .INIT(64'h0000000000005404)) 
+    rd_n_i_8
+       (.I0(\IR_reg_n_0_[2] ),
+        .I1(\PC[0]_i_36_n_0 ),
+        .I2(\IR_reg[0]_rep__0_n_0 ),
+        .I3(rd_n_i_16_n_0),
+        .I4(\IR_reg_n_0_[1] ),
+        .I5(\IR_reg_n_0_[7] ),
+        .O(rd_n_i_8_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair49" *) 
+  LUT5 #(
+    .INIT(32'hFFFFFDFF)) 
+    rd_n_i_9
+       (.I0(\IR_reg_n_0_[2] ),
+        .I1(\IR_reg[0]_rep__0_n_0 ),
+        .I2(\Read_To_Reg_r[4]_i_11_n_0 ),
+        .I3(\IR_reg_n_0_[1] ),
+        .I4(\IR_reg_n_0_[7] ),
+        .O(rd_n_i_9_n_0));
+  MUXF7 rd_n_reg_i_2
+       (.I0(rd_n_i_4_n_0),
+        .I1(rd_n_i_5_n_0),
+        .O(no_read),
+        .S(\ISet_reg_n_0_[1] ));
+  MUXF7 rd_n_reg_i_20
+       (.I0(rd_n_i_25_n_0),
+        .I1(rd_n_i_26_n_0),
+        .O(rd_n_reg_i_20_n_0),
+        .S(\IR_reg_n_0_[2] ));
+  MUXF7 rd_n_reg_i_3
+       (.I0(rd_n_i_6_n_0),
+        .I1(rd_n_i_7_n_0),
+        .O(write),
+        .S(\ISet_reg_n_0_[1] ));
   LUT2 #(
     .INIT(4'h2)) 
     \tstate[0]_i_1 
        (.I0(\tstate_reg_n_0_[6] ),
         .I1(\A[15]_i_3_n_0 ),
         .O(\tstate[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair148" *) 
+  (* SOFT_HLUTNM = "soft_lutpair149" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \tstate[1]_i_1 
        (.I0(\tstate_reg_n_0_[0] ),
         .I1(\A[15]_i_3_n_0 ),
         .O(\tstate[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair149" *) 
+  (* SOFT_HLUTNM = "soft_lutpair150" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \tstate[2]_i_1 
@@ -13715,14 +13689,14 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
        (.I0(tstate[2]),
         .I1(\A[15]_i_3_n_0 ),
         .O(\tstate[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair106" *) 
+  (* SOFT_HLUTNM = "soft_lutpair105" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \tstate[4]_i_1 
        (.I0(\tstate_reg_n_0_[3] ),
         .I1(\A[15]_i_3_n_0 ),
         .O(\tstate[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair149" *) 
+  (* SOFT_HLUTNM = "soft_lutpair150" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \tstate[5]_i_1 
@@ -13739,21 +13713,21 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
         .I4(\A[15]_i_3_n_0 ),
         .I5(\tstate[6]_i_4_n_0 ),
         .O(tstate_0));
-  (* SOFT_HLUTNM = "soft_lutpair148" *) 
+  (* SOFT_HLUTNM = "soft_lutpair149" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \tstate[6]_i_2 
        (.I0(\tstate_reg_n_0_[5] ),
         .I1(\A[15]_i_3_n_0 ),
         .O(\tstate[6]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair84" *) 
+  (* SOFT_HLUTNM = "soft_lutpair82" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \tstate[6]_i_3 
        (.I0(NMICycle_reg_n_0),
-        .I1(mcycle),
+        .I1(\mcycle_reg[0]_rep_n_0 ),
         .O(\tstate[6]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair97" *) 
+  (* SOFT_HLUTNM = "soft_lutpair71" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \tstate[6]_i_4 
@@ -13764,51 +13738,54 @@ module dkong_dkong_system_wrapper_0_0_tv80_core
        (.C(Q),
         .CE(tstate_0),
         .D(\tstate[0]_i_1_n_0 ),
-        .PRE(\IR_reg[0]_rep__0_0 ),
+        .PRE(\mcycle_reg[1]_rep_0 ),
         .Q(\tstate_reg_n_0_[0] ));
   FDCE \tstate_reg[1] 
        (.C(Q),
         .CE(tstate_0),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\tstate[1]_i_1_n_0 ),
         .Q(tstate[1]));
   FDCE \tstate_reg[2] 
        (.C(Q),
         .CE(tstate_0),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\tstate[2]_i_1_n_0 ),
         .Q(tstate[2]));
   FDCE \tstate_reg[3] 
        (.C(Q),
         .CE(tstate_0),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\tstate[3]_i_1_n_0 ),
         .Q(\tstate_reg_n_0_[3] ));
   FDCE \tstate_reg[4] 
        (.C(Q),
         .CE(tstate_0),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\tstate[4]_i_1_n_0 ),
         .Q(\tstate_reg_n_0_[4] ));
   FDCE \tstate_reg[5] 
        (.C(Q),
         .CE(tstate_0),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\tstate[5]_i_1_n_0 ),
         .Q(\tstate_reg_n_0_[5] ));
   FDCE \tstate_reg[6] 
        (.C(Q),
         .CE(tstate_0),
-        .CLR(\IR_reg[0]_rep__0_0 ),
+        .CLR(\mcycle_reg[1]_rep_0 ),
         .D(\tstate[6]_i_2_n_0 ),
         .Q(\tstate_reg_n_0_[6] ));
-  (* SOFT_HLUTNM = "soft_lutpair90" *) 
-  LUT2 #(
-    .INIT(4'hB)) 
+  (* SOFT_HLUTNM = "soft_lutpair71" *) 
+  LUT5 #(
+    .INIT(32'hDFDDDFDF)) 
     wr_n_i_1
-       (.I0(\mcycle_reg[0]_rep_n_0 ),
-        .I1(wr_n1__0),
-        .O(\mcycle_reg[0]_rep_0 ));
+       (.I0(write),
+        .I1(mcycle),
+        .I2(tstate[1]),
+        .I3(cpu_wait),
+        .I4(tstate[2]),
+        .O(\mcycle_reg[0]_3 ));
 endmodule
 
 (* ORIG_REF_NAME = "tv80_reg" *) 
@@ -13899,11 +13876,11 @@ module dkong_dkong_system_wrapper_0_0_tv80_reg
     Set_BusA_To,
     \BusA_reg[7]_1 ,
     \BusA_reg[7]_2 ,
-    \SP[15]_i_25_0 ,
     \A_reg[1] ,
     \RegBusA_r_reg[1] ,
     \SP_reg[15] ,
     \ACC[7]_i_3 ,
+    \SP[15]_i_25_0 ,
     RegsH_reg_0_7_0_1_i_37_0,
     \dout[3]_i_2_1 ,
     \mcycles[1]_i_8 ,
@@ -14105,11 +14082,11 @@ module dkong_dkong_system_wrapper_0_0_tv80_reg
   input [3:0]Set_BusA_To;
   input [7:0]\BusA_reg[7]_1 ;
   input [15:0]\BusA_reg[7]_2 ;
-  input [3:0]\SP[15]_i_25_0 ;
   input \A_reg[1] ;
   input \RegBusA_r_reg[1] ;
   input \SP_reg[15] ;
   input \ACC[7]_i_3 ;
+  input [2:0]\SP[15]_i_25_0 ;
   input RegsH_reg_0_7_0_1_i_37_0;
   input \dout[3]_i_2_1 ;
   input \mcycles[1]_i_8 ;
@@ -14625,7 +14602,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_reg
   wire \SP[15]_i_22_n_0 ;
   wire \SP[15]_i_23_n_0 ;
   wire \SP[15]_i_24_n_0 ;
-  wire [3:0]\SP[15]_i_25_0 ;
+  wire [2:0]\SP[15]_i_25_0 ;
   wire \SP[15]_i_25_n_0 ;
   wire \SP[15]_i_26_n_0 ;
   wire \SP[3]_i_10_n_0 ;
@@ -15928,8 +15905,8 @@ module dkong_dkong_system_wrapper_0_0_tv80_reg
   LUT4 #(
     .INIT(16'h00E2)) 
     \BusB[7]_i_20 
-       (.I0(\SP[15]_i_25_0 [2]),
-        .I1(\SP[15]_i_25_0 [1]),
+       (.I0(\SP[15]_i_25_0 [1]),
+        .I1(\SP[15]_i_25_0 [0]),
         .I2(\F_reg[7] ),
         .I3(RegsH_reg_0_7_0_1_i_37_0),
         .O(\mcycle_reg[3] ));
@@ -16331,7 +16308,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_reg
        (.I0(\dout[3]_i_2_0 [4]),
         .I1(\dout[3]_i_2_0 [2]),
         .I2(\dout[3]_i_2_0 [3]),
-        .I3(\SP[15]_i_25_0 [0]),
+        .I3(RegsL_reg_0_7_0_1_i_1_0),
         .O(\IR_reg[5]_0 ));
   (* METHODOLOGY_DRC_VIOS = "" *) 
   (* RTL_RAM_BITS = "64" *) 
@@ -16424,7 +16401,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_reg
     RegsH_reg_0_7_0_1_i_17
        (.I0(RegsH_reg_0_7_0_1_i_8_0[1]),
         .I1(p_3_in108_in),
-        .I2(\SP[15]_i_25_0 [0]),
+        .I2(RegsL_reg_0_7_0_1_i_1_0),
         .I3(RegsH_reg_0_7_0_1_i_8_0[2]),
         .I4(\A_reg[1] ),
         .I5(\RegBusA_r_reg[1] ),
@@ -16434,7 +16411,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_reg
     RegsH_reg_0_7_0_1_i_18
        (.I0(RegsH_reg_0_7_0_1_i_8_0[1]),
         .I1(p_3_in108_in),
-        .I2(\SP[15]_i_25_0 [0]),
+        .I2(RegsL_reg_0_7_0_1_i_1_0),
         .I3(RegsH_reg_0_7_0_1_i_8_0[2]),
         .I4(\ISet_reg[1] ),
         .I5(\ISet_reg[1]_0 ),
@@ -16637,7 +16614,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_reg
     .INIT(16'h5400)) 
     RegsH_reg_0_7_0_1_i_41
        (.I0(RegsL_reg_0_7_0_1_i_1_0),
-        .I1(\SP[15]_i_25_0 [1]),
+        .I1(\SP[15]_i_25_0 [0]),
         .I2(RegsH_reg_0_7_0_1_i_37_0),
         .I3(\ACC[7]_i_3 ),
         .O(\mcycle_reg[0]_rep ));
@@ -16645,7 +16622,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_reg
     .INIT(64'h00AF000000C00000)) 
     RegsH_reg_0_7_0_1_i_42
        (.I0(\ACC[7]_i_3 ),
-        .I1(\SP[15]_i_25_0 [1]),
+        .I1(\SP[15]_i_25_0 [0]),
         .I2(\dout[3]_i_2_0 [0]),
         .I3(RegsL_reg_0_7_0_1_i_1_0),
         .I4(\dout[3]_i_2_0 [4]),
@@ -16668,7 +16645,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_reg
        (.I0(RegsH_reg_0_7_0_1_i_37_0),
         .I1(RegsL_reg_0_7_0_1_i_1_0),
         .I2(\dout[3]_i_2_0 [4]),
-        .I3(\SP[15]_i_25_0 [1]),
+        .I3(\SP[15]_i_25_0 [0]),
         .I4(\ACC[7]_i_3 ),
         .O(RegsH_reg_0_7_0_1_i_44_n_0));
   (* SOFT_HLUTNM = "soft_lutpair11" *) 
@@ -16686,17 +16663,17 @@ module dkong_dkong_system_wrapper_0_0_tv80_reg
        (.I0(\IR_reg[5] ),
         .I1(\ACC[7]_i_3 ),
         .I2(RegsH_reg_0_7_0_1_i_37_0),
-        .I3(\SP[15]_i_25_0 [1]),
+        .I3(\SP[15]_i_25_0 [0]),
         .I4(RegsL_reg_0_7_0_1_i_1_0),
         .O(RegsH_reg_0_7_0_1_i_46_n_0));
   LUT6 #(
     .INIT(64'h4500440000000000)) 
     RegsH_reg_0_7_0_1_i_47
        (.I0(RegsH_reg_0_7_0_1_i_37_0),
-        .I1(\SP[15]_i_25_0 [1]),
-        .I2(\SP[15]_i_25_0 [2]),
+        .I1(\SP[15]_i_25_0 [0]),
+        .I2(\SP[15]_i_25_0 [1]),
         .I3(\IR_reg[5]_0 ),
-        .I4(\SP[15]_i_25_0 [3]),
+        .I4(\SP[15]_i_25_0 [2]),
         .I5(\ACC[7]_i_3 ),
         .O(RegsH_reg_0_7_0_1_i_47_n_0));
   LUT6 #(
@@ -16713,10 +16690,10 @@ module dkong_dkong_system_wrapper_0_0_tv80_reg
     .INIT(64'h50405040FAFBFAEA)) 
     RegsH_reg_0_7_0_1_i_49
        (.I0(RegsH_reg_0_7_0_1_i_37_0),
-        .I1(\SP[15]_i_25_0 [1]),
+        .I1(\SP[15]_i_25_0 [0]),
         .I2(RegsH_reg_0_7_0_1_i_50_n_0),
-        .I3(\SP[15]_i_25_0 [2]),
-        .I4(\SP[15]_i_25_0 [0]),
+        .I3(\SP[15]_i_25_0 [1]),
+        .I4(RegsL_reg_0_7_0_1_i_1_0),
         .I5(\dout[3]_i_2_0 [2]),
         .O(RegsH_reg_0_7_0_1_i_49_n_0));
   LUT2 #(
@@ -16729,7 +16706,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_reg
   LUT4 #(
     .INIT(16'h0A3A)) 
     RegsH_reg_0_7_0_1_i_50
-       (.I0(\SP[15]_i_25_0 [0]),
+       (.I0(RegsL_reg_0_7_0_1_i_1_0),
         .I1(\dout[3]_i_2_0 [3]),
         .I2(\dout[3]_i_2_0 [2]),
         .I3(\dout[3]_i_2_0 [4]),
@@ -17401,7 +17378,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_reg
        (.I0(\dout[3]_i_2_0 [0]),
         .I1(\ACC[7]_i_3 ),
         .I2(RegsH_reg_0_7_0_1_i_37_0),
-        .I3(\SP[15]_i_25_0 [1]),
+        .I3(\SP[15]_i_25_0 [0]),
         .I4(RegsL_reg_0_7_0_1_i_1_0),
         .I5(\dout[3]_i_2_0 [4]),
         .O(\SP[15]_i_18_n_0 ));
@@ -17440,18 +17417,18 @@ module dkong_dkong_system_wrapper_0_0_tv80_reg
        (.I0(\ACC[7]_i_3 ),
         .I1(RegsH_reg_0_7_0_1_i_37_0),
         .I2(\dout[3]_i_2_0 [2]),
-        .I3(\SP[15]_i_25_0 [1]),
-        .I4(\SP[15]_i_25_0 [0]),
+        .I3(\SP[15]_i_25_0 [0]),
+        .I4(RegsL_reg_0_7_0_1_i_1_0),
         .I5(\dout[3]_i_2_0 [4]),
         .O(\SP[15]_i_22_n_0 ));
   LUT6 #(
     .INIT(64'h0000A0000000C000)) 
     \SP[15]_i_23 
        (.I0(\ACC[7]_i_3 ),
-        .I1(\SP[15]_i_25_0 [1]),
+        .I1(\SP[15]_i_25_0 [0]),
         .I2(\dout[3]_i_2_0 [2]),
         .I3(\dout[3]_i_2_0 [4]),
-        .I4(\SP[15]_i_25_0 [0]),
+        .I4(RegsL_reg_0_7_0_1_i_1_0),
         .I5(RegsH_reg_0_7_0_1_i_37_0),
         .O(\SP[15]_i_23_n_0 ));
   LUT6 #(
@@ -17459,7 +17436,7 @@ module dkong_dkong_system_wrapper_0_0_tv80_reg
     \SP[15]_i_24 
        (.I0(\dout[3]_i_2_0 [2]),
         .I1(\dout[3]_i_2_0 [0]),
-        .I2(\SP[15]_i_25_0 [0]),
+        .I2(RegsL_reg_0_7_0_1_i_1_0),
         .I3(\IR_reg[5]_1 ),
         .I4(RegsH_reg_0_7_0_1_i_37_0),
         .I5(\ACC[7]_i_3 ),
@@ -17477,11 +17454,11 @@ module dkong_dkong_system_wrapper_0_0_tv80_reg
   LUT6 #(
     .INIT(64'h0000000000100000)) 
     \SP[15]_i_26 
-       (.I0(\SP[15]_i_25_0 [1]),
-        .I1(\SP[15]_i_25_0 [2]),
+       (.I0(\SP[15]_i_25_0 [0]),
+        .I1(\SP[15]_i_25_0 [1]),
         .I2(\IR_reg[4] ),
         .I3(RegsL_reg_0_7_0_1_i_1_0),
-        .I4(\SP[15]_i_25_0 [3]),
+        .I4(\SP[15]_i_25_0 [2]),
         .I5(RegsH_reg_0_7_0_1_i_37_0),
         .O(\SP[15]_i_26_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair25" *) 
@@ -18632,7 +18609,7 @@ module dkong_dkong_system_wrapper_0_0_tv80s
     E,
     \A_reg[8] ,
     wr_n_reg_0,
-    \A_reg[10] ,
+    \A_reg[14] ,
     outreg,
     WEA,
     \dout_reg[0] ,
@@ -18640,7 +18617,6 @@ module dkong_dkong_system_wrapper_0_0_tv80s
     \dout_reg[0]_0 ,
     Q,
     cpu_wait,
-    rom_ena0,
     douta,
     r_Rx_Byte,
     vram_busy,
@@ -18666,7 +18642,7 @@ module dkong_dkong_system_wrapper_0_0_tv80s
   output [0:0]E;
   output \A_reg[8] ;
   output wr_n_reg_0;
-  output \A_reg[10] ;
+  output \A_reg[14] ;
   output outreg;
   output [0:0]WEA;
   output \dout_reg[0] ;
@@ -18674,7 +18650,6 @@ module dkong_dkong_system_wrapper_0_0_tv80s
   output \dout_reg[0]_0 ;
   input [0:0]Q;
   input cpu_wait;
-  input rom_ena0;
   input [7:0]douta;
   input [7:0]r_Rx_Byte;
   input vram_busy;
@@ -18689,7 +18664,7 @@ module dkong_dkong_system_wrapper_0_0_tv80s
   input cpu_nmi;
 
   wire [15:0]A;
-  wire \A_reg[10] ;
+  wire \A_reg[14] ;
   wire \A_reg[3] ;
   wire \A_reg[8] ;
   wire [6:0]D;
@@ -18717,11 +18692,10 @@ module dkong_dkong_system_wrapper_0_0_tv80s
   wire i_tv80_core_n_1;
   wire i_tv80_core_n_2;
   wire i_tv80_core_n_3;
-  wire i_tv80_core_n_56;
-  wire i_tv80_core_n_57;
-  wire i_tv80_core_n_58;
+  wire i_tv80_core_n_5;
+  wire i_tv80_core_n_6;
+  wire i_tv80_core_n_7;
   wire [2:0]\io_bus_reg[dslave] ;
-  wire mreq_n;
   wire nmi_mask;
   wire out_busy;
   wire outreg;
@@ -18729,20 +18703,19 @@ module dkong_dkong_system_wrapper_0_0_tv80s
   wire [7:0]r_Rx_Byte;
   wire \r_Rx_Byte_reg[0] ;
   wire rd_n_reg_0;
-  wire rom_ena0;
   wire rst_n;
   wire rst_n_0;
   wire vram_busy;
   wire wr_n_reg_0;
 
   assign debug_cpu_sig_5_sn_1 = debug_cpu_sig_5_sp_1;
-  (* SOFT_HLUTNM = "soft_lutpair151" *) 
+  (* SOFT_HLUTNM = "soft_lutpair152" *) 
   LUT3 #(
     .INIT(8'h04)) 
     IncDecZ_i_11
-       (.I0(i_tv80_core_n_3),
-        .I1(i_tv80_core_n_2),
-        .I2(i_tv80_core_n_1),
+       (.I0(i_tv80_core_n_2),
+        .I1(i_tv80_core_n_1),
+        .I2(i_tv80_core_n_0),
         .O(IncDecZ_i_11_n_0));
   LUT1 #(
     .INIT(2'h1)) 
@@ -18754,11 +18727,6 @@ module dkong_dkong_system_wrapper_0_0_tv80s
     \debug_cpu_sig[1]_INST_0 
        (.I0(cpu_wr),
         .O(debug_cpu_sig[1]));
-  LUT1 #(
-    .INIT(2'h1)) 
-    \debug_cpu_sig[2]_INST_0 
-       (.I0(mreq_n),
-        .O(debug_cpu_sig[2]));
   FDCE \di_reg_reg[0] 
        (.C(Q),
         .CE(di_reg0),
@@ -18807,12 +18775,12 @@ module dkong_dkong_system_wrapper_0_0_tv80s
         .CLR(rst_n_0),
         .D(D[6]),
         .Q(di_reg[7]));
-  (* SOFT_HLUTNM = "soft_lutpair151" *) 
+  (* SOFT_HLUTNM = "soft_lutpair152" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \dout[1]_i_11 
-       (.I0(i_tv80_core_n_3),
-        .I1(i_tv80_core_n_1),
+       (.I0(i_tv80_core_n_2),
+        .I1(i_tv80_core_n_0),
         .O(\dout[1]_i_11_n_0 ));
   LUT1 #(
     .INIT(2'h1)) 
@@ -18820,15 +18788,14 @@ module dkong_dkong_system_wrapper_0_0_tv80s
        (.I0(rst_n),
         .O(rst_n_0));
   dkong_dkong_system_wrapper_0_0_tv80_core i_tv80_core
-       (.\A_reg[10]_0 (\A_reg[10] ),
+       (.\A_reg[14]_0 (\A_reg[14] ),
         .\A_reg[15]_0 (A),
         .\A_reg[3]_0 (\A_reg[3] ),
         .\A_reg[8]_0 (\A_reg[8] ),
         .D({D,\r_Rx_Byte_reg[0] }),
-        .E(E),
+        .E(di_reg0),
         .\F_reg[7]_0 (di_reg),
-        .\IR_reg[0]_rep__0_0 (rst_n_0),
-        .\IR_reg[5]_0 ({i_tv80_core_n_1,i_tv80_core_n_2,i_tv80_core_n_3}),
+        .\IR_reg[5]_0 ({i_tv80_core_n_0,i_tv80_core_n_1,i_tv80_core_n_2}),
         .Q(Q),
         .\RegAddrB_r[2]_i_7_0 (IncDecZ_i_11_n_0),
         .WEA(WEA),
@@ -18845,46 +18812,45 @@ module dkong_dkong_system_wrapper_0_0_tv80s
         .douta(douta),
         .flip_ena(flip_ena),
         .\io_bus_reg[dslave] (\io_bus_reg[dslave] ),
-        .\mcycle_reg[0]_0 (i_tv80_core_n_56),
-        .\mcycle_reg[0]_rep_0 (i_tv80_core_n_0),
+        .\mcycle_reg[0]_0 (i_tv80_core_n_3),
+        .\mcycle_reg[0]_1 (i_tv80_core_n_5),
+        .\mcycle_reg[0]_2 (i_tv80_core_n_6),
+        .\mcycle_reg[0]_3 (i_tv80_core_n_7),
+        .\mcycle_reg[1]_rep_0 (rst_n_0),
         .mem_reg(cpu_rd),
         .mem_reg_0(cpu_wr),
-        .mreq_n(mreq_n),
         .nmi_mask(nmi_mask),
         .out_busy(out_busy),
         .outreg(outreg),
         .outreg0_out(outreg0_out),
         .r_Rx_Byte(r_Rx_Byte),
         .rd_n_reg(rd_n_reg_0),
-        .rom_ena0(rom_ena0),
         .rst_n(rst_n),
-        .\tstate_reg[1]_0 (i_tv80_core_n_58),
-        .\tstate_reg[2]_0 (di_reg0),
-        .\tstate_reg[2]_1 (i_tv80_core_n_57),
         .vram_busy(vram_busy),
-        .wr_n_reg(wr_n_reg_0));
+        .wr_n_reg(E),
+        .wr_n_reg_0(wr_n_reg_0));
   FDCE iorq_n_reg_inv
        (.C(Q),
         .CE(1'b1),
         .CLR(rst_n_0),
-        .D(i_tv80_core_n_56),
+        .D(i_tv80_core_n_5),
         .Q(debug_cpu_sig[3]));
-  FDPE mreq_n_reg
+  FDCE mreq_n_reg_inv
        (.C(Q),
         .CE(1'b1),
-        .D(i_tv80_core_n_58),
-        .PRE(rst_n_0),
-        .Q(mreq_n));
+        .CLR(rst_n_0),
+        .D(i_tv80_core_n_6),
+        .Q(debug_cpu_sig[2]));
   FDPE rd_n_reg
        (.C(Q),
         .CE(1'b1),
-        .D(i_tv80_core_n_57),
+        .D(i_tv80_core_n_3),
         .PRE(rst_n_0),
         .Q(cpu_rd));
   FDPE wr_n_reg
        (.C(Q),
         .CE(1'b1),
-        .D(i_tv80_core_n_0),
+        .D(i_tv80_core_n_7),
         .PRE(rst_n_0),
         .Q(cpu_wr));
 endmodule
@@ -18967,7 +18933,7 @@ module dkong_dkong_system_wrapper_0_0_uart_rx
         .I4(r_Bit_Index[1]),
         .I5(r_Bit_Index[0]),
         .O(\FSM_sequential_r_SM_Main[0]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair156" *) 
+  (* SOFT_HLUTNM = "soft_lutpair157" *) 
   LUT2 #(
     .INIT(4'h1)) 
     \FSM_sequential_r_SM_Main[0]_i_3 
@@ -19018,7 +18984,7 @@ module dkong_dkong_system_wrapper_0_0_uart_rx
        (.I0(in_valid),
         .I1(cpu_rd),
         .O(r_Rx_DV_reg_0));
-  (* SOFT_HLUTNM = "soft_lutpair156" *) 
+  (* SOFT_HLUTNM = "soft_lutpair157" *) 
   LUT5 #(
     .INIT(32'hFC000200)) 
     \r_Bit_Index[0]_i_1 
@@ -19066,7 +19032,7 @@ module dkong_dkong_system_wrapper_0_0_uart_rx
         .D(\r_Bit_Index[2]_i_1_n_0 ),
         .Q(r_Bit_Index[2]),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair153" *) 
+  (* SOFT_HLUTNM = "soft_lutpair154" *) 
   LUT5 #(
     .INIT(32'hF0F20200)) 
     \r_Clock_Count[-1]_i_1 
@@ -19076,7 +19042,7 @@ module dkong_dkong_system_wrapper_0_0_uart_rx
         .I3(\r_Clock_Count_reg_n_0_[0] ),
         .I4(\r_Clock_Count_reg[-_n_0_1] ),
         .O(\r_Clock_Count[-1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair153" *) 
+  (* SOFT_HLUTNM = "soft_lutpair154" *) 
   LUT5 #(
     .INIT(32'hF002F000)) 
     \r_Clock_Count[0]_i_1 
@@ -19108,7 +19074,7 @@ module dkong_dkong_system_wrapper_0_0_uart_rx
         .I4(\r_Rx_Byte[0]_i_3_n_0 ),
         .I5(r_Rx_Byte[0]),
         .O(\r_Rx_Byte[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair155" *) 
+  (* SOFT_HLUTNM = "soft_lutpair156" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \r_Rx_Byte[0]_i_2 
@@ -19164,14 +19130,14 @@ module dkong_dkong_system_wrapper_0_0_uart_rx
         .I4(rst_n),
         .I5(r_SM_Main[2]),
         .O(\r_Rx_Byte[3]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair154" *) 
+  (* SOFT_HLUTNM = "soft_lutpair155" *) 
   LUT2 #(
     .INIT(4'h7)) 
     \r_Rx_Byte[3]_i_3 
        (.I0(r_Bit_Index[0]),
         .I1(r_Bit_Index[1]),
         .O(\r_Rx_Byte[3]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair152" *) 
+  (* SOFT_HLUTNM = "soft_lutpair153" *) 
   LUT4 #(
     .INIT(16'h0008)) 
     \r_Rx_Byte[3]_i_4 
@@ -19180,7 +19146,7 @@ module dkong_dkong_system_wrapper_0_0_uart_rx
         .I2(r_SM_Main[2]),
         .I3(r_SM_Main[0]),
         .O(\r_Rx_Byte[3]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair154" *) 
+  (* SOFT_HLUTNM = "soft_lutpair155" *) 
   LUT5 #(
     .INIT(32'hFFFB0008)) 
     \r_Rx_Byte[4]_i_1 
@@ -19227,7 +19193,7 @@ module dkong_dkong_system_wrapper_0_0_uart_rx
         .I4(rst_n),
         .I5(r_SM_Main[2]),
         .O(\r_Rx_Byte[7]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair152" *) 
+  (* SOFT_HLUTNM = "soft_lutpair153" *) 
   LUT5 #(
     .INIT(32'h10000000)) 
     \r_Rx_Byte[7]_i_3 
@@ -19285,7 +19251,7 @@ module dkong_dkong_system_wrapper_0_0_uart_rx
         .D(\r_Rx_Byte[7]_i_1_n_0 ),
         .Q(r_Rx_Byte[7]),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair155" *) 
+  (* SOFT_HLUTNM = "soft_lutpair156" *) 
   LUT5 #(
     .INIT(32'hA8A80080)) 
     r_Rx_DV_i_1
@@ -19392,7 +19358,7 @@ module dkong_dkong_system_wrapper_0_0_uart_tx
         .I4(r_SM_Main[1]),
         .I5(r_Tx_Active_reg_0),
         .O(\FSM_sequential_r_SM_Main[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair159" *) 
+  (* SOFT_HLUTNM = "soft_lutpair160" *) 
   LUT4 #(
     .INIT(16'h4000)) 
     \FSM_sequential_r_SM_Main[0]_i_2__0 
@@ -19401,7 +19367,7 @@ module dkong_dkong_system_wrapper_0_0_uart_tx
         .I2(\r_Bit_Index_reg_n_0_[1] ),
         .I3(\r_Bit_Index_reg_n_0_[0] ),
         .O(\FSM_sequential_r_SM_Main[0]_i_2__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair157" *) 
+  (* SOFT_HLUTNM = "soft_lutpair158" *) 
   LUT3 #(
     .INIT(8'h06)) 
     \FSM_sequential_r_SM_Main[1]_i_1 
@@ -19409,7 +19375,7 @@ module dkong_dkong_system_wrapper_0_0_uart_tx
         .I1(r_SM_Main[1]),
         .I2(r_SM_Main[2]),
         .O(\FSM_sequential_r_SM_Main[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair160" *) 
+  (* SOFT_HLUTNM = "soft_lutpair161" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \FSM_sequential_r_SM_Main[2]_i_1__0 
@@ -19478,7 +19444,7 @@ module dkong_dkong_system_wrapper_0_0_uart_tx
         .I4(r_SM_Main[1]),
         .I5(r_SM_Main[2]),
         .O(o_Tx_Serial_i_4_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair159" *) 
+  (* SOFT_HLUTNM = "soft_lutpair160" *) 
   LUT3 #(
     .INIT(8'h04)) 
     o_Tx_Serial_i_5
@@ -19504,7 +19470,7 @@ module dkong_dkong_system_wrapper_0_0_uart_tx
         .I2(\r_Tx_Data_reg_n_0_[6] ),
         .I3(\r_Bit_Index_reg_n_0_[1] ),
         .O(o_Tx_Serial_i_7_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair160" *) 
+  (* SOFT_HLUTNM = "soft_lutpair161" *) 
   LUT2 #(
     .INIT(4'h2)) 
     o_Tx_Serial_i_8
@@ -19526,7 +19492,7 @@ module dkong_dkong_system_wrapper_0_0_uart_tx
         .I3(cpu_wr),
         .I4(out_busy),
         .O(rst_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair158" *) 
+  (* SOFT_HLUTNM = "soft_lutpair159" *) 
   LUT4 #(
     .INIT(16'hFC02)) 
     \r_Bit_Index[0]_i_1 
@@ -19535,7 +19501,7 @@ module dkong_dkong_system_wrapper_0_0_uart_tx
         .I2(r_SM_Main[2]),
         .I3(\r_Bit_Index_reg_n_0_[0] ),
         .O(\r_Bit_Index[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair158" *) 
+  (* SOFT_HLUTNM = "soft_lutpair159" *) 
   LUT5 #(
     .INIT(32'hFFF20008)) 
     \r_Bit_Index[1]_i_1 
@@ -19573,7 +19539,7 @@ module dkong_dkong_system_wrapper_0_0_uart_tx
         .D(\r_Bit_Index[2]_i_1_n_0 ),
         .Q(\r_Bit_Index_reg_n_0_[2] ),
         .R(SR));
-  (* SOFT_HLUTNM = "soft_lutpair157" *) 
+  (* SOFT_HLUTNM = "soft_lutpair158" *) 
   LUT5 #(
     .INIT(32'hDFDF0100)) 
     r_Tx_Active_i_1
