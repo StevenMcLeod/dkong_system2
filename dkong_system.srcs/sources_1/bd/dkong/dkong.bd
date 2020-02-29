@@ -11,10 +11,10 @@
     "design_tree": {
       "processing_system7_0": "",
       "proc_sys_reset_0": "",
-      "mux4_0": "",
       "clk_wiz_0": "",
       "proc_sys_reset_1": "",
       "framedoubler_slow_0": "",
+      "mux4_0": "",
       "dkong_system_wrapper_0": ""
     },
     "interface_ports": {
@@ -233,52 +233,6 @@
           }
         }
       },
-      "mux4_0": {
-        "vlnv": "xilinx.com:module_ref:mux4:1.0",
-        "xci_name": "dkong_mux4_0_0",
-        "parameters": {
-          "WIDTH": {
-            "value": "8"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "mux4",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "sel": {
-            "direction": "I",
-            "left": "1",
-            "right": "0"
-          },
-          "ina": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "inb": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "inc": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "ind": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "outy": {
-            "direction": "O",
-            "left": "7",
-            "right": "0"
-          }
-        }
-      },
       "clk_wiz_0": {
         "vlnv": "xilinx.com:ip:clk_wiz:6.0",
         "xci_name": "dkong_clk_wiz_0_0",
@@ -447,6 +401,52 @@
           },
           "vsync": {
             "direction": "O"
+          }
+        }
+      },
+      "mux4_0": {
+        "vlnv": "xilinx.com:module_ref:mux4:1.0",
+        "xci_name": "dkong_mux4_0_0",
+        "parameters": {
+          "WIDTH": {
+            "value": "8"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "mux4",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "sel": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "ina": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "inb": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "inc": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "ind": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "outy": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
           }
         }
       },
