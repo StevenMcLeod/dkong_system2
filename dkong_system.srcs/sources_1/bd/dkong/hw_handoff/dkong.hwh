@@ -1,14 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Mar  6 00:50:17 2020" VIVADOVERSION="2019.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Mar  6 09:57:33 2020" VIVADOVERSION="2019.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="em.avnet.com:zed:part0:1.4" DEVICE="7z020" NAME="dkong" PACKAGE="clg484" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
-    <PORT DIR="I" NAME="BTNU" SIGIS="rst" SIGNAME="External_Ports_BTNU">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="proc_sys_reset_0" PORT="aux_reset_in"/>
-      </CONNECTIONS>
-    </PORT>
     <PORT DIR="I" LEFT="1" NAME="DIPSW" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_DIPSW">
       <CONNECTIONS>
         <CONNECTION INSTANCE="mux4_0" PORT="sel"/>
@@ -44,26 +39,6 @@
         <CONNECTION INSTANCE="framedoubler_slow_0" PORT="vsync"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="BTNL" SIGIS="undef" SIGNAME="External_Ports_BTNL">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="dkong_system_wrapper_0" PORT="p1_sw"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="BTNC" SIGIS="undef" SIGNAME="External_Ports_BTNC">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="dkong_system_wrapper_0" PORT="p2_sw"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="BTND" SIGIS="undef" SIGNAME="External_Ports_BTND">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="dkong_system_wrapper_0" PORT="coin_sw"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="BTNR" SIGIS="rst" SIGNAME="External_Ports_BTNR">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="proc_sys_reset_1" PORT="aux_reset_in"/>
-      </CONNECTIONS>
-    </PORT>
     <PORT DIR="IO" LEFT="53" NAME="FIXED_IO_mio" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_MIO">
       <CONNECTIONS>
         <CONNECTION INSTANCE="processing_system7_0" PORT="MIO"/>
@@ -82,6 +57,40 @@
     <PORT DIR="IO" NAME="FIXED_IO_ps_porb" SIGIS="undef" SIGNAME="processing_system7_0_PS_PORB">
       <CONNECTIONS>
         <CONNECTION INSTANCE="processing_system7_0" PORT="PS_PORB"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="INMODE" SIGIS="undef" SIGNAME="External_Ports_INMODE">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="demux2_0" PORT="sel"/>
+        <CONNECTION INSTANCE="demux2_1" PORT="sel"/>
+        <CONNECTION INSTANCE="demux2_2" PORT="sel"/>
+        <CONNECTION INSTANCE="demux2_3" PORT="sel"/>
+        <CONNECTION INSTANCE="demux2_4" PORT="sel"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="0" NAME="BTNR" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_BTNR">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="demux2_0" PORT="iny"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="0" NAME="BTNL" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_BTNL">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="demux2_1" PORT="iny"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="0" NAME="BTNU" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_BTNU">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="demux2_2" PORT="iny"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="0" NAME="BTND" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_BTND">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="demux2_3" PORT="iny"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="0" NAME="BTNC" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_BTNC">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="demux2_4" PORT="iny"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -690,11 +699,173 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/demux2_0" HWVERSION="1.0" INSTANCE="demux2_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="demux2" VLNV="xilinx.com:module_ref:demux2:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="WIDTH" VALUE="1"/>
+        <PARAMETER NAME="DISABLE_VAL" VALUE="&quot;0&quot;"/>
+        <PARAMETER NAME="Component_Name" VALUE="dkong_demux2_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="sel" SIGIS="undef" SIGNAME="External_Ports_INMODE">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="INMODE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="iny" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_BTNR">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="BTNR"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="outa" RIGHT="0" SIGIS="undef" SIGNAME="demux2_0_outa">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dkong_system_wrapper_0" PORT="p1_r"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="outb" RIGHT="0" SIGIS="undef" SIGNAME="demux2_0_outb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="proc_sys_reset_0" PORT="aux_reset_in"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/demux2_1" HWVERSION="1.0" INSTANCE="demux2_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="demux2" VLNV="xilinx.com:module_ref:demux2:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="WIDTH" VALUE="1"/>
+        <PARAMETER NAME="DISABLE_VAL" VALUE="&quot;0&quot;"/>
+        <PARAMETER NAME="Component_Name" VALUE="dkong_demux2_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="sel" SIGIS="undef" SIGNAME="External_Ports_INMODE">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="INMODE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="iny" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_BTNL">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="BTNL"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="outa" RIGHT="0" SIGIS="undef" SIGNAME="demux2_1_outa">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dkong_system_wrapper_0" PORT="p1_l"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="outb" RIGHT="0" SIGIS="undef" SIGNAME="demux2_1_outb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dkong_system_wrapper_0" PORT="p1_sw"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/demux2_2" HWVERSION="1.0" INSTANCE="demux2_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="demux2" VLNV="xilinx.com:module_ref:demux2:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="WIDTH" VALUE="1"/>
+        <PARAMETER NAME="DISABLE_VAL" VALUE="&quot;0&quot;"/>
+        <PARAMETER NAME="Component_Name" VALUE="dkong_demux2_0_2"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="sel" SIGIS="undef" SIGNAME="External_Ports_INMODE">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="INMODE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="iny" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_BTNU">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="BTNU"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="outa" RIGHT="0" SIGIS="undef" SIGNAME="demux2_2_outa">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dkong_system_wrapper_0" PORT="p1_u"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="outb" RIGHT="0" SIGIS="undef" SIGNAME="demux2_2_outb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="proc_sys_reset_1" PORT="aux_reset_in"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/demux2_3" HWVERSION="1.0" INSTANCE="demux2_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="demux2" VLNV="xilinx.com:module_ref:demux2:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="WIDTH" VALUE="1"/>
+        <PARAMETER NAME="DISABLE_VAL" VALUE="&quot;0&quot;"/>
+        <PARAMETER NAME="Component_Name" VALUE="dkong_demux2_0_3"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="sel" SIGIS="undef" SIGNAME="External_Ports_INMODE">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="INMODE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="iny" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_BTND">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="BTND"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="outa" RIGHT="0" SIGIS="undef" SIGNAME="demux2_3_outa">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dkong_system_wrapper_0" PORT="p1_d"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="outb" RIGHT="0" SIGIS="undef" SIGNAME="demux2_3_outb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dkong_system_wrapper_0" PORT="coin_sw"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/demux2_4" HWVERSION="1.0" INSTANCE="demux2_4" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="demux2" VLNV="xilinx.com:module_ref:demux2:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="WIDTH" VALUE="1"/>
+        <PARAMETER NAME="DISABLE_VAL" VALUE="&quot;0&quot;"/>
+        <PARAMETER NAME="Component_Name" VALUE="dkong_demux2_3_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="sel" SIGIS="undef" SIGNAME="External_Ports_INMODE">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="INMODE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="iny" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_BTNC">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="BTNC"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="outa" RIGHT="0" SIGIS="undef" SIGNAME="demux2_4_outa">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dkong_system_wrapper_0" PORT="p1_b1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="outb" RIGHT="0" SIGIS="undef" SIGNAME="demux2_4_outb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dkong_system_wrapper_0" PORT="p2_sw"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
     <MODULE COREREVISION="1" FULLNAME="/dkong_system_wrapper_0" HWVERSION="1.0" INSTANCE="dkong_system_wrapper_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="dkong_system_wrapper" VLNV="xilinx.com:module_ref:dkong_system_wrapper:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="CLKS_PER_BIT" VALUE="1"/>
         <PARAMETER NAME="DEBUG_WAIT_ENA" VALUE="0"/>
+        <PARAMETER NAME="IN0_ENA" VALUE="0"/>
+        <PARAMETER NAME="IN1_ENA" VALUE="0"/>
         <PARAMETER NAME="IN2_ENA" VALUE="1"/>
         <PARAMETER NAME="Component_Name" VALUE="dkong_dkong_system_wrapper_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
@@ -745,19 +916,49 @@
             <CONNECTION INSTANCE="framedoubler_slow_0" PORT="in_b"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="p1_sw" SIGIS="undef" SIGNAME="External_Ports_BTNL">
+        <PORT DIR="I" NAME="p1_r" SIGIS="undef" SIGNAME="demux2_0_outa">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="BTNL"/>
+            <CONNECTION INSTANCE="demux2_0" PORT="outa"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="p2_sw" SIGIS="undef" SIGNAME="External_Ports_BTNC">
+        <PORT DIR="I" NAME="p1_l" SIGIS="undef" SIGNAME="demux2_1_outa">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="BTNC"/>
+            <CONNECTION INSTANCE="demux2_1" PORT="outa"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="coin_sw" SIGIS="undef" SIGNAME="External_Ports_BTND">
+        <PORT DIR="I" NAME="p1_u" SIGIS="undef" SIGNAME="demux2_2_outa">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="BTND"/>
+            <CONNECTION INSTANCE="demux2_2" PORT="outa"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="p1_d" SIGIS="undef" SIGNAME="demux2_3_outa">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="demux2_3" PORT="outa"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="p1_b1" SIGIS="undef" SIGNAME="demux2_4_outa">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="demux2_4" PORT="outa"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="p2_r" SIGIS="undef"/>
+        <PORT DIR="I" NAME="p2_l" SIGIS="undef"/>
+        <PORT DIR="I" NAME="p2_u" SIGIS="undef"/>
+        <PORT DIR="I" NAME="p2_d" SIGIS="undef"/>
+        <PORT DIR="I" NAME="p2_b1" SIGIS="undef"/>
+        <PORT DIR="I" NAME="p1_sw" SIGIS="undef" SIGNAME="demux2_1_outb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="demux2_1" PORT="outb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="p2_sw" SIGIS="undef" SIGNAME="demux2_4_outb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="demux2_4" PORT="outb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="coin_sw" SIGIS="undef" SIGNAME="demux2_3_outb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="demux2_3" PORT="outb"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="debug_wait" SIGIS="undef"/>
@@ -937,9 +1138,9 @@
             <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_RESET0_N"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="aux_reset_in" SIGIS="rst" SIGNAME="External_Ports_BTNU">
+        <PORT DIR="I" NAME="aux_reset_in" SIGIS="rst" SIGNAME="demux2_0_outb">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="BTNU"/>
+            <CONNECTION INSTANCE="demux2_0" PORT="outb"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="mb_debug_sys_rst" SIGIS="rst"/>
@@ -987,9 +1188,9 @@
             <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_RESET0_N"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="aux_reset_in" SIGIS="rst" SIGNAME="External_Ports_BTNR">
+        <PORT DIR="I" NAME="aux_reset_in" SIGIS="rst" SIGNAME="demux2_2_outb">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="BTNR"/>
+            <CONNECTION INSTANCE="demux2_2" PORT="outb"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="mb_debug_sys_rst" SIGIS="rst"/>

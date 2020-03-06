@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x171DEAD3660D60F3",
+      "boundary_crc": "0xE3F082753F206480",
       "device": "xc7z020clg484-1",
       "name": "dkong",
       "synth_flow_mode": "Hierarchical",
@@ -13,9 +13,14 @@
       "proc_sys_reset_0": "",
       "clk_wiz_0": "",
       "proc_sys_reset_1": "",
-      "mux4_0": "",
       "framedoubler_slow_0": "",
-      "dkong_system_wrapper_0": ""
+      "dkong_system_wrapper_0": "",
+      "demux2_0": "",
+      "demux2_1": "",
+      "demux2_2": "",
+      "demux2_3": "",
+      "demux2_4": "",
+      "mux4_0": ""
     },
     "interface_ports": {
       "FIXED_IO": {
@@ -30,19 +35,6 @@
       }
     },
     "ports": {
-      "BTNU": {
-        "type": "rst",
-        "direction": "I",
-        "parameters": {
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "POLARITY": {
-            "value": "ACTIVE_HIGH"
-          }
-        }
-      },
       "DIPSW": {
         "direction": "I",
         "left": "1",
@@ -74,27 +66,33 @@
       "VGA_VS": {
         "direction": "O"
       },
-      "BTNL": {
-        "direction": "I"
-      },
-      "BTNC": {
-        "direction": "I"
-      },
-      "BTND": {
+      "INMODE": {
         "direction": "I"
       },
       "BTNR": {
-        "type": "rst",
         "direction": "I",
-        "parameters": {
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "POLARITY": {
-            "value": "ACTIVE_HIGH"
-          }
-        }
+        "left": "0",
+        "right": "0"
+      },
+      "BTNL": {
+        "direction": "I",
+        "left": "0",
+        "right": "0"
+      },
+      "BTNU": {
+        "direction": "I",
+        "left": "0",
+        "right": "0"
+      },
+      "BTND": {
+        "direction": "I",
+        "left": "0",
+        "right": "0"
+      },
+      "BTNC": {
+        "direction": "I",
+        "left": "0",
+        "right": "0"
       }
     },
     "components": {
@@ -186,8 +184,14 @@
           "PCW_EN_DDR": {
             "value": "0"
           },
+          "PCW_EN_EMIO_GPIO": {
+            "value": "0"
+          },
           "PCW_EN_EMIO_UART0": {
             "value": "1"
+          },
+          "PCW_EN_GPIO": {
+            "value": "0"
           },
           "PCW_EN_UART0": {
             "value": "1"
@@ -197,6 +201,18 @@
           },
           "PCW_FPGA_FCLK0_ENABLE": {
             "value": "1"
+          },
+          "PCW_GPIO_EMIO_GPIO_ENABLE": {
+            "value": "0"
+          },
+          "PCW_GPIO_MIO_GPIO_ENABLE": {
+            "value": "0"
+          },
+          "PCW_MIO_TREE_PERIPHERALS": {
+            "value": "unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned"
+          },
+          "PCW_MIO_TREE_SIGNALS": {
+            "value": "unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned"
           },
           "PCW_UART0_GRP_FULL_ENABLE": {
             "value": "0"
@@ -295,51 +311,10 @@
       },
       "proc_sys_reset_1": {
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
-        "xci_name": "dkong_proc_sys_reset_1_0"
-      },
-      "mux4_0": {
-        "vlnv": "xilinx.com:module_ref:mux4:1.0",
-        "xci_name": "dkong_mux4_0_0",
+        "xci_name": "dkong_proc_sys_reset_1_0",
         "parameters": {
-          "WIDTH": {
-            "value": "8"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "mux4",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "sel": {
-            "direction": "I",
-            "left": "1",
-            "right": "0"
-          },
-          "ina": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "inb": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "inc": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "ind": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "outy": {
-            "direction": "O",
-            "left": "7",
-            "right": "0"
+          "C_AUX_RESET_HIGH": {
+            "value": "1"
           }
         }
       },
@@ -518,6 +493,36 @@
             "left": "1",
             "right": "0"
           },
+          "p1_r": {
+            "direction": "I"
+          },
+          "p1_l": {
+            "direction": "I"
+          },
+          "p1_u": {
+            "direction": "I"
+          },
+          "p1_d": {
+            "direction": "I"
+          },
+          "p1_b1": {
+            "direction": "I"
+          },
+          "p2_r": {
+            "direction": "I"
+          },
+          "p2_l": {
+            "direction": "I"
+          },
+          "p2_u": {
+            "direction": "I"
+          },
+          "p2_d": {
+            "direction": "I"
+          },
+          "p2_b1": {
+            "direction": "I"
+          },
           "p1_sw": {
             "direction": "I"
           },
@@ -556,6 +561,197 @@
             "right": "0"
           },
           "debug_enables": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "demux2_0": {
+        "vlnv": "xilinx.com:module_ref:demux2:1.0",
+        "xci_name": "dkong_demux2_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "demux2",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "sel": {
+            "direction": "I"
+          },
+          "iny": {
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          },
+          "outa": {
+            "direction": "O",
+            "left": "0",
+            "right": "0"
+          },
+          "outb": {
+            "direction": "O",
+            "left": "0",
+            "right": "0"
+          }
+        }
+      },
+      "demux2_1": {
+        "vlnv": "xilinx.com:module_ref:demux2:1.0",
+        "xci_name": "dkong_demux2_0_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "demux2",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "sel": {
+            "direction": "I"
+          },
+          "iny": {
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          },
+          "outa": {
+            "direction": "O",
+            "left": "0",
+            "right": "0"
+          },
+          "outb": {
+            "direction": "O",
+            "left": "0",
+            "right": "0"
+          }
+        }
+      },
+      "demux2_2": {
+        "vlnv": "xilinx.com:module_ref:demux2:1.0",
+        "xci_name": "dkong_demux2_0_2",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "demux2",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "sel": {
+            "direction": "I"
+          },
+          "iny": {
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          },
+          "outa": {
+            "direction": "O",
+            "left": "0",
+            "right": "0"
+          },
+          "outb": {
+            "direction": "O",
+            "left": "0",
+            "right": "0"
+          }
+        }
+      },
+      "demux2_3": {
+        "vlnv": "xilinx.com:module_ref:demux2:1.0",
+        "xci_name": "dkong_demux2_0_3",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "demux2",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "sel": {
+            "direction": "I"
+          },
+          "iny": {
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          },
+          "outa": {
+            "direction": "O",
+            "left": "0",
+            "right": "0"
+          },
+          "outb": {
+            "direction": "O",
+            "left": "0",
+            "right": "0"
+          }
+        }
+      },
+      "demux2_4": {
+        "vlnv": "xilinx.com:module_ref:demux2:1.0",
+        "xci_name": "dkong_demux2_3_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "demux2",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "sel": {
+            "direction": "I"
+          },
+          "iny": {
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          },
+          "outa": {
+            "direction": "O",
+            "left": "0",
+            "right": "0"
+          },
+          "outb": {
+            "direction": "O",
+            "left": "0",
+            "right": "0"
+          }
+        }
+      },
+      "mux4_0": {
+        "vlnv": "xilinx.com:module_ref:mux4:1.0",
+        "xci_name": "dkong_mux4_0_0",
+        "parameters": {
+          "WIDTH": {
+            "value": "8"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "mux4",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "sel": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "ina": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "inb": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "inc": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "ind": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "outy": {
             "direction": "O",
             "left": "7",
             "right": "0"
@@ -632,12 +828,6 @@
         "ports": [
           "dkong_system_wrapper_0/debug_enables",
           "mux4_0/inc"
-        ]
-      },
-      "BTNC_1": {
-        "ports": [
-          "BTNU",
-          "proc_sys_reset_0/aux_reset_in"
         ]
       },
       "clk_wiz_0_vgaclk": {
@@ -727,28 +917,104 @@
           "VGA_VS"
         ]
       },
-      "p1_sw_0_1": {
+      "sel_0_2": {
+        "ports": [
+          "INMODE",
+          "demux2_0/sel",
+          "demux2_1/sel",
+          "demux2_2/sel",
+          "demux2_3/sel",
+          "demux2_4/sel"
+        ]
+      },
+      "in_0_1": {
+        "ports": [
+          "BTNR",
+          "demux2_0/iny"
+        ]
+      },
+      "in_1_1": {
         "ports": [
           "BTNL",
+          "demux2_1/iny"
+        ]
+      },
+      "in_2_1": {
+        "ports": [
+          "BTNU",
+          "demux2_2/iny"
+        ]
+      },
+      "in_3_1": {
+        "ports": [
+          "BTND",
+          "demux2_3/iny"
+        ]
+      },
+      "in_4_1": {
+        "ports": [
+          "BTNC",
+          "demux2_4/iny"
+        ]
+      },
+      "demux2_0_outa": {
+        "ports": [
+          "demux2_0/outa",
+          "dkong_system_wrapper_0/p1_r"
+        ]
+      },
+      "demux2_1_outa": {
+        "ports": [
+          "demux2_1/outa",
+          "dkong_system_wrapper_0/p1_l"
+        ]
+      },
+      "demux2_2_outa": {
+        "ports": [
+          "demux2_2/outa",
+          "dkong_system_wrapper_0/p1_u"
+        ]
+      },
+      "demux2_3_outa": {
+        "ports": [
+          "demux2_3/outa",
+          "dkong_system_wrapper_0/p1_d"
+        ]
+      },
+      "demux2_4_outa": {
+        "ports": [
+          "demux2_4/outa",
+          "dkong_system_wrapper_0/p1_b1"
+        ]
+      },
+      "demux2_0_outb": {
+        "ports": [
+          "demux2_0/outb",
+          "proc_sys_reset_0/aux_reset_in"
+        ]
+      },
+      "demux2_2_outb": {
+        "ports": [
+          "demux2_2/outb",
+          "proc_sys_reset_1/aux_reset_in"
+        ]
+      },
+      "demux2_1_outb": {
+        "ports": [
+          "demux2_1/outb",
           "dkong_system_wrapper_0/p1_sw"
         ]
       },
-      "p2_sw_0_1": {
+      "demux2_4_outb": {
         "ports": [
-          "BTNC",
+          "demux2_4/outb",
           "dkong_system_wrapper_0/p2_sw"
         ]
       },
-      "coin_sw_0_1": {
+      "demux2_3_outb": {
         "ports": [
-          "BTND",
+          "demux2_3/outb",
           "dkong_system_wrapper_0/coin_sw"
-        ]
-      },
-      "aux_reset_in_0_1": {
-        "ports": [
-          "BTNR",
-          "proc_sys_reset_1/aux_reset_in"
         ]
       }
     }

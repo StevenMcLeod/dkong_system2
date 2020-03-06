@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Fri Mar  6 00:50:17 2020
+//Date        : Fri Mar  6 09:57:33 2020
 //Host        : Steven-Win10-2 running 64-bit major release  (build 9200)
 //Command     : generate_target dkong_wrapper.bd
 //Design      : dkong_wrapper
@@ -20,22 +20,24 @@ module dkong_wrapper
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
+    INMODE,
     LD,
     VGA_B,
     VGA_G,
     VGA_HS,
     VGA_R,
     VGA_VS);
-  input BTNC;
-  input BTND;
-  input BTNL;
-  input BTNR;
-  input BTNU;
+  input [0:0]BTNC;
+  input [0:0]BTND;
+  input [0:0]BTNL;
+  input [0:0]BTNR;
+  input [0:0]BTNU;
   input [1:0]DIPSW;
   inout [53:0]FIXED_IO_mio;
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
+  input INMODE;
   output [7:0]LD;
   output [3:0]VGA_B;
   output [3:0]VGA_G;
@@ -43,16 +45,17 @@ module dkong_wrapper
   output [3:0]VGA_R;
   output VGA_VS;
 
-  wire BTNC;
-  wire BTND;
-  wire BTNL;
-  wire BTNR;
-  wire BTNU;
+  wire [0:0]BTNC;
+  wire [0:0]BTND;
+  wire [0:0]BTNL;
+  wire [0:0]BTNR;
+  wire [0:0]BTNU;
   wire [1:0]DIPSW;
   wire [53:0]FIXED_IO_mio;
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
+  wire INMODE;
   wire [7:0]LD;
   wire [3:0]VGA_B;
   wire [3:0]VGA_G;
@@ -71,6 +74,7 @@ module dkong_wrapper
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
+        .INMODE(INMODE),
         .LD(LD),
         .VGA_B(VGA_B),
         .VGA_G(VGA_G),

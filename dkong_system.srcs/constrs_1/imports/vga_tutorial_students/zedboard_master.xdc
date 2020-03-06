@@ -241,7 +241,7 @@ set_property PACKAGE_PIN G22 [get_ports {DIPSW[1]}];  # "SW1"
 #set_property PACKAGE_PIN H19 [get_ports {DIPSW[4]}];  # "SW4"
 #set_property PACKAGE_PIN H18 [get_ports {DIPSW[5]}];  # "SW5"
 #set_property PACKAGE_PIN H17 [get_ports {DIPSW[6]}];  # "SW6"
-#set_property PACKAGE_PIN M15 [get_ports {DIPSW[7]}];  # "SW7"
+set_property PACKAGE_PIN M15 [get_ports {INMODE}];  # "SW7"
 
 ## ----------------------------------------------------------------------------
 ## XADC AD Channels - Bank 35

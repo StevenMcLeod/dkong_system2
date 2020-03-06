@@ -93,6 +93,21 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==dkong_framedoub
 # IP: ip/framedoubler_mem/framedoubler_mem.xci
 #dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==framedoubler_mem || ORIG_REF_NAME==framedoubler_mem} -quiet] -quiet
 
+# IP: bd/dkong/ip/dkong_demux2_0_0/dkong_demux2_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==dkong_demux2_0_0 || ORIG_REF_NAME==dkong_demux2_0_0} -quiet] -quiet
+
+# IP: bd/dkong/ip/dkong_demux2_0_1/dkong_demux2_0_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==dkong_demux2_0_1 || ORIG_REF_NAME==dkong_demux2_0_1} -quiet] -quiet
+
+# IP: bd/dkong/ip/dkong_demux2_0_2/dkong_demux2_0_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==dkong_demux2_0_2 || ORIG_REF_NAME==dkong_demux2_0_2} -quiet] -quiet
+
+# IP: bd/dkong/ip/dkong_demux2_0_3/dkong_demux2_0_3.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==dkong_demux2_0_3 || ORIG_REF_NAME==dkong_demux2_0_3} -quiet] -quiet
+
+# IP: bd/dkong/ip/dkong_demux2_3_0/dkong_demux2_3_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==dkong_demux2_3_0 || ORIG_REF_NAME==dkong_demux2_3_0} -quiet] -quiet
+
 # XDC: ip/palette_2f_prom/palette_2f_prom_ooc.xdc
 
 # XDC: ip/palette_2e_prom/palette_2e_prom_ooc.xdc

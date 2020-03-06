@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="37">
   <CompositeFile CompositeFileTopName="dkong" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1583484617"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1583484617"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1583484617"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1583484617"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1583517453"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1583517453"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1583517453"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1583517453"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\dkong_dkong_system_wrapper_0_0\dkong_dkong_system_wrapper_0_0.xci" Type="IP">
         <Instance HierarchyPath="dkong_system_wrapper_0"/>
@@ -57,6 +57,46 @@
       </File>
       <File Name="ip\dkong_framedoubler_slow_0_0\dkong_framedoubler_slow_0_0.xci" Type="IP">
         <Instance HierarchyPath="framedoubler_slow_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\dkong_demux2_0_0\dkong_demux2_0_0.xci" Type="IP">
+        <Instance HierarchyPath="demux2_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\dkong_demux2_0_1\dkong_demux2_0_1.xci" Type="IP">
+        <Instance HierarchyPath="demux2_1"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\dkong_demux2_0_2\dkong_demux2_0_2.xci" Type="IP">
+        <Instance HierarchyPath="demux2_2"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\dkong_demux2_0_3\dkong_demux2_0_3.xci" Type="IP">
+        <Instance HierarchyPath="demux2_3"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\dkong_demux2_3_0\dkong_demux2_3_0.xci" Type="IP">
+        <Instance HierarchyPath="demux2_4"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
