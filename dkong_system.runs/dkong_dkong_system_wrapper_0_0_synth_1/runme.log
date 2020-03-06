@@ -1,0 +1,1951 @@
+
+*** Running vivado
+    with args -log dkong_dkong_system_wrapper_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source dkong_dkong_system_wrapper_0_0.tcl
+
+
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source dkong_dkong_system_wrapper_0_0.tcl -notrace
+Command: synth_design -top dkong_dkong_system_wrapper_0_0 -part xc7z020clg484-1 -mode out_of_context
+Starting synth_design
+WARNING: [IP_Flow 19-3571] IP 'dkong_dkong_system_wrapper_0_0' is restricted:
+* Module reference is stale and needs refreshing.
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 21520 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 714.629 ; gain = 177.574
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'dkong_dkong_system_wrapper_0_0' [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_dkong_system_wrapper_0_0/synth/dkong_dkong_system_wrapper_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'dkong_system_wrapper' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/wrappers/dkong_system_wrapper.v:1]
+	Parameter CLKS_PER_BIT bound to: 1 - type: integer 
+	Parameter DEBUG_WAIT_ENA bound to: 0 - type: integer 
+	Parameter IN2_ENA bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'dkong_system' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/dkong_system.sv:3]
+	Parameter CLKS_PER_BIT bound to: 1 - type: integer 
+	Parameter DEBUG_WAIT_ENA bound to: 0 - type: integer 
+	Parameter IN2_ENA bound to: 1 - type: integer 
+	Parameter MASTER_QTY bound to: 2 - type: integer 
+	Parameter SLAVE_QTY bound to: 7 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'tv80s' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/tv80/rtl/core/tv80s.v:27]
+	Parameter Mode bound to: 0 - type: integer 
+	Parameter T2Write bound to: 1 - type: integer 
+	Parameter IOWait bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'tv80_core' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/tv80/rtl/core/tv80_core.v:27]
+	Parameter Mode bound to: 0 - type: integer 
+	Parameter IOWait bound to: 1 - type: integer 
+	Parameter Flag_C bound to: 0 - type: integer 
+	Parameter Flag_N bound to: 1 - type: integer 
+	Parameter Flag_P bound to: 2 - type: integer 
+	Parameter Flag_X bound to: 3 - type: integer 
+	Parameter Flag_H bound to: 4 - type: integer 
+	Parameter Flag_Y bound to: 5 - type: integer 
+	Parameter Flag_Z bound to: 6 - type: integer 
+	Parameter Flag_S bound to: 7 - type: integer 
+	Parameter aNone bound to: 3'b111 
+	Parameter aBC bound to: 3'b000 
+	Parameter aDE bound to: 3'b001 
+	Parameter aXY bound to: 3'b010 
+	Parameter aIOA bound to: 3'b100 
+	Parameter aSP bound to: 3'b101 
+	Parameter aZI bound to: 3'b110 
+INFO: [Synth 8-6157] synthesizing module 'tv80_mcode' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/tv80/rtl/core/tv80_mcode.v:25]
+	Parameter Mode bound to: 0 - type: integer 
+	Parameter Flag_C bound to: 0 - type: integer 
+	Parameter Flag_N bound to: 1 - type: integer 
+	Parameter Flag_P bound to: 2 - type: integer 
+	Parameter Flag_X bound to: 3 - type: integer 
+	Parameter Flag_H bound to: 4 - type: integer 
+	Parameter Flag_Y bound to: 5 - type: integer 
+	Parameter Flag_Z bound to: 6 - type: integer 
+	Parameter Flag_S bound to: 7 - type: integer 
+	Parameter aNone bound to: 3'b111 
+	Parameter aBC bound to: 3'b000 
+	Parameter aDE bound to: 3'b001 
+	Parameter aXY bound to: 3'b010 
+	Parameter aIOA bound to: 3'b100 
+	Parameter aSP bound to: 3'b101 
+	Parameter aZI bound to: 3'b110 
+INFO: [Synth 8-6155] done synthesizing module 'tv80_mcode' (1#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/tv80/rtl/core/tv80_mcode.v:25]
+INFO: [Synth 8-6157] synthesizing module 'tv80_alu' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/tv80/rtl/core/tv80_alu.v:25]
+	Parameter Mode bound to: 0 - type: integer 
+	Parameter Flag_C bound to: 0 - type: integer 
+	Parameter Flag_N bound to: 1 - type: integer 
+	Parameter Flag_P bound to: 2 - type: integer 
+	Parameter Flag_X bound to: 3 - type: integer 
+	Parameter Flag_H bound to: 4 - type: integer 
+	Parameter Flag_Y bound to: 5 - type: integer 
+	Parameter Flag_Z bound to: 6 - type: integer 
+	Parameter Flag_S bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'tv80_alu' (2#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/tv80/rtl/core/tv80_alu.v:25]
+INFO: [Synth 8-6157] synthesizing module 'tv80_reg' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/tv80/rtl/core/tv80_reg.v:25]
+INFO: [Synth 8-6155] done synthesizing module 'tv80_reg' (3#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/tv80/rtl/core/tv80_reg.v:25]
+INFO: [Synth 8-6155] done synthesizing module 'tv80_core' (4#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/tv80/rtl/core/tv80_core.v:27]
+INFO: [Synth 8-6155] done synthesizing module 'tv80s' (5#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/tv80/rtl/core/tv80s.v:27]
+INFO: [Synth 8-6157] synthesizing module 'fakedma' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/fakedma.sv:23]
+	Parameter STATE_SI bound to: 7'b0000001 
+	Parameter STATE_S0 bound to: 7'b0000010 
+	Parameter STATE_S1 bound to: 7'b0000100 
+	Parameter STATE_S2 bound to: 7'b0001000 
+	Parameter STATE_S3 bound to: 7'b0010000 
+	Parameter STATE_SW bound to: 7'b0100000 
+	Parameter STATE_S4 bound to: 7'b1000000 
+WARNING: [Synth 8-6014] Unused sequential element global_mode_reg was removed.  [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/fakedma.sv:116]
+INFO: [Synth 8-6155] done synthesizing module 'fakedma' (6#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/fakedma.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'addr_decoder' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/addr_decoder.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'addr_decoder' (7#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/addr_decoder.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'prio_encoder' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/prio_encoder.sv:1]
+	Parameter INPUT_QTY bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'prio_encoder' (8#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/prio_encoder.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'sysmux' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/sysmux.sv:5]
+	Parameter MASTER_QTY bound to: 2 - type: integer 
+	Parameter SLAVE_QTY bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sysmux' (9#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/sysmux.sv:5]
+INFO: [Synth 8-6157] synthesizing module 'program_rom_wrapper' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/wrappers/program_rom_wrapper.sv:1]
+INFO: [Synth 8-638] synthesizing module 'cpu_program_rom' [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/cpu_program_rom/synth/cpu_program_rom.vhd:68]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_INTERFACE_TYPE bound to: 0 - type: integer 
+	Parameter C_AXI_TYPE bound to: 1 - type: integer 
+	Parameter C_AXI_SLAVE_TYPE bound to: 0 - type: integer 
+	Parameter C_USE_BRAM_BLOCK bound to: 0 - type: integer 
+	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
+	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
+	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_MEM_TYPE bound to: 3 - type: integer 
+	Parameter C_BYTE_SIZE bound to: 9 - type: integer 
+	Parameter C_ALGORITHM bound to: 1 - type: integer 
+	Parameter C_PRIM_TYPE bound to: 1 - type: integer 
+	Parameter C_LOAD_INIT_FILE bound to: 1 - type: integer 
+	Parameter C_INIT_FILE_NAME bound to: cpu_program_rom.mif - type: string 
+	Parameter C_INIT_FILE bound to: cpu_program_rom.mem - type: string 
+	Parameter C_USE_DEFAULT_DATA bound to: 0 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_HAS_RSTA bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
+	Parameter C_RSTRAM_A bound to: 0 - type: integer 
+	Parameter C_INITA_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENA bound to: 1 - type: integer 
+	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEA bound to: 0 - type: integer 
+	Parameter C_WEA_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_A bound to: 8 - type: integer 
+	Parameter C_READ_WIDTH_A bound to: 8 - type: integer 
+	Parameter C_WRITE_DEPTH_A bound to: 16384 - type: integer 
+	Parameter C_READ_DEPTH_A bound to: 16384 - type: integer 
+	Parameter C_ADDRA_WIDTH bound to: 14 - type: integer 
+	Parameter C_HAS_RSTB bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
+	Parameter C_RSTRAM_B bound to: 0 - type: integer 
+	Parameter C_INITB_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENB bound to: 0 - type: integer 
+	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEB bound to: 0 - type: integer 
+	Parameter C_WEB_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_B bound to: 8 - type: integer 
+	Parameter C_READ_WIDTH_B bound to: 8 - type: integer 
+	Parameter C_WRITE_DEPTH_B bound to: 16384 - type: integer 
+	Parameter C_READ_DEPTH_B bound to: 16384 - type: integer 
+	Parameter C_ADDRB_WIDTH bound to: 14 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_MUX_PIPELINE_STAGES bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_INPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+	Parameter C_EN_ECC_PIPE bound to: 0 - type: integer 
+	Parameter C_READ_LATENCY_A bound to: 1 - type: integer 
+	Parameter C_READ_LATENCY_B bound to: 1 - type: integer 
+	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
+	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
+	Parameter C_COMMON_CLK bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
+	Parameter C_EN_SLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_USE_URAM bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRA_CHG bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
+	Parameter C_EN_DEEPSLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SHUTDOWN_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SAFETY_CKT bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
+	Parameter C_COUNT_36K_BRAM bound to: 4 - type: string 
+	Parameter C_COUNT_18K_BRAM bound to: 0 - type: string 
+	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     2.326399 mW - type: string 
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_3' declared at 'c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/palette_2f_prom/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_3' [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/cpu_program_rom/synth/cpu_program_rom.vhd:232]
+INFO: [Synth 8-256] done synthesizing module 'cpu_program_rom' (20#1) [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/cpu_program_rom/synth/cpu_program_rom.vhd:68]
+INFO: [Synth 8-6155] done synthesizing module 'program_rom_wrapper' (21#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/wrappers/program_rom_wrapper.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'z80ram' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/z80ram.sv:3]
+	Parameter ADDR_W bound to: 12 - type: integer 
+	Parameter DATA_W bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ram' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/ram.sv:1]
+	Parameter ADDR_W bound to: 12 - type: integer 
+	Parameter DATA_W bound to: 8 - type: integer 
+	Parameter TOTAL_ADDRS bound to: 4096 - type: integer 
+	Parameter ADDR_MASK bound to: 4095 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ram' (22#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/ram.sv:1]
+WARNING: [Synth 8-689] width (16) of port connection 'addr' does not match port width (12) of module 'ram' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/z80ram.sv:21]
+INFO: [Synth 8-6155] done synthesizing module 'z80ram' (23#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/z80ram.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'dkong_video' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/video/dkong_video.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'tilegen' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/video/tilegen.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'ram__parameterized0' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/ram.sv:1]
+	Parameter ADDR_W bound to: 10 - type: integer 
+	Parameter DATA_W bound to: 8 - type: integer 
+	Parameter TOTAL_ADDRS bound to: 1024 - type: integer 
+	Parameter ADDR_MASK bound to: 1023 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ram__parameterized0' (23#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/ram.sv:1]
+INFO: [Synth 8-638] synthesizing module 'tile_2n_prom' [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/tile_2n_prom/synth/tile_2n_prom.vhd:68]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_INTERFACE_TYPE bound to: 0 - type: integer 
+	Parameter C_AXI_TYPE bound to: 1 - type: integer 
+	Parameter C_AXI_SLAVE_TYPE bound to: 0 - type: integer 
+	Parameter C_USE_BRAM_BLOCK bound to: 0 - type: integer 
+	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
+	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
+	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_MEM_TYPE bound to: 3 - type: integer 
+	Parameter C_BYTE_SIZE bound to: 9 - type: integer 
+	Parameter C_ALGORITHM bound to: 1 - type: integer 
+	Parameter C_PRIM_TYPE bound to: 1 - type: integer 
+	Parameter C_LOAD_INIT_FILE bound to: 1 - type: integer 
+	Parameter C_INIT_FILE_NAME bound to: tile_2n_prom.mif - type: string 
+	Parameter C_INIT_FILE bound to: tile_2n_prom.mem - type: string 
+	Parameter C_USE_DEFAULT_DATA bound to: 0 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_HAS_RSTA bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
+	Parameter C_RSTRAM_A bound to: 0 - type: integer 
+	Parameter C_INITA_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENA bound to: 1 - type: integer 
+	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEA bound to: 0 - type: integer 
+	Parameter C_WEA_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_A bound to: 4 - type: integer 
+	Parameter C_READ_WIDTH_A bound to: 4 - type: integer 
+	Parameter C_WRITE_DEPTH_A bound to: 256 - type: integer 
+	Parameter C_READ_DEPTH_A bound to: 256 - type: integer 
+	Parameter C_ADDRA_WIDTH bound to: 8 - type: integer 
+	Parameter C_HAS_RSTB bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
+	Parameter C_RSTRAM_B bound to: 0 - type: integer 
+	Parameter C_INITB_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENB bound to: 0 - type: integer 
+	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEB bound to: 0 - type: integer 
+	Parameter C_WEB_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_B bound to: 4 - type: integer 
+	Parameter C_READ_WIDTH_B bound to: 4 - type: integer 
+	Parameter C_WRITE_DEPTH_B bound to: 256 - type: integer 
+	Parameter C_READ_DEPTH_B bound to: 256 - type: integer 
+	Parameter C_ADDRB_WIDTH bound to: 8 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_MUX_PIPELINE_STAGES bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_INPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+	Parameter C_EN_ECC_PIPE bound to: 0 - type: integer 
+	Parameter C_READ_LATENCY_A bound to: 1 - type: integer 
+	Parameter C_READ_LATENCY_B bound to: 1 - type: integer 
+	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
+	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
+	Parameter C_COMMON_CLK bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
+	Parameter C_EN_SLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_USE_URAM bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRA_CHG bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
+	Parameter C_EN_DEEPSLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SHUTDOWN_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SAFETY_CKT bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
+	Parameter C_COUNT_36K_BRAM bound to: 0 - type: string 
+	Parameter C_COUNT_18K_BRAM bound to: 1 - type: string 
+	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     2.210399 mW - type: string 
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_3' declared at 'c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/palette_2f_prom/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_3' [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/tile_2n_prom/synth/tile_2n_prom.vhd:232]
+INFO: [Synth 8-256] done synthesizing module 'tile_2n_prom' (24#1) [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/tile_2n_prom/synth/tile_2n_prom.vhd:68]
+INFO: [Synth 8-638] synthesizing module 'tile_3p_rom' [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/tile_3p_rom/synth/tile_3p_rom.vhd:68]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_INTERFACE_TYPE bound to: 0 - type: integer 
+	Parameter C_AXI_TYPE bound to: 1 - type: integer 
+	Parameter C_AXI_SLAVE_TYPE bound to: 0 - type: integer 
+	Parameter C_USE_BRAM_BLOCK bound to: 0 - type: integer 
+	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
+	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
+	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_MEM_TYPE bound to: 3 - type: integer 
+	Parameter C_BYTE_SIZE bound to: 9 - type: integer 
+	Parameter C_ALGORITHM bound to: 1 - type: integer 
+	Parameter C_PRIM_TYPE bound to: 1 - type: integer 
+	Parameter C_LOAD_INIT_FILE bound to: 1 - type: integer 
+	Parameter C_INIT_FILE_NAME bound to: tile_3p_rom.mif - type: string 
+	Parameter C_INIT_FILE bound to: tile_3p_rom.mem - type: string 
+	Parameter C_USE_DEFAULT_DATA bound to: 0 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_HAS_RSTA bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
+	Parameter C_RSTRAM_A bound to: 0 - type: integer 
+	Parameter C_INITA_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENA bound to: 1 - type: integer 
+	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEA bound to: 0 - type: integer 
+	Parameter C_WEA_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_A bound to: 8 - type: integer 
+	Parameter C_READ_WIDTH_A bound to: 8 - type: integer 
+	Parameter C_WRITE_DEPTH_A bound to: 2048 - type: integer 
+	Parameter C_READ_DEPTH_A bound to: 2048 - type: integer 
+	Parameter C_ADDRA_WIDTH bound to: 11 - type: integer 
+	Parameter C_HAS_RSTB bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
+	Parameter C_RSTRAM_B bound to: 0 - type: integer 
+	Parameter C_INITB_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENB bound to: 0 - type: integer 
+	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEB bound to: 0 - type: integer 
+	Parameter C_WEB_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_B bound to: 8 - type: integer 
+	Parameter C_READ_WIDTH_B bound to: 8 - type: integer 
+	Parameter C_WRITE_DEPTH_B bound to: 2048 - type: integer 
+	Parameter C_READ_DEPTH_B bound to: 2048 - type: integer 
+	Parameter C_ADDRB_WIDTH bound to: 11 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_MUX_PIPELINE_STAGES bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_INPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+	Parameter C_EN_ECC_PIPE bound to: 0 - type: integer 
+	Parameter C_READ_LATENCY_A bound to: 1 - type: integer 
+	Parameter C_READ_LATENCY_B bound to: 1 - type: integer 
+	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
+	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
+	Parameter C_COMMON_CLK bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
+	Parameter C_EN_SLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_USE_URAM bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRA_CHG bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
+	Parameter C_EN_DEEPSLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SHUTDOWN_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SAFETY_CKT bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
+	Parameter C_COUNT_36K_BRAM bound to: 0 - type: string 
+	Parameter C_COUNT_18K_BRAM bound to: 1 - type: string 
+	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     1.2196 mW - type: string 
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_3' declared at 'c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/palette_2f_prom/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_3' [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/tile_3p_rom/synth/tile_3p_rom.vhd:232]
+INFO: [Synth 8-256] done synthesizing module 'tile_3p_rom' (25#1) [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/tile_3p_rom/synth/tile_3p_rom.vhd:68]
+INFO: [Synth 8-638] synthesizing module 'tile_3n_rom' [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/tile_3n_rom/synth/tile_3n_rom.vhd:68]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_INTERFACE_TYPE bound to: 0 - type: integer 
+	Parameter C_AXI_TYPE bound to: 1 - type: integer 
+	Parameter C_AXI_SLAVE_TYPE bound to: 0 - type: integer 
+	Parameter C_USE_BRAM_BLOCK bound to: 0 - type: integer 
+	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
+	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
+	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_MEM_TYPE bound to: 3 - type: integer 
+	Parameter C_BYTE_SIZE bound to: 9 - type: integer 
+	Parameter C_ALGORITHM bound to: 1 - type: integer 
+	Parameter C_PRIM_TYPE bound to: 1 - type: integer 
+	Parameter C_LOAD_INIT_FILE bound to: 1 - type: integer 
+	Parameter C_INIT_FILE_NAME bound to: tile_3n_rom.mif - type: string 
+	Parameter C_INIT_FILE bound to: tile_3n_rom.mem - type: string 
+	Parameter C_USE_DEFAULT_DATA bound to: 0 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_HAS_RSTA bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
+	Parameter C_RSTRAM_A bound to: 0 - type: integer 
+	Parameter C_INITA_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENA bound to: 1 - type: integer 
+	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEA bound to: 0 - type: integer 
+	Parameter C_WEA_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_A bound to: 8 - type: integer 
+	Parameter C_READ_WIDTH_A bound to: 8 - type: integer 
+	Parameter C_WRITE_DEPTH_A bound to: 2048 - type: integer 
+	Parameter C_READ_DEPTH_A bound to: 2048 - type: integer 
+	Parameter C_ADDRA_WIDTH bound to: 11 - type: integer 
+	Parameter C_HAS_RSTB bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
+	Parameter C_RSTRAM_B bound to: 0 - type: integer 
+	Parameter C_INITB_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENB bound to: 0 - type: integer 
+	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEB bound to: 0 - type: integer 
+	Parameter C_WEB_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_B bound to: 8 - type: integer 
+	Parameter C_READ_WIDTH_B bound to: 8 - type: integer 
+	Parameter C_WRITE_DEPTH_B bound to: 2048 - type: integer 
+	Parameter C_READ_DEPTH_B bound to: 2048 - type: integer 
+	Parameter C_ADDRB_WIDTH bound to: 11 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_MUX_PIPELINE_STAGES bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_INPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+	Parameter C_EN_ECC_PIPE bound to: 0 - type: integer 
+	Parameter C_READ_LATENCY_A bound to: 1 - type: integer 
+	Parameter C_READ_LATENCY_B bound to: 1 - type: integer 
+	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
+	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
+	Parameter C_COMMON_CLK bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
+	Parameter C_EN_SLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_USE_URAM bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRA_CHG bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
+	Parameter C_EN_DEEPSLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SHUTDOWN_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SAFETY_CKT bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
+	Parameter C_COUNT_36K_BRAM bound to: 0 - type: string 
+	Parameter C_COUNT_18K_BRAM bound to: 1 - type: string 
+	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     1.2196 mW - type: string 
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_3' declared at 'c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/palette_2f_prom/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_3' [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/tile_3n_rom/synth/tile_3n_rom.vhd:232]
+INFO: [Synth 8-256] done synthesizing module 'tile_3n_rom' (26#1) [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/tile_3n_rom/synth/tile_3n_rom.vhd:68]
+INFO: [Synth 8-6155] done synthesizing module 'tilegen' (27#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/video/tilegen.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'spritegen' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/video/spritegen.sv:1]
+	Parameter SPRITE_ADD_F0 bound to: 8'b11111000 
+	Parameter SPRITE_ADD_F1 bound to: 8'b11111010 
+INFO: [Synth 8-6157] synthesizing module 'ram__parameterized1' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/ram.sv:1]
+	Parameter ADDR_W bound to: 6 - type: integer 
+	Parameter DATA_W bound to: 9 - type: integer 
+	Parameter TOTAL_ADDRS bound to: 64 - type: integer 
+	Parameter ADDR_MASK bound to: 63 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ram__parameterized1' (27#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/ram.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'ram__parameterized2' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/ram.sv:1]
+	Parameter ADDR_W bound to: 8 - type: integer 
+	Parameter DATA_W bound to: 6 - type: integer 
+	Parameter TOTAL_ADDRS bound to: 256 - type: integer 
+	Parameter ADDR_MASK bound to: 255 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ram__parameterized2' (27#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/ram.sv:1]
+INFO: [Synth 8-638] synthesizing module 'obj_7c_rom' [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/obj_7c_rom/synth/obj_7c_rom.vhd:68]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_INTERFACE_TYPE bound to: 0 - type: integer 
+	Parameter C_AXI_TYPE bound to: 1 - type: integer 
+	Parameter C_AXI_SLAVE_TYPE bound to: 0 - type: integer 
+	Parameter C_USE_BRAM_BLOCK bound to: 0 - type: integer 
+	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
+	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
+	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_MEM_TYPE bound to: 3 - type: integer 
+	Parameter C_BYTE_SIZE bound to: 9 - type: integer 
+	Parameter C_ALGORITHM bound to: 1 - type: integer 
+	Parameter C_PRIM_TYPE bound to: 1 - type: integer 
+	Parameter C_LOAD_INIT_FILE bound to: 1 - type: integer 
+	Parameter C_INIT_FILE_NAME bound to: obj_7c_rom.mif - type: string 
+	Parameter C_INIT_FILE bound to: obj_7c_rom.mem - type: string 
+	Parameter C_USE_DEFAULT_DATA bound to: 0 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_HAS_RSTA bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
+	Parameter C_RSTRAM_A bound to: 0 - type: integer 
+	Parameter C_INITA_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENA bound to: 1 - type: integer 
+	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEA bound to: 0 - type: integer 
+	Parameter C_WEA_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_A bound to: 8 - type: integer 
+	Parameter C_READ_WIDTH_A bound to: 8 - type: integer 
+	Parameter C_WRITE_DEPTH_A bound to: 2048 - type: integer 
+	Parameter C_READ_DEPTH_A bound to: 2048 - type: integer 
+	Parameter C_ADDRA_WIDTH bound to: 11 - type: integer 
+	Parameter C_HAS_RSTB bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
+	Parameter C_RSTRAM_B bound to: 0 - type: integer 
+	Parameter C_INITB_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENB bound to: 0 - type: integer 
+	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEB bound to: 0 - type: integer 
+	Parameter C_WEB_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_B bound to: 8 - type: integer 
+	Parameter C_READ_WIDTH_B bound to: 8 - type: integer 
+	Parameter C_WRITE_DEPTH_B bound to: 2048 - type: integer 
+	Parameter C_READ_DEPTH_B bound to: 2048 - type: integer 
+	Parameter C_ADDRB_WIDTH bound to: 11 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_MUX_PIPELINE_STAGES bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_INPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+	Parameter C_EN_ECC_PIPE bound to: 0 - type: integer 
+	Parameter C_READ_LATENCY_A bound to: 1 - type: integer 
+	Parameter C_READ_LATENCY_B bound to: 1 - type: integer 
+	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
+	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
+	Parameter C_COMMON_CLK bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
+	Parameter C_EN_SLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_USE_URAM bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRA_CHG bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
+	Parameter C_EN_DEEPSLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SHUTDOWN_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SAFETY_CKT bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
+	Parameter C_COUNT_36K_BRAM bound to: 0 - type: string 
+	Parameter C_COUNT_18K_BRAM bound to: 1 - type: string 
+	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     1.2196 mW - type: string 
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_3' declared at 'c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/palette_2f_prom/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_3' [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/obj_7c_rom/synth/obj_7c_rom.vhd:232]
+INFO: [Synth 8-256] done synthesizing module 'obj_7c_rom' (28#1) [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/obj_7c_rom/synth/obj_7c_rom.vhd:68]
+INFO: [Synth 8-638] synthesizing module 'obj_7d_rom' [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/obj_7d_rom/synth/obj_7d_rom.vhd:68]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_INTERFACE_TYPE bound to: 0 - type: integer 
+	Parameter C_AXI_TYPE bound to: 1 - type: integer 
+	Parameter C_AXI_SLAVE_TYPE bound to: 0 - type: integer 
+	Parameter C_USE_BRAM_BLOCK bound to: 0 - type: integer 
+	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
+	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
+	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_MEM_TYPE bound to: 3 - type: integer 
+	Parameter C_BYTE_SIZE bound to: 9 - type: integer 
+	Parameter C_ALGORITHM bound to: 1 - type: integer 
+	Parameter C_PRIM_TYPE bound to: 1 - type: integer 
+	Parameter C_LOAD_INIT_FILE bound to: 1 - type: integer 
+	Parameter C_INIT_FILE_NAME bound to: obj_7d_rom.mif - type: string 
+	Parameter C_INIT_FILE bound to: obj_7d_rom.mem - type: string 
+	Parameter C_USE_DEFAULT_DATA bound to: 0 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_HAS_RSTA bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
+	Parameter C_RSTRAM_A bound to: 0 - type: integer 
+	Parameter C_INITA_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENA bound to: 1 - type: integer 
+	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEA bound to: 0 - type: integer 
+	Parameter C_WEA_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_A bound to: 8 - type: integer 
+	Parameter C_READ_WIDTH_A bound to: 8 - type: integer 
+	Parameter C_WRITE_DEPTH_A bound to: 2048 - type: integer 
+	Parameter C_READ_DEPTH_A bound to: 2048 - type: integer 
+	Parameter C_ADDRA_WIDTH bound to: 11 - type: integer 
+	Parameter C_HAS_RSTB bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
+	Parameter C_RSTRAM_B bound to: 0 - type: integer 
+	Parameter C_INITB_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENB bound to: 0 - type: integer 
+	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEB bound to: 0 - type: integer 
+	Parameter C_WEB_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_B bound to: 8 - type: integer 
+	Parameter C_READ_WIDTH_B bound to: 8 - type: integer 
+	Parameter C_WRITE_DEPTH_B bound to: 2048 - type: integer 
+	Parameter C_READ_DEPTH_B bound to: 2048 - type: integer 
+	Parameter C_ADDRB_WIDTH bound to: 11 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_MUX_PIPELINE_STAGES bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_INPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+	Parameter C_EN_ECC_PIPE bound to: 0 - type: integer 
+	Parameter C_READ_LATENCY_A bound to: 1 - type: integer 
+	Parameter C_READ_LATENCY_B bound to: 1 - type: integer 
+	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
+	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
+	Parameter C_COMMON_CLK bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
+	Parameter C_EN_SLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_USE_URAM bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRA_CHG bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
+	Parameter C_EN_DEEPSLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SHUTDOWN_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SAFETY_CKT bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
+	Parameter C_COUNT_36K_BRAM bound to: 0 - type: string 
+	Parameter C_COUNT_18K_BRAM bound to: 1 - type: string 
+	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     1.2196 mW - type: string 
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_3' declared at 'c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/palette_2f_prom/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_3' [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/obj_7d_rom/synth/obj_7d_rom.vhd:232]
+INFO: [Synth 8-256] done synthesizing module 'obj_7d_rom' (29#1) [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/obj_7d_rom/synth/obj_7d_rom.vhd:68]
+INFO: [Synth 8-638] synthesizing module 'obj_7e_rom' [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/obj_7e_rom/synth/obj_7e_rom.vhd:68]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_INTERFACE_TYPE bound to: 0 - type: integer 
+	Parameter C_AXI_TYPE bound to: 1 - type: integer 
+	Parameter C_AXI_SLAVE_TYPE bound to: 0 - type: integer 
+	Parameter C_USE_BRAM_BLOCK bound to: 0 - type: integer 
+	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
+	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
+	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_MEM_TYPE bound to: 3 - type: integer 
+	Parameter C_BYTE_SIZE bound to: 9 - type: integer 
+	Parameter C_ALGORITHM bound to: 1 - type: integer 
+	Parameter C_PRIM_TYPE bound to: 1 - type: integer 
+	Parameter C_LOAD_INIT_FILE bound to: 1 - type: integer 
+	Parameter C_INIT_FILE_NAME bound to: obj_7e_rom.mif - type: string 
+	Parameter C_INIT_FILE bound to: obj_7e_rom.mem - type: string 
+	Parameter C_USE_DEFAULT_DATA bound to: 0 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_HAS_RSTA bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
+	Parameter C_RSTRAM_A bound to: 0 - type: integer 
+	Parameter C_INITA_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENA bound to: 1 - type: integer 
+	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEA bound to: 0 - type: integer 
+	Parameter C_WEA_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_A bound to: 8 - type: integer 
+	Parameter C_READ_WIDTH_A bound to: 8 - type: integer 
+	Parameter C_WRITE_DEPTH_A bound to: 2048 - type: integer 
+	Parameter C_READ_DEPTH_A bound to: 2048 - type: integer 
+	Parameter C_ADDRA_WIDTH bound to: 11 - type: integer 
+	Parameter C_HAS_RSTB bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
+	Parameter C_RSTRAM_B bound to: 0 - type: integer 
+	Parameter C_INITB_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENB bound to: 0 - type: integer 
+	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEB bound to: 0 - type: integer 
+	Parameter C_WEB_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_B bound to: 8 - type: integer 
+	Parameter C_READ_WIDTH_B bound to: 8 - type: integer 
+	Parameter C_WRITE_DEPTH_B bound to: 2048 - type: integer 
+	Parameter C_READ_DEPTH_B bound to: 2048 - type: integer 
+	Parameter C_ADDRB_WIDTH bound to: 11 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_MUX_PIPELINE_STAGES bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_INPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+	Parameter C_EN_ECC_PIPE bound to: 0 - type: integer 
+	Parameter C_READ_LATENCY_A bound to: 1 - type: integer 
+	Parameter C_READ_LATENCY_B bound to: 1 - type: integer 
+	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
+	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
+	Parameter C_COMMON_CLK bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
+	Parameter C_EN_SLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_USE_URAM bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRA_CHG bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
+	Parameter C_EN_DEEPSLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SHUTDOWN_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SAFETY_CKT bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
+	Parameter C_COUNT_36K_BRAM bound to: 0 - type: string 
+	Parameter C_COUNT_18K_BRAM bound to: 1 - type: string 
+	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     1.2196 mW - type: string 
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_3' declared at 'c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/palette_2f_prom/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_3' [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/obj_7e_rom/synth/obj_7e_rom.vhd:232]
+INFO: [Synth 8-256] done synthesizing module 'obj_7e_rom' (30#1) [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/obj_7e_rom/synth/obj_7e_rom.vhd:68]
+INFO: [Synth 8-638] synthesizing module 'obj_7f_rom' [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/obj_7f_rom/synth/obj_7f_rom.vhd:68]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_INTERFACE_TYPE bound to: 0 - type: integer 
+	Parameter C_AXI_TYPE bound to: 1 - type: integer 
+	Parameter C_AXI_SLAVE_TYPE bound to: 0 - type: integer 
+	Parameter C_USE_BRAM_BLOCK bound to: 0 - type: integer 
+	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
+	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
+	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_MEM_TYPE bound to: 3 - type: integer 
+	Parameter C_BYTE_SIZE bound to: 9 - type: integer 
+	Parameter C_ALGORITHM bound to: 1 - type: integer 
+	Parameter C_PRIM_TYPE bound to: 1 - type: integer 
+	Parameter C_LOAD_INIT_FILE bound to: 1 - type: integer 
+	Parameter C_INIT_FILE_NAME bound to: obj_7f_rom.mif - type: string 
+	Parameter C_INIT_FILE bound to: obj_7f_rom.mem - type: string 
+	Parameter C_USE_DEFAULT_DATA bound to: 0 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_HAS_RSTA bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
+	Parameter C_RSTRAM_A bound to: 0 - type: integer 
+	Parameter C_INITA_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENA bound to: 1 - type: integer 
+	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEA bound to: 0 - type: integer 
+	Parameter C_WEA_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_A bound to: 8 - type: integer 
+	Parameter C_READ_WIDTH_A bound to: 8 - type: integer 
+	Parameter C_WRITE_DEPTH_A bound to: 2048 - type: integer 
+	Parameter C_READ_DEPTH_A bound to: 2048 - type: integer 
+	Parameter C_ADDRA_WIDTH bound to: 11 - type: integer 
+	Parameter C_HAS_RSTB bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
+	Parameter C_RSTRAM_B bound to: 0 - type: integer 
+	Parameter C_INITB_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENB bound to: 0 - type: integer 
+	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEB bound to: 0 - type: integer 
+	Parameter C_WEB_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_B bound to: 8 - type: integer 
+	Parameter C_READ_WIDTH_B bound to: 8 - type: integer 
+	Parameter C_WRITE_DEPTH_B bound to: 2048 - type: integer 
+	Parameter C_READ_DEPTH_B bound to: 2048 - type: integer 
+	Parameter C_ADDRB_WIDTH bound to: 11 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_MUX_PIPELINE_STAGES bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_INPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+	Parameter C_EN_ECC_PIPE bound to: 0 - type: integer 
+	Parameter C_READ_LATENCY_A bound to: 1 - type: integer 
+	Parameter C_READ_LATENCY_B bound to: 1 - type: integer 
+	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
+	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
+	Parameter C_COMMON_CLK bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
+	Parameter C_EN_SLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_USE_URAM bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRA_CHG bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
+	Parameter C_EN_DEEPSLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SHUTDOWN_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SAFETY_CKT bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
+	Parameter C_COUNT_36K_BRAM bound to: 0 - type: string 
+	Parameter C_COUNT_18K_BRAM bound to: 1 - type: string 
+	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     1.2196 mW - type: string 
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_3' declared at 'c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/palette_2f_prom/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_3' [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/obj_7f_rom/synth/obj_7f_rom.vhd:232]
+INFO: [Synth 8-256] done synthesizing module 'obj_7f_rom' (31#1) [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/obj_7f_rom/synth/obj_7f_rom.vhd:68]
+WARNING: [Synth 8-3936] Found unconnected internal register 'sprite_state_reg' and it is trimmed from '4' to '2' bits. [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/video/spritegen.sv:296]
+INFO: [Synth 8-6155] done synthesizing module 'spritegen' (32#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/video/spritegen.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'paletter' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/video/paletter.sv:1]
+INFO: [Synth 8-638] synthesizing module 'palette_2e_prom' [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/palette_2e_prom/synth/palette_2e_prom.vhd:68]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_INTERFACE_TYPE bound to: 0 - type: integer 
+	Parameter C_AXI_TYPE bound to: 1 - type: integer 
+	Parameter C_AXI_SLAVE_TYPE bound to: 0 - type: integer 
+	Parameter C_USE_BRAM_BLOCK bound to: 0 - type: integer 
+	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
+	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
+	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_MEM_TYPE bound to: 3 - type: integer 
+	Parameter C_BYTE_SIZE bound to: 9 - type: integer 
+	Parameter C_ALGORITHM bound to: 1 - type: integer 
+	Parameter C_PRIM_TYPE bound to: 1 - type: integer 
+	Parameter C_LOAD_INIT_FILE bound to: 1 - type: integer 
+	Parameter C_INIT_FILE_NAME bound to: palette_2e_prom.mif - type: string 
+	Parameter C_INIT_FILE bound to: palette_2e_prom.mem - type: string 
+	Parameter C_USE_DEFAULT_DATA bound to: 0 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_HAS_RSTA bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
+	Parameter C_RSTRAM_A bound to: 0 - type: integer 
+	Parameter C_INITA_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENA bound to: 1 - type: integer 
+	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEA bound to: 0 - type: integer 
+	Parameter C_WEA_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_A bound to: 4 - type: integer 
+	Parameter C_READ_WIDTH_A bound to: 4 - type: integer 
+	Parameter C_WRITE_DEPTH_A bound to: 256 - type: integer 
+	Parameter C_READ_DEPTH_A bound to: 256 - type: integer 
+	Parameter C_ADDRA_WIDTH bound to: 8 - type: integer 
+	Parameter C_HAS_RSTB bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
+	Parameter C_RSTRAM_B bound to: 0 - type: integer 
+	Parameter C_INITB_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENB bound to: 0 - type: integer 
+	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEB bound to: 0 - type: integer 
+	Parameter C_WEB_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_B bound to: 4 - type: integer 
+	Parameter C_READ_WIDTH_B bound to: 4 - type: integer 
+	Parameter C_WRITE_DEPTH_B bound to: 256 - type: integer 
+	Parameter C_READ_DEPTH_B bound to: 256 - type: integer 
+	Parameter C_ADDRB_WIDTH bound to: 8 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_MUX_PIPELINE_STAGES bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_INPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+	Parameter C_EN_ECC_PIPE bound to: 0 - type: integer 
+	Parameter C_READ_LATENCY_A bound to: 1 - type: integer 
+	Parameter C_READ_LATENCY_B bound to: 1 - type: integer 
+	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
+	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
+	Parameter C_COMMON_CLK bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
+	Parameter C_EN_SLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_USE_URAM bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRA_CHG bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
+	Parameter C_EN_DEEPSLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SHUTDOWN_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SAFETY_CKT bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
+	Parameter C_COUNT_36K_BRAM bound to: 0 - type: string 
+	Parameter C_COUNT_18K_BRAM bound to: 1 - type: string 
+	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     2.210399 mW - type: string 
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_3' declared at 'c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/palette_2f_prom/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_3' [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/palette_2e_prom/synth/palette_2e_prom.vhd:232]
+INFO: [Synth 8-256] done synthesizing module 'palette_2e_prom' (33#1) [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/palette_2e_prom/synth/palette_2e_prom.vhd:68]
+INFO: [Synth 8-638] synthesizing module 'palette_2f_prom' [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/palette_2f_prom/synth/palette_2f_prom.vhd:68]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_INTERFACE_TYPE bound to: 0 - type: integer 
+	Parameter C_AXI_TYPE bound to: 1 - type: integer 
+	Parameter C_AXI_SLAVE_TYPE bound to: 0 - type: integer 
+	Parameter C_USE_BRAM_BLOCK bound to: 0 - type: integer 
+	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
+	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
+	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_MEM_TYPE bound to: 3 - type: integer 
+	Parameter C_BYTE_SIZE bound to: 9 - type: integer 
+	Parameter C_ALGORITHM bound to: 1 - type: integer 
+	Parameter C_PRIM_TYPE bound to: 1 - type: integer 
+	Parameter C_LOAD_INIT_FILE bound to: 1 - type: integer 
+	Parameter C_INIT_FILE_NAME bound to: palette_2f_prom.mif - type: string 
+	Parameter C_INIT_FILE bound to: palette_2f_prom.mem - type: string 
+	Parameter C_USE_DEFAULT_DATA bound to: 0 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_HAS_RSTA bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
+	Parameter C_RSTRAM_A bound to: 0 - type: integer 
+	Parameter C_INITA_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENA bound to: 1 - type: integer 
+	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEA bound to: 0 - type: integer 
+	Parameter C_WEA_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_A bound to: 4 - type: integer 
+	Parameter C_READ_WIDTH_A bound to: 4 - type: integer 
+	Parameter C_WRITE_DEPTH_A bound to: 256 - type: integer 
+	Parameter C_READ_DEPTH_A bound to: 256 - type: integer 
+	Parameter C_ADDRA_WIDTH bound to: 8 - type: integer 
+	Parameter C_HAS_RSTB bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
+	Parameter C_RSTRAM_B bound to: 0 - type: integer 
+	Parameter C_INITB_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENB bound to: 0 - type: integer 
+	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEB bound to: 0 - type: integer 
+	Parameter C_WEB_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_B bound to: 4 - type: integer 
+	Parameter C_READ_WIDTH_B bound to: 4 - type: integer 
+	Parameter C_WRITE_DEPTH_B bound to: 256 - type: integer 
+	Parameter C_READ_DEPTH_B bound to: 256 - type: integer 
+	Parameter C_ADDRB_WIDTH bound to: 8 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_MUX_PIPELINE_STAGES bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_INPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+	Parameter C_EN_ECC_PIPE bound to: 0 - type: integer 
+	Parameter C_READ_LATENCY_A bound to: 1 - type: integer 
+	Parameter C_READ_LATENCY_B bound to: 1 - type: integer 
+	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
+	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
+	Parameter C_COMMON_CLK bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
+	Parameter C_EN_SLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_USE_URAM bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRA_CHG bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
+	Parameter C_EN_DEEPSLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SHUTDOWN_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SAFETY_CKT bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
+	Parameter C_COUNT_36K_BRAM bound to: 0 - type: string 
+	Parameter C_COUNT_18K_BRAM bound to: 1 - type: string 
+	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     2.210399 mW - type: string 
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_3' declared at 'c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/palette_2f_prom/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_3' [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/palette_2f_prom/synth/palette_2f_prom.vhd:232]
+INFO: [Synth 8-256] done synthesizing module 'palette_2f_prom' (34#1) [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/palette_2f_prom/synth/palette_2f_prom.vhd:68]
+INFO: [Synth 8-6155] done synthesizing module 'paletter' (35#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/video/paletter.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'dkong_video' (36#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/video/dkong_video.sv:3]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/dkong_system.sv:400]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/dkong_system.sv:423]
+INFO: [Synth 8-6157] synthesizing module 'z80_uart' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/z80uart.sv:3]
+	Parameter CLKS_PER_BIT bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'uart_rx' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/z80uart.sv:78]
+	Parameter CLKS_PER_BIT bound to: 1 - type: integer 
+	Parameter s_IDLE bound to: 3'b000 
+	Parameter s_RX_START_BIT bound to: 3'b001 
+	Parameter s_RX_DATA_BITS bound to: 3'b010 
+	Parameter s_RX_STOP_BIT bound to: 3'b011 
+	Parameter s_CLEANUP bound to: 3'b100 
+INFO: [Synth 8-6155] done synthesizing module 'uart_rx' (37#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/z80uart.sv:78]
+INFO: [Synth 8-6157] synthesizing module 'uart_tx' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/z80uart.sv:237]
+	Parameter CLKS_PER_BIT bound to: 1 - type: integer 
+	Parameter s_IDLE bound to: 3'b000 
+	Parameter s_TX_START_BIT bound to: 3'b001 
+	Parameter s_TX_DATA_BITS bound to: 3'b010 
+	Parameter s_TX_STOP_BIT bound to: 3'b011 
+	Parameter s_CLEANUP bound to: 3'b100 
+WARNING: [Synth 8-6014] Unused sequential element r_Clock_Count_reg was removed.  [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/z80uart.sv:266]
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (38#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/z80uart.sv:237]
+INFO: [Synth 8-6155] done synthesizing module 'z80_uart' (39#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/z80uart.sv:3]
+WARNING: [Synth 8-6014] Unused sequential element audio_irq_reg was removed.  [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/dkong_system.sv:415]
+INFO: [Synth 8-6155] done synthesizing module 'dkong_system' (40#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/dkong_system.sv:3]
+WARNING: [Synth 8-7023] instance 'inst' of module 'dkong_system' has 20 connections declared, but only 19 given [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/wrappers/dkong_system_wrapper.v:35]
+INFO: [Synth 8-6155] done synthesizing module 'dkong_system_wrapper' (41#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/wrappers/dkong_system_wrapper.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'dkong_dkong_system_wrapper_0_0' (42#1) [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_dkong_system_wrapper_0_0/synth/dkong_dkong_system_wrapper_0_0.v:58]
+WARNING: [Synth 8-3331] design z80_uart has unconnected port ibus[addr][15]
+WARNING: [Synth 8-3331] design z80_uart has unconnected port ibus[addr][14]
+WARNING: [Synth 8-3331] design z80_uart has unconnected port ibus[addr][13]
+WARNING: [Synth 8-3331] design z80_uart has unconnected port ibus[addr][12]
+WARNING: [Synth 8-3331] design z80_uart has unconnected port ibus[addr][11]
+WARNING: [Synth 8-3331] design z80_uart has unconnected port ibus[addr][10]
+WARNING: [Synth 8-3331] design z80_uart has unconnected port ibus[addr][9]
+WARNING: [Synth 8-3331] design z80_uart has unconnected port ibus[addr][8]
+WARNING: [Synth 8-3331] design z80_uart has unconnected port ibus[addr][7]
+WARNING: [Synth 8-3331] design z80_uart has unconnected port ibus[addr][6]
+WARNING: [Synth 8-3331] design z80_uart has unconnected port ibus[addr][5]
+WARNING: [Synth 8-3331] design z80_uart has unconnected port ibus[addr][4]
+WARNING: [Synth 8-3331] design z80_uart has unconnected port ibus[addr][3]
+WARNING: [Synth 8-3331] design z80_uart has unconnected port ibus[addr][2]
+WARNING: [Synth 8-3331] design z80_uart has unconnected port ibus[addr][1]
+WARNING: [Synth 8-3331] design z80_uart has unconnected port ibus[addr][0]
+WARNING: [Synth 8-3331] design z80_uart has unconnected port ibus[mreqn]
+WARNING: [Synth 8-3331] design z80_uart has unconnected port ibus[iorqn]
+WARNING: [Synth 8-3331] design z80_uart has unconnected port ibus[inta]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port SSRA
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port CLKB
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port SSRB
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port ENB
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port REGCEB
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port WEB[0]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port ADDRB[8]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port ADDRB[7]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port ADDRB[6]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port ADDRB[5]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port ADDRB[4]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port ADDRB[3]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port ADDRB[2]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port ADDRB[1]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port ADDRB[0]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port DINB[35]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port DINB[34]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port DINB[33]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port DINB[32]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port DINB[31]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port DINB[30]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port DINB[29]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port DINB[28]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port DINB[27]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port DINB[26]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port DINB[25]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port DINB[24]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port DINB[23]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port DINB[22]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port DINB[21]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port DINB[20]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port DINB[19]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port DINB[18]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port DINB[17]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port DINB[16]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port DINB[15]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port DINB[14]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port DINB[13]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port DINB[12]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port DINB[11]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port DINB[10]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port DINB[9]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port DINB[8]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port DINB[7]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port DINB[6]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port DINB[5]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port DINB[4]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port DINB[3]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port DINB[2]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port DINB[1]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port DINB[0]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port SLEEP
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port INJECTSBITERR
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port INJECTDBITERR
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port ECCPIPECE
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port ram_rstram_b
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized11 has unconnected port ram_rstreg_b
+WARNING: [Synth 8-3331] design blk_mem_gen_generic_cstr__parameterized8 has unconnected port REGCEA[0]
+WARNING: [Synth 8-3331] design blk_mem_gen_generic_cstr__parameterized8 has unconnected port REGCEB[0]
+WARNING: [Synth 8-3331] design blk_mem_gen_generic_cstr__parameterized8 has unconnected port INJECTSBITERR
+WARNING: [Synth 8-3331] design blk_mem_gen_generic_cstr__parameterized8 has unconnected port INJECTDBITERR
+WARNING: [Synth 8-3331] design blk_mem_output_block__parameterized0 has unconnected port CLKB
+WARNING: [Synth 8-3331] design blk_mem_output_block__parameterized0 has unconnected port DOUTB_I[3]
+WARNING: [Synth 8-3331] design blk_mem_output_block__parameterized0 has unconnected port DOUTB_I[2]
+WARNING: [Synth 8-3331] design blk_mem_output_block__parameterized0 has unconnected port DOUTB_I[1]
+WARNING: [Synth 8-3331] design blk_mem_output_block__parameterized0 has unconnected port DOUTB_I[0]
+WARNING: [Synth 8-3331] design blk_mem_output_block__parameterized0 has unconnected port SBITERR_I
+WARNING: [Synth 8-3331] design blk_mem_output_block__parameterized0 has unconnected port DBITERR_I
+WARNING: [Synth 8-3331] design blk_mem_output_block__parameterized0 has unconnected port RDADDRECC_I[7]
+WARNING: [Synth 8-3331] design blk_mem_output_block__parameterized0 has unconnected port RDADDRECC_I[6]
+WARNING: [Synth 8-3331] design blk_mem_output_block__parameterized0 has unconnected port RDADDRECC_I[5]
+WARNING: [Synth 8-3331] design blk_mem_output_block__parameterized0 has unconnected port RDADDRECC_I[4]
+WARNING: [Synth 8-3331] design blk_mem_output_block__parameterized0 has unconnected port RDADDRECC_I[3]
+WARNING: [Synth 8-3331] design blk_mem_output_block__parameterized0 has unconnected port RDADDRECC_I[2]
+WARNING: [Synth 8-3331] design blk_mem_output_block__parameterized0 has unconnected port RDADDRECC_I[1]
+WARNING: [Synth 8-3331] design blk_mem_output_block__parameterized0 has unconnected port RDADDRECC_I[0]
+WARNING: [Synth 8-3331] design blk_mem_input_block__parameterized0 has unconnected port RSTA
+WARNING: [Synth 8-3331] design blk_mem_input_block__parameterized0 has unconnected port REGCEA
+WARNING: [Synth 8-3331] design blk_mem_input_block__parameterized0 has unconnected port WEA[0]
+WARNING: [Synth 8-3331] design blk_mem_input_block__parameterized0 has unconnected port DINA[3]
+WARNING: [Synth 8-3331] design blk_mem_input_block__parameterized0 has unconnected port DINA[2]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:05:44 ; elapsed = 00:05:47 . Memory (MB): peak = 1704.980 ; gain = 1167.926
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:05:45 ; elapsed = 00:05:48 . Memory (MB): peak = 1704.980 ; gain = 1167.926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:05:45 ; elapsed = 00:05:48 . Memory (MB): peak = 1704.980 ; gain = 1167.926
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.runs/dkong_dkong_system_wrapper_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.runs/dkong_dkong_system_wrapper_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1704.980 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.185 . Memory (MB): peak = 1704.980 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:05:54 ; elapsed = 00:05:57 . Memory (MB): peak = 1704.980 ; gain = 1167.926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:05:54 ; elapsed = 00:05:57 . Memory (MB): peak = 1704.980 ; gain = 1167.926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst/inst/vid/pal/prom_2f. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/inst/vid/pal/prom_2e. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/inst/vid/sprite/rom_7f. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/inst/vid/sprite/rom_7e. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/inst/vid/sprite/rom_7d. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/inst/vid/sprite/rom_7c. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/inst/vid/tile/rom_3n. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/inst/vid/tile/rom_3p. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/inst/vid/tile/prom_2n. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/inst/cpu_rom/inst. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:05:55 ; elapsed = 00:05:57 . Memory (MB): peak = 1704.980 ; gain = 1167.926
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5587] ROM size for "MCycles" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "Read_To_Acc" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Special_LD" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "IMode" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-802] inferred FSM for state register 'r_SM_Main_reg' in module 'uart_rx'
+INFO: [Synth 8-802] inferred FSM for state register 'r_SM_Main_reg' in module 'uart_tx'
+INFO: [Synth 8-4471] merging register 'in1_reg[7:0]' into 'in0_reg[7:0]' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/dkong_system.sv:385]
+INFO: [Synth 8-5546] ROM "cref" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  s_IDLE |                              000 |                              000
+          s_RX_START_BIT |                              001 |                              001
+          s_RX_DATA_BITS |                              010 |                              010
+           s_RX_STOP_BIT |                              011 |                              011
+               s_CLEANUP |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'r_SM_Main_reg' using encoding 'sequential' in module 'uart_rx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  s_IDLE |                              000 |                              000
+          s_TX_START_BIT |                              001 |                              001
+          s_TX_DATA_BITS |                              010 |                              010
+           s_TX_STOP_BIT |                              011 |                              011
+               s_CLEANUP |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'r_SM_Main_reg' using encoding 'sequential' in module 'uart_tx'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:05:58 ; elapsed = 00:06:01 . Memory (MB): peak = 1704.980 ; gain = 1167.926
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 8     
+	   2 Input     14 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 3     
+	   3 Input      9 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 5     
+	   3 Input      8 Bit       Adders := 1     
+	   3 Input      5 Bit       Adders := 1     
+	   3 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 3     
+	   3 Input      2 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---XORs : 
+	   2 Input      9 Bit         XORs := 1     
+	   2 Input      8 Bit         XORs := 3     
+	   2 Input      4 Bit         XORs := 2     
+	   2 Input      1 Bit         XORs := 2     
++---XORs : 
+	                9 Bit    Wide XORs := 1     
+	                8 Bit    Wide XORs := 4     
++---Registers : 
+	               16 Bit    Registers := 11    
+	               14 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 3     
+	                8 Bit    Registers := 30    
+	                7 Bit    Registers := 4     
+	                6 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 4     
+	                3 Bit    Registers := 10    
+	                2 Bit    Registers := 12    
+	                1 Bit    Registers := 65    
++---RAMs : 
+	              32K Bit         RAMs := 1     
+	               8K Bit         RAMs := 2     
+	               1K Bit         RAMs := 1     
+	              576 Bit         RAMs := 1     
+	               64 Bit         RAMs := 2     
++---Muxes : 
+	   6 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 51    
+	   3 Input     16 Bit        Muxes := 1     
+	   4 Input     16 Bit        Muxes := 1     
+	   9 Input     16 Bit        Muxes := 4     
+	   2 Input     14 Bit        Muxes := 2     
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      9 Bit        Muxes := 3     
+	   8 Input      8 Bit        Muxes := 1     
+	   5 Input      8 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 70    
+	   6 Input      8 Bit        Muxes := 4     
+	   4 Input      8 Bit        Muxes := 5     
+	   9 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 30    
+	   9 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 4     
+	   2 Input      5 Bit        Muxes := 2     
+	   4 Input      4 Bit        Muxes := 13    
+	   6 Input      4 Bit        Muxes := 4     
+	   2 Input      4 Bit        Muxes := 51    
+	   5 Input      4 Bit        Muxes := 11    
+	  49 Input      4 Bit        Muxes := 4     
+	   3 Input      4 Bit        Muxes := 7     
+	  22 Input      4 Bit        Muxes := 3     
+	   9 Input      4 Bit        Muxes := 1     
+	   8 Input      4 Bit        Muxes := 2     
+	   3 Input      3 Bit        Muxes := 15    
+	   2 Input      3 Bit        Muxes := 77    
+	   5 Input      3 Bit        Muxes := 24    
+	  49 Input      3 Bit        Muxes := 3     
+	  24 Input      3 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 19    
+	   8 Input      3 Bit        Muxes := 3     
+	   6 Input      3 Bit        Muxes := 6     
+	  22 Input      3 Bit        Muxes := 4     
+	   4 Input      2 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 21    
+	   3 Input      2 Bit        Muxes := 1     
+	   8 Input      2 Bit        Muxes := 2     
+	  51 Input      2 Bit        Muxes := 1     
+	  24 Input      2 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	  10 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 224   
+	   4 Input      1 Bit        Muxes := 20    
+	   3 Input      1 Bit        Muxes := 6     
+	   5 Input      1 Bit        Muxes := 26    
+	   6 Input      1 Bit        Muxes := 11    
+	  49 Input      1 Bit        Muxes := 19    
+	  22 Input      1 Bit        Muxes := 14    
+	   8 Input      1 Bit        Muxes := 8     
+	  24 Input      1 Bit        Muxes := 1     
+	  51 Input      1 Bit        Muxes := 10    
+	   7 Input      1 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module tv80_mcode 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 13    
+	   6 Input      4 Bit        Muxes := 4     
+	   2 Input      4 Bit        Muxes := 46    
+	   5 Input      4 Bit        Muxes := 11    
+	  49 Input      4 Bit        Muxes := 4     
+	   3 Input      4 Bit        Muxes := 7     
+	  22 Input      4 Bit        Muxes := 3     
+	   9 Input      4 Bit        Muxes := 1     
+	   8 Input      4 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 15    
+	   2 Input      3 Bit        Muxes := 32    
+	   5 Input      3 Bit        Muxes := 20    
+	  49 Input      3 Bit        Muxes := 3     
+	  24 Input      3 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 19    
+	   8 Input      3 Bit        Muxes := 2     
+	   6 Input      3 Bit        Muxes := 5     
+	  22 Input      3 Bit        Muxes := 4     
+	   4 Input      2 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   8 Input      2 Bit        Muxes := 2     
+	  51 Input      2 Bit        Muxes := 1     
+	  24 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 71    
+	   4 Input      1 Bit        Muxes := 9     
+	   3 Input      1 Bit        Muxes := 5     
+	   5 Input      1 Bit        Muxes := 9     
+	   6 Input      1 Bit        Muxes := 7     
+	  49 Input      1 Bit        Muxes := 19    
+	  22 Input      1 Bit        Muxes := 14    
+	   8 Input      1 Bit        Muxes := 2     
+	  24 Input      1 Bit        Muxes := 1     
+	  51 Input      1 Bit        Muxes := 10    
+Module tv80_alu 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 2     
+	   3 Input      9 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
+	   3 Input      5 Bit       Adders := 1     
+	   3 Input      4 Bit       Adders := 1     
+	   3 Input      2 Bit       Adders := 1     
++---XORs : 
+	   2 Input      8 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 2     
++---XORs : 
+	                9 Bit    Wide XORs := 1     
+	                8 Bit    Wide XORs := 3     
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 2     
+	   8 Input      8 Bit        Muxes := 1     
+	   5 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 6     
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 9     
+	   8 Input      1 Bit        Muxes := 1     
+Module tv80_reg 
+Detailed RTL Component Info : 
++---RAMs : 
+	               64 Bit         RAMs := 2     
+Module tv80_core 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 4     
++---XORs : 
+	                8 Bit    Wide XORs := 1     
++---Registers : 
+	               16 Bit    Registers := 4     
+	                8 Bit    Registers := 9     
+	                7 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 5     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 22    
++---Muxes : 
+	   6 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 20    
+	   3 Input     16 Bit        Muxes := 1     
+	   4 Input     16 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 48    
+	   6 Input      8 Bit        Muxes := 4     
+	   4 Input      8 Bit        Muxes := 3     
+	   2 Input      7 Bit        Muxes := 3     
+	   9 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 2     
+	   8 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 6     
+	   2 Input      2 Bit        Muxes := 7     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 78    
+	   4 Input      1 Bit        Muxes := 7     
+	   5 Input      1 Bit        Muxes := 3     
+	   6 Input      1 Bit        Muxes := 2     
+Module tv80s 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 10    
+Module fakedma 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 4     
+	   2 Input     14 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 5     
+	               14 Bit    Registers := 1     
+	                8 Bit    Registers := 3     
+	                7 Bit    Registers := 1     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 26    
+	   9 Input     16 Bit        Muxes := 4     
+	   2 Input     14 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 8     
+	   9 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 27    
+	   8 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 27    
+	   2 Input      2 Bit        Muxes := 10    
+	   7 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 18    
+	   9 Input      1 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 4     
+	   6 Input      1 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+Module prio_encoder 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 1     
+Module sysmux 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 6     
+Module bindec 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 4     
+Module blk_mem_gen_mux 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      8 Bit        Muxes := 1     
+Module blk_mem_gen_mux__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      8 Bit        Muxes := 1     
+Module ram 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---RAMs : 
+	              32K Bit         RAMs := 1     
+Module ram__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---RAMs : 
+	               8K Bit         RAMs := 1     
+Module tilegen 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      9 Bit         XORs := 1     
++---Registers : 
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module ram__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	                9 Bit    Registers := 1     
++---RAMs : 
+	              576 Bit         RAMs := 1     
+Module ram__parameterized2 
+Detailed RTL Component Info : 
++---Registers : 
+	                6 Bit    Registers := 1     
++---RAMs : 
+	               1K Bit         RAMs := 1     
+Module spritegen 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 4     
+	   3 Input      8 Bit       Adders := 1     
++---XORs : 
+	   2 Input      8 Bit         XORs := 1     
+	   2 Input      4 Bit         XORs := 2     
++---Registers : 
+	               16 Bit    Registers := 2     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 5     
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 4     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 3     
+	   2 Input      6 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 4     
+Module paletter 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module dkong_video 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---XORs : 
+	   2 Input      8 Bit         XORs := 1     
++---Registers : 
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module uart_rx 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   5 Input      8 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 6     
+	   5 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 2     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+	   5 Input      1 Bit        Muxes := 4     
+Module uart_tx 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 3     
+	   5 Input      3 Bit        Muxes := 2     
+	   5 Input      1 Bit        Muxes := 8     
+Module z80_uart 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module dkong_system 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 4     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	  10 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 8     
+	   8 Input      1 Bit        Muxes := 5     
+	   5 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/inst/mycpu/i_tv80_core /INT_s_reg)
+INFO: [Synth 8-3886] merging instance 'inst/inst/dsw0_reg[0]' (FDRE) to 'inst/inst/in0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/inst/in2_reg[0]' (FDR) to 'inst/inst/in2_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/inst/in0_reg[0]' (FDRE) to 'inst/inst/in0_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/inst/dsw0_reg[1]' (FDRE) to 'inst/inst/in0_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/inst/in2_reg[1]' (FDR) to 'inst/inst/in2_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/inst/in0_reg[1]' (FDRE) to 'inst/inst/in0_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/inst/dsw0_reg[2]' (FDRE) to 'inst/inst/in0_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/inst/in0_reg[2]' (FDRE) to 'inst/inst/in0_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/inst/dsw0_reg[3]' (FDRE) to 'inst/inst/in0_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/inst/in0_reg[3]' (FDRE) to 'inst/inst/in0_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/inst/dsw0_reg[4]' (FDRE) to 'inst/inst/in0_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/inst/in2_reg[4]' (FDR) to 'inst/inst/in2_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/inst/in0_reg[4]' (FDRE) to 'inst/inst/in0_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/inst/dsw0_reg[5]' (FDRE) to 'inst/inst/in0_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/inst/in2_reg[5]' (FDR) to 'inst/inst/in2_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/inst/in0_reg[5]' (FDRE) to 'inst/inst/in0_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/inst/dsw0_reg[6]' (FDRE) to 'inst/inst/in0_reg[6]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/inst/in2_reg[6] )
+INFO: [Synth 8-3886] merging instance 'inst/inst/in0_reg[6]' (FDRE) to 'inst/inst/in0_reg[7]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\inst/inst/dsw0_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/inst/in0_reg[7] )
+INFO: [Synth 8-3886] merging instance 'inst/inst/io_bus_reg[dslave][0]' (FDE) to 'inst/inst/io_bus_reg[dslave][6]'
+INFO: [Synth 8-3886] merging instance 'inst/inst/io_bus_reg[dslave][1]' (FDE) to 'inst/inst/io_bus_reg[dslave][6]'
+INFO: [Synth 8-3886] merging instance 'inst/inst/io_bus_reg[dslave][4]' (FDE) to 'inst/inst/io_bus_reg[dslave][6]'
+INFO: [Synth 8-3886] merging instance 'inst/inst/io_bus_reg[dslave][5]' (FDE) to 'inst/inst/io_bus_reg[dslave][6]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/inst/io_bus_reg[dslave][6] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:06:18 ; elapsed = 00:06:22 . Memory (MB): peak = 1704.980 ; gain = 1167.926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping  Report (see note below)
++-------------------------------+-----------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                    | RTL Object                              | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-------------------------------+-----------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|\inst/inst /vid                | tile/tileram/mem_reg                    | 1 K x 8(READ_FIRST)    | W | R |                        |   |   | Port A           | 1      | 0      | 
+|\inst/inst /vid                | sprite/objram/mem_reg                   | 1 K x 8(READ_FIRST)    | W | R |                        |   |   | Port A           | 1      | 0      | 
+|dkong_dkong_system_wrapper_0_0 | inst/inst/vid/sprite/linebuffer/mem_reg | 256 x 6(READ_FIRST)    | W | R |                        |   |   | Port A           | 1      | 0      | 
+|dkong_dkong_system_wrapper_0_0 | inst/inst/cpu_ram/ram_imp/mem_reg       | 4 K x 8(READ_FIRST)    | W |   | 4 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
++-------------------------------+-----------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++-------------------------------+-----------------------------------------+-----------+----------------------+----------------+
+|Module Name                    | RTL Object                              | Inference | Size (Depth x Width) | Primitives     | 
++-------------------------------+-----------------------------------------+-----------+----------------------+----------------+
+|\inst/inst/mycpu/i_tv80_core   | i_reg/RegsH_reg                         | Implied   | 8 x 8                | RAM32M x 4     | 
+|\inst/inst/mycpu/i_tv80_core   | i_reg/RegsL_reg                         | Implied   | 8 x 8                | RAM32M x 4     | 
+|dkong_dkong_system_wrapper_0_0 | inst/inst/vid/sprite/scratchpad/mem_reg | Implied   | 64 x 9               | RAM64X1S x 9   | 
++-------------------------------+-----------------------------------------+-----------+----------------------+----------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance inst/i_32/inst/inst/vid/tile/tileram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_39/inst/inst/vid/sprite/objram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_8/inst/inst/vid/sprite/linebuffer/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_28/inst/inst/cpu_ram/ram_imp/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:06:24 ; elapsed = 00:06:28 . Memory (MB): peak = 1704.980 ; gain = 1167.926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:06:24 ; elapsed = 00:06:28 . Memory (MB): peak = 1704.980 ; gain = 1167.926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping  Report
++-------------------------------+-----------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                    | RTL Object                              | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-------------------------------+-----------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|\inst/inst /vid                | tile/tileram/mem_reg                    | 1 K x 8(READ_FIRST)    | W | R |                        |   |   | Port A           | 1      | 0      | 
+|\inst/inst /vid                | sprite/objram/mem_reg                   | 1 K x 8(READ_FIRST)    | W | R |                        |   |   | Port A           | 1      | 0      | 
+|dkong_dkong_system_wrapper_0_0 | inst/inst/vid/sprite/linebuffer/mem_reg | 256 x 6(READ_FIRST)    | W | R |                        |   |   | Port A           | 1      | 0      | 
+|dkong_dkong_system_wrapper_0_0 | inst/inst/cpu_ram/ram_imp/mem_reg       | 4 K x 8(READ_FIRST)    | W |   | 4 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
++-------------------------------+-----------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+
+Distributed RAM: Final Mapping  Report
++-------------------------------+-----------------------------------------+-----------+----------------------+----------------+
+|Module Name                    | RTL Object                              | Inference | Size (Depth x Width) | Primitives     | 
++-------------------------------+-----------------------------------------+-----------+----------------------+----------------+
+|\inst/inst/mycpu/i_tv80_core   | i_reg/RegsH_reg                         | Implied   | 8 x 8                | RAM32M x 4     | 
+|\inst/inst/mycpu/i_tv80_core   | i_reg/RegsL_reg                         | Implied   | 8 x 8                | RAM32M x 4     | 
+|dkong_dkong_system_wrapper_0_0 | inst/inst/vid/sprite/scratchpad/mem_reg | Implied   | 64 x 9               | RAM64X1S x 9   | 
++-------------------------------+-----------------------------------------+-----------+----------------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance inst/inst/vid/tile/tileram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/inst/vid/sprite/objram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/inst/vid/sprite/linebuffer/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/inst/cpu_ram/ram_imp/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:06:25 ; elapsed = 00:06:29 . Memory (MB): peak = 1704.980 ; gain = 1167.926
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5365] Flop inst/inst/mycpu/iorq_n_reg is being inverted and renamed to inst/inst/mycpu/iorq_n_reg_inv.
+INFO: [Synth 8-5365] Flop inst/inst/mycpu/mreq_n_reg is being inverted and renamed to inst/inst/mycpu/mreq_n_reg_inv.
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:06:27 ; elapsed = 00:06:30 . Memory (MB): peak = 1704.980 ; gain = 1167.926
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:06:27 ; elapsed = 00:06:30 . Memory (MB): peak = 1704.980 ; gain = 1167.926
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:06:27 ; elapsed = 00:06:30 . Memory (MB): peak = 1704.980 ; gain = 1167.926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:06:27 ; elapsed = 00:06:30 . Memory (MB): peak = 1704.980 ; gain = 1167.926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:06:27 ; elapsed = 00:06:31 . Memory (MB): peak = 1704.980 ; gain = 1167.926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:06:27 ; elapsed = 00:06:31 . Memory (MB): peak = 1704.980 ; gain = 1167.926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |CARRY4     |    54|
+|2     |LUT1       |    28|
+|3     |LUT2       |   157|
+|4     |LUT3       |   255|
+|5     |LUT4       |   171|
+|6     |LUT5       |   418|
+|7     |LUT6       |   838|
+|8     |MUXF7      |    58|
+|9     |RAM32M     |     8|
+|10    |RAM64X1S   |     9|
+|11    |RAMB18E1   |     1|
+|12    |RAMB18E1_1 |     1|
+|13    |RAMB18E1_2 |     1|
+|14    |RAMB18E1_3 |     1|
+|15    |RAMB18E1_4 |     1|
+|16    |RAMB18E1_5 |     1|
+|17    |RAMB18E1_6 |     1|
+|18    |RAMB18E1_7 |     1|
+|19    |RAMB18E1_8 |     1|
+|20    |RAMB18E1_9 |     3|
+|21    |RAMB36E1   |     1|
+|22    |RAMB36E1_1 |     1|
+|23    |RAMB36E1_2 |     1|
+|24    |RAMB36E1_3 |     1|
+|25    |RAMB36E1_4 |     1|
+|26    |FDCE       |   134|
+|27    |FDPE       |    54|
+|28    |FDRE       |   444|
+|29    |FDSE       |     9|
++------+-----------+------+
+
+Report Instance Areas: 
++------+-------------------------------------------------------+-----------------------------------------------+------+
+|      |Instance                                               |Module                                         |Cells |
++------+-------------------------------------------------------+-----------------------------------------------+------+
+|1     |top                                                    |                                               |  2654|
+|2     |  inst                                                 |dkong_system_wrapper                           |  2654|
+|3     |    inst                                               |dkong_system                                   |  2654|
+|4     |      cpu_ram                                          |z80ram                                         |     1|
+|5     |        ram_imp                                        |ram                                            |     1|
+|6     |      cpu_rom                                          |program_rom_wrapper                            |    20|
+|7     |        inst                                           |cpu_program_rom                                |    20|
+|8     |          U0                                           |blk_mem_gen_v8_4_3                             |    20|
+|9     |            inst_blk_mem_gen                           |blk_mem_gen_v8_4_3_synth                       |    20|
+|10    |              \gnbram.gnativebmg.native_blk_mem_gen    |blk_mem_gen_top                                |    20|
+|11    |                \valid.cstr                            |blk_mem_gen_generic_cstr                       |    20|
+|12    |                  \bindec_a.bindec_inst_a              |bindec                                         |     3|
+|13    |                  \has_mux_a.A                         |blk_mem_gen_mux                                |    12|
+|14    |                  \ramloop[0].ram.r                    |blk_mem_gen_prim_width                         |     1|
+|15    |                    \prim_init.ram                     |blk_mem_gen_prim_wrapper_init                  |     1|
+|16    |                  \ramloop[1].ram.r                    |blk_mem_gen_prim_width__parameterized0         |     1|
+|17    |                    \prim_init.ram                     |blk_mem_gen_prim_wrapper_init__parameterized0  |     1|
+|18    |                  \ramloop[2].ram.r                    |blk_mem_gen_prim_width__parameterized1         |     1|
+|19    |                    \prim_init.ram                     |blk_mem_gen_prim_wrapper_init__parameterized1  |     1|
+|20    |                  \ramloop[3].ram.r                    |blk_mem_gen_prim_width__parameterized2         |     2|
+|21    |                    \prim_init.ram                     |blk_mem_gen_prim_wrapper_init__parameterized2  |     2|
+|22    |      dmac                                             |fakedma                                        |   376|
+|23    |      mycpu                                            |tv80s                                          |  1713|
+|24    |        i_tv80_core                                    |tv80_core                                      |  1696|
+|25    |          i_reg                                        |tv80_reg                                       |   415|
+|26    |      uart                                             |z80_uart                                       |    84|
+|27    |        rx_dev                                         |uart_rx                                        |    48|
+|28    |        tx_dev                                         |uart_tx                                        |    27|
+|29    |      vid                                              |dkong_video                                    |   426|
+|30    |        pal                                            |paletter                                       |    15|
+|31    |          prom_2e                                      |palette_2e_prom                                |     1|
+|32    |            U0                                         |blk_mem_gen_v8_4_3__parameterized15            |     1|
+|33    |              inst_blk_mem_gen                         |blk_mem_gen_v8_4_3_synth__parameterized7       |     1|
+|34    |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top__parameterized7                |     1|
+|35    |                  \valid.cstr                          |blk_mem_gen_generic_cstr__parameterized7       |     1|
+|36    |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width__parameterized10        |     1|
+|37    |                      \prim_init.ram                   |blk_mem_gen_prim_wrapper_init__parameterized10 |     1|
+|38    |          prom_2f                                      |palette_2f_prom                                |     1|
+|39    |            U0                                         |blk_mem_gen_v8_4_3__parameterized17            |     1|
+|40    |              inst_blk_mem_gen                         |blk_mem_gen_v8_4_3_synth__parameterized8       |     1|
+|41    |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top__parameterized8                |     1|
+|42    |                  \valid.cstr                          |blk_mem_gen_generic_cstr__parameterized8       |     1|
+|43    |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width__parameterized11        |     1|
+|44    |                      \prim_init.ram                   |blk_mem_gen_prim_wrapper_init__parameterized11 |     1|
+|45    |        sprite                                         |spritegen                                      |   305|
+|46    |          rom_7c                                       |obj_7c_rom                                     |     1|
+|47    |            U0                                         |blk_mem_gen_v8_4_3__parameterized7             |     1|
+|48    |              inst_blk_mem_gen                         |blk_mem_gen_v8_4_3_synth__parameterized3       |     1|
+|49    |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top__parameterized3                |     1|
+|50    |                  \valid.cstr                          |blk_mem_gen_generic_cstr__parameterized3       |     1|
+|51    |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width__parameterized6         |     1|
+|52    |                      \prim_init.ram                   |blk_mem_gen_prim_wrapper_init__parameterized6  |     1|
+|53    |          rom_7d                                       |obj_7d_rom                                     |     1|
+|54    |            U0                                         |blk_mem_gen_v8_4_3__parameterized9             |     1|
+|55    |              inst_blk_mem_gen                         |blk_mem_gen_v8_4_3_synth__parameterized4       |     1|
+|56    |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top__parameterized4                |     1|
+|57    |                  \valid.cstr                          |blk_mem_gen_generic_cstr__parameterized4       |     1|
+|58    |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width__parameterized7         |     1|
+|59    |                      \prim_init.ram                   |blk_mem_gen_prim_wrapper_init__parameterized7  |     1|
+|60    |          rom_7e                                       |obj_7e_rom                                     |     1|
+|61    |            U0                                         |blk_mem_gen_v8_4_3__parameterized11            |     1|
+|62    |              inst_blk_mem_gen                         |blk_mem_gen_v8_4_3_synth__parameterized5       |     1|
+|63    |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top__parameterized5                |     1|
+|64    |                  \valid.cstr                          |blk_mem_gen_generic_cstr__parameterized5       |     1|
+|65    |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width__parameterized8         |     1|
+|66    |                      \prim_init.ram                   |blk_mem_gen_prim_wrapper_init__parameterized8  |     1|
+|67    |          rom_7f                                       |obj_7f_rom                                     |     1|
+|68    |            U0                                         |blk_mem_gen_v8_4_3__parameterized13            |     1|
+|69    |              inst_blk_mem_gen                         |blk_mem_gen_v8_4_3_synth__parameterized6       |     1|
+|70    |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top__parameterized6                |     1|
+|71    |                  \valid.cstr                          |blk_mem_gen_generic_cstr__parameterized6       |     1|
+|72    |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width__parameterized9         |     1|
+|73    |                      \prim_init.ram                   |blk_mem_gen_prim_wrapper_init__parameterized9  |     1|
+|74    |          linebuffer                                   |ram__parameterized2                            |    30|
+|75    |          objram                                       |ram__parameterized0_0                          |     9|
+|76    |          scratchpad                                   |ram__parameterized1                            |    53|
+|77    |        tile                                           |tilegen                                        |    49|
+|78    |          prom_2n                                      |tile_2n_prom                                   |     1|
+|79    |            U0                                         |blk_mem_gen_v8_4_3__parameterized1             |     1|
+|80    |              inst_blk_mem_gen                         |blk_mem_gen_v8_4_3_synth__parameterized0       |     1|
+|81    |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top__parameterized0                |     1|
+|82    |                  \valid.cstr                          |blk_mem_gen_generic_cstr__parameterized0       |     1|
+|83    |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width__parameterized3         |     1|
+|84    |                      \prim_init.ram                   |blk_mem_gen_prim_wrapper_init__parameterized3  |     1|
+|85    |          rom_3p                                       |tile_3p_rom                                    |     1|
+|86    |            U0                                         |blk_mem_gen_v8_4_3__parameterized3             |     1|
+|87    |              inst_blk_mem_gen                         |blk_mem_gen_v8_4_3_synth__parameterized1       |     1|
+|88    |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top__parameterized1                |     1|
+|89    |                  \valid.cstr                          |blk_mem_gen_generic_cstr__parameterized1       |     1|
+|90    |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width__parameterized4         |     1|
+|91    |                      \prim_init.ram                   |blk_mem_gen_prim_wrapper_init__parameterized4  |     1|
+|92    |          rom_3n                                       |tile_3n_rom                                    |     1|
+|93    |            U0                                         |blk_mem_gen_v8_4_3__parameterized5             |     1|
+|94    |              inst_blk_mem_gen                         |blk_mem_gen_v8_4_3_synth__parameterized2       |     1|
+|95    |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top__parameterized2                |     1|
+|96    |                  \valid.cstr                          |blk_mem_gen_generic_cstr__parameterized2       |     1|
+|97    |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width__parameterized5         |     1|
+|98    |                      \prim_init.ram                   |blk_mem_gen_prim_wrapper_init__parameterized5  |     1|
+|99    |          tileram                                      |ram__parameterized0                            |    12|
++------+-------------------------------------------------------+-----------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:06:27 ; elapsed = 00:06:31 . Memory (MB): peak = 1704.980 ; gain = 1167.926
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1583 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:35 ; elapsed = 00:06:24 . Memory (MB): peak = 1704.980 ; gain = 1167.926
+Synthesis Optimization Complete : Time (s): cpu = 00:06:27 ; elapsed = 00:06:31 . Memory (MB): peak = 1704.980 ; gain = 1167.926
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 146 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1704.980 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 17 instances were transformed.
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 8 instances
+  RAM64X1S => RAM64X1S (RAMS64E): 9 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+143 Infos, 107 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:06:33 ; elapsed = 00:06:38 . Memory (MB): peak = 1704.980 ; gain = 1414.559
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1704.980 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.runs/dkong_dkong_system_wrapper_0_0_synth_1/dkong_dkong_system_wrapper_0_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1174] Renamed 98 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1704.980 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.runs/dkong_dkong_system_wrapper_0_0_synth_1/dkong_dkong_system_wrapper_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file dkong_dkong_system_wrapper_0_0_utilization_synth.rpt -pb dkong_dkong_system_wrapper_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Mar  6 00:57:05 2020...
