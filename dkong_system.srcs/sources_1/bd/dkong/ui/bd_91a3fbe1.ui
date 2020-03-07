@@ -2,15 +2,15 @@
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS
 #  -string -flagsOSRD
-preplace port FIXED_IO -pg 1 -lvl 5 -x 1490 -y -380 -defaultsOSRD
-preplace port VGA_HS -pg 1 -lvl 5 -x 1490 -y -120 -defaultsOSRD
-preplace port VGA_VS -pg 1 -lvl 5 -x 1490 -y -100 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 5 -x 1510 -y -380 -defaultsOSRD
+preplace port VGA_HS -pg 1 -lvl 5 -x 1510 -y -120 -defaultsOSRD
+preplace port VGA_VS -pg 1 -lvl 5 -x 1510 -y -100 -defaultsOSRD
 preplace port INMODE -pg 1 -lvl 0 -x -130 -y -620 -defaultsOSRD
 preplace portBus DIPSW -pg 1 -lvl 0 -x -130 -y -650 -defaultsOSRD
-preplace portBus LD -pg 1 -lvl 5 -x 1490 -y -480 -defaultsOSRD
-preplace portBus VGA_R -pg 1 -lvl 5 -x 1490 -y -180 -defaultsOSRD
-preplace portBus VGA_G -pg 1 -lvl 5 -x 1490 -y -160 -defaultsOSRD
-preplace portBus VGA_B -pg 1 -lvl 5 -x 1490 -y -140 -defaultsOSRD
+preplace portBus LD -pg 1 -lvl 5 -x 1510 -y -480 -defaultsOSRD
+preplace portBus VGA_R -pg 1 -lvl 5 -x 1510 -y -180 -defaultsOSRD
+preplace portBus VGA_G -pg 1 -lvl 5 -x 1510 -y -160 -defaultsOSRD
+preplace portBus VGA_B -pg 1 -lvl 5 -x 1510 -y -140 -defaultsOSRD
 preplace portBus BTNR -pg 1 -lvl 0 -x -130 -y -600 -defaultsOSRD
 preplace portBus BTNL -pg 1 -lvl 0 -x -130 -y -480 -defaultsOSRD
 preplace portBus BTNU -pg 1 -lvl 0 -x -130 -y -360 -defaultsOSRD
@@ -20,14 +20,14 @@ preplace inst processing_system7_0 -pg 1 -lvl 2 -x 410 -y -430 -defaultsOSRD
 preplace inst proc_sys_reset_0 -pg 1 -lvl 2 -x 410 -y -230 -defaultsOSRD
 preplace inst clk_wiz_0 -pg 1 -lvl 3 -x 990 -y -90 -defaultsOSRD
 preplace inst proc_sys_reset_1 -pg 1 -lvl 2 -x 410 -y -50 -defaultsOSRD
-preplace inst framedoubler_slow_0 -pg 1 -lvl 4 -x 1350 -y -140 -defaultsOSRD
 preplace inst dkong_system_wrapper_0 -pg 1 -lvl 3 -x 990 -y -380 -defaultsOSRD
+preplace inst framedoubler_slow_0 -pg 1 -lvl 4 -x 1360 -y -140 -defaultsOSRD
 preplace inst demux2_0 -pg 1 -lvl 1 -x 30 -y -610 -defaultsOSRD
 preplace inst demux2_1 -pg 1 -lvl 1 -x 30 -y -490 -defaultsOSRD
 preplace inst demux2_2 -pg 1 -lvl 1 -x 30 -y -370 -defaultsOSRD
 preplace inst demux2_3 -pg 1 -lvl 1 -x 30 -y -250 -defaultsOSRD
 preplace inst demux2_4 -pg 1 -lvl 1 -x 30 -y -130 -defaultsOSRD
-preplace inst mux4_0 -pg 1 -lvl 4 -x 1350 -y -480 -defaultsOSRD
+preplace inst mux4_0 -pg 1 -lvl 4 -x 1360 -y -480 -defaultsOSRD
 preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 2 220 80 580
 preplace netloc sel_0_1 1 0 4 -110J -680 N -680 NJ -680 1150J
 preplace netloc mux4_0_outy 1 4 1 N -480
@@ -68,9 +68,9 @@ preplace netloc demux2_2_outb 1 1 1 190 -360n
 preplace netloc demux2_1_outb 1 1 2 180J -550 600
 preplace netloc demux2_4_outb 1 1 2 140 70 680J
 preplace netloc demux2_3_outb 1 1 2 150 60 690J
-preplace netloc processing_system7_0_FIXED_IO 1 2 3 580 -610 N -610 1470
-levelinfo -pg 1 -130 30 410 990 1350 1490
-pagesize -pg 1 -db -bbox -sgen -260 -840 1620 270
+preplace netloc processing_system7_0_FIXED_IO 1 2 3 580 -610 N -610 1480
+levelinfo -pg 1 -130 30 410 990 1360 1510
+pagesize -pg 1 -db -bbox -sgen -260 -840 1640 270
 "
 }
 0

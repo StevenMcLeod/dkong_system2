@@ -121,8 +121,8 @@ output wire [7 : 0] debug_enables;
   dkong_system_wrapper #(
     .CLKS_PER_BIT(1),
     .DEBUG_WAIT_ENA(0),
-    .IN0_ENA(0),
-    .IN1_ENA(0),
+    .IN0_ENA(1),
+    .IN1_ENA(1),
     .IN2_ENA(1)
   ) inst (
     .masterclk(masterclk),

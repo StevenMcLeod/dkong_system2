@@ -270,6 +270,8 @@ proc create_root_design { parentCell } {
      return 1
    }
     set_property -dict [ list \
+   CONFIG.IN0_ENA {1} \
+   CONFIG.IN1_ENA {1} \
    CONFIG.IN2_ENA {1} \
  ] $dkong_system_wrapper_0
 

@@ -17,30 +17,30 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 28968 
+INFO: Helper process launched with PID 3636 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 714.289 ; gain = 177.344
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:23 . Memory (MB): peak = 833.699 ; gain = 177.031
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'dkong_dkong_system_wrapper_0_0' [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_dkong_system_wrapper_0_0/synth/dkong_dkong_system_wrapper_0_0.v:58]
-INFO: [Synth 8-6157] synthesizing module 'dkong_system_wrapper' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/wrappers/dkong_system_wrapper.v:1]
+INFO: [Synth 8-6157] synthesizing module 'dkong_dkong_system_wrapper_0_0' [u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_dkong_system_wrapper_0_0/synth/dkong_dkong_system_wrapper_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'dkong_system_wrapper' [U:/ENSC452/z80_system_sources/hdl/wrappers/dkong_system_wrapper.v:1]
 	Parameter CLKS_PER_BIT bound to: 1 - type: integer 
 	Parameter DEBUG_WAIT_ENA bound to: 0 - type: integer 
-	Parameter IN0_ENA bound to: 0 - type: integer 
-	Parameter IN1_ENA bound to: 0 - type: integer 
+	Parameter IN0_ENA bound to: 1 - type: integer 
+	Parameter IN1_ENA bound to: 1 - type: integer 
 	Parameter IN2_ENA bound to: 1 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'dkong_system' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/dkong_system.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'dkong_system' [U:/ENSC452/z80_system_sources/hdl/dkong_system.sv:3]
 	Parameter CLKS_PER_BIT bound to: 1 - type: integer 
 	Parameter DEBUG_WAIT_ENA bound to: 0 - type: integer 
-	Parameter IN0_ENA bound to: 0 - type: integer 
-	Parameter IN1_ENA bound to: 0 - type: integer 
+	Parameter IN0_ENA bound to: 1 - type: integer 
+	Parameter IN1_ENA bound to: 1 - type: integer 
 	Parameter IN2_ENA bound to: 1 - type: integer 
 	Parameter MASTER_QTY bound to: 2 - type: integer 
 	Parameter SLAVE_QTY bound to: 7 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'tv80s' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/tv80/rtl/core/tv80s.v:27]
+INFO: [Synth 8-6157] synthesizing module 'tv80s' [U:/ENSC452/z80_system_sources/hdl/tv80/rtl/core/tv80s.v:27]
 	Parameter Mode bound to: 0 - type: integer 
 	Parameter T2Write bound to: 1 - type: integer 
 	Parameter IOWait bound to: 1 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'tv80_core' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/tv80/rtl/core/tv80_core.v:27]
+INFO: [Synth 8-6157] synthesizing module 'tv80_core' [U:/ENSC452/z80_system_sources/hdl/tv80/rtl/core/tv80_core.v:27]
 	Parameter Mode bound to: 0 - type: integer 
 	Parameter IOWait bound to: 1 - type: integer 
 	Parameter Flag_C bound to: 0 - type: integer 
@@ -58,7 +58,7 @@ INFO: [Synth 8-6157] synthesizing module 'tv80_core' [C:/Users/Steven/Documents/
 	Parameter aIOA bound to: 3'b100 
 	Parameter aSP bound to: 3'b101 
 	Parameter aZI bound to: 3'b110 
-INFO: [Synth 8-6157] synthesizing module 'tv80_mcode' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/tv80/rtl/core/tv80_mcode.v:25]
+INFO: [Synth 8-6157] synthesizing module 'tv80_mcode' [U:/ENSC452/z80_system_sources/hdl/tv80/rtl/core/tv80_mcode.v:25]
 	Parameter Mode bound to: 0 - type: integer 
 	Parameter Flag_C bound to: 0 - type: integer 
 	Parameter Flag_N bound to: 1 - type: integer 
@@ -75,8 +75,8 @@ INFO: [Synth 8-6157] synthesizing module 'tv80_mcode' [C:/Users/Steven/Documents
 	Parameter aIOA bound to: 3'b100 
 	Parameter aSP bound to: 3'b101 
 	Parameter aZI bound to: 3'b110 
-INFO: [Synth 8-6155] done synthesizing module 'tv80_mcode' (1#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/tv80/rtl/core/tv80_mcode.v:25]
-INFO: [Synth 8-6157] synthesizing module 'tv80_alu' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/tv80/rtl/core/tv80_alu.v:25]
+INFO: [Synth 8-6155] done synthesizing module 'tv80_mcode' (1#1) [U:/ENSC452/z80_system_sources/hdl/tv80/rtl/core/tv80_mcode.v:25]
+INFO: [Synth 8-6157] synthesizing module 'tv80_alu' [U:/ENSC452/z80_system_sources/hdl/tv80/rtl/core/tv80_alu.v:25]
 	Parameter Mode bound to: 0 - type: integer 
 	Parameter Flag_C bound to: 0 - type: integer 
 	Parameter Flag_N bound to: 1 - type: integer 
@@ -86,12 +86,12 @@ INFO: [Synth 8-6157] synthesizing module 'tv80_alu' [C:/Users/Steven/Documents/H
 	Parameter Flag_Y bound to: 5 - type: integer 
 	Parameter Flag_Z bound to: 6 - type: integer 
 	Parameter Flag_S bound to: 7 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'tv80_alu' (2#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/tv80/rtl/core/tv80_alu.v:25]
-INFO: [Synth 8-6157] synthesizing module 'tv80_reg' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/tv80/rtl/core/tv80_reg.v:25]
-INFO: [Synth 8-6155] done synthesizing module 'tv80_reg' (3#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/tv80/rtl/core/tv80_reg.v:25]
-INFO: [Synth 8-6155] done synthesizing module 'tv80_core' (4#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/tv80/rtl/core/tv80_core.v:27]
-INFO: [Synth 8-6155] done synthesizing module 'tv80s' (5#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/tv80/rtl/core/tv80s.v:27]
-INFO: [Synth 8-6157] synthesizing module 'fakedma' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/fakedma.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'tv80_alu' (2#1) [U:/ENSC452/z80_system_sources/hdl/tv80/rtl/core/tv80_alu.v:25]
+INFO: [Synth 8-6157] synthesizing module 'tv80_reg' [U:/ENSC452/z80_system_sources/hdl/tv80/rtl/core/tv80_reg.v:25]
+INFO: [Synth 8-6155] done synthesizing module 'tv80_reg' (3#1) [U:/ENSC452/z80_system_sources/hdl/tv80/rtl/core/tv80_reg.v:25]
+INFO: [Synth 8-6155] done synthesizing module 'tv80_core' (4#1) [U:/ENSC452/z80_system_sources/hdl/tv80/rtl/core/tv80_core.v:27]
+INFO: [Synth 8-6155] done synthesizing module 'tv80s' (5#1) [U:/ENSC452/z80_system_sources/hdl/tv80/rtl/core/tv80s.v:27]
+INFO: [Synth 8-6157] synthesizing module 'fakedma' [U:/ENSC452/z80_system_sources/hdl/fakedma.sv:23]
 	Parameter STATE_SI bound to: 7'b0000001 
 	Parameter STATE_S0 bound to: 7'b0000010 
 	Parameter STATE_S1 bound to: 7'b0000100 
@@ -99,19 +99,19 @@ INFO: [Synth 8-6157] synthesizing module 'fakedma' [C:/Users/Steven/Documents/HD
 	Parameter STATE_S3 bound to: 7'b0010000 
 	Parameter STATE_SW bound to: 7'b0100000 
 	Parameter STATE_S4 bound to: 7'b1000000 
-WARNING: [Synth 8-6014] Unused sequential element global_mode_reg was removed.  [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/fakedma.sv:116]
-INFO: [Synth 8-6155] done synthesizing module 'fakedma' (6#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/fakedma.sv:23]
-INFO: [Synth 8-6157] synthesizing module 'addr_decoder' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/addr_decoder.sv:1]
-INFO: [Synth 8-6155] done synthesizing module 'addr_decoder' (7#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/addr_decoder.sv:1]
-INFO: [Synth 8-6157] synthesizing module 'prio_encoder' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/prio_encoder.sv:1]
+WARNING: [Synth 8-6014] Unused sequential element global_mode_reg was removed.  [U:/ENSC452/z80_system_sources/hdl/fakedma.sv:116]
+INFO: [Synth 8-6155] done synthesizing module 'fakedma' (6#1) [U:/ENSC452/z80_system_sources/hdl/fakedma.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'addr_decoder' [U:/ENSC452/z80_system_sources/hdl/addr_decoder.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'addr_decoder' (7#1) [U:/ENSC452/z80_system_sources/hdl/addr_decoder.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'prio_encoder' [U:/ENSC452/z80_system_sources/hdl/prio_encoder.sv:1]
 	Parameter INPUT_QTY bound to: 7 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'prio_encoder' (8#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/prio_encoder.sv:1]
-INFO: [Synth 8-6157] synthesizing module 'sysmux' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/sysmux.sv:5]
+INFO: [Synth 8-6155] done synthesizing module 'prio_encoder' (8#1) [U:/ENSC452/z80_system_sources/hdl/prio_encoder.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'sysmux' [U:/ENSC452/z80_system_sources/hdl/sysmux.sv:5]
 	Parameter MASTER_QTY bound to: 2 - type: integer 
 	Parameter SLAVE_QTY bound to: 7 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'sysmux' (9#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/sysmux.sv:5]
-INFO: [Synth 8-6157] synthesizing module 'program_rom_wrapper' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/wrappers/program_rom_wrapper.sv:1]
-INFO: [Synth 8-638] synthesizing module 'cpu_program_rom' [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/cpu_program_rom/synth/cpu_program_rom.vhd:68]
+INFO: [Synth 8-6155] done synthesizing module 'sysmux' (9#1) [U:/ENSC452/z80_system_sources/hdl/sysmux.sv:5]
+INFO: [Synth 8-6157] synthesizing module 'program_rom_wrapper' [U:/ENSC452/z80_system_sources/hdl/wrappers/program_rom_wrapper.sv:1]
+INFO: [Synth 8-638] synthesizing module 'cpu_program_rom' [u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/ip/cpu_program_rom/synth/cpu_program_rom.vhd:68]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
@@ -187,29 +187,29 @@ INFO: [Synth 8-638] synthesizing module 'cpu_program_rom' [c:/Users/Steven/Docum
 	Parameter C_COUNT_36K_BRAM bound to: 4 - type: string 
 	Parameter C_COUNT_18K_BRAM bound to: 0 - type: string 
 	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     2.326399 mW - type: string 
-INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_3' declared at 'c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/palette_2f_prom/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_3' [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/cpu_program_rom/synth/cpu_program_rom.vhd:232]
-INFO: [Synth 8-256] done synthesizing module 'cpu_program_rom' (20#1) [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/cpu_program_rom/synth/cpu_program_rom.vhd:68]
-INFO: [Synth 8-6155] done synthesizing module 'program_rom_wrapper' (21#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/wrappers/program_rom_wrapper.sv:1]
-INFO: [Synth 8-6157] synthesizing module 'z80ram' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/z80ram.sv:3]
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_3' declared at 'u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/ip/palette_2f_prom/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_3' [u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/ip/cpu_program_rom/synth/cpu_program_rom.vhd:232]
+INFO: [Synth 8-256] done synthesizing module 'cpu_program_rom' (20#1) [u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/ip/cpu_program_rom/synth/cpu_program_rom.vhd:68]
+INFO: [Synth 8-6155] done synthesizing module 'program_rom_wrapper' (21#1) [U:/ENSC452/z80_system_sources/hdl/wrappers/program_rom_wrapper.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'z80ram' [U:/ENSC452/z80_system_sources/hdl/z80ram.sv:3]
 	Parameter ADDR_W bound to: 12 - type: integer 
 	Parameter DATA_W bound to: 8 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'ram' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/ram.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'ram' [U:/ENSC452/z80_system_sources/hdl/ram.sv:1]
 	Parameter ADDR_W bound to: 12 - type: integer 
 	Parameter DATA_W bound to: 8 - type: integer 
 	Parameter TOTAL_ADDRS bound to: 4096 - type: integer 
 	Parameter ADDR_MASK bound to: 4095 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'ram' (22#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/ram.sv:1]
-WARNING: [Synth 8-689] width (16) of port connection 'addr' does not match port width (12) of module 'ram' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/z80ram.sv:21]
-INFO: [Synth 8-6155] done synthesizing module 'z80ram' (23#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/z80ram.sv:3]
-INFO: [Synth 8-6157] synthesizing module 'dkong_video' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/video/dkong_video.sv:3]
-INFO: [Synth 8-6157] synthesizing module 'tilegen' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/video/tilegen.sv:1]
-INFO: [Synth 8-6157] synthesizing module 'ram__parameterized0' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/ram.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'ram' (22#1) [U:/ENSC452/z80_system_sources/hdl/ram.sv:1]
+WARNING: [Synth 8-689] width (16) of port connection 'addr' does not match port width (12) of module 'ram' [U:/ENSC452/z80_system_sources/hdl/z80ram.sv:21]
+INFO: [Synth 8-6155] done synthesizing module 'z80ram' (23#1) [U:/ENSC452/z80_system_sources/hdl/z80ram.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'dkong_video' [U:/ENSC452/z80_system_sources/hdl/video/dkong_video.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'tilegen' [U:/ENSC452/z80_system_sources/hdl/video/tilegen.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'ram__parameterized0' [U:/ENSC452/z80_system_sources/hdl/ram.sv:1]
 	Parameter ADDR_W bound to: 10 - type: integer 
 	Parameter DATA_W bound to: 8 - type: integer 
 	Parameter TOTAL_ADDRS bound to: 1024 - type: integer 
 	Parameter ADDR_MASK bound to: 1023 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'ram__parameterized0' (23#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/ram.sv:1]
-INFO: [Synth 8-638] synthesizing module 'tile_2n_prom' [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/tile_2n_prom/synth/tile_2n_prom.vhd:68]
+INFO: [Synth 8-6155] done synthesizing module 'ram__parameterized0' (23#1) [U:/ENSC452/z80_system_sources/hdl/ram.sv:1]
+INFO: [Synth 8-638] synthesizing module 'tile_2n_prom' [u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/ip/tile_2n_prom/synth/tile_2n_prom.vhd:68]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
@@ -285,9 +285,9 @@ INFO: [Synth 8-638] synthesizing module 'tile_2n_prom' [c:/Users/Steven/Document
 	Parameter C_COUNT_36K_BRAM bound to: 0 - type: string 
 	Parameter C_COUNT_18K_BRAM bound to: 1 - type: string 
 	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     2.210399 mW - type: string 
-INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_3' declared at 'c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/palette_2f_prom/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_3' [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/tile_2n_prom/synth/tile_2n_prom.vhd:232]
-INFO: [Synth 8-256] done synthesizing module 'tile_2n_prom' (24#1) [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/tile_2n_prom/synth/tile_2n_prom.vhd:68]
-INFO: [Synth 8-638] synthesizing module 'tile_3p_rom' [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/tile_3p_rom/synth/tile_3p_rom.vhd:68]
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_3' declared at 'u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/ip/palette_2f_prom/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_3' [u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/ip/tile_2n_prom/synth/tile_2n_prom.vhd:232]
+INFO: [Synth 8-256] done synthesizing module 'tile_2n_prom' (24#1) [u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/ip/tile_2n_prom/synth/tile_2n_prom.vhd:68]
+INFO: [Synth 8-638] synthesizing module 'tile_3p_rom' [u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/ip/tile_3p_rom/synth/tile_3p_rom.vhd:68]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
@@ -363,9 +363,9 @@ INFO: [Synth 8-638] synthesizing module 'tile_3p_rom' [c:/Users/Steven/Documents
 	Parameter C_COUNT_36K_BRAM bound to: 0 - type: string 
 	Parameter C_COUNT_18K_BRAM bound to: 1 - type: string 
 	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     1.2196 mW - type: string 
-INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_3' declared at 'c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/palette_2f_prom/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_3' [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/tile_3p_rom/synth/tile_3p_rom.vhd:232]
-INFO: [Synth 8-256] done synthesizing module 'tile_3p_rom' (25#1) [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/tile_3p_rom/synth/tile_3p_rom.vhd:68]
-INFO: [Synth 8-638] synthesizing module 'tile_3n_rom' [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/tile_3n_rom/synth/tile_3n_rom.vhd:68]
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_3' declared at 'u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/ip/palette_2f_prom/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_3' [u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/ip/tile_3p_rom/synth/tile_3p_rom.vhd:232]
+INFO: [Synth 8-256] done synthesizing module 'tile_3p_rom' (25#1) [u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/ip/tile_3p_rom/synth/tile_3p_rom.vhd:68]
+INFO: [Synth 8-638] synthesizing module 'tile_3n_rom' [u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/ip/tile_3n_rom/synth/tile_3n_rom.vhd:68]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
@@ -441,25 +441,25 @@ INFO: [Synth 8-638] synthesizing module 'tile_3n_rom' [c:/Users/Steven/Documents
 	Parameter C_COUNT_36K_BRAM bound to: 0 - type: string 
 	Parameter C_COUNT_18K_BRAM bound to: 1 - type: string 
 	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     1.2196 mW - type: string 
-INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_3' declared at 'c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/palette_2f_prom/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_3' [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/tile_3n_rom/synth/tile_3n_rom.vhd:232]
-INFO: [Synth 8-256] done synthesizing module 'tile_3n_rom' (26#1) [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/tile_3n_rom/synth/tile_3n_rom.vhd:68]
-INFO: [Synth 8-6155] done synthesizing module 'tilegen' (27#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/video/tilegen.sv:1]
-INFO: [Synth 8-6157] synthesizing module 'spritegen' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/video/spritegen.sv:1]
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_3' declared at 'u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/ip/palette_2f_prom/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_3' [u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/ip/tile_3n_rom/synth/tile_3n_rom.vhd:232]
+INFO: [Synth 8-256] done synthesizing module 'tile_3n_rom' (26#1) [u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/ip/tile_3n_rom/synth/tile_3n_rom.vhd:68]
+INFO: [Synth 8-6155] done synthesizing module 'tilegen' (27#1) [U:/ENSC452/z80_system_sources/hdl/video/tilegen.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'spritegen' [U:/ENSC452/z80_system_sources/hdl/video/spritegen.sv:1]
 	Parameter SPRITE_ADD_F0 bound to: 8'b11111000 
 	Parameter SPRITE_ADD_F1 bound to: 8'b11111010 
-INFO: [Synth 8-6157] synthesizing module 'ram__parameterized1' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/ram.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'ram__parameterized1' [U:/ENSC452/z80_system_sources/hdl/ram.sv:1]
 	Parameter ADDR_W bound to: 6 - type: integer 
 	Parameter DATA_W bound to: 9 - type: integer 
 	Parameter TOTAL_ADDRS bound to: 64 - type: integer 
 	Parameter ADDR_MASK bound to: 63 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'ram__parameterized1' (27#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/ram.sv:1]
-INFO: [Synth 8-6157] synthesizing module 'ram__parameterized2' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/ram.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'ram__parameterized1' (27#1) [U:/ENSC452/z80_system_sources/hdl/ram.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'ram__parameterized2' [U:/ENSC452/z80_system_sources/hdl/ram.sv:1]
 	Parameter ADDR_W bound to: 8 - type: integer 
 	Parameter DATA_W bound to: 6 - type: integer 
 	Parameter TOTAL_ADDRS bound to: 256 - type: integer 
 	Parameter ADDR_MASK bound to: 255 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'ram__parameterized2' (27#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/ram.sv:1]
-INFO: [Synth 8-638] synthesizing module 'obj_7c_rom' [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/obj_7c_rom/synth/obj_7c_rom.vhd:68]
+INFO: [Synth 8-6155] done synthesizing module 'ram__parameterized2' (27#1) [U:/ENSC452/z80_system_sources/hdl/ram.sv:1]
+INFO: [Synth 8-638] synthesizing module 'obj_7c_rom' [u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/ip/obj_7c_rom/synth/obj_7c_rom.vhd:68]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
@@ -535,9 +535,9 @@ INFO: [Synth 8-638] synthesizing module 'obj_7c_rom' [c:/Users/Steven/Documents/
 	Parameter C_COUNT_36K_BRAM bound to: 0 - type: string 
 	Parameter C_COUNT_18K_BRAM bound to: 1 - type: string 
 	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     1.2196 mW - type: string 
-INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_3' declared at 'c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/palette_2f_prom/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_3' [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/obj_7c_rom/synth/obj_7c_rom.vhd:232]
-INFO: [Synth 8-256] done synthesizing module 'obj_7c_rom' (28#1) [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/obj_7c_rom/synth/obj_7c_rom.vhd:68]
-INFO: [Synth 8-638] synthesizing module 'obj_7d_rom' [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/obj_7d_rom/synth/obj_7d_rom.vhd:68]
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_3' declared at 'u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/ip/palette_2f_prom/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_3' [u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/ip/obj_7c_rom/synth/obj_7c_rom.vhd:232]
+INFO: [Synth 8-256] done synthesizing module 'obj_7c_rom' (28#1) [u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/ip/obj_7c_rom/synth/obj_7c_rom.vhd:68]
+INFO: [Synth 8-638] synthesizing module 'obj_7d_rom' [u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/ip/obj_7d_rom/synth/obj_7d_rom.vhd:68]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
@@ -613,9 +613,9 @@ INFO: [Synth 8-638] synthesizing module 'obj_7d_rom' [c:/Users/Steven/Documents/
 	Parameter C_COUNT_36K_BRAM bound to: 0 - type: string 
 	Parameter C_COUNT_18K_BRAM bound to: 1 - type: string 
 	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     1.2196 mW - type: string 
-INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_3' declared at 'c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/palette_2f_prom/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_3' [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/obj_7d_rom/synth/obj_7d_rom.vhd:232]
-INFO: [Synth 8-256] done synthesizing module 'obj_7d_rom' (29#1) [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/obj_7d_rom/synth/obj_7d_rom.vhd:68]
-INFO: [Synth 8-638] synthesizing module 'obj_7e_rom' [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/obj_7e_rom/synth/obj_7e_rom.vhd:68]
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_3' declared at 'u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/ip/palette_2f_prom/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_3' [u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/ip/obj_7d_rom/synth/obj_7d_rom.vhd:232]
+INFO: [Synth 8-256] done synthesizing module 'obj_7d_rom' (29#1) [u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/ip/obj_7d_rom/synth/obj_7d_rom.vhd:68]
+INFO: [Synth 8-638] synthesizing module 'obj_7e_rom' [u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/ip/obj_7e_rom/synth/obj_7e_rom.vhd:68]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
@@ -691,9 +691,9 @@ INFO: [Synth 8-638] synthesizing module 'obj_7e_rom' [c:/Users/Steven/Documents/
 	Parameter C_COUNT_36K_BRAM bound to: 0 - type: string 
 	Parameter C_COUNT_18K_BRAM bound to: 1 - type: string 
 	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     1.2196 mW - type: string 
-INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_3' declared at 'c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/palette_2f_prom/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_3' [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/obj_7e_rom/synth/obj_7e_rom.vhd:232]
-INFO: [Synth 8-256] done synthesizing module 'obj_7e_rom' (30#1) [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/obj_7e_rom/synth/obj_7e_rom.vhd:68]
-INFO: [Synth 8-638] synthesizing module 'obj_7f_rom' [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/obj_7f_rom/synth/obj_7f_rom.vhd:68]
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_3' declared at 'u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/ip/palette_2f_prom/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_3' [u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/ip/obj_7e_rom/synth/obj_7e_rom.vhd:232]
+INFO: [Synth 8-256] done synthesizing module 'obj_7e_rom' (30#1) [u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/ip/obj_7e_rom/synth/obj_7e_rom.vhd:68]
+INFO: [Synth 8-638] synthesizing module 'obj_7f_rom' [u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/ip/obj_7f_rom/synth/obj_7f_rom.vhd:68]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
@@ -769,12 +769,12 @@ INFO: [Synth 8-638] synthesizing module 'obj_7f_rom' [c:/Users/Steven/Documents/
 	Parameter C_COUNT_36K_BRAM bound to: 0 - type: string 
 	Parameter C_COUNT_18K_BRAM bound to: 1 - type: string 
 	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     1.2196 mW - type: string 
-INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_3' declared at 'c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/palette_2f_prom/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_3' [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/obj_7f_rom/synth/obj_7f_rom.vhd:232]
-INFO: [Synth 8-256] done synthesizing module 'obj_7f_rom' (31#1) [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/obj_7f_rom/synth/obj_7f_rom.vhd:68]
-WARNING: [Synth 8-3936] Found unconnected internal register 'sprite_state_reg' and it is trimmed from '4' to '2' bits. [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/video/spritegen.sv:296]
-INFO: [Synth 8-6155] done synthesizing module 'spritegen' (32#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/video/spritegen.sv:1]
-INFO: [Synth 8-6157] synthesizing module 'paletter' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/video/paletter.sv:1]
-INFO: [Synth 8-638] synthesizing module 'palette_2e_prom' [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/palette_2e_prom/synth/palette_2e_prom.vhd:68]
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_3' declared at 'u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/ip/palette_2f_prom/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_3' [u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/ip/obj_7f_rom/synth/obj_7f_rom.vhd:232]
+INFO: [Synth 8-256] done synthesizing module 'obj_7f_rom' (31#1) [u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/ip/obj_7f_rom/synth/obj_7f_rom.vhd:68]
+WARNING: [Synth 8-3936] Found unconnected internal register 'sprite_state_reg' and it is trimmed from '4' to '2' bits. [U:/ENSC452/z80_system_sources/hdl/video/spritegen.sv:296]
+INFO: [Synth 8-6155] done synthesizing module 'spritegen' (32#1) [U:/ENSC452/z80_system_sources/hdl/video/spritegen.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'paletter' [U:/ENSC452/z80_system_sources/hdl/video/paletter.sv:1]
+INFO: [Synth 8-638] synthesizing module 'palette_2e_prom' [u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/ip/palette_2e_prom/synth/palette_2e_prom.vhd:68]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
@@ -850,9 +850,9 @@ INFO: [Synth 8-638] synthesizing module 'palette_2e_prom' [c:/Users/Steven/Docum
 	Parameter C_COUNT_36K_BRAM bound to: 0 - type: string 
 	Parameter C_COUNT_18K_BRAM bound to: 1 - type: string 
 	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     2.210399 mW - type: string 
-INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_3' declared at 'c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/palette_2f_prom/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_3' [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/palette_2e_prom/synth/palette_2e_prom.vhd:232]
-INFO: [Synth 8-256] done synthesizing module 'palette_2e_prom' (33#1) [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/palette_2e_prom/synth/palette_2e_prom.vhd:68]
-INFO: [Synth 8-638] synthesizing module 'palette_2f_prom' [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/palette_2f_prom/synth/palette_2f_prom.vhd:68]
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_3' declared at 'u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/ip/palette_2f_prom/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_3' [u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/ip/palette_2e_prom/synth/palette_2e_prom.vhd:232]
+INFO: [Synth 8-256] done synthesizing module 'palette_2e_prom' (33#1) [u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/ip/palette_2e_prom/synth/palette_2e_prom.vhd:68]
+INFO: [Synth 8-638] synthesizing module 'palette_2f_prom' [u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/ip/palette_2f_prom/synth/palette_2f_prom.vhd:68]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
@@ -928,37 +928,37 @@ INFO: [Synth 8-638] synthesizing module 'palette_2f_prom' [c:/Users/Steven/Docum
 	Parameter C_COUNT_36K_BRAM bound to: 0 - type: string 
 	Parameter C_COUNT_18K_BRAM bound to: 1 - type: string 
 	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     2.210399 mW - type: string 
-INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_3' declared at 'c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/palette_2f_prom/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_3' [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/palette_2f_prom/synth/palette_2f_prom.vhd:232]
-INFO: [Synth 8-256] done synthesizing module 'palette_2f_prom' (34#1) [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/palette_2f_prom/synth/palette_2f_prom.vhd:68]
-INFO: [Synth 8-6155] done synthesizing module 'paletter' (35#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/video/paletter.sv:1]
-INFO: [Synth 8-6155] done synthesizing module 'dkong_video' (36#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/video/dkong_video.sv:3]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/dkong_system.sv:418]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/dkong_system.sv:441]
-INFO: [Synth 8-6157] synthesizing module 'z80_uart' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/z80uart.sv:3]
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_3' declared at 'u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/ip/palette_2f_prom/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_3' [u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/ip/palette_2f_prom/synth/palette_2f_prom.vhd:232]
+INFO: [Synth 8-256] done synthesizing module 'palette_2f_prom' (34#1) [u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/ip/palette_2f_prom/synth/palette_2f_prom.vhd:68]
+INFO: [Synth 8-6155] done synthesizing module 'paletter' (35#1) [U:/ENSC452/z80_system_sources/hdl/video/paletter.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'dkong_video' (36#1) [U:/ENSC452/z80_system_sources/hdl/video/dkong_video.sv:3]
+INFO: [Synth 8-155] case statement is not full and has no default [U:/ENSC452/z80_system_sources/hdl/dkong_system.sv:418]
+INFO: [Synth 8-155] case statement is not full and has no default [U:/ENSC452/z80_system_sources/hdl/dkong_system.sv:441]
+INFO: [Synth 8-6157] synthesizing module 'z80_uart' [U:/ENSC452/z80_system_sources/hdl/z80uart.sv:3]
 	Parameter CLKS_PER_BIT bound to: 1 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'uart_rx' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/z80uart.sv:78]
+INFO: [Synth 8-6157] synthesizing module 'uart_rx' [U:/ENSC452/z80_system_sources/hdl/z80uart.sv:78]
 	Parameter CLKS_PER_BIT bound to: 1 - type: integer 
 	Parameter s_IDLE bound to: 3'b000 
 	Parameter s_RX_START_BIT bound to: 3'b001 
 	Parameter s_RX_DATA_BITS bound to: 3'b010 
 	Parameter s_RX_STOP_BIT bound to: 3'b011 
 	Parameter s_CLEANUP bound to: 3'b100 
-INFO: [Synth 8-6155] done synthesizing module 'uart_rx' (37#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/z80uart.sv:78]
-INFO: [Synth 8-6157] synthesizing module 'uart_tx' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/z80uart.sv:237]
+INFO: [Synth 8-6155] done synthesizing module 'uart_rx' (37#1) [U:/ENSC452/z80_system_sources/hdl/z80uart.sv:78]
+INFO: [Synth 8-6157] synthesizing module 'uart_tx' [U:/ENSC452/z80_system_sources/hdl/z80uart.sv:237]
 	Parameter CLKS_PER_BIT bound to: 1 - type: integer 
 	Parameter s_IDLE bound to: 3'b000 
 	Parameter s_TX_START_BIT bound to: 3'b001 
 	Parameter s_TX_DATA_BITS bound to: 3'b010 
 	Parameter s_TX_STOP_BIT bound to: 3'b011 
 	Parameter s_CLEANUP bound to: 3'b100 
-WARNING: [Synth 8-6014] Unused sequential element r_Clock_Count_reg was removed.  [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/z80uart.sv:266]
-INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (38#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/z80uart.sv:237]
-INFO: [Synth 8-6155] done synthesizing module 'z80_uart' (39#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/z80uart.sv:3]
-WARNING: [Synth 8-6014] Unused sequential element audio_irq_reg was removed.  [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/dkong_system.sv:433]
-INFO: [Synth 8-6155] done synthesizing module 'dkong_system' (40#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/dkong_system.sv:3]
-WARNING: [Synth 8-7023] instance 'inst' of module 'dkong_system' has 30 connections declared, but only 29 given [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/wrappers/dkong_system_wrapper.v:51]
-INFO: [Synth 8-6155] done synthesizing module 'dkong_system_wrapper' (41#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/wrappers/dkong_system_wrapper.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'dkong_dkong_system_wrapper_0_0' (42#1) [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_dkong_system_wrapper_0_0/synth/dkong_dkong_system_wrapper_0_0.v:58]
+WARNING: [Synth 8-6014] Unused sequential element r_Clock_Count_reg was removed.  [U:/ENSC452/z80_system_sources/hdl/z80uart.sv:266]
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (38#1) [U:/ENSC452/z80_system_sources/hdl/z80uart.sv:237]
+INFO: [Synth 8-6155] done synthesizing module 'z80_uart' (39#1) [U:/ENSC452/z80_system_sources/hdl/z80uart.sv:3]
+WARNING: [Synth 8-6014] Unused sequential element audio_irq_reg was removed.  [U:/ENSC452/z80_system_sources/hdl/dkong_system.sv:433]
+INFO: [Synth 8-6155] done synthesizing module 'dkong_system' (40#1) [U:/ENSC452/z80_system_sources/hdl/dkong_system.sv:3]
+WARNING: [Synth 8-7023] instance 'inst' of module 'dkong_system' has 30 connections declared, but only 29 given [U:/ENSC452/z80_system_sources/hdl/wrappers/dkong_system_wrapper.v:51]
+INFO: [Synth 8-6155] done synthesizing module 'dkong_system_wrapper' (41#1) [U:/ENSC452/z80_system_sources/hdl/wrappers/dkong_system_wrapper.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'dkong_dkong_system_wrapper_0_0' (42#1) [u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_dkong_system_wrapper_0_0/synth/dkong_dkong_system_wrapper_0_0.v:58]
 WARNING: [Synth 8-3331] design z80_uart has unconnected port ibus[addr][15]
 WARNING: [Synth 8-3331] design z80_uart has unconnected port ibus[addr][14]
 WARNING: [Synth 8-3331] design z80_uart has unconnected port ibus[addr][13]
@@ -1061,7 +1061,7 @@ WARNING: [Synth 8-3331] design blk_mem_input_block__parameterized0 has unconnect
 WARNING: [Synth 8-3331] design blk_mem_input_block__parameterized0 has unconnected port DINA[2]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:05:44 ; elapsed = 00:05:46 . Memory (MB): peak = 1706.117 ; gain = 1169.172
+Finished RTL Elaboration : Time (s): cpu = 00:08:26 ; elapsed = 00:09:39 . Memory (MB): peak = 1823.926 ; gain = 1167.258
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1074,10 +1074,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:05:45 ; elapsed = 00:05:46 . Memory (MB): peak = 1706.117 ; gain = 1169.172
+Finished Handling Custom Attributes : Time (s): cpu = 00:08:28 ; elapsed = 00:10:09 . Memory (MB): peak = 1823.926 ; gain = 1167.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:05:45 ; elapsed = 00:05:46 . Memory (MB): peak = 1706.117 ; gain = 1169.172
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:08:28 ; elapsed = 00:10:09 . Memory (MB): peak = 1823.926 ; gain = 1167.258
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -1085,24 +1085,24 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.runs/dkong_dkong_system_wrapper_0_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.runs/dkong_dkong_system_wrapper_0_0_synth_1/dont_touch.xdc]
+Parsing XDC File [U:/ENSC452/dkong_system2/dkong_system.runs/dkong_dkong_system_wrapper_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [U:/ENSC452/dkong_system2/dkong_system.runs/dkong_dkong_system_wrapper_0_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1706.117 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1823.926 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.186 . Memory (MB): peak = 1706.117 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.270 . Memory (MB): peak = 1823.926 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:05:54 ; elapsed = 00:05:56 . Memory (MB): peak = 1706.117 ; gain = 1169.172
+Finished Constraint Validation : Time (s): cpu = 00:08:43 ; elapsed = 00:11:46 . Memory (MB): peak = 1823.926 ; gain = 1167.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:05:54 ; elapsed = 00:05:56 . Memory (MB): peak = 1706.117 ; gain = 1169.172
+Finished Loading Part and Timing Information : Time (s): cpu = 00:08:43 ; elapsed = 00:11:46 . Memory (MB): peak = 1823.926 ; gain = 1167.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -1118,7 +1118,7 @@ Applied set_property DONT_TOUCH = true for inst/inst/vid/tile/rom_3p. (constrain
 Applied set_property DONT_TOUCH = true for inst/inst/vid/tile/prom_2n. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for inst/inst/cpu_rom/inst. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:05:54 ; elapsed = 00:05:56 . Memory (MB): peak = 1706.117 ; gain = 1169.172
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:08:43 ; elapsed = 00:11:46 . Memory (MB): peak = 1823.926 ; gain = 1167.258
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5587] ROM size for "MCycles" is below threshold of ROM address width. It will be mapped to LUTs
 INFO: [Synth 8-5546] ROM "Read_To_Acc" won't be mapped to RAM because it is too sparse
@@ -1126,8 +1126,6 @@ INFO: [Synth 8-5546] ROM "Special_LD" won't be mapped to RAM because it is too s
 INFO: [Synth 8-5546] ROM "IMode" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-802] inferred FSM for state register 'r_SM_Main_reg' in module 'uart_rx'
 INFO: [Synth 8-802] inferred FSM for state register 'r_SM_Main_reg' in module 'uart_tx'
-INFO: [Synth 8-4471] merging register 'in1_reg[7:0]' into 'in0_reg[7:0]' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/dkong_system.sv:399]
-INFO: [Synth 8-4471] merging register 'dsw0_reg[7:0]' into 'in0_reg[7:0]' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/dkong_system.sv:401]
 INFO: [Synth 8-5546] ROM "cref" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
@@ -1150,7 +1148,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'r_SM_Main_reg' using encod
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'r_SM_Main_reg' using encoding 'sequential' in module 'uart_tx'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:05:57 ; elapsed = 00:06:00 . Memory (MB): peak = 1706.117 ; gain = 1169.172
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:08:48 ; elapsed = 00:12:15 . Memory (MB): peak = 1823.926 ; gain = 1167.258
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1188,7 +1186,7 @@ Detailed RTL Component Info :
 	               14 Bit    Registers := 1     
 	               10 Bit    Registers := 1     
 	                9 Bit    Registers := 3     
-	                8 Bit    Registers := 29    
+	                8 Bit    Registers := 31    
 	                7 Bit    Registers := 4     
 	                6 Bit    Registers := 2     
 	                5 Bit    Registers := 1     
@@ -1213,7 +1211,7 @@ Detailed RTL Component Info :
 	   2 Input      9 Bit        Muxes := 3     
 	   8 Input      8 Bit        Muxes := 1     
 	   5 Input      8 Bit        Muxes := 3     
-	   2 Input      8 Bit        Muxes := 69    
+	   2 Input      8 Bit        Muxes := 70    
 	   6 Input      8 Bit        Muxes := 4     
 	   4 Input      8 Bit        Muxes := 5     
 	   9 Input      8 Bit        Muxes := 1     
@@ -1554,11 +1552,11 @@ Detailed RTL Component Info :
 Module dkong_system 
 Detailed RTL Component Info : 
 +---Registers : 
-	                8 Bit    Registers := 3     
+	                8 Bit    Registers := 5     
 	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 9     
 +---Muxes : 
-	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
 	  10 Input      2 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 8     
 	   8 Input      1 Bit        Muxes := 5     
@@ -1580,26 +1578,29 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/inst/mycpu/i_tv80_core /INT_s_reg)
-INFO: [Synth 8-3886] merging instance 'inst/inst/in2_reg[0]' (FDR) to 'inst/inst/in2_reg[1]'
-INFO: [Synth 8-3886] merging instance 'inst/inst/in0_reg[0]' (FDRE) to 'inst/inst/in0_reg[7]'
-INFO: [Synth 8-3886] merging instance 'inst/inst/in2_reg[1]' (FDR) to 'inst/inst/in2_reg[4]'
-INFO: [Synth 8-3886] merging instance 'inst/inst/in0_reg[1]' (FDRE) to 'inst/inst/in0_reg[7]'
-INFO: [Synth 8-3886] merging instance 'inst/inst/in0_reg[2]' (FDRE) to 'inst/inst/in0_reg[7]'
-INFO: [Synth 8-3886] merging instance 'inst/inst/in0_reg[3]' (FDRE) to 'inst/inst/in0_reg[7]'
-INFO: [Synth 8-3886] merging instance 'inst/inst/in2_reg[4]' (FDR) to 'inst/inst/in2_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/inst/in0_reg[4]' (FDRE) to 'inst/inst/in0_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/inst/dsw0_reg[0]' (FDRE) to 'inst/inst/dsw0_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/inst/in2_reg[0]' (FDR) to 'inst/inst/in2_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/inst/dsw0_reg[1]' (FDRE) to 'inst/inst/dsw0_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/inst/in2_reg[1]' (FDR) to 'inst/inst/in2_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/inst/dsw0_reg[2]' (FDRE) to 'inst/inst/dsw0_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/inst/dsw0_reg[3]' (FDRE) to 'inst/inst/dsw0_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/inst/dsw0_reg[4]' (FDRE) to 'inst/inst/dsw0_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/inst/in2_reg[4]' (FDR) to 'inst/inst/in2_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/inst/dsw0_reg[5]' (FDRE) to 'inst/inst/dsw0_reg[7]'
 INFO: [Synth 8-3886] merging instance 'inst/inst/in2_reg[5]' (FDR) to 'inst/inst/in2_reg[6]'
-INFO: [Synth 8-3886] merging instance 'inst/inst/in0_reg[5]' (FDRE) to 'inst/inst/in0_reg[7]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/inst/in2_reg[6] )
-INFO: [Synth 8-3886] merging instance 'inst/inst/in0_reg[6]' (FDRE) to 'inst/inst/in0_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/inst/in1_reg[5]' (FDR) to 'inst/inst/in2_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/inst/in0_reg[5]' (FDR) to 'inst/inst/in2_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/inst/dsw0_reg[6]' (FDRE) to 'inst/inst/dsw0_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/inst/in2_reg[6]' (FDR) to 'inst/inst/in0_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/inst/in1_reg[6]' (FDR) to 'inst/inst/in0_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/inst/in0_reg[6]' (FDR) to 'inst/inst/in0_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/inst/dsw0_reg[7] )
+INFO: [Synth 8-3886] merging instance 'inst/inst/in1_reg[7]' (FDR) to 'inst/inst/in0_reg[7]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/inst/in0_reg[7] )
-INFO: [Synth 8-3886] merging instance 'inst/inst/io_bus_reg[dslave][0]' (FDE) to 'inst/inst/io_bus_reg[dslave][6]'
-INFO: [Synth 8-3886] merging instance 'inst/inst/io_bus_reg[dslave][1]' (FDE) to 'inst/inst/io_bus_reg[dslave][6]'
-INFO: [Synth 8-3886] merging instance 'inst/inst/io_bus_reg[dslave][4]' (FDE) to 'inst/inst/io_bus_reg[dslave][6]'
 INFO: [Synth 8-3886] merging instance 'inst/inst/io_bus_reg[dslave][5]' (FDE) to 'inst/inst/io_bus_reg[dslave][6]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/inst/io_bus_reg[dslave][6] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:06:16 ; elapsed = 00:06:19 . Memory (MB): peak = 1706.117 ; gain = 1169.172
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:09:21 ; elapsed = 00:12:59 . Memory (MB): peak = 1823.926 ; gain = 1167.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -1644,13 +1645,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:06:22 ; elapsed = 00:06:25 . Memory (MB): peak = 1706.117 ; gain = 1169.172
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:09:30 ; elapsed = 00:13:09 . Memory (MB): peak = 1823.926 ; gain = 1167.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:06:22 ; elapsed = 00:06:25 . Memory (MB): peak = 1706.117 ; gain = 1169.172
+Finished Timing Optimization : Time (s): cpu = 00:09:31 ; elapsed = 00:13:10 . Memory (MB): peak = 1823.926 ; gain = 1167.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -1693,7 +1694,7 @@ INFO: [Synth 8-6837] The timing for the instance inst/inst/vid/sprite/objram/mem
 INFO: [Synth 8-6837] The timing for the instance inst/inst/vid/sprite/linebuffer/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance inst/inst/cpu_ram/ram_imp/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:06:23 ; elapsed = 00:06:26 . Memory (MB): peak = 1706.117 ; gain = 1169.172
+Finished Technology Mapping : Time (s): cpu = 00:09:32 ; elapsed = 00:13:12 . Memory (MB): peak = 1823.926 ; gain = 1167.258
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1719,7 +1720,7 @@ INFO: [Synth 8-5365] Flop inst/inst/mycpu/mreq_n_reg is being inverted and renam
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:06:25 ; elapsed = 00:06:28 . Memory (MB): peak = 1706.117 ; gain = 1169.172
+Finished IO Insertion : Time (s): cpu = 00:09:35 ; elapsed = 00:13:15 . Memory (MB): peak = 1823.926 ; gain = 1167.258
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1732,7 +1733,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:06:25 ; elapsed = 00:06:28 . Memory (MB): peak = 1706.117 ; gain = 1169.172
+Finished Renaming Generated Instances : Time (s): cpu = 00:09:35 ; elapsed = 00:13:15 . Memory (MB): peak = 1823.926 ; gain = 1167.258
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1744,25 +1745,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:06:25 ; elapsed = 00:06:28 . Memory (MB): peak = 1706.117 ; gain = 1169.172
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:09:35 ; elapsed = 00:13:15 . Memory (MB): peak = 1823.926 ; gain = 1167.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:06:25 ; elapsed = 00:06:28 . Memory (MB): peak = 1706.117 ; gain = 1169.172
+Finished Renaming Generated Ports : Time (s): cpu = 00:09:35 ; elapsed = 00:13:15 . Memory (MB): peak = 1823.926 ; gain = 1167.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:06:25 ; elapsed = 00:06:28 . Memory (MB): peak = 1706.117 ; gain = 1169.172
+Finished Handling Custom Attributes : Time (s): cpu = 00:09:35 ; elapsed = 00:13:15 . Memory (MB): peak = 1823.926 ; gain = 1167.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:06:25 ; elapsed = 00:06:28 . Memory (MB): peak = 1706.117 ; gain = 1169.172
+Finished Renaming Generated Nets : Time (s): cpu = 00:09:35 ; elapsed = 00:13:15 . Memory (MB): peak = 1823.926 ; gain = 1167.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1779,13 +1780,13 @@ Report Cell Usage:
 |      |Cell       |Count |
 +------+-----------+------+
 |1     |CARRY4     |    54|
-|2     |LUT1       |    32|
-|3     |LUT2       |   157|
-|4     |LUT3       |   254|
-|5     |LUT4       |   170|
-|6     |LUT5       |   433|
-|7     |LUT6       |   828|
-|8     |MUXF7      |    58|
+|2     |LUT1       |    30|
+|3     |LUT2       |   156|
+|4     |LUT3       |   271|
+|5     |LUT4       |   161|
+|6     |LUT5       |   413|
+|7     |LUT6       |   878|
+|8     |MUXF7      |    56|
 |9     |RAM32M     |     8|
 |10    |RAM64X1S   |     9|
 |11    |RAMB18E1   |     1|
@@ -1805,7 +1806,7 @@ Report Cell Usage:
 |25    |RAMB36E1_4 |     1|
 |26    |FDCE       |   134|
 |27    |FDPE       |    54|
-|28    |FDRE       |   444|
+|28    |FDRE       |   457|
 |29    |FDSE       |     9|
 +------+-----------+------+
 
@@ -1813,9 +1814,9 @@ Report Instance Areas:
 +------+-------------------------------------------------------+-----------------------------------------------+------+
 |      |Instance                                               |Module                                         |Cells |
 +------+-------------------------------------------------------+-----------------------------------------------+------+
-|1     |top                                                    |                                               |  2661|
-|2     |  inst                                                 |dkong_system_wrapper                           |  2661|
-|3     |    inst                                               |dkong_system                                   |  2661|
+|1     |top                                                    |                                               |  2707|
+|2     |  inst                                                 |dkong_system_wrapper                           |  2707|
+|3     |    inst                                               |dkong_system                                   |  2707|
 |4     |      cpu_ram                                          |z80ram                                         |     1|
 |5     |        ram_imp                                        |ram                                            |     1|
 |6     |      cpu_rom                                          |program_rom_wrapper                            |    20|
@@ -1834,14 +1835,14 @@ Report Instance Areas:
 |19    |                    \prim_init.ram                     |blk_mem_gen_prim_wrapper_init__parameterized1  |     1|
 |20    |                  \ramloop[3].ram.r                    |blk_mem_gen_prim_width__parameterized2         |     2|
 |21    |                    \prim_init.ram                     |blk_mem_gen_prim_wrapper_init__parameterized2  |     2|
-|22    |      dmac                                             |fakedma                                        |   377|
-|23    |      mycpu                                            |tv80s                                          |  1718|
-|24    |        i_tv80_core                                    |tv80_core                                      |  1701|
+|22    |      dmac                                             |fakedma                                        |   465|
+|23    |      mycpu                                            |tv80s                                          |  1665|
+|24    |        i_tv80_core                                    |tv80_core                                      |  1648|
 |25    |          i_reg                                        |tv80_reg                                       |   415|
 |26    |      uart                                             |z80_uart                                       |    84|
 |27    |        rx_dev                                         |uart_rx                                        |    48|
 |28    |        tx_dev                                         |uart_tx                                        |    27|
-|29    |      vid                                              |dkong_video                                    |   427|
+|29    |      vid                                              |dkong_video                                    |   425|
 |30    |        pal                                            |paletter                                       |    15|
 |31    |          prom_2e                                      |palette_2e_prom                                |     1|
 |32    |            U0                                         |blk_mem_gen_v8_4_3__parameterized15            |     1|
@@ -1857,7 +1858,7 @@ Report Instance Areas:
 |42    |                  \valid.cstr                          |blk_mem_gen_generic_cstr__parameterized8       |     1|
 |43    |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width__parameterized11        |     1|
 |44    |                      \prim_init.ram                   |blk_mem_gen_prim_wrapper_init__parameterized11 |     1|
-|45    |        sprite                                         |spritegen                                      |   306|
+|45    |        sprite                                         |spritegen                                      |   305|
 |46    |          rom_7c                                       |obj_7c_rom                                     |     1|
 |47    |            U0                                         |blk_mem_gen_v8_4_3__parameterized7             |     1|
 |48    |              inst_blk_mem_gen                         |blk_mem_gen_v8_4_3_synth__parameterized3       |     1|
@@ -1886,7 +1887,7 @@ Report Instance Areas:
 |71    |                  \valid.cstr                          |blk_mem_gen_generic_cstr__parameterized6       |     1|
 |72    |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width__parameterized9         |     1|
 |73    |                      \prim_init.ram                   |blk_mem_gen_prim_wrapper_init__parameterized9  |     1|
-|74    |          linebuffer                                   |ram__parameterized2                            |    31|
+|74    |          linebuffer                                   |ram__parameterized2                            |    30|
 |75    |          objram                                       |ram__parameterized0_0                          |     9|
 |76    |          scratchpad                                   |ram__parameterized1                            |    53|
 |77    |        tile                                           |tilegen                                        |    49|
@@ -1914,35 +1915,36 @@ Report Instance Areas:
 |99    |          tileram                                      |ram__parameterized0                            |    12|
 +------+-------------------------------------------------------+-----------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:06:25 ; elapsed = 00:06:28 . Memory (MB): peak = 1706.117 ; gain = 1169.172
+Finished Writing Synthesis Report : Time (s): cpu = 00:09:35 ; elapsed = 00:13:16 . Memory (MB): peak = 1823.926 ; gain = 1167.258
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 1593 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:34 ; elapsed = 00:06:21 . Memory (MB): peak = 1706.117 ; gain = 1169.172
-Synthesis Optimization Complete : Time (s): cpu = 00:06:25 ; elapsed = 00:06:28 . Memory (MB): peak = 1706.117 ; gain = 1169.172
+Synthesis finished with 0 errors, 0 critical warnings and 1583 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:57 ; elapsed = 00:12:14 . Memory (MB): peak = 1823.926 ; gain = 1167.258
+Synthesis Optimization Complete : Time (s): cpu = 00:09:35 ; elapsed = 00:13:16 . Memory (MB): peak = 1823.926 ; gain = 1167.258
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 146 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 144 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1706.117 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1823.926 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 17 instances were transformed.
   RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 8 instances
   RAM64X1S => RAM64X1S (RAMS64E): 9 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-136 Infos, 107 Warnings, 0 Critical Warnings and 0 Errors encountered.
+137 Infos, 107 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:06:32 ; elapsed = 00:06:36 . Memory (MB): peak = 1706.117 ; gain = 1414.758
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1706.117 ; gain = 0.000
+synth_design: Time (s): cpu = 00:09:45 ; elapsed = 00:14:38 . Memory (MB): peak = 1823.926 ; gain = 1437.078
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1823.926 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.runs/dkong_dkong_system_wrapper_0_0_synth_1/dkong_dkong_system_wrapper_0_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'U:/ENSC452/dkong_system2/dkong_system.runs/dkong_dkong_system_wrapper_0_0_synth_1/dkong_dkong_system_wrapper_0_0.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
 INFO: [Coretcl 2-1174] Renamed 98 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1706.117 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1823.926 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.runs/dkong_dkong_system_wrapper_0_0_synth_1/dkong_dkong_system_wrapper_0_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'U:/ENSC452/dkong_system2/dkong_system.runs/dkong_dkong_system_wrapper_0_0_synth_1/dkong_dkong_system_wrapper_0_0.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 1823.926 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file dkong_dkong_system_wrapper_0_0_utilization_synth.rpt -pb dkong_dkong_system_wrapper_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Mar  6 10:04:38 2020...
+INFO: [Common 17-206] Exiting Vivado at Fri Mar  6 14:47:14 2020...

@@ -17,8 +17,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param chipscope.maxJobs 4
-set_param xicom.use_bs_reader 1
 set_msg_config -id {HDL-1065} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 create_project -in_memory -part xc7z020clg484-1
@@ -27,16 +25,16 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.cache/wt [current_project]
-set_property parent.project_path C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.xpr [current_project]
+set_property webtalk.parent_dir U:/ENSC452/dkong_system2/dkong_system.cache/wt [current_project]
+set_property parent.project_path U:/ENSC452/dkong_system2/dkong_system.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part em.avnet.com:zed:part0:1.4 [current_project]
-set_property ip_output_repo c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.cache/ip [current_project]
+set_property ip_output_repo u:/ENSC452/dkong_system2/dkong_system.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_verilog -library xil_defaultlib C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/common/mux.v
-read_ip -quiet c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_demux2_0_3/dkong_demux2_0_3.xci
+read_verilog -library xil_defaultlib U:/ENSC452/z80_system_sources/hdl/common/mux.v
+read_ip -quiet U:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_demux2_0_3/dkong_demux2_0_3.xci
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -48,7 +46,7 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 }
 set_param ips.enableIPCacheLiteLoad 1
 
-set cached_ip [config_ip_cache -export -no_bom  -dir C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.runs/dkong_demux2_0_3_synth_1 -new_name dkong_demux2_0_3 -ip [get_ips dkong_demux2_0_3]]
+set cached_ip [config_ip_cache -export -no_bom  -dir U:/ENSC452/dkong_system2/dkong_system.runs/dkong_demux2_0_3_synth_1 -new_name dkong_demux2_0_3 -ip [get_ips dkong_demux2_0_3]]
 
 if { $cached_ip eq {} } {
 close [open __synthesis_is_running__ w]
@@ -89,32 +87,32 @@ write_checkpoint -force -noxdef dkong_demux2_0_3.dcp
 create_report "dkong_demux2_0_3_synth_1_synth_report_utilization_0" "report_utilization -file dkong_demux2_0_3_utilization_synth.rpt -pb dkong_demux2_0_3_utilization_synth.pb"
 
 if { [catch {
-  file copy -force C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.runs/dkong_demux2_0_3_synth_1/dkong_demux2_0_3.dcp c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_demux2_0_3/dkong_demux2_0_3.dcp
+  file copy -force U:/ENSC452/dkong_system2/dkong_system.runs/dkong_demux2_0_3_synth_1/dkong_demux2_0_3.dcp U:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_demux2_0_3/dkong_demux2_0_3.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_demux2_0_3/dkong_demux2_0_3_stub.v
+  write_verilog -force -mode synth_stub U:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_demux2_0_3/dkong_demux2_0_3_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_demux2_0_3/dkong_demux2_0_3_stub.vhdl
+  write_vhdl -force -mode synth_stub U:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_demux2_0_3/dkong_demux2_0_3_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_demux2_0_3/dkong_demux2_0_3_sim_netlist.v
+  write_verilog -force -mode funcsim U:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_demux2_0_3/dkong_demux2_0_3_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_demux2_0_3/dkong_demux2_0_3_sim_netlist.vhdl
+  write_vhdl -force -mode funcsim U:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_demux2_0_3/dkong_demux2_0_3_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -124,47 +122,47 @@ if { [catch {
 
 
 if { [catch {
-  file copy -force C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.runs/dkong_demux2_0_3_synth_1/dkong_demux2_0_3.dcp c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_demux2_0_3/dkong_demux2_0_3.dcp
+  file copy -force U:/ENSC452/dkong_system2/dkong_system.runs/dkong_demux2_0_3_synth_1/dkong_demux2_0_3.dcp U:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_demux2_0_3/dkong_demux2_0_3.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  file rename -force C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.runs/dkong_demux2_0_3_synth_1/dkong_demux2_0_3_stub.v c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_demux2_0_3/dkong_demux2_0_3_stub.v
+  file rename -force U:/ENSC452/dkong_system2/dkong_system.runs/dkong_demux2_0_3_synth_1/dkong_demux2_0_3_stub.v U:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_demux2_0_3/dkong_demux2_0_3_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.runs/dkong_demux2_0_3_synth_1/dkong_demux2_0_3_stub.vhdl c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_demux2_0_3/dkong_demux2_0_3_stub.vhdl
+  file rename -force U:/ENSC452/dkong_system2/dkong_system.runs/dkong_demux2_0_3_synth_1/dkong_demux2_0_3_stub.vhdl U:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_demux2_0_3/dkong_demux2_0_3_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.runs/dkong_demux2_0_3_synth_1/dkong_demux2_0_3_sim_netlist.v c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_demux2_0_3/dkong_demux2_0_3_sim_netlist.v
+  file rename -force U:/ENSC452/dkong_system2/dkong_system.runs/dkong_demux2_0_3_synth_1/dkong_demux2_0_3_sim_netlist.v U:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_demux2_0_3/dkong_demux2_0_3_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.runs/dkong_demux2_0_3_synth_1/dkong_demux2_0_3_sim_netlist.vhdl c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_demux2_0_3/dkong_demux2_0_3_sim_netlist.vhdl
+  file rename -force U:/ENSC452/dkong_system2/dkong_system.runs/dkong_demux2_0_3_synth_1/dkong_demux2_0_3_sim_netlist.vhdl U:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_demux2_0_3/dkong_demux2_0_3_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 }; # end if cached_ip 
 
-if {[file isdir C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.ip_user_files/ip/dkong_demux2_0_3]} {
+if {[file isdir U:/ENSC452/dkong_system2/dkong_system.ip_user_files/ip/dkong_demux2_0_3]} {
   catch { 
-    file copy -force c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_demux2_0_3/dkong_demux2_0_3_stub.v C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.ip_user_files/ip/dkong_demux2_0_3
+    file copy -force U:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_demux2_0_3/dkong_demux2_0_3_stub.v U:/ENSC452/dkong_system2/dkong_system.ip_user_files/ip/dkong_demux2_0_3
   }
 }
 
-if {[file isdir C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.ip_user_files/ip/dkong_demux2_0_3]} {
+if {[file isdir U:/ENSC452/dkong_system2/dkong_system.ip_user_files/ip/dkong_demux2_0_3]} {
   catch { 
-    file copy -force c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_demux2_0_3/dkong_demux2_0_3_stub.vhdl C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.ip_user_files/ip/dkong_demux2_0_3
+    file copy -force U:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_demux2_0_3/dkong_demux2_0_3_stub.vhdl U:/ENSC452/dkong_system2/dkong_system.ip_user_files/ip/dkong_demux2_0_3
   }
 }
 file delete __synthesis_is_running__

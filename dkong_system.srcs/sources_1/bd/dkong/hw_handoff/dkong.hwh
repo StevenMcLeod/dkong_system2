@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Mar  6 09:57:33 2020" VIVADOVERSION="2019.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Mar  6 14:29:23 2020" VIVADOVERSION="2019.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="em.avnet.com:zed:part0:1.4" DEVICE="7z020" NAME="dkong" PACKAGE="clg484" SPEEDGRADE="-1"/>
 
@@ -39,26 +39,6 @@
         <CONNECTION INSTANCE="framedoubler_slow_0" PORT="vsync"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="IO" LEFT="53" NAME="FIXED_IO_mio" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_MIO">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="processing_system7_0" PORT="MIO"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="IO" NAME="FIXED_IO_ps_srstb" SIGIS="undef" SIGNAME="processing_system7_0_PS_SRSTB">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="processing_system7_0" PORT="PS_SRSTB"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="IO" NAME="FIXED_IO_ps_clk" SIGIS="undef" SIGNAME="processing_system7_0_PS_CLK">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="processing_system7_0" PORT="PS_CLK"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="IO" NAME="FIXED_IO_ps_porb" SIGIS="undef" SIGNAME="processing_system7_0_PS_PORB">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="processing_system7_0" PORT="PS_PORB"/>
-      </CONNECTIONS>
-    </PORT>
     <PORT DIR="I" NAME="INMODE" SIGIS="undef" SIGNAME="External_Ports_INMODE">
       <CONNECTIONS>
         <CONNECTION INSTANCE="demux2_0" PORT="sel"/>
@@ -91,6 +71,26 @@
     <PORT DIR="I" LEFT="0" NAME="BTNC" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_BTNC">
       <CONNECTIONS>
         <CONNECTION INSTANCE="demux2_4" PORT="iny"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="IO" LEFT="53" NAME="FIXED_IO_mio" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_MIO">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="processing_system7_0" PORT="MIO"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="IO" NAME="FIXED_IO_ps_srstb" SIGIS="undef" SIGNAME="processing_system7_0_PS_SRSTB">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="processing_system7_0" PORT="PS_SRSTB"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="IO" NAME="FIXED_IO_ps_clk" SIGIS="undef" SIGNAME="processing_system7_0_PS_CLK">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="processing_system7_0" PORT="PS_CLK"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="IO" NAME="FIXED_IO_ps_porb" SIGIS="undef" SIGNAME="processing_system7_0_PS_PORB">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="processing_system7_0" PORT="PS_PORB"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -692,8 +692,8 @@
         <PORT CLKFREQUENCY="61447368" DIR="O" NAME="coreclk" SIGIS="clk" SIGNAME="clk_wiz_0_coreclk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="proc_sys_reset_0" PORT="slowest_sync_clk"/>
-            <CONNECTION INSTANCE="framedoubler_slow_0" PORT="masterclk"/>
             <CONNECTION INSTANCE="dkong_system_wrapper_0" PORT="masterclk"/>
+            <CONNECTION INSTANCE="framedoubler_slow_0" PORT="masterclk"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -864,8 +864,8 @@
       <PARAMETERS>
         <PARAMETER NAME="CLKS_PER_BIT" VALUE="1"/>
         <PARAMETER NAME="DEBUG_WAIT_ENA" VALUE="0"/>
-        <PARAMETER NAME="IN0_ENA" VALUE="0"/>
-        <PARAMETER NAME="IN1_ENA" VALUE="0"/>
+        <PARAMETER NAME="IN0_ENA" VALUE="1"/>
+        <PARAMETER NAME="IN1_ENA" VALUE="1"/>
         <PARAMETER NAME="IN2_ENA" VALUE="1"/>
         <PARAMETER NAME="Component_Name" VALUE="dkong_dkong_system_wrapper_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
@@ -1151,8 +1151,8 @@
         <PORT DIR="O" LEFT="0" NAME="interconnect_aresetn" RIGHT="0" SIGIS="rst"/>
         <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" RIGHT="0" SIGIS="rst" SIGNAME="proc_sys_reset_0_peripheral_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="framedoubler_slow_0" PORT="in_rst_n"/>
             <CONNECTION INSTANCE="dkong_system_wrapper_0" PORT="rst_n"/>
+            <CONNECTION INSTANCE="framedoubler_slow_0" PORT="in_rst_n"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

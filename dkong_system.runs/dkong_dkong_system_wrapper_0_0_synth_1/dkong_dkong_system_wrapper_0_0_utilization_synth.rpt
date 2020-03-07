@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Fri Mar  6 10:04:37 2020
-| Host         : Steven-Win10-2 running 64-bit major release  (build 9200)
+| Date         : Fri Mar  6 14:47:13 2020
+| Host         : ensc-pit-w35 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file dkong_dkong_system_wrapper_0_0_utilization_synth.rpt -pb dkong_dkong_system_wrapper_0_0_utilization_synth.pb
 | Design       : dkong_dkong_system_wrapper_0_0
 | Device       : 7z020clg484-1
@@ -30,15 +30,15 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                | 1691 |     0 |     53200 |  3.18 |
-|   LUT as Logic             | 1650 |     0 |     53200 |  3.10 |
+| Slice LUTs*                | 1722 |     0 |     53200 |  3.24 |
+|   LUT as Logic             | 1681 |     0 |     53200 |  3.16 |
 |   LUT as Memory            |   41 |     0 |     17400 |  0.24 |
 |     LUT as Distributed RAM |   41 |     0 |           |       |
 |     LUT as Shift Register  |    0 |     0 |           |       |
-| Slice Registers            |  641 |     0 |    106400 |  0.60 |
-|   Register as Flip Flop    |  641 |     0 |    106400 |  0.60 |
+| Slice Registers            |  654 |     0 |    106400 |  0.61 |
+|   Register as Flip Flop    |  654 |     0 |    106400 |  0.61 |
 |   Register as Latch        |    0 |     0 |    106400 |  0.00 |
-| F7 Muxes                   |   58 |     0 |     26600 |  0.22 |
+| F7 Muxes                   |   56 |     0 |     26600 |  0.21 |
 | F8 Muxes                   |    0 |     0 |     13300 |  0.00 |
 +----------------------------+------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
@@ -59,7 +59,7 @@ Table of Contents
 | 54    |          Yes |           - |          Set |
 | 134   |          Yes |           - |        Reset |
 | 9     |          Yes |         Set |            - |
-| 444   |          Yes |       Reset |            - |
+| 457   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -150,18 +150,18 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT6     |  828 |                 LUT |
-| FDRE     |  444 |        Flop & Latch |
-| LUT5     |  433 |                 LUT |
-| LUT3     |  254 |                 LUT |
-| LUT4     |  170 |                 LUT |
-| LUT2     |  157 |                 LUT |
+| LUT6     |  878 |                 LUT |
+| FDRE     |  457 |        Flop & Latch |
+| LUT5     |  413 |                 LUT |
+| LUT3     |  271 |                 LUT |
+| LUT4     |  161 |                 LUT |
+| LUT2     |  156 |                 LUT |
 | FDCE     |  134 |        Flop & Latch |
-| MUXF7    |   58 |               MuxFx |
+| MUXF7    |   56 |               MuxFx |
 | FDPE     |   54 |        Flop & Latch |
 | CARRY4   |   54 |          CarryLogic |
 | RAMD32   |   48 |  Distributed Memory |
-| LUT1     |   32 |                 LUT |
+| LUT1     |   30 |                 LUT |
 | RAMS32   |   16 |  Distributed Memory |
 | RAMB18E1 |   12 |        Block Memory |
 | RAMS64E  |    9 |  Distributed Memory |
