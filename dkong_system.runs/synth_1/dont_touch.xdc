@@ -3,6 +3,12 @@
 
 # XDC: imports/vga_tutorial_students/zedboard_master.xdc
 
+# IP: ip/sou_3f_rom/sou_3f_rom.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==sou_3f_rom || ORIG_REF_NAME==sou_3f_rom} -quiet] -quiet
+
+# IP: ip/sou_3h_rom/sou_3h_rom.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==sou_3h_rom || ORIG_REF_NAME==sou_3h_rom} -quiet] -quiet
+
 # IP: ip/palette_2f_prom/palette_2f_prom.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==palette_2f_prom || ORIG_REF_NAME==palette_2f_prom} -quiet] -quiet
 
@@ -41,6 +47,12 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==dkong || ORIG_R
 
 # IP: bd/dkong/ip/dkong_dkong_system_wrapper_0_0/dkong_dkong_system_wrapper_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==dkong_dkong_system_wrapper_0_0 || ORIG_REF_NAME==dkong_dkong_system_wrapper_0_0} -quiet] -quiet
+
+# IP: ip/sou_3f_rom/sou_3f_rom.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==sou_3f_rom || ORIG_REF_NAME==sou_3f_rom} -quiet] -quiet
+
+# IP: ip/sou_3h_rom/sou_3h_rom.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==sou_3h_rom || ORIG_REF_NAME==sou_3h_rom} -quiet] -quiet
 
 # IP: ip/palette_2f_prom/palette_2f_prom.xci
 #dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==palette_2f_prom || ORIG_REF_NAME==palette_2f_prom} -quiet] -quiet
@@ -108,6 +120,10 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==dkong_demux2_0_
 # IP: bd/dkong/ip/dkong_demux2_3_0/dkong_demux2_3_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==dkong_demux2_3_0 || ORIG_REF_NAME==dkong_demux2_3_0} -quiet] -quiet
 
+# XDC: ip/sou_3f_rom/sou_3f_rom_ooc.xdc
+
+# XDC: ip/sou_3h_rom/sou_3h_rom_ooc.xdc
+
 # XDC: ip/palette_2f_prom/palette_2f_prom_ooc.xdc
 
 # XDC: ip/palette_2e_prom/palette_2e_prom_ooc.xdc
@@ -129,6 +145,10 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==dkong_demux2_3_
 # XDC: ip/cpu_program_rom/cpu_program_rom_ooc.xdc
 
 # XDC: ip/framedoubler_mem/framedoubler_mem_ooc.xdc
+
+# XDC: ip/sou_3f_rom/sou_3f_rom_ooc.xdc
+
+# XDC: ip/sou_3h_rom/sou_3h_rom_ooc.xdc
 
 # XDC: ip/palette_2f_prom/palette_2f_prom_ooc.xdc
 

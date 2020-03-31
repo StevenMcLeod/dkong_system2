@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Fri Mar  6 13:59:55 2020
-// Host        : ensc-pit-w35 running 64-bit major release  (build 9200)
+// Date        : Tue Mar 31 13:23:55 2020
+// Host        : Steven-Win10-2 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
-//               U:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_demux2_0_1/dkong_demux2_0_1_stub.v
+//               C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_demux2_0_1/dkong_demux2_0_1_stub.v
 // Design      : dkong_demux2_0_1
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg484-1

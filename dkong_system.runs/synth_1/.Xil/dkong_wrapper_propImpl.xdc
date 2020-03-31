@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:U:/ENSC452/dkong_system2/dkong_system.srcs/constrs_1/imports/vga_tutorial_students/zedboard_master.xdc rfile:../../../dkong_system.srcs/constrs_1/imports/vga_tutorial_students/zedboard_master.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/constrs_1/imports/vga_tutorial_students/zedboard_master.xdc rfile:../../../dkong_system.srcs/constrs_1/imports/vga_tutorial_students/zedboard_master.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:175 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN T22 [get_ports {LD[0]}];  # "LD0"
 set_property src_info {type:XDC file:1 line:176 export:INPUT save:INPUT read:READ} [current_design]

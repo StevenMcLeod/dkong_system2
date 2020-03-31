@@ -5,33 +5,26 @@
       "device": "xc7z020clg484-1",
       "name": "dkong",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2019.1",
-      "validated": "true"
+      "tool_version": "2019.1"
     },
     "design_tree": {
       "processing_system7_0": "",
       "proc_sys_reset_0": "",
       "clk_wiz_0": "",
       "proc_sys_reset_1": "",
-      "dkong_system_wrapper_0": "",
+      "mux4_0": "",
       "framedoubler_slow_0": "",
       "demux2_0": "",
       "demux2_1": "",
       "demux2_2": "",
       "demux2_3": "",
       "demux2_4": "",
-      "mux4_0": ""
+      "dkong_system_wrapper_0": ""
     },
     "interface_ports": {
       "FIXED_IO": {
         "mode": "Master",
-        "vlnv": "xilinx.com:display_processing_system7:fixedio_rtl:1.0",
-        "parameters": {
-          "CAN_DEBUG": {
-            "value": "false",
-            "value_src": "default"
-          }
-        }
+        "vlnv": "xilinx.com:display_processing_system7:fixedio_rtl:1.0"
       }
     },
     "ports": {
@@ -254,24 +247,36 @@
         "xci_name": "dkong_clk_wiz_0_0",
         "parameters": {
           "CLKOUT1_JITTER": {
-            "value": "253.110"
+            "value": "583.934"
           },
           "CLKOUT1_PHASE_ERROR": {
-            "value": "303.436"
+            "value": "590.341"
           },
           "CLKOUT1_REQUESTED_OUT_FREQ": {
             "value": "25.175"
           },
           "CLKOUT2_JITTER": {
-            "value": "218.660"
+            "value": "509.339"
           },
           "CLKOUT2_PHASE_ERROR": {
-            "value": "303.436"
+            "value": "590.341"
           },
           "CLKOUT2_REQUESTED_OUT_FREQ": {
             "value": "61.44"
           },
           "CLKOUT2_USED": {
+            "value": "true"
+          },
+          "CLKOUT3_JITTER": {
+            "value": "719.770"
+          },
+          "CLKOUT3_PHASE_ERROR": {
+            "value": "590.341"
+          },
+          "CLKOUT3_REQUESTED_OUT_FREQ": {
+            "value": "6.000"
+          },
+          "CLKOUT3_USED": {
             "value": "true"
           },
           "CLK_OUT1_PORT": {
@@ -280,20 +285,26 @@
           "CLK_OUT2_PORT": {
             "value": "coreclk"
           },
+          "CLK_OUT3_PORT": {
+            "value": "soundclk"
+          },
           "MMCM_CLKFBOUT_MULT_F": {
-            "value": "58.375"
+            "value": "54.125"
           },
           "MMCM_CLKOUT0_DIVIDE_F": {
-            "value": "46.375"
+            "value": "26.875"
           },
           "MMCM_CLKOUT1_DIVIDE": {
-            "value": "19"
+            "value": "11"
+          },
+          "MMCM_CLKOUT2_DIVIDE": {
+            "value": "113"
           },
           "MMCM_DIVCLK_DIVIDE": {
-            "value": "5"
+            "value": "8"
           },
           "NUM_OUT_CLKS": {
-            "value": "2"
+            "value": "3"
           },
           "RESET_PORT": {
             "value": "resetn"
@@ -318,148 +329,46 @@
           }
         }
       },
-      "dkong_system_wrapper_0": {
-        "vlnv": "xilinx.com:module_ref:dkong_system_wrapper:1.0",
-        "xci_name": "dkong_dkong_system_wrapper_0_0",
+      "mux4_0": {
+        "vlnv": "xilinx.com:module_ref:mux4:1.0",
+        "xci_name": "dkong_mux4_0_0",
         "parameters": {
-          "IN0_ENA": {
-            "value": "1"
-          },
-          "IN1_ENA": {
-            "value": "1"
-          },
-          "IN2_ENA": {
-            "value": "1"
+          "WIDTH": {
+            "value": "8"
           }
         },
         "reference_info": {
           "ref_type": "hdl",
-          "ref_name": "dkong_system_wrapper",
+          "ref_name": "mux4",
           "boundary_crc": "0x0"
         },
         "ports": {
-          "rst_n": {
-            "type": "rst",
+          "sel": {
             "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "constant"
-              }
-            }
-          },
-          "masterclk": {
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "/clk_wiz_0_clk_out1",
-                "value_src": "ip_prop"
-              },
-              "FREQ_HZ": {
-                "value": "61447368",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              }
-            }
-          },
-          "ser_in": {
-            "direction": "I"
-          },
-          "ser_out": {
-            "direction": "O"
-          },
-          "pixelclk": {
-            "direction": "O"
-          },
-          "video_valid": {
-            "direction": "O"
-          },
-          "r_sig": {
-            "direction": "O",
-            "left": "2",
-            "right": "0"
-          },
-          "g_sig": {
-            "direction": "O",
-            "left": "2",
-            "right": "0"
-          },
-          "b_sig": {
-            "direction": "O",
             "left": "1",
             "right": "0"
           },
-          "p1_r": {
-            "direction": "I"
-          },
-          "p1_l": {
-            "direction": "I"
-          },
-          "p1_u": {
-            "direction": "I"
-          },
-          "p1_d": {
-            "direction": "I"
-          },
-          "p1_b1": {
-            "direction": "I"
-          },
-          "p2_r": {
-            "direction": "I"
-          },
-          "p2_l": {
-            "direction": "I"
-          },
-          "p2_u": {
-            "direction": "I"
-          },
-          "p2_d": {
-            "direction": "I"
-          },
-          "p2_b1": {
-            "direction": "I"
-          },
-          "p1_sw": {
-            "direction": "I"
-          },
-          "p2_sw": {
-            "direction": "I"
-          },
-          "coin_sw": {
-            "direction": "I"
-          },
-          "debug_wait": {
-            "direction": "I"
-          },
-          "debug_ahi": {
-            "direction": "O",
+          "ina": {
+            "direction": "I",
             "left": "7",
             "right": "0"
           },
-          "debug_alo": {
-            "direction": "O",
+          "inb": {
+            "direction": "I",
             "left": "7",
             "right": "0"
           },
-          "debug_dmaster": {
-            "direction": "O",
+          "inc": {
+            "direction": "I",
             "left": "7",
             "right": "0"
           },
-          "debug_dslave": {
-            "direction": "O",
+          "ind": {
+            "direction": "I",
             "left": "7",
             "right": "0"
           },
-          "debug_cpu_sig": {
-            "direction": "O",
-            "left": "7",
-            "right": "0"
-          },
-          "debug_enables": {
+          "outy": {
             "direction": "O",
             "left": "7",
             "right": "0"
@@ -477,40 +386,14 @@
         "ports": {
           "in_rst_n": {
             "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "constant"
-              }
-            }
+            "direction": "I"
           },
           "out_rst_n": {
             "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "constant"
-              }
-            }
+            "direction": "I"
           },
           "masterclk": {
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "/clk_wiz_0_clk_out1",
-                "value_src": "ip_prop"
-              },
-              "FREQ_HZ": {
-                "value": "61447368",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              }
-            }
+            "direction": "I"
           },
           "in_pixclk": {
             "direction": "I"
@@ -534,21 +417,7 @@
             "right": "0"
           },
           "out_pixclk": {
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "/clk_wiz_0_clk_out1",
-                "value_src": "ip_prop"
-              },
-              "FREQ_HZ": {
-                "value": "25175202",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              }
-            }
+            "direction": "I"
           },
           "out_r": {
             "direction": "O",
@@ -718,46 +587,148 @@
           }
         }
       },
-      "mux4_0": {
-        "vlnv": "xilinx.com:module_ref:mux4:1.0",
-        "xci_name": "dkong_mux4_0_0",
+      "dkong_system_wrapper_0": {
+        "vlnv": "xilinx.com:module_ref:dkong_system_wrapper:1.0",
+        "xci_name": "dkong_dkong_system_wrapper_0_0",
         "parameters": {
-          "WIDTH": {
-            "value": "8"
+          "IN0_ENA": {
+            "value": "1"
+          },
+          "IN1_ENA": {
+            "value": "1"
+          },
+          "IN2_ENA": {
+            "value": "1"
           }
         },
         "reference_info": {
           "ref_type": "hdl",
-          "ref_name": "mux4",
+          "ref_name": "dkong_system_wrapper",
           "boundary_crc": "0x0"
         },
         "ports": {
-          "sel": {
-            "direction": "I",
+          "rst_n": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "masterclk": {
+            "direction": "I"
+          },
+          "soundclk": {
+            "direction": "I"
+          },
+          "ser_in": {
+            "direction": "I"
+          },
+          "ser_out": {
+            "direction": "O"
+          },
+          "pixelclk": {
+            "direction": "O"
+          },
+          "video_valid": {
+            "direction": "O"
+          },
+          "r_sig": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
+          "g_sig": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
+          "b_sig": {
+            "direction": "O",
             "left": "1",
             "right": "0"
           },
-          "ina": {
-            "direction": "I",
+          "dac_mute": {
+            "direction": "O"
+          },
+          "dac_out": {
+            "direction": "O",
             "left": "7",
             "right": "0"
           },
-          "inb": {
-            "direction": "I",
+          "walk_out": {
+            "direction": "O"
+          },
+          "jump_out": {
+            "direction": "O"
+          },
+          "crash_out": {
+            "direction": "O"
+          },
+          "p1_r": {
+            "direction": "I"
+          },
+          "p1_l": {
+            "direction": "I"
+          },
+          "p1_u": {
+            "direction": "I"
+          },
+          "p1_d": {
+            "direction": "I"
+          },
+          "p1_b1": {
+            "direction": "I"
+          },
+          "p2_r": {
+            "direction": "I"
+          },
+          "p2_l": {
+            "direction": "I"
+          },
+          "p2_u": {
+            "direction": "I"
+          },
+          "p2_d": {
+            "direction": "I"
+          },
+          "p2_b1": {
+            "direction": "I"
+          },
+          "p1_sw": {
+            "direction": "I"
+          },
+          "p2_sw": {
+            "direction": "I"
+          },
+          "coin_sw": {
+            "direction": "I"
+          },
+          "debug_wait": {
+            "direction": "I"
+          },
+          "debug_ahi": {
+            "direction": "O",
             "left": "7",
             "right": "0"
           },
-          "inc": {
-            "direction": "I",
+          "debug_alo": {
+            "direction": "O",
             "left": "7",
             "right": "0"
           },
-          "ind": {
-            "direction": "I",
+          "debug_dmaster": {
+            "direction": "O",
             "left": "7",
             "right": "0"
           },
-          "outy": {
+          "debug_dslave": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "debug_cpu_sig": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "debug_enables": {
             "direction": "O",
             "left": "7",
             "right": "0"
@@ -796,8 +767,8 @@
       "proc_sys_reset_0_peripheral_aresetn": {
         "ports": [
           "proc_sys_reset_0/peripheral_aresetn",
-          "dkong_system_wrapper_0/rst_n",
-          "framedoubler_slow_0/in_rst_n"
+          "framedoubler_slow_0/in_rst_n",
+          "dkong_system_wrapper_0/rst_n"
         ]
       },
       "dkong_system_wrapper_0_debug_alo": {
@@ -830,12 +801,6 @@
           "dkong_system_wrapper_0/ser_in"
         ]
       },
-      "dkong_system_wrapper_0_debug_enables": {
-        "ports": [
-          "dkong_system_wrapper_0/debug_enables",
-          "mux4_0/inc"
-        ]
-      },
       "clk_wiz_0_vgaclk": {
         "ports": [
           "clk_wiz_0/vgaclk",
@@ -853,8 +818,8 @@
         "ports": [
           "clk_wiz_0/coreclk",
           "proc_sys_reset_0/slowest_sync_clk",
-          "dkong_system_wrapper_0/masterclk",
-          "framedoubler_slow_0/masterclk"
+          "framedoubler_slow_0/masterclk",
+          "dkong_system_wrapper_0/masterclk"
         ]
       },
       "proc_sys_reset_1_peripheral_aresetn": {
@@ -1021,6 +986,18 @@
         "ports": [
           "demux2_3/outb",
           "dkong_system_wrapper_0/coin_sw"
+        ]
+      },
+      "dkong_system_wrapper_0_dac_out": {
+        "ports": [
+          "dkong_system_wrapper_0/dac_out",
+          "mux4_0/inc"
+        ]
+      },
+      "clk_wiz_0_soundclk": {
+        "ports": [
+          "clk_wiz_0/soundclk",
+          "dkong_system_wrapper_0/soundclk"
         ]
       }
     }

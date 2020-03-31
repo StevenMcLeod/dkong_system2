@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="dkong_demux2_0_3_synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1583531822">
+<GenRun Id="dkong_demux2_0_3_synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1585686194">
   <File Type="PA-TCL" Name="dkong_demux2_0_3.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="dkong_demux2_0_3_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="dkong_demux2_0_3_reports.tcl"/>

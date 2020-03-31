@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Sat Feb 22 14:07:21 2020
+-- Date        : Tue Mar 31 12:46:32 2020
 -- Host        : Steven-Win10-2 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim -rename_top dkong_clk_wiz_0_0 -prefix
 --               dkong_clk_wiz_0_0_ dkong_clk_wiz_0_0_sim_netlist.vhdl
@@ -18,6 +18,7 @@ entity dkong_clk_wiz_0_0_dkong_clk_wiz_0_0_clk_wiz is
   port (
     vgaclk : out STD_LOGIC;
     coreclk : out STD_LOGIC;
+    soundclk : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
 end dkong_clk_wiz_0_0_dkong_clk_wiz_0_0_clk_wiz;
@@ -27,13 +28,13 @@ architecture STRUCTURE of dkong_clk_wiz_0_0_dkong_clk_wiz_0_0_clk_wiz is
   signal clkfbout_buf_dkong_clk_wiz_0_0 : STD_LOGIC;
   signal clkfbout_dkong_clk_wiz_0_0 : STD_LOGIC;
   signal coreclk_dkong_clk_wiz_0_0 : STD_LOGIC;
+  signal soundclk_dkong_clk_wiz_0_0 : STD_LOGIC;
   signal vgaclk_dkong_clk_wiz_0_0 : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKFBOUTB_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKFBSTOPPED_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKINSTOPPED_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKOUT0B_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED : STD_LOGIC;
-  signal NLW_mmcm_adv_inst_CLKOUT2_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKOUT3_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKOUT3B_UNCONNECTED : STD_LOGIC;
@@ -55,6 +56,7 @@ architecture STRUCTURE of dkong_clk_wiz_0_0_dkong_clk_wiz_0_0_clk_wiz is
   attribute IFD_DELAY_VALUE of clkin1_ibufg : label is "AUTO";
   attribute BOX_TYPE of clkout1_buf : label is "PRIMITIVE";
   attribute BOX_TYPE of clkout2_buf : label is "PRIMITIVE";
+  attribute BOX_TYPE of clkout3_buf : label is "PRIMITIVE";
   attribute BOX_TYPE of mmcm_adv_inst : label is "PRIMITIVE";
 begin
 clkf_buf: unisim.vcomponents.BUFG
@@ -80,23 +82,28 @@ clkout2_buf: unisim.vcomponents.BUFG
       I => coreclk_dkong_clk_wiz_0_0,
       O => coreclk
     );
+clkout3_buf: unisim.vcomponents.BUFG
+     port map (
+      I => soundclk_dkong_clk_wiz_0_0,
+      O => soundclk
+    );
 mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
     generic map(
       BANDWIDTH => "OPTIMIZED",
-      CLKFBOUT_MULT_F => 58.375000,
+      CLKFBOUT_MULT_F => 54.125000,
       CLKFBOUT_PHASE => 0.000000,
       CLKFBOUT_USE_FINE_PS => false,
       CLKIN1_PERIOD => 10.000000,
       CLKIN2_PERIOD => 0.000000,
-      CLKOUT0_DIVIDE_F => 46.375000,
+      CLKOUT0_DIVIDE_F => 26.875000,
       CLKOUT0_DUTY_CYCLE => 0.500000,
       CLKOUT0_PHASE => 0.000000,
       CLKOUT0_USE_FINE_PS => false,
-      CLKOUT1_DIVIDE => 19,
+      CLKOUT1_DIVIDE => 11,
       CLKOUT1_DUTY_CYCLE => 0.500000,
       CLKOUT1_PHASE => 0.000000,
       CLKOUT1_USE_FINE_PS => false,
-      CLKOUT2_DIVIDE => 1,
+      CLKOUT2_DIVIDE => 113,
       CLKOUT2_DUTY_CYCLE => 0.500000,
       CLKOUT2_PHASE => 0.000000,
       CLKOUT2_USE_FINE_PS => false,
@@ -118,7 +125,7 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       CLKOUT6_PHASE => 0.000000,
       CLKOUT6_USE_FINE_PS => false,
       COMPENSATION => "ZHOLD",
-      DIVCLK_DIVIDE => 5,
+      DIVCLK_DIVIDE => 8,
       IS_CLKINSEL_INVERTED => '0',
       IS_PSEN_INVERTED => '0',
       IS_PSINCDEC_INVERTED => '0',
@@ -144,7 +151,7 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       CLKOUT0B => NLW_mmcm_adv_inst_CLKOUT0B_UNCONNECTED,
       CLKOUT1 => coreclk_dkong_clk_wiz_0_0,
       CLKOUT1B => NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED,
-      CLKOUT2 => NLW_mmcm_adv_inst_CLKOUT2_UNCONNECTED,
+      CLKOUT2 => soundclk_dkong_clk_wiz_0_0,
       CLKOUT2B => NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED,
       CLKOUT3 => NLW_mmcm_adv_inst_CLKOUT3_UNCONNECTED,
       CLKOUT3B => NLW_mmcm_adv_inst_CLKOUT3B_UNCONNECTED,
@@ -175,6 +182,7 @@ entity dkong_clk_wiz_0_0 is
   port (
     vgaclk : out STD_LOGIC;
     coreclk : out STD_LOGIC;
+    soundclk : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
   attribute NotValidForBitStream : boolean;
@@ -187,6 +195,7 @@ inst: entity work.dkong_clk_wiz_0_0_dkong_clk_wiz_0_0_clk_wiz
      port map (
       clk_in1 => clk_in1,
       coreclk => coreclk,
+      soundclk => soundclk,
       vgaclk => vgaclk
     );
 end STRUCTURE;

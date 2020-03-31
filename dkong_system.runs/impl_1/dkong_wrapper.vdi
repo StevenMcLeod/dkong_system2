@@ -2,67 +2,66 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Fri Mar  6 14:49:15 2020
-# Process ID: 13280
-# Current directory: U:/ENSC452/dkong_system2/dkong_system.runs/impl_1
+# Start of session at: Tue Mar 31 13:32:17 2020
+# Process ID: 4152
+# Current directory: C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.runs/impl_1
 # Command line: vivado.exe -log dkong_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source dkong_wrapper.tcl -notrace
-# Log file: U:/ENSC452/dkong_system2/dkong_system.runs/impl_1/dkong_wrapper.vdi
-# Journal file: U:/ENSC452/dkong_system2/dkong_system.runs/impl_1\vivado.jou
+# Log file: C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.runs/impl_1/dkong_wrapper.vdi
+# Journal file: C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
 source dkong_wrapper.tcl -notrace
-add_files: Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 402.051 ; gain = 14.148
 Command: link_design -top dkong_wrapper -part xc7z020clg484-1
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
 INFO: [Device 21-403] Loading part xc7z020clg484-1
-INFO: [Project 1-454] Reading design checkpoint 'u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_clk_wiz_0_0/dkong_clk_wiz_0_0.dcp' for cell 'dkong_i/clk_wiz_0'
-INFO: [Project 1-454] Reading design checkpoint 'u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_demux2_0_0/dkong_demux2_0_0.dcp' for cell 'dkong_i/demux2_0'
-INFO: [Project 1-454] Reading design checkpoint 'u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_demux2_0_1/dkong_demux2_0_1.dcp' for cell 'dkong_i/demux2_1'
-INFO: [Project 1-454] Reading design checkpoint 'u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_demux2_0_2/dkong_demux2_0_2.dcp' for cell 'dkong_i/demux2_2'
-INFO: [Project 1-454] Reading design checkpoint 'u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_demux2_0_3/dkong_demux2_0_3.dcp' for cell 'dkong_i/demux2_3'
-INFO: [Project 1-454] Reading design checkpoint 'u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_demux2_3_0/dkong_demux2_3_0.dcp' for cell 'dkong_i/demux2_4'
-INFO: [Project 1-454] Reading design checkpoint 'u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_dkong_system_wrapper_0_0/dkong_dkong_system_wrapper_0_0.dcp' for cell 'dkong_i/dkong_system_wrapper_0'
-INFO: [Project 1-454] Reading design checkpoint 'u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_framedoubler_slow_0_0/dkong_framedoubler_slow_0_0.dcp' for cell 'dkong_i/framedoubler_slow_0'
-INFO: [Project 1-454] Reading design checkpoint 'u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_mux4_0_0/dkong_mux4_0_0.dcp' for cell 'dkong_i/mux4_0'
-INFO: [Project 1-454] Reading design checkpoint 'u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_proc_sys_reset_0_0/dkong_proc_sys_reset_0_0.dcp' for cell 'dkong_i/proc_sys_reset_0'
-INFO: [Project 1-454] Reading design checkpoint 'u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_proc_sys_reset_1_0/dkong_proc_sys_reset_1_0.dcp' for cell 'dkong_i/proc_sys_reset_1'
-INFO: [Project 1-454] Reading design checkpoint 'u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_processing_system7_0_0/dkong_processing_system7_0_0.dcp' for cell 'dkong_i/processing_system7_0'
-INFO: [Netlist 29-17] Analyzing 225 Unisim elements for replacement
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_clk_wiz_0_0/dkong_clk_wiz_0_0.dcp' for cell 'dkong_i/clk_wiz_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_demux2_0_0/dkong_demux2_0_0.dcp' for cell 'dkong_i/demux2_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_demux2_0_1/dkong_demux2_0_1.dcp' for cell 'dkong_i/demux2_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_demux2_0_2/dkong_demux2_0_2.dcp' for cell 'dkong_i/demux2_2'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_demux2_0_3/dkong_demux2_0_3.dcp' for cell 'dkong_i/demux2_3'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_demux2_3_0/dkong_demux2_3_0.dcp' for cell 'dkong_i/demux2_4'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_dkong_system_wrapper_0_0/dkong_dkong_system_wrapper_0_0.dcp' for cell 'dkong_i/dkong_system_wrapper_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_framedoubler_slow_0_0/dkong_framedoubler_slow_0_0.dcp' for cell 'dkong_i/framedoubler_slow_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_mux4_0_0/dkong_mux4_0_0.dcp' for cell 'dkong_i/mux4_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_proc_sys_reset_0_0/dkong_proc_sys_reset_0_0.dcp' for cell 'dkong_i/proc_sys_reset_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_proc_sys_reset_1_0/dkong_proc_sys_reset_1_0.dcp' for cell 'dkong_i/proc_sys_reset_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_processing_system7_0_0/dkong_processing_system7_0_0.dcp' for cell 'dkong_i/processing_system7_0'
+INFO: [Netlist 29-17] Analyzing 276 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2019.1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. dkong_i/clk_wiz_0/inst/clkin1_ibufg 
 Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
 WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'dkong_i/clk_wiz_0/clk_in1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
-Parsing XDC File [u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_processing_system7_0_0/dkong_processing_system7_0_0.xdc] for cell 'dkong_i/processing_system7_0/inst'
-Finished Parsing XDC File [u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_processing_system7_0_0/dkong_processing_system7_0_0.xdc] for cell 'dkong_i/processing_system7_0/inst'
-Parsing XDC File [u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_proc_sys_reset_0_0/dkong_proc_sys_reset_0_0_board.xdc] for cell 'dkong_i/proc_sys_reset_0/U0'
-Finished Parsing XDC File [u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_proc_sys_reset_0_0/dkong_proc_sys_reset_0_0_board.xdc] for cell 'dkong_i/proc_sys_reset_0/U0'
-Parsing XDC File [u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_proc_sys_reset_0_0/dkong_proc_sys_reset_0_0.xdc] for cell 'dkong_i/proc_sys_reset_0/U0'
-Finished Parsing XDC File [u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_proc_sys_reset_0_0/dkong_proc_sys_reset_0_0.xdc] for cell 'dkong_i/proc_sys_reset_0/U0'
-Parsing XDC File [u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_clk_wiz_0_0/dkong_clk_wiz_0_0_board.xdc] for cell 'dkong_i/clk_wiz_0/inst'
-Finished Parsing XDC File [u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_clk_wiz_0_0/dkong_clk_wiz_0_0_board.xdc] for cell 'dkong_i/clk_wiz_0/inst'
-Parsing XDC File [u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_clk_wiz_0_0/dkong_clk_wiz_0_0.xdc] for cell 'dkong_i/clk_wiz_0/inst'
-INFO: [Timing 38-35] Done setting XDC timing constraints. [u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_clk_wiz_0_0/dkong_clk_wiz_0_0.xdc:57]
-INFO: [Timing 38-2] Deriving generated clocks [u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_clk_wiz_0_0/dkong_clk_wiz_0_0.xdc:57]
-get_clocks: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1404.637 ; gain = 576.676
-Finished Parsing XDC File [u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_clk_wiz_0_0/dkong_clk_wiz_0_0.xdc] for cell 'dkong_i/clk_wiz_0/inst'
-Parsing XDC File [u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_proc_sys_reset_1_0/dkong_proc_sys_reset_1_0_board.xdc] for cell 'dkong_i/proc_sys_reset_1/U0'
-Finished Parsing XDC File [u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_proc_sys_reset_1_0/dkong_proc_sys_reset_1_0_board.xdc] for cell 'dkong_i/proc_sys_reset_1/U0'
-Parsing XDC File [u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_proc_sys_reset_1_0/dkong_proc_sys_reset_1_0.xdc] for cell 'dkong_i/proc_sys_reset_1/U0'
-Finished Parsing XDC File [u:/ENSC452/dkong_system2/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_proc_sys_reset_1_0/dkong_proc_sys_reset_1_0.xdc] for cell 'dkong_i/proc_sys_reset_1/U0'
-Parsing XDC File [U:/ENSC452/dkong_system2/dkong_system.srcs/constrs_1/imports/vga_tutorial_students/zedboard_master.xdc]
-Finished Parsing XDC File [U:/ENSC452/dkong_system2/dkong_system.srcs/constrs_1/imports/vga_tutorial_students/zedboard_master.xdc]
+Parsing XDC File [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_processing_system7_0_0/dkong_processing_system7_0_0.xdc] for cell 'dkong_i/processing_system7_0/inst'
+Finished Parsing XDC File [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_processing_system7_0_0/dkong_processing_system7_0_0.xdc] for cell 'dkong_i/processing_system7_0/inst'
+Parsing XDC File [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_proc_sys_reset_0_0/dkong_proc_sys_reset_0_0_board.xdc] for cell 'dkong_i/proc_sys_reset_0/U0'
+Finished Parsing XDC File [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_proc_sys_reset_0_0/dkong_proc_sys_reset_0_0_board.xdc] for cell 'dkong_i/proc_sys_reset_0/U0'
+Parsing XDC File [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_proc_sys_reset_0_0/dkong_proc_sys_reset_0_0.xdc] for cell 'dkong_i/proc_sys_reset_0/U0'
+Finished Parsing XDC File [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_proc_sys_reset_0_0/dkong_proc_sys_reset_0_0.xdc] for cell 'dkong_i/proc_sys_reset_0/U0'
+Parsing XDC File [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_clk_wiz_0_0/dkong_clk_wiz_0_0_board.xdc] for cell 'dkong_i/clk_wiz_0/inst'
+Finished Parsing XDC File [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_clk_wiz_0_0/dkong_clk_wiz_0_0_board.xdc] for cell 'dkong_i/clk_wiz_0/inst'
+Parsing XDC File [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_clk_wiz_0_0/dkong_clk_wiz_0_0.xdc] for cell 'dkong_i/clk_wiz_0/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_clk_wiz_0_0/dkong_clk_wiz_0_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_clk_wiz_0_0/dkong_clk_wiz_0_0.xdc:57]
+get_clocks: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1287.160 ; gain = 577.387
+Finished Parsing XDC File [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_clk_wiz_0_0/dkong_clk_wiz_0_0.xdc] for cell 'dkong_i/clk_wiz_0/inst'
+Parsing XDC File [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_proc_sys_reset_1_0/dkong_proc_sys_reset_1_0_board.xdc] for cell 'dkong_i/proc_sys_reset_1/U0'
+Finished Parsing XDC File [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_proc_sys_reset_1_0/dkong_proc_sys_reset_1_0_board.xdc] for cell 'dkong_i/proc_sys_reset_1/U0'
+Parsing XDC File [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_proc_sys_reset_1_0/dkong_proc_sys_reset_1_0.xdc] for cell 'dkong_i/proc_sys_reset_1/U0'
+Finished Parsing XDC File [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_proc_sys_reset_1_0/dkong_proc_sys_reset_1_0.xdc] for cell 'dkong_i/proc_sys_reset_1/U0'
+Parsing XDC File [C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/constrs_1/imports/vga_tutorial_students/zedboard_master.xdc]
+Finished Parsing XDC File [C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/constrs_1/imports/vga_tutorial_students/zedboard_master.xdc]
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1404.637 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1287.160 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 17 instances were transformed.
+  A total of 25 instances were transformed.
   RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 8 instances
-  RAM64X1S => RAM64X1S (RAMS64E): 9 instances
+  RAM64X1S => RAM64X1S (RAMS64E): 17 instances
 
 21 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:22 ; elapsed = 00:01:06 . Memory (MB): peak = 1404.637 ; gain = 1002.586
+link_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:21 . Memory (MB): peak = 1287.160 ; gain = 996.660
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
@@ -73,54 +72,54 @@ INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1404.637 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.599 . Memory (MB): peak = 1287.160 ; gain = 0.000
 
 Starting Cache Timing Information Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Cache Timing Information Task | Checksum: 106ddbebe
+Ending Cache Timing Information Task | Checksum: 1c8c786b2
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.506 . Memory (MB): peak = 1420.754 ; gain = 16.117
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.179 . Memory (MB): peak = 1304.902 ; gain = 17.742
 
 Starting Logic Optimization Task
 
 Phase 1 Retarget
 INFO: [Opt 31-138] Pushed 6 inverter(s) to 11 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 12eaa5367
+Phase 1 Retarget | Checksum: 116466806
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.420 . Memory (MB): peak = 1553.746 ; gain = 0.000
-INFO: [Opt 31-389] Phase Retarget created 5 cells and removed 37 cells
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.228 . Memory (MB): peak = 1441.762 ; gain = 0.000
+INFO: [Opt 31-389] Phase Retarget created 4 cells and removed 33 cells
 
 Phase 2 Constant propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Phase 2 Constant propagation | Checksum: 14e869f1a
+Phase 2 Constant propagation | Checksum: 1cba8e4b0
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.746 . Memory (MB): peak = 1553.746 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.271 . Memory (MB): peak = 1441.762 ; gain = 0.000
 INFO: [Opt 31-389] Phase Constant propagation created 5 cells and removed 10 cells
 
 Phase 3 Sweep
-Phase 3 Sweep | Checksum: 9d292f6c
+Phase 3 Sweep | Checksum: 116634ed6
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1553.746 ; gain = 0.000
-INFO: [Opt 31-389] Phase Sweep created 2 cells and removed 110 cells
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.501 . Memory (MB): peak = 1441.762 ; gain = 0.000
+INFO: [Opt 31-389] Phase Sweep created 2 cells and removed 117 cells
 
 Phase 4 BUFG optimization
-Phase 4 BUFG optimization | Checksum: 9d292f6c
+Phase 4 BUFG optimization | Checksum: 116634ed6
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1553.746 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.570 . Memory (MB): peak = 1441.762 ; gain = 0.000
 INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
 
 Phase 5 Shift Register Optimization
 INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
-Phase 5 Shift Register Optimization | Checksum: 9d292f6c
+Phase 5 Shift Register Optimization | Checksum: 116634ed6
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1553.746 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.628 . Memory (MB): peak = 1441.762 ; gain = 0.000
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 6 Post Processing Netlist
-Phase 6 Post Processing Netlist | Checksum: ed93e46d
+Phase 6 Post Processing Netlist | Checksum: 1b02ddeb6
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1553.746 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.656 . Memory (MB): peak = 1441.762 ; gain = 0.000
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
 Opt_design Change Summary
 =========================
@@ -129,9 +128,9 @@ Opt_design Change Summary
 -------------------------------------------------------------------------------------------------------------------------
 |  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
 -------------------------------------------------------------------------------------------------------------------------
-|  Retarget                     |               5  |              37  |                                              0  |
+|  Retarget                     |               4  |              33  |                                              0  |
 |  Constant propagation         |               5  |              10  |                                              0  |
-|  Sweep                        |               2  |             110  |                                              0  |
+|  Sweep                        |               2  |             117  |                                              0  |
 |  BUFG optimization            |               0  |               0  |                                              0  |
 |  Shift Register Optimization  |               0  |               0  |                                              0  |
 |  Post Processing Netlist      |               0  |               0  |                                              0  |
@@ -141,15 +140,15 @@ Opt_design Change Summary
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1553.746 ; gain = 0.000
-Ending Logic Optimization Task | Checksum: 172827113
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1441.762 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 17aa352aa
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1553.746 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.747 . Memory (MB): peak = 1441.762 ; gain = 0.000
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.395 | TNS=-1.395 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-5.356 | TNS=-704.869 |
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
@@ -158,50 +157,49 @@ INFO: [Pwropt 34-10] Applying ODC optimizations ...
 
 
 Starting PowerOpt Patch Enables Task
-INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 45 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 47 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
 INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
-Number of BRAM Ports augmented: 28 newly gated: 4 Total Ports: 90
-Ending PowerOpt Patch Enables Task | Checksum: 1dd728a9e
+Number of BRAM Ports augmented: 28 newly gated: 4 Total Ports: 94
+Ending PowerOpt Patch Enables Task | Checksum: 14338c62b
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.259 . Memory (MB): peak = 1802.945 ; gain = 0.000
-Ending Power Optimization Task | Checksum: 1dd728a9e
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.183 . Memory (MB): peak = 1699.719 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 14338c62b
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 1802.945 ; gain = 249.199
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1699.719 ; gain = 257.957
 
 Starting Final Cleanup Task
 
 Starting Logic Optimization Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Logic Optimization Task | Checksum: 14796377c
+Ending Logic Optimization Task | Checksum: 10714a5d0
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.449 . Memory (MB): peak = 1802.945 ; gain = 0.000
-Ending Final Cleanup Task | Checksum: 14796377c
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.341 . Memory (MB): peak = 1699.719 ; gain = 0.000
+Ending Final Cleanup Task | Checksum: 10714a5d0
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1802.945 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1699.719 ; gain = 0.000
 
 Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1802.945 ; gain = 0.000
-Ending Netlist Obfuscation Task | Checksum: 14796377c
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1699.719 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 10714a5d0
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1802.945 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1699.719 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
 45 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:17 . Memory (MB): peak = 1802.945 ; gain = 398.309
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1802.945 ; gain = 0.000
+opt_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 1699.719 ; gain = 412.559
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1699.719 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.967 . Memory (MB): peak = 1802.945 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'U:/ENSC452/dkong_system2/dkong_system.runs/impl_1/dkong_wrapper_opt.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 1802.945 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.058 . Memory (MB): peak = 1699.719 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.runs/impl_1/dkong_wrapper_opt.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file dkong_wrapper_drc_opted.rpt -pb dkong_wrapper_drc_opted.pb -rpx dkong_wrapper_drc_opted.rpx
 Command: report_drc -file dkong_wrapper_drc_opted.rpt -pb dkong_wrapper_drc_opted.pb -rpx dkong_wrapper_drc_opted.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 2 threads
-INFO: [Coretcl 2-168] The results of DRC are in file U:/ENSC452/dkong_system2/dkong_system.runs/impl_1/dkong_wrapper_drc_opted.rpt.
+INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.runs/impl_1/dkong_wrapper_drc_opted.rpt.
 report_drc completed successfully
 Command: place_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
@@ -213,26 +211,26 @@ Running DRC as a precondition to command place_design
 INFO: [DRC 23-27] Running DRC with 2 threads
 WARNING: [DRC CHECK-3] Report rule limit reached: REQP-1839 rule limit reached: 20 violations have been found.
 WARNING: [DRC CHECK-3] Report rule limit reached: REQP-1840 rule limit reached: 20 violations have been found.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[10] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/master_out[addr][7]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[10] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/master_out[addr][7]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/BusAck_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[11] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/master_out[addr][8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[8]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[11] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/master_out[addr][8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/BusAck_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/master_out[addr][9]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[9]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/master_out[addr][9]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/BusAck_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[13] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/master_out[addr][10]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[10]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[13] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/master_out[addr][10]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/BusAck_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[14] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/master_out[addr][11]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[11]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[14] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/master_out[addr][11]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/BusAck_reg_rep) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[5] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/master_out[addr][2]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[5] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/master_out[addr][2]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/BusAck_reg_rep) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[6] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/master_out[addr][3]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[6] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/master_out[addr][3]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/BusAck_reg_rep) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[7] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/master_out[addr][4]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[7] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/master_out[addr][4]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/BusAck_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[8] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/master_out[addr][5]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[8] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/master_out[addr][5]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/BusAck_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[9] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/master_out[addr][6]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[9] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/master_out[addr][6]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/BusAck_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[10] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/ADDRBWRADDR[7]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[10] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/ADDRBWRADDR[7]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/BusAck_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[11] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/ADDRBWRADDR[8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[8]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[11] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/ADDRBWRADDR[8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/BusAck_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/ADDRBWRADDR[9]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[9]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/ADDRBWRADDR[9]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/BusAck_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[13] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/ADDRBWRADDR[10]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[10]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[13] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/ADDRBWRADDR[10]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/BusAck_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[14] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/ADDRBWRADDR[11]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[11]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[14] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/ADDRBWRADDR[11]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/BusAck_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[5] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/ADDRBWRADDR[2]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[5] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/ADDRBWRADDR[2]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/BusAck_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[6] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/ADDRBWRADDR[3]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[6] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/ADDRBWRADDR[3]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/BusAck_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[7] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/ADDRBWRADDR[4]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[7] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/ADDRBWRADDR[4]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/BusAck_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[8] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/ADDRBWRADDR[5]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[8] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/ADDRBWRADDR[5]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/BusAck_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[9] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/ADDRBWRADDR[6]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[9] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/ADDRBWRADDR[6]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/BusAck_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/ADDRARDADDR[8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[10]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/ADDRARDADDR[8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[11]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/ADDRARDADDR[8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[12]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
@@ -262,37 +260,37 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1802.945 ; gain = 0.000
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 109ea89ca
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1699.719 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: e85af87c
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 1802.945 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1802.945 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1699.719 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1699.719 ; gain = 0.000
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: d6128b25
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 116675d0f
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1802.945 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1699.719 ; gain = 0.000
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: 2185dc02e
+Phase 1.3 Build Placer Netlist Model | Checksum: 1958b5590
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1802.945 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1699.719 ; gain = 0.000
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: 2185dc02e
+Phase 1.4 Constrain Clocks/Macros | Checksum: 1958b5590
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1802.945 ; gain = 0.000
-Phase 1 Placer Initialization | Checksum: 2185dc02e
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1699.719 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 1958b5590
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1802.945 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1699.719 ; gain = 0.000
 
 Phase 2 Global Placement
 
 Phase 2.1 Floorplanning
-Phase 2.1 Floorplanning | Checksum: 216dd06d1
+Phase 2.1 Floorplanning | Checksum: 18e2b087f
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1802.945 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1699.719 ; gain = 0.000
 
 Phase 2.2 Global Placement Core
 
@@ -308,7 +306,7 @@ INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found i
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
 INFO: [Physopt 32-949] No candidate nets found for HD net replication
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1802.945 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1699.719 ; gain = 0.000
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -326,65 +324,65 @@ Summary of Physical Synthesis Optimizations
 ----------------------------------------------------------------------------------------------------------------------------------------
 
 
-Phase 2.2.1 Physical Synthesis In Placer | Checksum: 135efd2d1
+Phase 2.2.1 Physical Synthesis In Placer | Checksum: 214e204bf
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 1802.945 ; gain = 0.000
-Phase 2.2 Global Placement Core | Checksum: 204b72e22
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 1699.719 ; gain = 0.000
+Phase 2.2 Global Placement Core | Checksum: 11e4859c6
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:08 . Memory (MB): peak = 1802.945 ; gain = 0.000
-Phase 2 Global Placement | Checksum: 204b72e22
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 1699.719 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 11e4859c6
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:08 . Memory (MB): peak = 1802.945 ; gain = 0.000
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 1699.719 ; gain = 0.000
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 1f5ad0778
+Phase 3.1 Commit Multi Column Macros | Checksum: 1f0991c64
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:09 . Memory (MB): peak = 1802.945 ; gain = 0.000
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 1699.719 ; gain = 0.000
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 15dcc79fb
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1c42a4bc1
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 1802.945 ; gain = 0.000
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 1699.719 ; gain = 0.000
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 2330546fc
+Phase 3.3 Area Swap Optimization | Checksum: 17927b3fc
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 1802.945 ; gain = 0.000
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 1699.719 ; gain = 0.000
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: 15571a9f3
+Phase 3.4 Pipeline Register Optimization | Checksum: 1c88cc555
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 1802.945 ; gain = 0.000
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 1699.719 ; gain = 0.000
 
 Phase 3.5 Fast Optimization
-Phase 3.5 Fast Optimization | Checksum: 1c1fd8bfb
+Phase 3.5 Fast Optimization | Checksum: d3d4f616
 
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:10 . Memory (MB): peak = 1802.945 ; gain = 0.000
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 1699.719 ; gain = 0.000
 
 Phase 3.6 Small Shape Detail Placement
-Phase 3.6 Small Shape Detail Placement | Checksum: 1336e7e27
+Phase 3.6 Small Shape Detail Placement | Checksum: 137cb40ad
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:11 . Memory (MB): peak = 1802.945 ; gain = 0.000
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 1699.719 ; gain = 0.000
 
 Phase 3.7 Re-assign LUT pins
-Phase 3.7 Re-assign LUT pins | Checksum: 1a3b8a3e3
+Phase 3.7 Re-assign LUT pins | Checksum: c2b41e09
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:11 . Memory (MB): peak = 1802.945 ; gain = 0.000
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 1699.719 ; gain = 0.000
 
 Phase 3.8 Pipeline Register Optimization
-Phase 3.8 Pipeline Register Optimization | Checksum: 2810c00da
+Phase 3.8 Pipeline Register Optimization | Checksum: 9411326e
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:11 . Memory (MB): peak = 1802.945 ; gain = 0.000
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 1699.719 ; gain = 0.000
 
 Phase 3.9 Fast Optimization
-Phase 3.9 Fast Optimization | Checksum: 2069798d3
+Phase 3.9 Fast Optimization | Checksum: 1dc62043b
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:12 . Memory (MB): peak = 1802.945 ; gain = 0.000
-Phase 3 Detail Placement | Checksum: 2069798d3
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:10 . Memory (MB): peak = 1699.719 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 1dc62043b
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:12 . Memory (MB): peak = 1802.945 ; gain = 0.000
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:11 . Memory (MB): peak = 1699.719 ; gain = 0.000
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -392,60 +390,59 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: 151a47653
+Post Placement Optimization Initialization | Checksum: 171cc2de1
 
 Phase 4.1.1.1 BUFG Insertion
 INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
-Phase 4.1.1.1 BUFG Insertion | Checksum: 151a47653
+Phase 4.1.1.1 BUFG Insertion | Checksum: 171cc2de1
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:13 . Memory (MB): peak = 1802.945 ; gain = 0.000
-INFO: [Place 30-746] Post Placement Timing Summary WNS=-1.275. For the most accurate timing information please run report_timing.
-Phase 4.1.1 Post Placement Optimization | Checksum: 21e2faaa4
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:11 . Memory (MB): peak = 1699.719 ; gain = 0.000
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-3.595. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 22d5fdd9b
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:14 . Memory (MB): peak = 1802.945 ; gain = 0.000
-Phase 4.1 Post Commit Optimization | Checksum: 21e2faaa4
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:26 . Memory (MB): peak = 1699.719 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 22d5fdd9b
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:14 . Memory (MB): peak = 1802.945 ; gain = 0.000
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:26 . Memory (MB): peak = 1699.719 ; gain = 0.000
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 21e2faaa4
+Phase 4.2 Post Placement Cleanup | Checksum: 22d5fdd9b
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:15 . Memory (MB): peak = 1802.945 ; gain = 0.000
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:26 . Memory (MB): peak = 1699.719 ; gain = 0.000
 
 Phase 4.3 Placer Reporting
-Phase 4.3 Placer Reporting | Checksum: 21e2faaa4
+Phase 4.3 Placer Reporting | Checksum: 22d5fdd9b
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:15 . Memory (MB): peak = 1802.945 ; gain = 0.000
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:26 . Memory (MB): peak = 1699.719 ; gain = 0.000
 
 Phase 4.4 Final Placement Cleanup
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1802.945 ; gain = 0.000
-Phase 4.4 Final Placement Cleanup | Checksum: 2331f03ba
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1699.719 ; gain = 0.000
+Phase 4.4 Final Placement Cleanup | Checksum: 23b0bd456
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:15 . Memory (MB): peak = 1802.945 ; gain = 0.000
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 2331f03ba
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:26 . Memory (MB): peak = 1699.719 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 23b0bd456
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:15 . Memory (MB): peak = 1802.945 ; gain = 0.000
-Ending Placer Task | Checksum: 156533963
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:26 . Memory (MB): peak = 1699.719 ; gain = 0.000
+Ending Placer Task | Checksum: 1c8b300aa
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:15 . Memory (MB): peak = 1802.945 ; gain = 0.000
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:26 . Memory (MB): peak = 1699.719 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
 75 Infos, 44 Warnings, 0 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:17 . Memory (MB): peak = 1802.945 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1802.945 ; gain = 0.000
+place_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:27 . Memory (MB): peak = 1699.719 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1699.719 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1802.945 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'U:/ENSC452/dkong_system2/dkong_system.runs/impl_1/dkong_wrapper_placed.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:02 ; elapsed = 00:00:16 . Memory (MB): peak = 1802.945 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.331 . Memory (MB): peak = 1699.719 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.runs/impl_1/dkong_wrapper_placed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_io -file dkong_wrapper_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.127 . Memory (MB): peak = 1802.945 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.055 . Memory (MB): peak = 1699.719 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file dkong_wrapper_utilization_placed.rpt -pb dkong_wrapper_utilization_placed.pb
 INFO: [runtcl-4] Executing : report_control_sets -verbose -file dkong_wrapper_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.093 . Memory (MB): peak = 1802.945 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.065 . Memory (MB): peak = 1699.719 ; gain = 0.000
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
@@ -457,67 +454,71 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 
 Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
-Checksum: PlaceDB: d1e07ae9 ConstDB: 0 ShapeSum: 8472be7a RouteDB: 0
+Checksum: PlaceDB: df31b986 ConstDB: 0 ShapeSum: e9814724 RouteDB: 0
 
 Phase 1 Build RT Design
-Phase 1 Build RT Design | Checksum: a3014a0f
+Phase 1 Build RT Design | Checksum: ba73f935
 
-Time (s): cpu = 00:00:35 ; elapsed = 00:00:31 . Memory (MB): peak = 1802.945 ; gain = 0.000
-Post Restoration Checksum: NetGraph: 41c4835c NumContArr: 613cc6b3 Constraints: 0 Timing: 0
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:19 . Memory (MB): peak = 1699.719 ; gain = 0.000
+Post Restoration Checksum: NetGraph: b96b18e2 NumContArr: 108e053 Constraints: 0 Timing: 0
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: a3014a0f
+Phase 2.1 Create Timer | Checksum: ba73f935
 
-Time (s): cpu = 00:00:35 ; elapsed = 00:00:31 . Memory (MB): peak = 1802.945 ; gain = 0.000
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:19 . Memory (MB): peak = 1699.719 ; gain = 0.000
 
 Phase 2.2 Fix Topology Constraints
-Phase 2.2 Fix Topology Constraints | Checksum: a3014a0f
+Phase 2.2 Fix Topology Constraints | Checksum: ba73f935
 
-Time (s): cpu = 00:00:35 ; elapsed = 00:00:31 . Memory (MB): peak = 1802.945 ; gain = 0.000
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:19 . Memory (MB): peak = 1699.719 ; gain = 0.000
 
 Phase 2.3 Pre Route Cleanup
-Phase 2.3 Pre Route Cleanup | Checksum: a3014a0f
+Phase 2.3 Pre Route Cleanup | Checksum: ba73f935
 
-Time (s): cpu = 00:00:35 ; elapsed = 00:00:31 . Memory (MB): peak = 1802.945 ; gain = 0.000
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:19 . Memory (MB): peak = 1699.719 ; gain = 0.000
  Number of Nodes with overlaps = 0
 
 Phase 2.4 Update Timing
-Phase 2.4 Update Timing | Checksum: 25cd8d23d
+Phase 2.4 Update Timing | Checksum: 13f998549
 
-Time (s): cpu = 00:00:37 ; elapsed = 00:00:32 . Memory (MB): peak = 1802.945 ; gain = 0.000
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.321 | TNS=-1.321 | WHS=-0.387 | THS=-14.695|
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:21 . Memory (MB): peak = 1699.719 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-3.683 | TNS=-608.376| WHS=-0.594 | THS=-38.472|
 
-Phase 2 Router Initialization | Checksum: 200f0522f
+Phase 2 Router Initialization | Checksum: 139ee4ed6
 
-Time (s): cpu = 00:00:38 ; elapsed = 00:00:33 . Memory (MB): peak = 1802.945 ; gain = 0.000
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1699.719 ; gain = 0.000
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 0.0104587 %
-  Global Horizontal Routing Utilization  = 0.0311866 %
+  Global Vertical Routing Utilization    = 0.0184322 %
+  Global Horizontal Routing Utilization  = 0.0321163 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
-  Number of Failed Nets               = 3016
+  Number of Failed Nets               = 3685
     (Failed Nets is the sum of unrouted and partially routed nets)
-  Number of Unrouted Nets             = 3015
+  Number of Unrouted Nets             = 3684
   Number of Partially Routed Nets     = 1
   Number of Node Overlaps             = 0
 
 
 Phase 3 Initial Routing
-Phase 3 Initial Routing | Checksum: 1dad9408f
+Phase 3 Initial Routing | Checksum: 11c31b750
 
-Time (s): cpu = 00:00:39 ; elapsed = 00:00:34 . Memory (MB): peak = 1802.945 ; gain = 0.000
-INFO: [Route 35-580] Design has 1 pins with tight setup and hold constraints.
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:33 . Memory (MB): peak = 1734.285 ; gain = 34.566
+INFO: [Route 35-580] Design has 56 pins with tight setup and hold constraints.
 
 The top 5 pins with tight setup and hold constraints:
 
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
 |       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
-| coreclk_dkong_clk_wiz_0_0 | vgaclk_dkong_clk_wiz_0_0 |                                          dkong_i/framedoubler_slow_0/inst/outclk_frame_in_parity_reg[0]/D|
+| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                                dkong_i/dkong_system_wrapper_0/inst/inst/sou/i8035_int_ram/outreg_reg[2]/D|
+| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                                dkong_i/dkong_system_wrapper_0/inst/inst/sou/i8035_int_ram/outreg_reg[3]/D|
+| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                       dkong_i/dkong_system_wrapper_0/inst/inst/sou/i8035_int_ram/mem_reg_0_63_5_5/SP/ADR2|
+| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                       dkong_i/dkong_system_wrapper_0/inst/inst/sou/i8035_int_ram/mem_reg_0_63_6_6/SP/ADR2|
+| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                                dkong_i/dkong_system_wrapper_0/inst/inst/sou/i8035_int_ram/outreg_reg[7]/D|
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
 
 File with complete list of pins: tight_setup_hold_pins.txt
@@ -526,70 +527,86 @@ File with complete list of pins: tight_setup_hold_pins.txt
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 435
- Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 574
+ Number of Nodes with overlaps = 27
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-2.462 | TNS=-2.462 | WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-4.154 | TNS=-774.156| WHS=N/A    | THS=N/A    |
 
-Phase 4.1 Global Iteration 0 | Checksum: 1dc91ded9
+Phase 4.1 Global Iteration 0 | Checksum: 1739fdc3c
 
-Time (s): cpu = 00:00:42 ; elapsed = 00:00:36 . Memory (MB): peak = 1802.945 ; gain = 0.000
+Time (s): cpu = 00:01:46 ; elapsed = 00:01:36 . Memory (MB): peak = 1770.055 ; gain = 70.336
 
 Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-2.462 | TNS=-2.462 | WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-4.009 | TNS=-758.786| WHS=N/A    | THS=N/A    |
 
-Phase 4.2 Global Iteration 1 | Checksum: 11e1cb16d
+Phase 4.2 Global Iteration 1 | Checksum: 24d0cf54d
 
-Time (s): cpu = 00:00:42 ; elapsed = 00:00:36 . Memory (MB): peak = 1802.945 ; gain = 0.000
-Phase 4 Rip-up And Reroute | Checksum: 11e1cb16d
+Time (s): cpu = 00:02:04 ; elapsed = 00:01:52 . Memory (MB): peak = 1770.055 ; gain = 70.336
 
-Time (s): cpu = 00:00:42 ; elapsed = 00:00:36 . Memory (MB): peak = 1802.945 ; gain = 0.000
+Phase 4.3 Global Iteration 2
+ Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-4.171 | TNS=-777.867| WHS=N/A    | THS=N/A    |
+
+Phase 4.3 Global Iteration 2 | Checksum: 12ad1271d
+
+Time (s): cpu = 00:04:12 ; elapsed = 00:03:43 . Memory (MB): peak = 1815.789 ; gain = 116.070
+Phase 4 Rip-up And Reroute | Checksum: 12ad1271d
+
+Time (s): cpu = 00:04:12 ; elapsed = 00:03:43 . Memory (MB): peak = 1815.789 ; gain = 116.070
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
 
 Phase 5.1.1 Update Timing
-Phase 5.1.1 Update Timing | Checksum: 147e8d2c3
+Phase 5.1.1 Update Timing | Checksum: bb94b2b5
 
-Time (s): cpu = 00:00:43 ; elapsed = 00:00:36 . Memory (MB): peak = 1802.945 ; gain = 0.000
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-2.462 | TNS=-2.462 | WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:04:12 ; elapsed = 00:03:43 . Memory (MB): peak = 1815.789 ; gain = 116.070
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-4.009 | TNS=-758.786| WHS=N/A    | THS=N/A    |
 
-Phase 5.1 Delay CleanUp | Checksum: 147e8d2c3
+ Number of Nodes with overlaps = 0
+Phase 5.1 Delay CleanUp | Checksum: 2300794bc
 
-Time (s): cpu = 00:00:43 ; elapsed = 00:00:36 . Memory (MB): peak = 1802.945 ; gain = 0.000
+Time (s): cpu = 00:04:12 ; elapsed = 00:03:43 . Memory (MB): peak = 1815.789 ; gain = 116.070
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 147e8d2c3
+Phase 5.2 Clock Skew Optimization | Checksum: 2300794bc
 
-Time (s): cpu = 00:00:43 ; elapsed = 00:00:36 . Memory (MB): peak = 1802.945 ; gain = 0.000
-Phase 5 Delay and Skew Optimization | Checksum: 147e8d2c3
+Time (s): cpu = 00:04:12 ; elapsed = 00:03:43 . Memory (MB): peak = 1815.789 ; gain = 116.070
+Phase 5 Delay and Skew Optimization | Checksum: 2300794bc
 
-Time (s): cpu = 00:00:43 ; elapsed = 00:00:36 . Memory (MB): peak = 1802.945 ; gain = 0.000
+Time (s): cpu = 00:04:12 ; elapsed = 00:03:44 . Memory (MB): peak = 1815.789 ; gain = 116.070
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: 1a2194683
+Phase 6.1.1 Update Timing | Checksum: 28d8ac7aa
 
-Time (s): cpu = 00:00:43 ; elapsed = 00:00:37 . Memory (MB): peak = 1802.945 ; gain = 0.000
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-2.462 | TNS=-2.462 | WHS=0.068  | THS=0.000  |
+Time (s): cpu = 00:04:12 ; elapsed = 00:03:44 . Memory (MB): peak = 1815.789 ; gain = 116.070
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-4.009 | TNS=-757.616| WHS=0.081  | THS=0.000  |
 
-Phase 6.1 Hold Fix Iter | Checksum: 143553a06
+Phase 6.1 Hold Fix Iter | Checksum: 1d5eae15b
 
-Time (s): cpu = 00:00:43 ; elapsed = 00:00:37 . Memory (MB): peak = 1802.945 ; gain = 0.000
-Phase 6 Post Hold Fix | Checksum: 143553a06
+Time (s): cpu = 00:04:12 ; elapsed = 00:03:44 . Memory (MB): peak = 1815.789 ; gain = 116.070
+Phase 6 Post Hold Fix | Checksum: 1d5eae15b
 
-Time (s): cpu = 00:00:43 ; elapsed = 00:00:37 . Memory (MB): peak = 1802.945 ; gain = 0.000
+Time (s): cpu = 00:04:12 ; elapsed = 00:03:44 . Memory (MB): peak = 1815.789 ; gain = 116.070
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 0.756498 %
-  Global Horizontal Routing Utilization  = 1.14182 %
+  Global Vertical Routing Utilization    = 0.896604 %
+  Global Horizontal Routing Utilization  = 1.41819 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -600,10 +617,10 @@ Router Utilization Summary
   Number of Node Overlaps             = 0
 
 Congestion Report
-North Dir 1x1 Area, Max Cong = 33.3333%, No Congested Regions.
-South Dir 1x1 Area, Max Cong = 41.4414%, No Congested Regions.
-East Dir 1x1 Area, Max Cong = 47.0588%, No Congested Regions.
-West Dir 1x1 Area, Max Cong = 51.4706%, No Congested Regions.
+North Dir 1x1 Area, Max Cong = 34.2342%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 42.3423%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 48.5294%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 54.4118%, No Congested Regions.
 
 ------------------------------
 Reporting congestion hotspots
@@ -625,59 +642,58 @@ Direction: West
 Congested clusters found at Level 0
 Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
 
-Phase 7 Route finalize | Checksum: 11d7b5cfc
+Phase 7 Route finalize | Checksum: 26437df3a
 
-Time (s): cpu = 00:00:43 ; elapsed = 00:00:37 . Memory (MB): peak = 1802.945 ; gain = 0.000
+Time (s): cpu = 00:04:13 ; elapsed = 00:03:44 . Memory (MB): peak = 1815.789 ; gain = 116.070
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: 11d7b5cfc
+Phase 8 Verifying routed nets | Checksum: 26437df3a
 
-Time (s): cpu = 00:00:43 ; elapsed = 00:00:37 . Memory (MB): peak = 1802.945 ; gain = 0.000
+Time (s): cpu = 00:04:13 ; elapsed = 00:03:44 . Memory (MB): peak = 1815.789 ; gain = 116.070
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 11953d67c
+Phase 9 Depositing Routes | Checksum: 23eb3c2e9
 
-Time (s): cpu = 00:00:44 ; elapsed = 00:00:38 . Memory (MB): peak = 1802.945 ; gain = 0.000
+Time (s): cpu = 00:04:13 ; elapsed = 00:03:44 . Memory (MB): peak = 1815.789 ; gain = 116.070
 
 Phase 10 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=-2.462 | TNS=-2.462 | WHS=0.068  | THS=0.000  |
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-4.009 | TNS=-757.616| WHS=0.081  | THS=0.000  |
 
 WARNING: [Route 35-328] Router estimated timing not met.
 Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
-Phase 10 Post Router Timing | Checksum: 11953d67c
+Phase 10 Post Router Timing | Checksum: 23eb3c2e9
 
-Time (s): cpu = 00:00:44 ; elapsed = 00:00:38 . Memory (MB): peak = 1802.945 ; gain = 0.000
+Time (s): cpu = 00:04:13 ; elapsed = 00:03:44 . Memory (MB): peak = 1815.789 ; gain = 116.070
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:00:44 ; elapsed = 00:00:38 . Memory (MB): peak = 1802.945 ; gain = 0.000
+Time (s): cpu = 00:04:13 ; elapsed = 00:03:44 . Memory (MB): peak = 1815.789 ; gain = 116.070
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-94 Infos, 45 Warnings, 0 Critical Warnings and 0 Errors encountered.
+95 Infos, 45 Warnings, 0 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:00:47 ; elapsed = 00:00:40 . Memory (MB): peak = 1802.945 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1802.945 ; gain = 0.000
+route_design: Time (s): cpu = 00:04:15 ; elapsed = 00:03:45 . Memory (MB): peak = 1815.789 ; gain = 116.070
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1815.789 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1802.945 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'U:/ENSC452/dkong_system2/dkong_system.runs/impl_1/dkong_wrapper_routed.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:02 ; elapsed = 00:00:14 . Memory (MB): peak = 1802.945 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.397 . Memory (MB): peak = 1815.789 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.runs/impl_1/dkong_wrapper_routed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file dkong_wrapper_drc_routed.rpt -pb dkong_wrapper_drc_routed.pb -rpx dkong_wrapper_drc_routed.rpx
 Command: report_drc -file dkong_wrapper_drc_routed.rpt -pb dkong_wrapper_drc_routed.pb -rpx dkong_wrapper_drc_routed.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 2 threads
-INFO: [Coretcl 2-168] The results of DRC are in file U:/ENSC452/dkong_system2/dkong_system.runs/impl_1/dkong_wrapper_drc_routed.rpt.
+INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.runs/impl_1/dkong_wrapper_drc_routed.rpt.
 report_drc completed successfully
 INFO: [runtcl-4] Executing : report_methodology -file dkong_wrapper_methodology_drc_routed.rpt -pb dkong_wrapper_methodology_drc_routed.pb -rpx dkong_wrapper_methodology_drc_routed.rpx
 Command: report_methodology -file dkong_wrapper_methodology_drc_routed.rpt -pb dkong_wrapper_methodology_drc_routed.pb -rpx dkong_wrapper_methodology_drc_routed.rpx
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [DRC 23-133] Running Methodology with 2 threads
-INFO: [Coretcl 2-1520] The results of Report Methodology are in file U:/ENSC452/dkong_system2/dkong_system.runs/impl_1/dkong_wrapper_methodology_drc_routed.rpt.
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.runs/impl_1/dkong_wrapper_methodology_drc_routed.rpt.
 report_methodology completed successfully
 INFO: [runtcl-4] Executing : report_power -file dkong_wrapper_power_routed.rpt -pb dkong_wrapper_power_summary_routed.pb -rpx dkong_wrapper_power_routed.rpx
 Command: report_power -file dkong_wrapper_power_routed.rpt -pb dkong_wrapper_power_summary_routed.pb -rpx dkong_wrapper_power_routed.rpx
@@ -685,7 +701,7 @@ INFO: [Timing 38-35] Done setting XDC timing constraints.
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
-106 Infos, 45 Warnings, 0 Critical Warnings and 0 Errors encountered.
+107 Infos, 45 Warnings, 0 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
 INFO: [runtcl-4] Executing : report_route_status -file dkong_wrapper_route_status.rpt -pb dkong_wrapper_route_status.pb
 INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file dkong_wrapper_timing_summary_routed.rpt -pb dkong_wrapper_timing_summary_routed.pb -rpx dkong_wrapper_timing_summary_routed.rpx -warn_on_violation 
@@ -706,35 +722,35 @@ INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 2 threads
 WARNING: [DRC CHECK-3] Report rule limit reached: REQP-1839 rule limit reached: 20 violations have been found.
 WARNING: [DRC CHECK-3] Report rule limit reached: REQP-1840 rule limit reached: 20 violations have been found.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[10] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/master_out[addr][7]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[10] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/master_out[addr][7]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/BusAck_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[11] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/master_out[addr][8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[8]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[11] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/master_out[addr][8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/BusAck_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/master_out[addr][9]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[9]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/master_out[addr][9]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/BusAck_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[13] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/master_out[addr][10]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[10]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[13] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/master_out[addr][10]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/BusAck_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[14] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/master_out[addr][11]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[11]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[14] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/master_out[addr][11]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/BusAck_reg_rep) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[5] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/master_out[addr][2]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[5] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/master_out[addr][2]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/BusAck_reg_rep) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[6] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/master_out[addr][3]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[6] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/master_out[addr][3]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/BusAck_reg_rep) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[7] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/master_out[addr][4]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[7] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/master_out[addr][4]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/BusAck_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[8] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/master_out[addr][5]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[8] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/master_out[addr][5]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/BusAck_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[9] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/master_out[addr][6]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[9] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/master_out[addr][6]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/BusAck_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[10] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/ADDRBWRADDR[7]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[10] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/ADDRBWRADDR[7]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/BusAck_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[11] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/ADDRBWRADDR[8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[8]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[11] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/ADDRBWRADDR[8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/BusAck_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/ADDRBWRADDR[9]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[9]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/ADDRBWRADDR[9]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/BusAck_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[13] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/ADDRBWRADDR[10]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[10]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[13] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/ADDRBWRADDR[10]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/BusAck_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[14] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/ADDRBWRADDR[11]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[11]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[14] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/ADDRBWRADDR[11]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/BusAck_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[5] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/ADDRBWRADDR[2]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[5] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/ADDRBWRADDR[2]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/BusAck_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[6] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/ADDRBWRADDR[3]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[6] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/ADDRBWRADDR[3]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/BusAck_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[7] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/ADDRBWRADDR[4]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[7] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/ADDRBWRADDR[4]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/BusAck_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[8] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/ADDRBWRADDR[5]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[8] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/ADDRBWRADDR[5]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/BusAck_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[9] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/ADDRBWRADDR[6]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[9] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/ADDRBWRADDR[6]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/BusAck_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/sou/rom_3f/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/sou/rom_3f/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/ADDRARDADDR[11] (net: dkong_i/dkong_system_wrapper_0/inst/inst/sou/rom_3f/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/use_p2.p2_b/p2_o_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/sou/rom_3f/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/sou/rom_3f/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/sou/rom_3f/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[9]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/use_p2.p2_b/p2_o_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/sou/rom_3f/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/sou/rom_3f/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/ADDRARDADDR[13] (net: dkong_i/dkong_system_wrapper_0/inst/inst/sou/rom_3f/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[10]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/use_p2.p2_b/p2_o_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/sou/rom_3h/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/sou/rom_3h/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/ADDRARDADDR[11] (net: dkong_i/dkong_system_wrapper_0/inst/inst/sou/rom_3h/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/use_p2.p2_b/p2_o_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/sou/rom_3h/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/sou/rom_3h/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/sou/rom_3h/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[9]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/use_p2.p2_b/p2_o_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/sou/rom_3h/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/sou/rom_3h/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/ADDRARDADDR[13] (net: dkong_i/dkong_system_wrapper_0/inst/inst/sou/rom_3h/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[10]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/use_p2.p2_b/p2_o_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/ADDRARDADDR[8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[10]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/ADDRARDADDR[8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[11]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/ADDRARDADDR[8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[12]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/ADDRARDADDR[8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[13]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/ADDRARDADDR[8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[14]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/ADDRARDADDR[8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[15]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/ADDRARDADDR[8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[8]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/ADDRARDADDR[8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/BusAck_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/ADDRARDADDR[8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/BusAck_reg_rep) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg/ADDRARDADDR[13] (net: dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/ADDRARDADDR[9]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[10]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg/ADDRARDADDR[13] (net: dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/ADDRARDADDR[9]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[11]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg/ADDRARDADDR[13] (net: dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/ADDRARDADDR[9]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[12]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
@@ -757,10 +773,10 @@ Creating bitmap...
 Creating bitstream...
 Writing bitstream ./dkong_wrapper.bit...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
-INFO: [Project 1-118] WebTalk data collection is enabled (User setting is ON. Install Setting is ON.).
-INFO: [Common 17-186] 'U:/ENSC452/dkong_system2/dkong_system.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Fri Mar  6 14:54:30 2020. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.1/doc/webtalk_introduction.html.
+INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
+INFO: [Common 17-186] 'C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Tue Mar 31 13:37:32 2020. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.1/doc/webtalk_introduction.html.
 INFO: [Common 17-83] Releasing license: Implementation
-126 Infos, 87 Warnings, 1 Critical Warnings and 0 Errors encountered.
+127 Infos, 87 Warnings, 1 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 2231.727 ; gain = 428.781
-INFO: [Common 17-206] Exiting Vivado at Fri Mar  6 14:54:34 2020...
+write_bitstream: Time (s): cpu = 00:00:18 ; elapsed = 00:00:15 . Memory (MB): peak = 2140.703 ; gain = 324.914
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 31 13:37:32 2020...

@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='U:/ENSC452/dkong_system2/dkong_system.runs/synth_1'
+HD_PWD='C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

@@ -1,0 +1,6 @@
+verilog xil_defaultlib  \
+"../../../ip/sou_3f_rom/sim/sou_3f_rom.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort
