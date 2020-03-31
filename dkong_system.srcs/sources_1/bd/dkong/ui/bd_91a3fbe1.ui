@@ -2,15 +2,15 @@
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS
 #  -string -flagsOSRD
-preplace port FIXED_IO -pg 1 -lvl 5 -x 1530 -y -380 -defaultsOSRD
-preplace port VGA_HS -pg 1 -lvl 5 -x 1530 -y -120 -defaultsOSRD
-preplace port VGA_VS -pg 1 -lvl 5 -x 1530 -y -100 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 6 -x 1700 -y -380 -defaultsOSRD
+preplace port VGA_HS -pg 1 -lvl 6 -x 1700 -y -120 -defaultsOSRD
+preplace port VGA_VS -pg 1 -lvl 6 -x 1700 -y -100 -defaultsOSRD
 preplace port INMODE -pg 1 -lvl 0 -x -130 -y -620 -defaultsOSRD
 preplace portBus DIPSW -pg 1 -lvl 0 -x -130 -y -650 -defaultsOSRD
-preplace portBus LD -pg 1 -lvl 5 -x 1530 -y -480 -defaultsOSRD
-preplace portBus VGA_R -pg 1 -lvl 5 -x 1530 -y -180 -defaultsOSRD
-preplace portBus VGA_G -pg 1 -lvl 5 -x 1530 -y -160 -defaultsOSRD
-preplace portBus VGA_B -pg 1 -lvl 5 -x 1530 -y -140 -defaultsOSRD
+preplace portBus LD -pg 1 -lvl 6 -x 1700 -y -480 -defaultsOSRD
+preplace portBus VGA_R -pg 1 -lvl 6 -x 1700 -y -180 -defaultsOSRD
+preplace portBus VGA_G -pg 1 -lvl 6 -x 1700 -y -160 -defaultsOSRD
+preplace portBus VGA_B -pg 1 -lvl 6 -x 1700 -y -140 -defaultsOSRD
 preplace portBus BTNR -pg 1 -lvl 0 -x -130 -y -600 -defaultsOSRD
 preplace portBus BTNL -pg 1 -lvl 0 -x -130 -y -480 -defaultsOSRD
 preplace portBus BTNU -pg 1 -lvl 0 -x -130 -y -360 -defaultsOSRD
@@ -18,60 +18,60 @@ preplace portBus BTND -pg 1 -lvl 0 -x -130 -y -240 -defaultsOSRD
 preplace portBus BTNC -pg 1 -lvl 0 -x -130 -y -120 -defaultsOSRD
 preplace inst processing_system7_0 -pg 1 -lvl 2 -x 410 -y -430 -defaultsOSRD
 preplace inst proc_sys_reset_0 -pg 1 -lvl 2 -x 410 -y -230 -defaultsOSRD
-preplace inst clk_wiz_0 -pg 1 -lvl 3 -x 990 -y -90 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 4 -x 1120 -y -90 -defaultsOSRD
 preplace inst proc_sys_reset_1 -pg 1 -lvl 2 -x 410 -y -50 -defaultsOSRD
-preplace inst mux4_0 -pg 1 -lvl 4 -x 1390 -y -480 -defaultsOSRD
-preplace inst framedoubler_slow_0 -pg 1 -lvl 4 -x 1390 -y -140 -defaultsOSRD
+preplace inst mux4_0 -pg 1 -lvl 5 -x 1520 -y -480 -defaultsOSRD
+preplace inst framedoubler_slow_0 -pg 1 -lvl 5 -x 1520 -y -120 -defaultsOSRD
 preplace inst demux2_0 -pg 1 -lvl 1 -x 30 -y -610 -defaultsOSRD
 preplace inst demux2_1 -pg 1 -lvl 1 -x 30 -y -490 -defaultsOSRD
 preplace inst demux2_2 -pg 1 -lvl 1 -x 30 -y -370 -defaultsOSRD
 preplace inst demux2_3 -pg 1 -lvl 1 -x 30 -y -250 -defaultsOSRD
 preplace inst demux2_4 -pg 1 -lvl 1 -x 30 -y -130 -defaultsOSRD
-preplace inst dkong_system_wrapper_0 -pg 1 -lvl 3 -x 990 -y -380 -defaultsOSRD
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 2 220 80 580
-preplace netloc sel_0_1 1 0 4 -110J -680 N -680 NJ -680 1260J
-preplace netloc mux4_0_outy 1 4 1 N -480
-preplace netloc proc_sys_reset_0_peripheral_aresetn 1 2 2 680 0 1260
-preplace netloc dkong_system_wrapper_0_debug_alo 1 3 1 1180 -500n
-preplace netloc dkong_system_wrapper_0_debug_ahi 1 3 1 1200 -480n
-preplace netloc dkong_system_wrapper_0_debug_cpu_sig 1 3 1 1230 -440n
-preplace netloc dkong_system_wrapper_0_ser_out 1 2 2 610 -610 1140
-preplace netloc processing_system7_0_UART0_TX 1 2 1 640 -490n
-preplace netloc clk_wiz_0_vgaclk 1 1 3 230 90 N 90 1160
-preplace netloc processing_system7_0_FCLK_CLK0 1 2 1 590 -400n
-preplace netloc clk_wiz_0_coreclk 1 1 3 210 50 630 10 1250
-preplace netloc proc_sys_reset_1_peripheral_aresetn 1 2 2 NJ -10 1270
-preplace netloc dkong_system_wrapper_0_b_sig 1 3 1 1170 -440n
-preplace netloc dkong_system_wrapper_0_g_sig 1 3 1 1210 -460n
-preplace netloc dkong_system_wrapper_0_r_sig 1 3 1 1190 -480n
-preplace netloc dkong_system_wrapper_0_video_valid 1 3 1 1140 -500n
-preplace netloc dkong_system_wrapper_0_pixelclk 1 3 1 1240 -520n
-preplace netloc framedoubler_slow_0_out_r 1 4 1 N -180
-preplace netloc framedoubler_slow_0_out_g 1 4 1 N -160
-preplace netloc framedoubler_slow_0_out_b 1 4 1 N -140
-preplace netloc framedoubler_slow_0_hsync 1 4 1 N -120
-preplace netloc framedoubler_slow_0_vsync 1 4 1 N -100
+preplace inst dkong_system_wrapper_0 -pg 1 -lvl 4 -x 1120 -y -380 -defaultsOSRD
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 2 220 60 580
+preplace netloc sel_0_1 1 0 5 -110J -680 N -680 NJ -680 N -680 1380J
+preplace netloc mux4_0_outy 1 5 1 N -480
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 2 3 590 -20 810 0 1380
+preplace netloc dkong_system_wrapper_0_debug_alo 1 4 1 1300 -500n
+preplace netloc dkong_system_wrapper_0_debug_ahi 1 4 1 1320 -480n
+preplace netloc dkong_system_wrapper_0_debug_cpu_sig 1 4 1 1350 -440n
+preplace netloc dkong_system_wrapper_0_ser_out 1 2 3 590 -630 N -630 1360
+preplace netloc processing_system7_0_UART0_TX 1 2 2 610 -490 N
+preplace netloc clk_wiz_0_vgaclk 1 1 4 230 80 N 80 N 80 1280
+preplace netloc processing_system7_0_FCLK_CLK0 1 2 2 610 -90 N
+preplace netloc clk_wiz_0_coreclk 1 1 4 210 90 N 90 790 10 1370
+preplace netloc proc_sys_reset_1_peripheral_aresetn 1 2 3 NJ -10 N -10 1390
+preplace netloc dkong_system_wrapper_0_b_sig 1 4 1 1290 -440n
+preplace netloc dkong_system_wrapper_0_g_sig 1 4 1 1330 -460n
+preplace netloc dkong_system_wrapper_0_r_sig 1 4 1 1310 -480n
+preplace netloc dkong_system_wrapper_0_video_valid 1 4 1 1280 -500n
+preplace netloc dkong_system_wrapper_0_pixelclk 1 4 1 1360 -520n
+preplace netloc framedoubler_slow_0_out_r 1 5 1 1640 -180n
+preplace netloc framedoubler_slow_0_out_g 1 5 1 1650 -160n
+preplace netloc framedoubler_slow_0_out_b 1 5 1 1660 -140n
+preplace netloc framedoubler_slow_0_hsync 1 5 1 1670 -120n
+preplace netloc framedoubler_slow_0_vsync 1 5 1 1680 -100n
 preplace netloc sel_0_2 1 0 1 -110 -620n
 preplace netloc in_0_1 1 0 1 N -600
 preplace netloc in_1_1 1 0 1 N -480
 preplace netloc in_2_1 1 0 1 N -360
 preplace netloc in_3_1 1 0 1 N -240
 preplace netloc in_4_1 1 0 1 N -120
-preplace netloc demux2_0_outa 1 1 2 N -620 690J
-preplace netloc demux2_1_outa 1 1 2 150J -560 670
-preplace netloc demux2_2_outa 1 1 2 190 -540 620J
-preplace netloc demux2_3_outa 1 1 2 170 -570 650J
-preplace netloc demux2_4_outa 1 1 2 160 -580 660J
-preplace netloc demux2_0_outb 1 1 1 200 -600n
-preplace netloc demux2_2_outb 1 1 1 190 -360n
-preplace netloc demux2_1_outb 1 1 2 180J -550 600
-preplace netloc demux2_4_outb 1 1 2 140 70 690J
-preplace netloc demux2_3_outb 1 1 2 150 60 700J
-preplace netloc dkong_system_wrapper_0_dac_out 1 3 1 1220 -460n
-preplace netloc clk_wiz_0_soundclk 1 2 2 700 -620 1150
-preplace netloc processing_system7_0_FIXED_IO 1 2 3 590 -630 N -630 1510
-levelinfo -pg 1 -130 30 410 990 1390 1530
-pagesize -pg 1 -db -bbox -sgen -260 -840 1660 270
+preplace netloc demux2_0_outa 1 1 3 N -620 NJ -620 820
+preplace netloc demux2_1_outa 1 1 3 160J -560 N -560 800
+preplace netloc demux2_2_outa 1 1 3 180 -550 NJ -550 760
+preplace netloc demux2_3_outa 1 1 3 200 -540 NJ -540 750
+preplace netloc demux2_4_outa 1 1 3 170 -570 NJ -570 770
+preplace netloc demux2_0_outb 1 1 1 190 -600n
+preplace netloc demux2_2_outb 1 1 1 160 -360n
+preplace netloc demux2_1_outb 1 1 3 150J -580 N -580 780
+preplace netloc demux2_4_outb 1 1 3 140 50 600J -40 800
+preplace netloc demux2_3_outb 1 1 3 150 70 610J -30 830
+preplace netloc dkong_system_wrapper_0_dac_out 1 4 1 1340 -460n
+preplace netloc clk_wiz_0_soundclk 1 3 2 830 -620 1270
+preplace netloc processing_system7_0_FIXED_IO 1 2 4 580 -610 N -610 N -610 1640
+levelinfo -pg 1 -130 30 410 730 1120 1520 1700
+pagesize -pg 1 -db -bbox -sgen -260 -840 1830 270
 "
 }
 0
