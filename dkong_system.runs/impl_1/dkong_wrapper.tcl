@@ -60,12 +60,14 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {HDL-1065} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param project.hsv.suppressChildGraphs 0
   set_param chipscope.maxJobs 4
   set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7z020clg484-1
@@ -76,12 +78,12 @@ set rc [catch {
   set_property parent.project_path C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.xpr [current_project]
   set_property ip_output_repo C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+  set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
   add_files -quiet C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.runs/synth_1/dkong_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  read_ip -quiet c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/sou_3f_rom/sou_3f_rom.xci
-  read_ip -quiet c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/sou_3h_rom/sou_3h_rom.xci
+  read_ip -quiet C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/sou_3f_rom/sou_3f_rom.xci
+  read_ip -quiet C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/sou_3h_rom/sou_3h_rom.xci
   read_ip -quiet C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/palette_2f_prom/palette_2f_prom.xci
   read_ip -quiet C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/palette_2e_prom/palette_2e_prom.xci
   read_ip -quiet C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/obj_7f_rom/obj_7f_rom.xci
@@ -91,7 +93,7 @@ set rc [catch {
   read_ip -quiet C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/tile_3n_rom/tile_3n_rom.xci
   read_ip -quiet C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/tile_3p_rom/tile_3p_rom.xci
   read_ip -quiet C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/tile_2n_prom/tile_2n_prom.xci
-  read_ip -quiet C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/cpu_program_rom/cpu_program_rom.xci
+  read_ip -quiet c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/cpu_program_rom_dp/cpu_program_rom_dp.xci
   read_ip -quiet C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/framedoubler_mem/framedoubler_mem.xci
   add_files C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/dkong.bd
   set_param project.isImplRun false
@@ -178,7 +180,7 @@ start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
-  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+  set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
   catch { write_mem_info -force dkong_wrapper.mmi }
   write_bitstream -force dkong_wrapper.bit 
   catch { write_sysdef -hwdef dkong_wrapper.hwdef -bitfile dkong_wrapper.bit -meminfo dkong_wrapper.mmi -file dkong_wrapper.sysdef }

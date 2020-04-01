@@ -17,8 +17,10 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param project.hsv.suppressChildGraphs 0
 set_param chipscope.maxJobs 4
 set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {HDL-1065} -limit 10000
 create_project -in_memory -part xc7z020clg484-1
 
@@ -28,7 +30,7 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.cache/wt [current_project]
 set_property parent.project_path C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.xpr [current_project]
-set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part em.avnet.com:zed:part0:1.4 [current_project]
@@ -45,8 +47,8 @@ add_files C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/coe/l_4m_b.bin
 add_files C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/coe/l_4n_b.bin.coe
 add_files C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/coe/l_4r_b.bin.coe
 add_files C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/coe/l_4s_b.bin.coe
-add_files c:/Users/Steven/Documents/HDL/vivado/z80_system_sources/coe/s_3i_b.bin.coe
-add_files c:/Users/Steven/Documents/HDL/vivado/z80_system_sources/coe/s_3j_b.bin.coe
+add_files C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/coe/s_3i_b.bin.coe
+add_files C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/coe/s_3j_b.bin.coe
 read_verilog -library xil_defaultlib C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/hdl/dkong_wrapper.v
 add_files C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/dkong.bd
 set_property used_in_implementation false [get_files -all c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_processing_system7_0_0/dkong_processing_system7_0_0.xdc]
@@ -59,6 +61,20 @@ set_property used_in_implementation false [get_files -all c:/Users/Steven/Docume
 set_property used_in_implementation false [get_files -all c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_proc_sys_reset_1_0/dkong_proc_sys_reset_1_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_proc_sys_reset_1_0/dkong_proc_sys_reset_1_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_proc_sys_reset_1_0/dkong_proc_sys_reset_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_axi_bram_ctrl_0_2/dkong_axi_bram_ctrl_0_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_0_0/ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_0_0/bd_0/ip/ip_1/bd_09d9_psr_aclk_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_0_0/bd_0/ip/ip_1/bd_09d9_psr_aclk_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_0_0/bd_0/ip/ip_5/bd_09d9_s00a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_0_0/bd_0/ip/ip_6/bd_09d9_sarn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_0_0/bd_0/ip/ip_7/bd_09d9_srn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_0_0/bd_0/ip/ip_8/bd_09d9_sawn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_0_0/bd_0/ip/ip_9/bd_09d9_swn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_0_0/bd_0/ip/ip_10/bd_09d9_sbn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_0_0/bd_0/ip/ip_11/bd_09d9_m00s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_proc_sys_reset_1_1/dkong_proc_sys_reset_1_1_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_proc_sys_reset_1_1/dkong_proc_sys_reset_1_1.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_proc_sys_reset_1_1/dkong_proc_sys_reset_1_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/dkong_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being

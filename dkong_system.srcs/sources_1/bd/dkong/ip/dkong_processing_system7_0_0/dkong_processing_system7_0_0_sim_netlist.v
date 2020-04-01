@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Tue Mar 31 12:46:35 2020
+// Date        : Tue Mar 31 23:18:42 2020
 // Host        : Steven-Win10-2 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top dkong_processing_system7_0_0 -prefix
-//               dkong_processing_system7_0_0_ dkong_processing_system7_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim
+//               C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_processing_system7_0_0/dkong_processing_system7_0_0_sim_netlist.v
 // Design      : dkong_processing_system7_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -17,24 +17,192 @@
 module dkong_processing_system7_0_0
    (UART0_TX,
     UART0_RX,
+    M_AXI_GP0_ARVALID,
+    M_AXI_GP0_AWVALID,
+    M_AXI_GP0_BREADY,
+    M_AXI_GP0_RREADY,
+    M_AXI_GP0_WLAST,
+    M_AXI_GP0_WVALID,
+    M_AXI_GP0_ARID,
+    M_AXI_GP0_AWID,
+    M_AXI_GP0_WID,
+    M_AXI_GP0_ARBURST,
+    M_AXI_GP0_ARLOCK,
+    M_AXI_GP0_ARSIZE,
+    M_AXI_GP0_AWBURST,
+    M_AXI_GP0_AWLOCK,
+    M_AXI_GP0_AWSIZE,
+    M_AXI_GP0_ARPROT,
+    M_AXI_GP0_AWPROT,
+    M_AXI_GP0_ARADDR,
+    M_AXI_GP0_AWADDR,
+    M_AXI_GP0_WDATA,
+    M_AXI_GP0_ARCACHE,
+    M_AXI_GP0_ARLEN,
+    M_AXI_GP0_ARQOS,
+    M_AXI_GP0_AWCACHE,
+    M_AXI_GP0_AWLEN,
+    M_AXI_GP0_AWQOS,
+    M_AXI_GP0_WSTRB,
+    M_AXI_GP0_ACLK,
+    M_AXI_GP0_ARREADY,
+    M_AXI_GP0_AWREADY,
+    M_AXI_GP0_BVALID,
+    M_AXI_GP0_RLAST,
+    M_AXI_GP0_RVALID,
+    M_AXI_GP0_WREADY,
+    M_AXI_GP0_BID,
+    M_AXI_GP0_RID,
+    M_AXI_GP0_BRESP,
+    M_AXI_GP0_RRESP,
+    M_AXI_GP0_RDATA,
     FCLK_CLK0,
     FCLK_RESET0_N,
     MIO,
+    DDR_CAS_n,
+    DDR_CKE,
+    DDR_Clk_n,
+    DDR_Clk,
+    DDR_CS_n,
+    DDR_DRSTB,
+    DDR_ODT,
+    DDR_RAS_n,
+    DDR_WEB,
+    DDR_BankAddr,
+    DDR_Addr,
+    DDR_VRN,
+    DDR_VRP,
+    DDR_DM,
+    DDR_DQ,
+    DDR_DQS_n,
+    DDR_DQS,
     PS_SRSTB,
     PS_CLK,
     PS_PORB);
   (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 UART_0 TxD" *) output UART0_TX;
   (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 UART_0 RxD" *) input UART0_RX;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 FCLK_CLK0 CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME FCLK_CLK0, FREQ_HZ 1e+08, PHASE 0.000, CLK_DOMAIN dkong_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *) output FCLK_CLK0;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 ARVALID" *) output M_AXI_GP0_ARVALID;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 AWVALID" *) output M_AXI_GP0_AWVALID;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 BREADY" *) output M_AXI_GP0_BREADY;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 RREADY" *) output M_AXI_GP0_RREADY;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 WLAST" *) output M_AXI_GP0_WLAST;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 WVALID" *) output M_AXI_GP0_WVALID;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 ARID" *) output [11:0]M_AXI_GP0_ARID;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 AWID" *) output [11:0]M_AXI_GP0_AWID;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 WID" *) output [11:0]M_AXI_GP0_WID;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 ARBURST" *) output [1:0]M_AXI_GP0_ARBURST;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 ARLOCK" *) output [1:0]M_AXI_GP0_ARLOCK;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 ARSIZE" *) output [2:0]M_AXI_GP0_ARSIZE;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 AWBURST" *) output [1:0]M_AXI_GP0_AWBURST;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 AWLOCK" *) output [1:0]M_AXI_GP0_AWLOCK;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 AWSIZE" *) output [2:0]M_AXI_GP0_AWSIZE;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 ARPROT" *) output [2:0]M_AXI_GP0_ARPROT;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 AWPROT" *) output [2:0]M_AXI_GP0_AWPROT;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 ARADDR" *) output [31:0]M_AXI_GP0_ARADDR;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 AWADDR" *) output [31:0]M_AXI_GP0_AWADDR;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 WDATA" *) output [31:0]M_AXI_GP0_WDATA;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 ARCACHE" *) output [3:0]M_AXI_GP0_ARCACHE;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 ARLEN" *) output [3:0]M_AXI_GP0_ARLEN;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 ARQOS" *) output [3:0]M_AXI_GP0_ARQOS;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 AWCACHE" *) output [3:0]M_AXI_GP0_AWCACHE;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 AWLEN" *) output [3:0]M_AXI_GP0_AWLEN;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 AWQOS" *) output [3:0]M_AXI_GP0_AWQOS;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 WSTRB" *) output [3:0]M_AXI_GP0_WSTRB;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 M_AXI_GP0_ACLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXI_GP0_ACLK, ASSOCIATED_BUSIF M_AXI_GP0, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN dkong_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *) input M_AXI_GP0_ACLK;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 ARREADY" *) input M_AXI_GP0_ARREADY;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 AWREADY" *) input M_AXI_GP0_AWREADY;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 BVALID" *) input M_AXI_GP0_BVALID;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 RLAST" *) input M_AXI_GP0_RLAST;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 RVALID" *) input M_AXI_GP0_RVALID;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 WREADY" *) input M_AXI_GP0_WREADY;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 BID" *) input [11:0]M_AXI_GP0_BID;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 RID" *) input [11:0]M_AXI_GP0_RID;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 BRESP" *) input [1:0]M_AXI_GP0_BRESP;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 RRESP" *) input [1:0]M_AXI_GP0_RRESP;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 RDATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXI_GP0, SUPPORTS_NARROW_BURST 0, NUM_WRITE_OUTSTANDING 8, NUM_READ_OUTSTANDING 8, DATA_WIDTH 32, PROTOCOL AXI3, FREQ_HZ 100000000, ID_WIDTH 12, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, MAX_BURST_LENGTH 16, PHASE 0.000, CLK_DOMAIN dkong_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 4, NUM_WRITE_THREADS 4, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input [31:0]M_AXI_GP0_RDATA;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 FCLK_CLK0 CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME FCLK_CLK0, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN dkong_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *) output FCLK_CLK0;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 FCLK_RESET0_N RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME FCLK_RESET0_N, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) output FCLK_RESET0_N;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO MIO" *) inout [53:0]MIO;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR CAS_N" *) inout DDR_CAS_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR CKE" *) inout DDR_CKE;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR CK_N" *) inout DDR_Clk_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR CK_P" *) inout DDR_Clk;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR CS_N" *) inout DDR_CS_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR RESET_N" *) inout DDR_DRSTB;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR ODT" *) inout DDR_ODT;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR RAS_N" *) inout DDR_RAS_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR WE_N" *) inout DDR_WEB;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR BA" *) inout [2:0]DDR_BankAddr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR ADDR" *) inout [14:0]DDR_Addr;
+  (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO DDR_VRN" *) inout DDR_VRN;
+  (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO DDR_VRP" *) inout DDR_VRP;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR DM" *) inout [3:0]DDR_DM;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR DQ" *) inout [31:0]DDR_DQ;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR DQS_N" *) inout [3:0]DDR_DQS_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR DQS_P" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DDR, CAN_DEBUG false, TIMEPERIOD_PS 1250, MEMORY_TYPE COMPONENTS, DATA_WIDTH 8, CS_ENABLED true, DATA_MASK_ENABLED true, SLOT Single, MEM_ADDR_MAP ROW_COLUMN_BANK, BURST_LENGTH 8, AXI_ARBITRATION_SCHEME TDM, CAS_LATENCY 11, CAS_WRITE_LATENCY 11" *) inout [3:0]DDR_DQS;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB" *) inout PS_SRSTB;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_CLK" *) inout PS_CLK;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME FIXED_IO, CAN_DEBUG false" *) inout PS_PORB;
 
+  wire [14:0]DDR_Addr;
+  wire [2:0]DDR_BankAddr;
+  wire DDR_CAS_n;
+  wire DDR_CKE;
+  wire DDR_CS_n;
+  wire DDR_Clk;
+  wire DDR_Clk_n;
+  wire [3:0]DDR_DM;
+  wire [31:0]DDR_DQ;
+  wire [3:0]DDR_DQS;
+  wire [3:0]DDR_DQS_n;
+  wire DDR_DRSTB;
+  wire DDR_ODT;
+  wire DDR_RAS_n;
+  wire DDR_VRN;
+  wire DDR_VRP;
+  wire DDR_WEB;
   wire FCLK_CLK0;
   wire FCLK_RESET0_N;
   wire [53:0]MIO;
+  wire M_AXI_GP0_ACLK;
+  wire [31:0]M_AXI_GP0_ARADDR;
+  wire [1:0]M_AXI_GP0_ARBURST;
+  wire [3:0]M_AXI_GP0_ARCACHE;
+  wire [11:0]M_AXI_GP0_ARID;
+  wire [3:0]M_AXI_GP0_ARLEN;
+  wire [1:0]M_AXI_GP0_ARLOCK;
+  wire [2:0]M_AXI_GP0_ARPROT;
+  wire [3:0]M_AXI_GP0_ARQOS;
+  wire M_AXI_GP0_ARREADY;
+  wire [2:0]M_AXI_GP0_ARSIZE;
+  wire M_AXI_GP0_ARVALID;
+  wire [31:0]M_AXI_GP0_AWADDR;
+  wire [1:0]M_AXI_GP0_AWBURST;
+  wire [3:0]M_AXI_GP0_AWCACHE;
+  wire [11:0]M_AXI_GP0_AWID;
+  wire [3:0]M_AXI_GP0_AWLEN;
+  wire [1:0]M_AXI_GP0_AWLOCK;
+  wire [2:0]M_AXI_GP0_AWPROT;
+  wire [3:0]M_AXI_GP0_AWQOS;
+  wire M_AXI_GP0_AWREADY;
+  wire [2:0]M_AXI_GP0_AWSIZE;
+  wire M_AXI_GP0_AWVALID;
+  wire [11:0]M_AXI_GP0_BID;
+  wire M_AXI_GP0_BREADY;
+  wire [1:0]M_AXI_GP0_BRESP;
+  wire M_AXI_GP0_BVALID;
+  wire [31:0]M_AXI_GP0_RDATA;
+  wire [11:0]M_AXI_GP0_RID;
+  wire M_AXI_GP0_RLAST;
+  wire M_AXI_GP0_RREADY;
+  wire [1:0]M_AXI_GP0_RRESP;
+  wire M_AXI_GP0_RVALID;
+  wire [31:0]M_AXI_GP0_WDATA;
+  wire [11:0]M_AXI_GP0_WID;
+  wire M_AXI_GP0_WLAST;
+  wire M_AXI_GP0_WREADY;
+  wire [3:0]M_AXI_GP0_WSTRB;
+  wire M_AXI_GP0_WVALID;
   wire PS_CLK;
   wire PS_PORB;
   wire PS_SRSTB;
@@ -42,17 +210,6 @@ module dkong_processing_system7_0_0
   wire UART0_TX;
   wire NLW_inst_CAN0_PHY_TX_UNCONNECTED;
   wire NLW_inst_CAN1_PHY_TX_UNCONNECTED;
-  wire NLW_inst_DDR_CAS_n_UNCONNECTED;
-  wire NLW_inst_DDR_CKE_UNCONNECTED;
-  wire NLW_inst_DDR_CS_n_UNCONNECTED;
-  wire NLW_inst_DDR_Clk_UNCONNECTED;
-  wire NLW_inst_DDR_Clk_n_UNCONNECTED;
-  wire NLW_inst_DDR_DRSTB_UNCONNECTED;
-  wire NLW_inst_DDR_ODT_UNCONNECTED;
-  wire NLW_inst_DDR_RAS_n_UNCONNECTED;
-  wire NLW_inst_DDR_VRN_UNCONNECTED;
-  wire NLW_inst_DDR_VRP_UNCONNECTED;
-  wire NLW_inst_DDR_WEB_UNCONNECTED;
   wire NLW_inst_DMA0_DAVALID_UNCONNECTED;
   wire NLW_inst_DMA0_DRREADY_UNCONNECTED;
   wire NLW_inst_DMA0_RSTN_UNCONNECTED;
@@ -148,12 +305,6 @@ module dkong_processing_system7_0_0
   wire NLW_inst_IRQ_P2F_USB0_UNCONNECTED;
   wire NLW_inst_IRQ_P2F_USB1_UNCONNECTED;
   wire NLW_inst_M_AXI_GP0_ARESETN_UNCONNECTED;
-  wire NLW_inst_M_AXI_GP0_ARVALID_UNCONNECTED;
-  wire NLW_inst_M_AXI_GP0_AWVALID_UNCONNECTED;
-  wire NLW_inst_M_AXI_GP0_BREADY_UNCONNECTED;
-  wire NLW_inst_M_AXI_GP0_RREADY_UNCONNECTED;
-  wire NLW_inst_M_AXI_GP0_WLAST_UNCONNECTED;
-  wire NLW_inst_M_AXI_GP0_WVALID_UNCONNECTED;
   wire NLW_inst_M_AXI_GP1_ARESETN_UNCONNECTED;
   wire NLW_inst_M_AXI_GP1_ARVALID_UNCONNECTED;
   wire NLW_inst_M_AXI_GP1_AWVALID_UNCONNECTED;
@@ -257,12 +408,6 @@ module dkong_processing_system7_0_0
   wire NLW_inst_USB0_VBUS_PWRSELECT_UNCONNECTED;
   wire NLW_inst_USB1_VBUS_PWRSELECT_UNCONNECTED;
   wire NLW_inst_WDT_RST_OUT_UNCONNECTED;
-  wire [14:0]NLW_inst_DDR_Addr_UNCONNECTED;
-  wire [2:0]NLW_inst_DDR_BankAddr_UNCONNECTED;
-  wire [3:0]NLW_inst_DDR_DM_UNCONNECTED;
-  wire [31:0]NLW_inst_DDR_DQ_UNCONNECTED;
-  wire [3:0]NLW_inst_DDR_DQS_UNCONNECTED;
-  wire [3:0]NLW_inst_DDR_DQS_n_UNCONNECTED;
   wire [1:0]NLW_inst_DMA0_DATYPE_UNCONNECTED;
   wire [1:0]NLW_inst_DMA1_DATYPE_UNCONNECTED;
   wire [1:0]NLW_inst_DMA2_DATYPE_UNCONNECTED;
@@ -274,27 +419,6 @@ module dkong_processing_system7_0_0
   wire [31:0]NLW_inst_FTMT_P2F_DEBUG_UNCONNECTED;
   wire [63:0]NLW_inst_GPIO_O_UNCONNECTED;
   wire [63:0]NLW_inst_GPIO_T_UNCONNECTED;
-  wire [31:0]NLW_inst_M_AXI_GP0_ARADDR_UNCONNECTED;
-  wire [1:0]NLW_inst_M_AXI_GP0_ARBURST_UNCONNECTED;
-  wire [3:0]NLW_inst_M_AXI_GP0_ARCACHE_UNCONNECTED;
-  wire [11:0]NLW_inst_M_AXI_GP0_ARID_UNCONNECTED;
-  wire [3:0]NLW_inst_M_AXI_GP0_ARLEN_UNCONNECTED;
-  wire [1:0]NLW_inst_M_AXI_GP0_ARLOCK_UNCONNECTED;
-  wire [2:0]NLW_inst_M_AXI_GP0_ARPROT_UNCONNECTED;
-  wire [3:0]NLW_inst_M_AXI_GP0_ARQOS_UNCONNECTED;
-  wire [2:0]NLW_inst_M_AXI_GP0_ARSIZE_UNCONNECTED;
-  wire [31:0]NLW_inst_M_AXI_GP0_AWADDR_UNCONNECTED;
-  wire [1:0]NLW_inst_M_AXI_GP0_AWBURST_UNCONNECTED;
-  wire [3:0]NLW_inst_M_AXI_GP0_AWCACHE_UNCONNECTED;
-  wire [11:0]NLW_inst_M_AXI_GP0_AWID_UNCONNECTED;
-  wire [3:0]NLW_inst_M_AXI_GP0_AWLEN_UNCONNECTED;
-  wire [1:0]NLW_inst_M_AXI_GP0_AWLOCK_UNCONNECTED;
-  wire [2:0]NLW_inst_M_AXI_GP0_AWPROT_UNCONNECTED;
-  wire [3:0]NLW_inst_M_AXI_GP0_AWQOS_UNCONNECTED;
-  wire [2:0]NLW_inst_M_AXI_GP0_AWSIZE_UNCONNECTED;
-  wire [31:0]NLW_inst_M_AXI_GP0_WDATA_UNCONNECTED;
-  wire [11:0]NLW_inst_M_AXI_GP0_WID_UNCONNECTED;
-  wire [3:0]NLW_inst_M_AXI_GP0_WSTRB_UNCONNECTED;
   wire [31:0]NLW_inst_M_AXI_GP1_ARADDR_UNCONNECTED;
   wire [1:0]NLW_inst_M_AXI_GP1_ARBURST_UNCONNECTED;
   wire [3:0]NLW_inst_M_AXI_GP1_ARCACHE_UNCONNECTED;
@@ -423,7 +547,7 @@ module dkong_processing_system7_0_0
   (* C_TRACE_PIPELINE_WIDTH = "8" *) 
   (* C_USE_AXI_NONSECURE = "0" *) 
   (* C_USE_DEFAULT_ACP_USER_VAL = "0" *) 
-  (* C_USE_M_AXI_GP0 = "0" *) 
+  (* C_USE_M_AXI_GP0 = "1" *) 
   (* C_USE_M_AXI_GP1 = "0" *) 
   (* C_USE_S_AXI_ACP = "0" *) 
   (* C_USE_S_AXI_GP0 = "0" *) 
@@ -433,7 +557,7 @@ module dkong_processing_system7_0_0
   (* C_USE_S_AXI_HP2 = "0" *) 
   (* C_USE_S_AXI_HP3 = "0" *) 
   (* HW_HANDOFF = "dkong_processing_system7_0_0.hwdef" *) 
-  (* POWER = "<PROCESSOR name={system} numA9Cores={2} clockFreq={666.666666} load={0.5} /><MEMORY name={code} memType={} dataWidth={} clockFreq={533.333} readRate={0.5} writeRate={0.5} /><IO interface={UART} ioStandard={} bidis={0} ioBank={} clockFreq={100.000000} usageRate={0.5} /><PLL domain={Processor} vco={1333.333} /><PLL domain={Memory} vco={1066.667} /><PLL domain={IO} vco={1600.000} />/>" *) 
+  (* POWER = "<PROCESSOR name={system} numA9Cores={2} clockFreq={666.666666} load={0.5} /><MEMORY name={code} memType={DDR3} dataWidth={32} clockFreq={533.333} readRate={0.5} writeRate={0.5} /><IO interface={UART} ioStandard={} bidis={0} ioBank={} clockFreq={100.000000} usageRate={0.5} /><PLL domain={Processor} vco={1333.333} /><PLL domain={Memory} vco={1066.667} /><PLL domain={IO} vco={1600.000} /><AXI interface={M_AXI_GP0} dataWidth={32} clockFreq={100} usageRate={0.5} />/>" *) 
   (* USE_TRACE_DATA_EDGE_DETECTOR = "0" *) 
   dkong_processing_system7_0_0_processing_system7_v5_5_processing_system7 inst
        (.CAN0_PHY_RX(1'b0),
@@ -445,23 +569,23 @@ module dkong_processing_system7_0_0
         .Core1_nFIQ(1'b0),
         .Core1_nIRQ(1'b0),
         .DDR_ARB({1'b0,1'b0,1'b0,1'b0}),
-        .DDR_Addr(NLW_inst_DDR_Addr_UNCONNECTED[14:0]),
-        .DDR_BankAddr(NLW_inst_DDR_BankAddr_UNCONNECTED[2:0]),
-        .DDR_CAS_n(NLW_inst_DDR_CAS_n_UNCONNECTED),
-        .DDR_CKE(NLW_inst_DDR_CKE_UNCONNECTED),
-        .DDR_CS_n(NLW_inst_DDR_CS_n_UNCONNECTED),
-        .DDR_Clk(NLW_inst_DDR_Clk_UNCONNECTED),
-        .DDR_Clk_n(NLW_inst_DDR_Clk_n_UNCONNECTED),
-        .DDR_DM(NLW_inst_DDR_DM_UNCONNECTED[3:0]),
-        .DDR_DQ(NLW_inst_DDR_DQ_UNCONNECTED[31:0]),
-        .DDR_DQS(NLW_inst_DDR_DQS_UNCONNECTED[3:0]),
-        .DDR_DQS_n(NLW_inst_DDR_DQS_n_UNCONNECTED[3:0]),
-        .DDR_DRSTB(NLW_inst_DDR_DRSTB_UNCONNECTED),
-        .DDR_ODT(NLW_inst_DDR_ODT_UNCONNECTED),
-        .DDR_RAS_n(NLW_inst_DDR_RAS_n_UNCONNECTED),
-        .DDR_VRN(NLW_inst_DDR_VRN_UNCONNECTED),
-        .DDR_VRP(NLW_inst_DDR_VRP_UNCONNECTED),
-        .DDR_WEB(NLW_inst_DDR_WEB_UNCONNECTED),
+        .DDR_Addr(DDR_Addr),
+        .DDR_BankAddr(DDR_BankAddr),
+        .DDR_CAS_n(DDR_CAS_n),
+        .DDR_CKE(DDR_CKE),
+        .DDR_CS_n(DDR_CS_n),
+        .DDR_Clk(DDR_Clk),
+        .DDR_Clk_n(DDR_Clk_n),
+        .DDR_DM(DDR_DM),
+        .DDR_DQ(DDR_DQ),
+        .DDR_DQS(DDR_DQS),
+        .DDR_DQS_n(DDR_DQS_n),
+        .DDR_DRSTB(DDR_DRSTB),
+        .DDR_ODT(DDR_ODT),
+        .DDR_RAS_n(DDR_RAS_n),
+        .DDR_VRN(DDR_VRN),
+        .DDR_VRP(DDR_VRP),
+        .DDR_WEB(DDR_WEB),
         .DMA0_ACLK(1'b0),
         .DMA0_DAREADY(1'b0),
         .DMA0_DATYPE(NLW_inst_DMA0_DATYPE_UNCONNECTED[1:0]),
@@ -633,46 +757,46 @@ module dkong_processing_system7_0_0
         .IRQ_P2F_USB0(NLW_inst_IRQ_P2F_USB0_UNCONNECTED),
         .IRQ_P2F_USB1(NLW_inst_IRQ_P2F_USB1_UNCONNECTED),
         .MIO(MIO),
-        .M_AXI_GP0_ACLK(1'b0),
-        .M_AXI_GP0_ARADDR(NLW_inst_M_AXI_GP0_ARADDR_UNCONNECTED[31:0]),
-        .M_AXI_GP0_ARBURST(NLW_inst_M_AXI_GP0_ARBURST_UNCONNECTED[1:0]),
-        .M_AXI_GP0_ARCACHE(NLW_inst_M_AXI_GP0_ARCACHE_UNCONNECTED[3:0]),
+        .M_AXI_GP0_ACLK(M_AXI_GP0_ACLK),
+        .M_AXI_GP0_ARADDR(M_AXI_GP0_ARADDR),
+        .M_AXI_GP0_ARBURST(M_AXI_GP0_ARBURST),
+        .M_AXI_GP0_ARCACHE(M_AXI_GP0_ARCACHE),
         .M_AXI_GP0_ARESETN(NLW_inst_M_AXI_GP0_ARESETN_UNCONNECTED),
-        .M_AXI_GP0_ARID(NLW_inst_M_AXI_GP0_ARID_UNCONNECTED[11:0]),
-        .M_AXI_GP0_ARLEN(NLW_inst_M_AXI_GP0_ARLEN_UNCONNECTED[3:0]),
-        .M_AXI_GP0_ARLOCK(NLW_inst_M_AXI_GP0_ARLOCK_UNCONNECTED[1:0]),
-        .M_AXI_GP0_ARPROT(NLW_inst_M_AXI_GP0_ARPROT_UNCONNECTED[2:0]),
-        .M_AXI_GP0_ARQOS(NLW_inst_M_AXI_GP0_ARQOS_UNCONNECTED[3:0]),
-        .M_AXI_GP0_ARREADY(1'b0),
-        .M_AXI_GP0_ARSIZE(NLW_inst_M_AXI_GP0_ARSIZE_UNCONNECTED[2:0]),
-        .M_AXI_GP0_ARVALID(NLW_inst_M_AXI_GP0_ARVALID_UNCONNECTED),
-        .M_AXI_GP0_AWADDR(NLW_inst_M_AXI_GP0_AWADDR_UNCONNECTED[31:0]),
-        .M_AXI_GP0_AWBURST(NLW_inst_M_AXI_GP0_AWBURST_UNCONNECTED[1:0]),
-        .M_AXI_GP0_AWCACHE(NLW_inst_M_AXI_GP0_AWCACHE_UNCONNECTED[3:0]),
-        .M_AXI_GP0_AWID(NLW_inst_M_AXI_GP0_AWID_UNCONNECTED[11:0]),
-        .M_AXI_GP0_AWLEN(NLW_inst_M_AXI_GP0_AWLEN_UNCONNECTED[3:0]),
-        .M_AXI_GP0_AWLOCK(NLW_inst_M_AXI_GP0_AWLOCK_UNCONNECTED[1:0]),
-        .M_AXI_GP0_AWPROT(NLW_inst_M_AXI_GP0_AWPROT_UNCONNECTED[2:0]),
-        .M_AXI_GP0_AWQOS(NLW_inst_M_AXI_GP0_AWQOS_UNCONNECTED[3:0]),
-        .M_AXI_GP0_AWREADY(1'b0),
-        .M_AXI_GP0_AWSIZE(NLW_inst_M_AXI_GP0_AWSIZE_UNCONNECTED[2:0]),
-        .M_AXI_GP0_AWVALID(NLW_inst_M_AXI_GP0_AWVALID_UNCONNECTED),
-        .M_AXI_GP0_BID({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .M_AXI_GP0_BREADY(NLW_inst_M_AXI_GP0_BREADY_UNCONNECTED),
-        .M_AXI_GP0_BRESP({1'b0,1'b0}),
-        .M_AXI_GP0_BVALID(1'b0),
-        .M_AXI_GP0_RDATA({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .M_AXI_GP0_RID({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .M_AXI_GP0_RLAST(1'b0),
-        .M_AXI_GP0_RREADY(NLW_inst_M_AXI_GP0_RREADY_UNCONNECTED),
-        .M_AXI_GP0_RRESP({1'b0,1'b0}),
-        .M_AXI_GP0_RVALID(1'b0),
-        .M_AXI_GP0_WDATA(NLW_inst_M_AXI_GP0_WDATA_UNCONNECTED[31:0]),
-        .M_AXI_GP0_WID(NLW_inst_M_AXI_GP0_WID_UNCONNECTED[11:0]),
-        .M_AXI_GP0_WLAST(NLW_inst_M_AXI_GP0_WLAST_UNCONNECTED),
-        .M_AXI_GP0_WREADY(1'b0),
-        .M_AXI_GP0_WSTRB(NLW_inst_M_AXI_GP0_WSTRB_UNCONNECTED[3:0]),
-        .M_AXI_GP0_WVALID(NLW_inst_M_AXI_GP0_WVALID_UNCONNECTED),
+        .M_AXI_GP0_ARID(M_AXI_GP0_ARID),
+        .M_AXI_GP0_ARLEN(M_AXI_GP0_ARLEN),
+        .M_AXI_GP0_ARLOCK(M_AXI_GP0_ARLOCK),
+        .M_AXI_GP0_ARPROT(M_AXI_GP0_ARPROT),
+        .M_AXI_GP0_ARQOS(M_AXI_GP0_ARQOS),
+        .M_AXI_GP0_ARREADY(M_AXI_GP0_ARREADY),
+        .M_AXI_GP0_ARSIZE(M_AXI_GP0_ARSIZE),
+        .M_AXI_GP0_ARVALID(M_AXI_GP0_ARVALID),
+        .M_AXI_GP0_AWADDR(M_AXI_GP0_AWADDR),
+        .M_AXI_GP0_AWBURST(M_AXI_GP0_AWBURST),
+        .M_AXI_GP0_AWCACHE(M_AXI_GP0_AWCACHE),
+        .M_AXI_GP0_AWID(M_AXI_GP0_AWID),
+        .M_AXI_GP0_AWLEN(M_AXI_GP0_AWLEN),
+        .M_AXI_GP0_AWLOCK(M_AXI_GP0_AWLOCK),
+        .M_AXI_GP0_AWPROT(M_AXI_GP0_AWPROT),
+        .M_AXI_GP0_AWQOS(M_AXI_GP0_AWQOS),
+        .M_AXI_GP0_AWREADY(M_AXI_GP0_AWREADY),
+        .M_AXI_GP0_AWSIZE(M_AXI_GP0_AWSIZE),
+        .M_AXI_GP0_AWVALID(M_AXI_GP0_AWVALID),
+        .M_AXI_GP0_BID(M_AXI_GP0_BID),
+        .M_AXI_GP0_BREADY(M_AXI_GP0_BREADY),
+        .M_AXI_GP0_BRESP(M_AXI_GP0_BRESP),
+        .M_AXI_GP0_BVALID(M_AXI_GP0_BVALID),
+        .M_AXI_GP0_RDATA(M_AXI_GP0_RDATA),
+        .M_AXI_GP0_RID(M_AXI_GP0_RID),
+        .M_AXI_GP0_RLAST(M_AXI_GP0_RLAST),
+        .M_AXI_GP0_RREADY(M_AXI_GP0_RREADY),
+        .M_AXI_GP0_RRESP(M_AXI_GP0_RRESP),
+        .M_AXI_GP0_RVALID(M_AXI_GP0_RVALID),
+        .M_AXI_GP0_WDATA(M_AXI_GP0_WDATA),
+        .M_AXI_GP0_WID(M_AXI_GP0_WID),
+        .M_AXI_GP0_WLAST(M_AXI_GP0_WLAST),
+        .M_AXI_GP0_WREADY(M_AXI_GP0_WREADY),
+        .M_AXI_GP0_WSTRB(M_AXI_GP0_WSTRB),
+        .M_AXI_GP0_WVALID(M_AXI_GP0_WVALID),
         .M_AXI_GP1_ACLK(1'b0),
         .M_AXI_GP1_ARADDR(NLW_inst_M_AXI_GP1_ARADDR_UNCONNECTED[31:0]),
         .M_AXI_GP1_ARBURST(NLW_inst_M_AXI_GP1_ARBURST_UNCONNECTED[1:0]),
@@ -1138,11 +1262,11 @@ endmodule
 (* C_S_AXI_HP2_DATA_WIDTH = "64" *) (* C_S_AXI_HP2_ID_WIDTH = "6" *) (* C_S_AXI_HP3_DATA_WIDTH = "64" *) 
 (* C_S_AXI_HP3_ID_WIDTH = "6" *) (* C_TRACE_BUFFER_CLOCK_DELAY = "12" *) (* C_TRACE_BUFFER_FIFO_SIZE = "128" *) 
 (* C_TRACE_INTERNAL_WIDTH = "2" *) (* C_TRACE_PIPELINE_WIDTH = "8" *) (* C_USE_AXI_NONSECURE = "0" *) 
-(* C_USE_DEFAULT_ACP_USER_VAL = "0" *) (* C_USE_M_AXI_GP0 = "0" *) (* C_USE_M_AXI_GP1 = "0" *) 
+(* C_USE_DEFAULT_ACP_USER_VAL = "0" *) (* C_USE_M_AXI_GP0 = "1" *) (* C_USE_M_AXI_GP1 = "0" *) 
 (* C_USE_S_AXI_ACP = "0" *) (* C_USE_S_AXI_GP0 = "0" *) (* C_USE_S_AXI_GP1 = "0" *) 
 (* C_USE_S_AXI_HP0 = "0" *) (* C_USE_S_AXI_HP1 = "0" *) (* C_USE_S_AXI_HP2 = "0" *) 
-(* C_USE_S_AXI_HP3 = "0" *) (* HW_HANDOFF = "dkong_processing_system7_0_0.hwdef" *) (* POWER = "<PROCESSOR name={system} numA9Cores={2} clockFreq={666.666666} load={0.5} /><MEMORY name={code} memType={} dataWidth={} clockFreq={533.333} readRate={0.5} writeRate={0.5} /><IO interface={UART} ioStandard={} bidis={0} ioBank={} clockFreq={100.000000} usageRate={0.5} /><PLL domain={Processor} vco={1333.333} /><PLL domain={Memory} vco={1066.667} /><PLL domain={IO} vco={1600.000} />/>" *) 
-(* USE_TRACE_DATA_EDGE_DETECTOR = "0" *) 
+(* C_USE_S_AXI_HP3 = "0" *) (* HW_HANDOFF = "dkong_processing_system7_0_0.hwdef" *) (* ORIG_REF_NAME = "processing_system7_v5_5_processing_system7" *) 
+(* POWER = "<PROCESSOR name={system} numA9Cores={2} clockFreq={666.666666} load={0.5} /><MEMORY name={code} memType={DDR3} dataWidth={32} clockFreq={533.333} readRate={0.5} writeRate={0.5} /><IO interface={UART} ioStandard={} bidis={0} ioBank={} clockFreq={100.000000} usageRate={0.5} /><PLL domain={Processor} vco={1333.333} /><PLL domain={Memory} vco={1066.667} /><PLL domain={IO} vco={1600.000} /><AXI interface={M_AXI_GP0} dataWidth={32} clockFreq={100} usageRate={0.5} />/>" *) (* USE_TRACE_DATA_EDGE_DETECTOR = "0" *) 
 module dkong_processing_system7_0_0_processing_system7_v5_5_processing_system7
    (CAN0_PHY_TX,
     CAN0_PHY_RX,

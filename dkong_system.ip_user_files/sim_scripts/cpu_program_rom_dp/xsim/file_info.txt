@@ -1,0 +1,2 @@
+cpu_program_rom_dp.v,verilog,xil_defaultlib,../../../ip/cpu_program_rom_dp/sim/cpu_program_rom_dp.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

@@ -2,18 +2,20 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Tue Mar 31 13:32:17 2020
-# Process ID: 4152
+# Start of session at: Wed Apr  1 13:09:02 2020
+# Process ID: 14348
 # Current directory: C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.runs/impl_1
 # Command line: vivado.exe -log dkong_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source dkong_wrapper.tcl -notrace
 # Log file: C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.runs/impl_1/dkong_wrapper.vdi
 # Journal file: C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
 source dkong_wrapper.tcl -notrace
+add_files: Time (s): cpu = 00:00:02 ; elapsed = 00:00:22 . Memory (MB): peak = 297.813 ; gain = 7.242
 Command: link_design -top dkong_wrapper -part xc7z020clg484-1
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
 INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_axi_bram_ctrl_0_2/dkong_axi_bram_ctrl_0_2.dcp' for cell 'dkong_i/axi_bram_ctrl_0'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_clk_wiz_0_0/dkong_clk_wiz_0_0.dcp' for cell 'dkong_i/clk_wiz_0'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_demux2_0_0/dkong_demux2_0_0.dcp' for cell 'dkong_i/demux2_0'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_demux2_0_1/dkong_demux2_0_1.dcp' for cell 'dkong_i/demux2_1'
@@ -25,8 +27,10 @@ INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Steven/Documents/HDL/v
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_mux4_0_0/dkong_mux4_0_0.dcp' for cell 'dkong_i/mux4_0'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_proc_sys_reset_0_0/dkong_proc_sys_reset_0_0.dcp' for cell 'dkong_i/proc_sys_reset_0'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_proc_sys_reset_1_0/dkong_proc_sys_reset_1_0.dcp' for cell 'dkong_i/proc_sys_reset_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_proc_sys_reset_1_1/dkong_proc_sys_reset_1_1.dcp' for cell 'dkong_i/proc_sys_reset_2'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_processing_system7_0_0/dkong_processing_system7_0_0.dcp' for cell 'dkong_i/processing_system7_0'
-INFO: [Netlist 29-17] Analyzing 276 Unisim elements for replacement
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_0_0/dkong_smartconnect_0_0.dcp' for cell 'dkong_i/smartconnect_0'
+INFO: [Netlist 29-17] Analyzing 378 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2019.1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -44,24 +48,42 @@ Finished Parsing XDC File [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dko
 Parsing XDC File [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_clk_wiz_0_0/dkong_clk_wiz_0_0.xdc] for cell 'dkong_i/clk_wiz_0/inst'
 INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_clk_wiz_0_0/dkong_clk_wiz_0_0.xdc:57]
 INFO: [Timing 38-2] Deriving generated clocks [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_clk_wiz_0_0/dkong_clk_wiz_0_0.xdc:57]
-get_clocks: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1287.160 ; gain = 577.387
+get_clocks: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1345.645 ; gain = 578.680
 Finished Parsing XDC File [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_clk_wiz_0_0/dkong_clk_wiz_0_0.xdc] for cell 'dkong_i/clk_wiz_0/inst'
 Parsing XDC File [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_proc_sys_reset_1_0/dkong_proc_sys_reset_1_0_board.xdc] for cell 'dkong_i/proc_sys_reset_1/U0'
 Finished Parsing XDC File [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_proc_sys_reset_1_0/dkong_proc_sys_reset_1_0_board.xdc] for cell 'dkong_i/proc_sys_reset_1/U0'
 Parsing XDC File [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_proc_sys_reset_1_0/dkong_proc_sys_reset_1_0.xdc] for cell 'dkong_i/proc_sys_reset_1/U0'
 Finished Parsing XDC File [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_proc_sys_reset_1_0/dkong_proc_sys_reset_1_0.xdc] for cell 'dkong_i/proc_sys_reset_1/U0'
+Parsing XDC File [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_0_0/bd_0/ip/ip_1/bd_09d9_psr_aclk_0_board.xdc] for cell 'dkong_i/smartconnect_0/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_0_0/bd_0/ip/ip_1/bd_09d9_psr_aclk_0_board.xdc] for cell 'dkong_i/smartconnect_0/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_0_0/bd_0/ip/ip_1/bd_09d9_psr_aclk_0.xdc] for cell 'dkong_i/smartconnect_0/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_0_0/bd_0/ip/ip_1/bd_09d9_psr_aclk_0.xdc] for cell 'dkong_i/smartconnect_0/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_proc_sys_reset_1_1/dkong_proc_sys_reset_1_1_board.xdc] for cell 'dkong_i/proc_sys_reset_2/U0'
+Finished Parsing XDC File [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_proc_sys_reset_1_1/dkong_proc_sys_reset_1_1_board.xdc] for cell 'dkong_i/proc_sys_reset_2/U0'
+Parsing XDC File [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_proc_sys_reset_1_1/dkong_proc_sys_reset_1_1.xdc] for cell 'dkong_i/proc_sys_reset_2/U0'
+Finished Parsing XDC File [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_proc_sys_reset_1_1/dkong_proc_sys_reset_1_1.xdc] for cell 'dkong_i/proc_sys_reset_2/U0'
 Parsing XDC File [C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/constrs_1/imports/vga_tutorial_students/zedboard_master.xdc]
 Finished Parsing XDC File [C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/constrs_1/imports/vga_tutorial_students/zedboard_master.xdc]
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'dkong_i/smartconnect_0/inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'dkong_i/smartconnect_0/inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'dkong_i/smartconnect_0/inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'dkong_i/smartconnect_0/inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'dkong_i/smartconnect_0/inst/s00_nodes/s00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'dkong_i/smartconnect_0/inst/s00_nodes/s00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'dkong_i/smartconnect_0/inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'dkong_i/smartconnect_0/inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'dkong_i/smartconnect_0/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'dkong_i/smartconnect_0/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1287.160 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1345.645 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 25 instances were transformed.
-  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 8 instances
+  A total of 105 instances were transformed.
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 88 instances
   RAM64X1S => RAM64X1S (RAMS64E): 17 instances
 
-21 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+24 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:21 . Memory (MB): peak = 1287.160 ; gain = 996.660
+link_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:46 . Memory (MB): peak = 1345.645 ; gain = 1047.832
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
@@ -72,55 +94,59 @@ INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.599 . Memory (MB): peak = 1287.160 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.578 . Memory (MB): peak = 1345.645 ; gain = 0.000
 
 Starting Cache Timing Information Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Cache Timing Information Task | Checksum: 1c8c786b2
+Ending Cache Timing Information Task | Checksum: 15382686d
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.179 . Memory (MB): peak = 1304.902 ; gain = 17.742
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.425 . Memory (MB): peak = 1368.422 ; gain = 22.777
 
 Starting Logic Optimization Task
 
 Phase 1 Retarget
-INFO: [Opt 31-138] Pushed 6 inverter(s) to 11 load pin(s).
+INFO: [Opt 31-138] Pushed 16 inverter(s) to 54 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 116466806
+Phase 1 Retarget | Checksum: 6df53099
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.228 . Memory (MB): peak = 1441.762 ; gain = 0.000
-INFO: [Opt 31-389] Phase Retarget created 4 cells and removed 33 cells
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.508 . Memory (MB): peak = 1510.813 ; gain = 0.000
+INFO: [Opt 31-389] Phase Retarget created 42 cells and removed 87 cells
+INFO: [Opt 31-1021] In phase Retarget, 15 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 2 Constant propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Phase 2 Constant propagation | Checksum: 1cba8e4b0
+Phase 2 Constant propagation | Checksum: 127d54ef0
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.271 . Memory (MB): peak = 1441.762 ; gain = 0.000
-INFO: [Opt 31-389] Phase Constant propagation created 5 cells and removed 10 cells
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.677 . Memory (MB): peak = 1510.813 ; gain = 0.000
+INFO: [Opt 31-389] Phase Constant propagation created 55 cells and removed 224 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 20 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 3 Sweep
-Phase 3 Sweep | Checksum: 116634ed6
+Phase 3 Sweep | Checksum: febc971a
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.501 . Memory (MB): peak = 1441.762 ; gain = 0.000
-INFO: [Opt 31-389] Phase Sweep created 2 cells and removed 117 cells
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1510.813 ; gain = 0.000
+INFO: [Opt 31-389] Phase Sweep created 2 cells and removed 1311 cells
+INFO: [Opt 31-1021] In phase Sweep, 33 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 4 BUFG optimization
-Phase 4 BUFG optimization | Checksum: 116634ed6
+Phase 4 BUFG optimization | Checksum: febc971a
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.570 . Memory (MB): peak = 1441.762 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1510.813 ; gain = 0.000
 INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
 
 Phase 5 Shift Register Optimization
 INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
-Phase 5 Shift Register Optimization | Checksum: 116634ed6
+Phase 5 Shift Register Optimization | Checksum: febc971a
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.628 . Memory (MB): peak = 1441.762 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1510.813 ; gain = 0.000
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 6 Post Processing Netlist
-Phase 6 Post Processing Netlist | Checksum: 1b02ddeb6
+Phase 6 Post Processing Netlist | Checksum: 84c6abc0
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.656 . Memory (MB): peak = 1441.762 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1510.813 ; gain = 0.000
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Post Processing Netlist, 15 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 Opt_design Change Summary
 =========================
 
@@ -128,72 +154,72 @@ Opt_design Change Summary
 -------------------------------------------------------------------------------------------------------------------------
 |  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
 -------------------------------------------------------------------------------------------------------------------------
-|  Retarget                     |               4  |              33  |                                              0  |
-|  Constant propagation         |               5  |              10  |                                              0  |
-|  Sweep                        |               2  |             117  |                                              0  |
+|  Retarget                     |              42  |              87  |                                             15  |
+|  Constant propagation         |              55  |             224  |                                             20  |
+|  Sweep                        |               2  |            1311  |                                             33  |
 |  BUFG optimization            |               0  |               0  |                                              0  |
 |  Shift Register Optimization  |               0  |               0  |                                              0  |
-|  Post Processing Netlist      |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                             15  |
 -------------------------------------------------------------------------------------------------------------------------
 
 
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1441.762 ; gain = 0.000
-Ending Logic Optimization Task | Checksum: 17aa352aa
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1510.813 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 13b49992b
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.747 . Memory (MB): peak = 1441.762 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1510.813 ; gain = 0.000
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-5.356 | TNS=-704.869 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-5.356 | TNS=-706.915 |
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
 Running Vector-less Activity Propagation...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
 
 Finished Running Vector-less Activity Propagation
-INFO: [Pwropt 34-9] Applying IDT optimizations ...
-INFO: [Pwropt 34-10] Applying ODC optimizations ...
 
 
 Starting PowerOpt Patch Enables Task
 INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 47 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
 INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
 Number of BRAM Ports augmented: 28 newly gated: 4 Total Ports: 94
-Ending PowerOpt Patch Enables Task | Checksum: 14338c62b
+Ending PowerOpt Patch Enables Task | Checksum: 1fcf7dbba
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.183 . Memory (MB): peak = 1699.719 ; gain = 0.000
-Ending Power Optimization Task | Checksum: 14338c62b
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.199 . Memory (MB): peak = 1785.641 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 1fcf7dbba
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1699.719 ; gain = 257.957
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1785.641 ; gain = 274.828
 
 Starting Final Cleanup Task
 
 Starting Logic Optimization Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Logic Optimization Task | Checksum: 10714a5d0
+Ending Logic Optimization Task | Checksum: 23da70266
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.341 . Memory (MB): peak = 1699.719 ; gain = 0.000
-Ending Final Cleanup Task | Checksum: 10714a5d0
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.702 . Memory (MB): peak = 1785.641 ; gain = 0.000
+Ending Final Cleanup Task | Checksum: 23da70266
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1699.719 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1785.641 ; gain = 0.000
 
 Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1699.719 ; gain = 0.000
-Ending Netlist Obfuscation Task | Checksum: 10714a5d0
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1785.641 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 23da70266
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1699.719 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1785.641 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
-45 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+52 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 1699.719 ; gain = 412.559
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1699.719 ; gain = 0.000
+opt_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:13 . Memory (MB): peak = 1785.641 ; gain = 439.996
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1785.641 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.058 . Memory (MB): peak = 1699.719 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.056 . Memory (MB): peak = 1785.641 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.runs/impl_1/dkong_wrapper_opt.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file dkong_wrapper_drc_opted.rpt -pb dkong_wrapper_drc_opted.pb -rpx dkong_wrapper_drc_opted.rpx
 Command: report_drc -file dkong_wrapper_drc_opted.rpt -pb dkong_wrapper_drc_opted.pb -rpx dkong_wrapper_drc_opted.rpx
@@ -231,15 +257,15 @@ WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_
 WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[8] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/ADDRBWRADDR[5]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/BusAck_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[9] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/ADDRBWRADDR[6]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/mem_reg/ADDRARDADDR[9] (net: dkong_i/dkong_system_wrapper_0/inst/inst/cpu_ram/ram_imp/ADDRBWRADDR[6]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/BusAck_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/ADDRARDADDR[8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[10]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/sou/rom_3f/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/sou/rom_3f/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/ADDRARDADDR[11] (net: dkong_i/dkong_system_wrapper_0/inst/inst/sou/rom_3f/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/use_p2.p2_b/p2_o_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/sou/rom_3f/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/sou/rom_3f/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/sou/rom_3f/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[9]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/use_p2.p2_b/p2_o_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/sou/rom_3f/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/sou/rom_3f/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/ADDRARDADDR[13] (net: dkong_i/dkong_system_wrapper_0/inst/inst/sou/rom_3f/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[10]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/use_p2.p2_b/p2_o_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/sou/rom_3h/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/sou/rom_3h/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/ADDRARDADDR[11] (net: dkong_i/dkong_system_wrapper_0/inst/inst/sou/rom_3h/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/use_p2.p2_b/p2_o_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/sou/rom_3h/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/sou/rom_3h/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/sou/rom_3h/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[9]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/use_p2.p2_b/p2_o_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/sou/rom_3h/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/sou/rom_3h/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/ADDRARDADDR[13] (net: dkong_i/dkong_system_wrapper_0/inst/inst/sou/rom_3h/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[10]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/use_p2.p2_b/p2_o_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/ADDRARDADDR[8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[11]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/ADDRARDADDR[8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[12]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/ADDRARDADDR[8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[13]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/ADDRARDADDR[8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[14]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/ADDRARDADDR[8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[15]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/ADDRARDADDR[8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[8]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/ADDRARDADDR[8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/BusAck_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/ADDRARDADDR[8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/BusAck_reg_rep) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/ADDRARDADDR[8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/rd_n_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/ADDRARDADDR[8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/wr_n_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg/ADDRARDADDR[13] (net: dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/ADDRARDADDR[9]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[10]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg/ADDRARDADDR[13] (net: dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/ADDRARDADDR[9]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[11]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg/ADDRARDADDR[13] (net: dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/ADDRARDADDR[9]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[12]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
@@ -260,37 +286,37 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1699.719 ; gain = 0.000
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: e85af87c
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1785.641 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 140caeac1
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1699.719 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1699.719 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1785.641 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1785.641 ; gain = 0.000
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 116675d0f
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 8cecbd85
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1699.719 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1785.641 ; gain = 0.000
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: 1958b5590
+Phase 1.3 Build Placer Netlist Model | Checksum: 10363612c
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1699.719 ; gain = 0.000
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1785.641 ; gain = 0.000
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: 1958b5590
+Phase 1.4 Constrain Clocks/Macros | Checksum: 10363612c
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1699.719 ; gain = 0.000
-Phase 1 Placer Initialization | Checksum: 1958b5590
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1785.641 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 10363612c
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1699.719 ; gain = 0.000
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1785.641 ; gain = 0.000
 
 Phase 2 Global Placement
 
 Phase 2.1 Floorplanning
-Phase 2.1 Floorplanning | Checksum: 18e2b087f
+Phase 2.1 Floorplanning | Checksum: bd202a48
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1699.719 ; gain = 0.000
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 1785.641 ; gain = 0.000
 
 Phase 2.2 Global Placement Core
 
@@ -306,7 +332,7 @@ INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found i
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
 INFO: [Physopt 32-949] No candidate nets found for HD net replication
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1699.719 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1785.641 ; gain = 0.000
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -324,65 +350,65 @@ Summary of Physical Synthesis Optimizations
 ----------------------------------------------------------------------------------------------------------------------------------------
 
 
-Phase 2.2.1 Physical Synthesis In Placer | Checksum: 214e204bf
+Phase 2.2.1 Physical Synthesis In Placer | Checksum: 99ab0907
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 1699.719 ; gain = 0.000
-Phase 2.2 Global Placement Core | Checksum: 11e4859c6
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:09 . Memory (MB): peak = 1785.641 ; gain = 0.000
+Phase 2.2 Global Placement Core | Checksum: 16b3384c2
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 1699.719 ; gain = 0.000
-Phase 2 Global Placement | Checksum: 11e4859c6
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:09 . Memory (MB): peak = 1785.641 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 16b3384c2
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 1699.719 ; gain = 0.000
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:09 . Memory (MB): peak = 1785.641 ; gain = 0.000
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 1f0991c64
+Phase 3.1 Commit Multi Column Macros | Checksum: 15a594b1b
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 1699.719 ; gain = 0.000
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:09 . Memory (MB): peak = 1785.641 ; gain = 0.000
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1c42a4bc1
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: bb251e8c
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 1699.719 ; gain = 0.000
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:10 . Memory (MB): peak = 1785.641 ; gain = 0.000
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 17927b3fc
+Phase 3.3 Area Swap Optimization | Checksum: 6ca6669b
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 1699.719 ; gain = 0.000
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:10 . Memory (MB): peak = 1785.641 ; gain = 0.000
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: 1c88cc555
+Phase 3.4 Pipeline Register Optimization | Checksum: f37206ee
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 1699.719 ; gain = 0.000
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:10 . Memory (MB): peak = 1785.641 ; gain = 0.000
 
 Phase 3.5 Fast Optimization
-Phase 3.5 Fast Optimization | Checksum: d3d4f616
+Phase 3.5 Fast Optimization | Checksum: 91a28d3e
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 1699.719 ; gain = 0.000
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:11 . Memory (MB): peak = 1785.641 ; gain = 0.000
 
 Phase 3.6 Small Shape Detail Placement
-Phase 3.6 Small Shape Detail Placement | Checksum: 137cb40ad
+Phase 3.6 Small Shape Detail Placement | Checksum: 1d42281cc
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 1699.719 ; gain = 0.000
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:13 . Memory (MB): peak = 1785.641 ; gain = 0.000
 
 Phase 3.7 Re-assign LUT pins
-Phase 3.7 Re-assign LUT pins | Checksum: c2b41e09
+Phase 3.7 Re-assign LUT pins | Checksum: 20028dc63
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 1699.719 ; gain = 0.000
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:13 . Memory (MB): peak = 1785.641 ; gain = 0.000
 
 Phase 3.8 Pipeline Register Optimization
-Phase 3.8 Pipeline Register Optimization | Checksum: 9411326e
+Phase 3.8 Pipeline Register Optimization | Checksum: 1e2c820a2
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 1699.719 ; gain = 0.000
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:13 . Memory (MB): peak = 1785.641 ; gain = 0.000
 
 Phase 3.9 Fast Optimization
-Phase 3.9 Fast Optimization | Checksum: 1dc62043b
+Phase 3.9 Fast Optimization | Checksum: 14995210f
 
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:10 . Memory (MB): peak = 1699.719 ; gain = 0.000
-Phase 3 Detail Placement | Checksum: 1dc62043b
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:15 . Memory (MB): peak = 1785.641 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 14995210f
 
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:11 . Memory (MB): peak = 1699.719 ; gain = 0.000
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:15 . Memory (MB): peak = 1785.641 ; gain = 0.000
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -390,59 +416,59 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: 171cc2de1
+Post Placement Optimization Initialization | Checksum: 157e0c51d
 
 Phase 4.1.1.1 BUFG Insertion
 INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
-Phase 4.1.1.1 BUFG Insertion | Checksum: 171cc2de1
+Phase 4.1.1.1 BUFG Insertion | Checksum: 157e0c51d
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:11 . Memory (MB): peak = 1699.719 ; gain = 0.000
-INFO: [Place 30-746] Post Placement Timing Summary WNS=-3.595. For the most accurate timing information please run report_timing.
-Phase 4.1.1 Post Placement Optimization | Checksum: 22d5fdd9b
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:16 . Memory (MB): peak = 1785.641 ; gain = 0.000
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-3.703. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: d6ec26da
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:26 . Memory (MB): peak = 1699.719 ; gain = 0.000
-Phase 4.1 Post Commit Optimization | Checksum: 22d5fdd9b
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:40 . Memory (MB): peak = 1785.641 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: d6ec26da
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:26 . Memory (MB): peak = 1699.719 ; gain = 0.000
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:40 . Memory (MB): peak = 1785.641 ; gain = 0.000
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 22d5fdd9b
+Phase 4.2 Post Placement Cleanup | Checksum: d6ec26da
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:26 . Memory (MB): peak = 1699.719 ; gain = 0.000
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:40 . Memory (MB): peak = 1785.641 ; gain = 0.000
 
 Phase 4.3 Placer Reporting
-Phase 4.3 Placer Reporting | Checksum: 22d5fdd9b
+Phase 4.3 Placer Reporting | Checksum: d6ec26da
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:26 . Memory (MB): peak = 1699.719 ; gain = 0.000
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:40 . Memory (MB): peak = 1785.641 ; gain = 0.000
 
 Phase 4.4 Final Placement Cleanup
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1699.719 ; gain = 0.000
-Phase 4.4 Final Placement Cleanup | Checksum: 23b0bd456
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1785.641 ; gain = 0.000
+Phase 4.4 Final Placement Cleanup | Checksum: dd3e2d80
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:26 . Memory (MB): peak = 1699.719 ; gain = 0.000
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 23b0bd456
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:40 . Memory (MB): peak = 1785.641 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: dd3e2d80
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:26 . Memory (MB): peak = 1699.719 ; gain = 0.000
-Ending Placer Task | Checksum: 1c8b300aa
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:40 . Memory (MB): peak = 1785.641 ; gain = 0.000
+Ending Placer Task | Checksum: a90465df
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:26 . Memory (MB): peak = 1699.719 ; gain = 0.000
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:40 . Memory (MB): peak = 1785.641 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
-75 Infos, 44 Warnings, 0 Critical Warnings and 0 Errors encountered.
+82 Infos, 44 Warnings, 0 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:27 . Memory (MB): peak = 1699.719 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1699.719 ; gain = 0.000
+place_design: Time (s): cpu = 00:00:49 ; elapsed = 00:00:41 . Memory (MB): peak = 1785.641 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1785.641 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.331 . Memory (MB): peak = 1699.719 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.515 . Memory (MB): peak = 1785.641 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.runs/impl_1/dkong_wrapper_placed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_io -file dkong_wrapper_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.055 . Memory (MB): peak = 1699.719 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.058 . Memory (MB): peak = 1785.641 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file dkong_wrapper_utilization_placed.rpt -pb dkong_wrapper_utilization_placed.pb
 INFO: [runtcl-4] Executing : report_control_sets -verbose -file dkong_wrapper_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.065 . Memory (MB): peak = 1699.719 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.152 . Memory (MB): peak = 1785.641 ; gain = 0.000
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
@@ -454,71 +480,71 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 
 Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
-Checksum: PlaceDB: df31b986 ConstDB: 0 ShapeSum: e9814724 RouteDB: 0
+Checksum: PlaceDB: faf0a4 ConstDB: 0 ShapeSum: a809753b RouteDB: 0
 
 Phase 1 Build RT Design
-Phase 1 Build RT Design | Checksum: ba73f935
+Phase 1 Build RT Design | Checksum: 144144152
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:19 . Memory (MB): peak = 1699.719 ; gain = 0.000
-Post Restoration Checksum: NetGraph: b96b18e2 NumContArr: 108e053 Constraints: 0 Timing: 0
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:18 . Memory (MB): peak = 1785.641 ; gain = 0.000
+Post Restoration Checksum: NetGraph: 6c892e7a NumContArr: d78b12d8 Constraints: 0 Timing: 0
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: ba73f935
+Phase 2.1 Create Timer | Checksum: 144144152
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:19 . Memory (MB): peak = 1699.719 ; gain = 0.000
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:18 . Memory (MB): peak = 1785.641 ; gain = 0.000
 
 Phase 2.2 Fix Topology Constraints
-Phase 2.2 Fix Topology Constraints | Checksum: ba73f935
+Phase 2.2 Fix Topology Constraints | Checksum: 144144152
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:19 . Memory (MB): peak = 1699.719 ; gain = 0.000
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:18 . Memory (MB): peak = 1785.641 ; gain = 0.000
 
 Phase 2.3 Pre Route Cleanup
-Phase 2.3 Pre Route Cleanup | Checksum: ba73f935
+Phase 2.3 Pre Route Cleanup | Checksum: 144144152
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:19 . Memory (MB): peak = 1699.719 ; gain = 0.000
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:18 . Memory (MB): peak = 1785.641 ; gain = 0.000
  Number of Nodes with overlaps = 0
 
 Phase 2.4 Update Timing
-Phase 2.4 Update Timing | Checksum: 13f998549
+Phase 2.4 Update Timing | Checksum: 10fc41f3d
 
-Time (s): cpu = 00:00:23 ; elapsed = 00:00:21 . Memory (MB): peak = 1699.719 ; gain = 0.000
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-3.683 | TNS=-608.376| WHS=-0.594 | THS=-38.472|
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:20 . Memory (MB): peak = 1785.641 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-4.121 | TNS=-568.178| WHS=-0.602 | THS=-146.987|
 
-Phase 2 Router Initialization | Checksum: 139ee4ed6
+Phase 2 Router Initialization | Checksum: 13a5d02af
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1699.719 ; gain = 0.000
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:21 . Memory (MB): peak = 1785.641 ; gain = 0.000
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 0.0184322 %
-  Global Horizontal Routing Utilization  = 0.0321163 %
+  Global Vertical Routing Utilization    = 0.0292534 %
+  Global Horizontal Routing Utilization  = 0.0193543 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
-  Number of Failed Nets               = 3685
+  Number of Failed Nets               = 6546
     (Failed Nets is the sum of unrouted and partially routed nets)
-  Number of Unrouted Nets             = 3684
+  Number of Unrouted Nets             = 6545
   Number of Partially Routed Nets     = 1
   Number of Node Overlaps             = 0
 
 
 Phase 3 Initial Routing
-Phase 3 Initial Routing | Checksum: 11c31b750
+Phase 3 Initial Routing | Checksum: b090e310
 
-Time (s): cpu = 00:00:39 ; elapsed = 00:00:33 . Memory (MB): peak = 1734.285 ; gain = 34.566
-INFO: [Route 35-580] Design has 56 pins with tight setup and hold constraints.
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:30 . Memory (MB): peak = 1832.594 ; gain = 46.953
+INFO: [Route 35-580] Design has 42 pins with tight setup and hold constraints.
 
 The top 5 pins with tight setup and hold constraints:
 
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
 |       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                                dkong_i/dkong_system_wrapper_0/inst/inst/sou/i8035_int_ram/outreg_reg[6]/D|
+| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                                dkong_i/dkong_system_wrapper_0/inst/inst/sou/i8035_int_ram/outreg_reg[7]/D|
 | coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                                dkong_i/dkong_system_wrapper_0/inst/inst/sou/i8035_int_ram/outreg_reg[2]/D|
 | coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                                dkong_i/dkong_system_wrapper_0/inst/inst/sou/i8035_int_ram/outreg_reg[3]/D|
-| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                       dkong_i/dkong_system_wrapper_0/inst/inst/sou/i8035_int_ram/mem_reg_0_63_5_5/SP/ADR2|
-| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                       dkong_i/dkong_system_wrapper_0/inst/inst/sou/i8035_int_ram/mem_reg_0_63_6_6/SP/ADR2|
-| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                                dkong_i/dkong_system_wrapper_0/inst/inst/sou/i8035_int_ram/outreg_reg[7]/D|
+| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                             dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/alu_b/accu_shadow_q_reg[5]/D|
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
 
 File with complete list of pins: tight_setup_hold_pins.txt
@@ -527,86 +553,85 @@ File with complete list of pins: tight_setup_hold_pins.txt
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 574
- Number of Nodes with overlaps = 27
+ Number of Nodes with overlaps = 786
+ Number of Nodes with overlaps = 37
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-4.154 | TNS=-774.156| WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-3.768 | TNS=-757.462| WHS=N/A    | THS=N/A    |
 
-Phase 4.1 Global Iteration 0 | Checksum: 1739fdc3c
+Phase 4.1 Global Iteration 0 | Checksum: 1a0842ebd
 
-Time (s): cpu = 00:01:46 ; elapsed = 00:01:36 . Memory (MB): peak = 1770.055 ; gain = 70.336
+Time (s): cpu = 00:01:59 ; elapsed = 00:01:22 . Memory (MB): peak = 1848.695 ; gain = 63.055
 
 Phase 4.2 Global Iteration 1
- Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 15
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-4.009 | TNS=-758.786| WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-4.047 | TNS=-779.307| WHS=N/A    | THS=N/A    |
 
-Phase 4.2 Global Iteration 1 | Checksum: 24d0cf54d
+Phase 4.2 Global Iteration 1 | Checksum: ec686f4d
 
-Time (s): cpu = 00:02:04 ; elapsed = 00:01:52 . Memory (MB): peak = 1770.055 ; gain = 70.336
+Time (s): cpu = 00:02:46 ; elapsed = 00:01:51 . Memory (MB): peak = 1849.270 ; gain = 63.629
+Phase 4 Rip-up And Reroute | Checksum: ec686f4d
 
-Phase 4.3 Global Iteration 2
- Number of Nodes with overlaps = 6
- Number of Nodes with overlaps = 4
- Number of Nodes with overlaps = 2
- Number of Nodes with overlaps = 2
- Number of Nodes with overlaps = 2
- Number of Nodes with overlaps = 1
- Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-4.171 | TNS=-777.867| WHS=N/A    | THS=N/A    |
-
-Phase 4.3 Global Iteration 2 | Checksum: 12ad1271d
-
-Time (s): cpu = 00:04:12 ; elapsed = 00:03:43 . Memory (MB): peak = 1815.789 ; gain = 116.070
-Phase 4 Rip-up And Reroute | Checksum: 12ad1271d
-
-Time (s): cpu = 00:04:12 ; elapsed = 00:03:43 . Memory (MB): peak = 1815.789 ; gain = 116.070
+Time (s): cpu = 00:02:46 ; elapsed = 00:01:51 . Memory (MB): peak = 1849.270 ; gain = 63.629
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
 
 Phase 5.1.1 Update Timing
-Phase 5.1.1 Update Timing | Checksum: bb94b2b5
+Phase 5.1.1 Update Timing | Checksum: d4c96f95
 
-Time (s): cpu = 00:04:12 ; elapsed = 00:03:43 . Memory (MB): peak = 1815.789 ; gain = 116.070
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-4.009 | TNS=-758.786| WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:02:47 ; elapsed = 00:01:51 . Memory (MB): peak = 1849.270 ; gain = 63.629
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-3.768 | TNS=-757.462| WHS=N/A    | THS=N/A    |
 
  Number of Nodes with overlaps = 0
-Phase 5.1 Delay CleanUp | Checksum: 2300794bc
+Phase 5.1 Delay CleanUp | Checksum: 1566cdd97
 
-Time (s): cpu = 00:04:12 ; elapsed = 00:03:43 . Memory (MB): peak = 1815.789 ; gain = 116.070
+Time (s): cpu = 00:02:47 ; elapsed = 00:01:51 . Memory (MB): peak = 1849.270 ; gain = 63.629
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 2300794bc
+Phase 5.2 Clock Skew Optimization | Checksum: 1566cdd97
 
-Time (s): cpu = 00:04:12 ; elapsed = 00:03:43 . Memory (MB): peak = 1815.789 ; gain = 116.070
-Phase 5 Delay and Skew Optimization | Checksum: 2300794bc
+Time (s): cpu = 00:02:47 ; elapsed = 00:01:51 . Memory (MB): peak = 1849.270 ; gain = 63.629
+Phase 5 Delay and Skew Optimization | Checksum: 1566cdd97
 
-Time (s): cpu = 00:04:12 ; elapsed = 00:03:44 . Memory (MB): peak = 1815.789 ; gain = 116.070
+Time (s): cpu = 00:02:47 ; elapsed = 00:01:51 . Memory (MB): peak = 1849.270 ; gain = 63.629
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: 28d8ac7aa
+Phase 6.1.1 Update Timing | Checksum: 11c4f227c
 
-Time (s): cpu = 00:04:12 ; elapsed = 00:03:44 . Memory (MB): peak = 1815.789 ; gain = 116.070
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-4.009 | TNS=-757.616| WHS=0.081  | THS=0.000  |
+Time (s): cpu = 00:02:47 ; elapsed = 00:01:52 . Memory (MB): peak = 1849.270 ; gain = 63.629
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-3.768 | TNS=-757.448| WHS=-0.012 | THS=-0.014 |
 
-Phase 6.1 Hold Fix Iter | Checksum: 1d5eae15b
+Phase 6.1 Hold Fix Iter | Checksum: 195a0c1b7
 
-Time (s): cpu = 00:04:12 ; elapsed = 00:03:44 . Memory (MB): peak = 1815.789 ; gain = 116.070
-Phase 6 Post Hold Fix | Checksum: 1d5eae15b
+Time (s): cpu = 00:02:47 ; elapsed = 00:01:52 . Memory (MB): peak = 1849.270 ; gain = 63.629
+WARNING: [Route 35-468] The router encountered 77 pins that are both setup-critical and hold-critical and tried to fix hold violations at the expense of setup slack. Such pins are:
+	dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/alu_b/accu_shadow_q_reg[0]/CLR
+	dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/alu_b/accu_shadow_q_reg[1]/CLR
+	dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/alu_b/accu_shadow_q_reg[2]/CLR
+	dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/alu_b/accu_shadow_q_reg[4]/CLR
+	dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/alu_b/accumulator_q_reg[0]/CLR
+	dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/alu_b/accumulator_q_reg[4]/CLR
+	dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/alu_b/accumulator_q_reg[5]/CLR
+	dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/alu_b/temp_req_q_reg[0]/CLR
+	dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/alu_b/temp_req_q_reg[1]/CLR
+	dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/alu_b/temp_req_q_reg[2]/CLR
+	.. and 67 more pins.
 
-Time (s): cpu = 00:04:12 ; elapsed = 00:03:44 . Memory (MB): peak = 1815.789 ; gain = 116.070
+Phase 6 Post Hold Fix | Checksum: 216e67eab
+
+Time (s): cpu = 00:02:47 ; elapsed = 00:01:52 . Memory (MB): peak = 1849.270 ; gain = 63.629
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 0.896604 %
-  Global Horizontal Routing Utilization  = 1.41819 %
+  Global Vertical Routing Utilization    = 1.3615 %
+  Global Horizontal Routing Utilization  = 1.87669 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -617,10 +642,10 @@ Router Utilization Summary
   Number of Node Overlaps             = 0
 
 Congestion Report
-North Dir 1x1 Area, Max Cong = 34.2342%, No Congested Regions.
-South Dir 1x1 Area, Max Cong = 42.3423%, No Congested Regions.
-East Dir 1x1 Area, Max Cong = 48.5294%, No Congested Regions.
-West Dir 1x1 Area, Max Cong = 54.4118%, No Congested Regions.
+North Dir 1x1 Area, Max Cong = 44.1441%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 45.9459%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 52.9412%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 50%, No Congested Regions.
 
 ------------------------------
 Reporting congestion hotspots
@@ -642,46 +667,51 @@ Direction: West
 Congested clusters found at Level 0
 Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
 
-Phase 7 Route finalize | Checksum: 26437df3a
+Phase 7 Route finalize | Checksum: 1e24b5a5b
 
-Time (s): cpu = 00:04:13 ; elapsed = 00:03:44 . Memory (MB): peak = 1815.789 ; gain = 116.070
+Time (s): cpu = 00:02:47 ; elapsed = 00:01:52 . Memory (MB): peak = 1849.270 ; gain = 63.629
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: 26437df3a
+Phase 8 Verifying routed nets | Checksum: 1e24b5a5b
 
-Time (s): cpu = 00:04:13 ; elapsed = 00:03:44 . Memory (MB): peak = 1815.789 ; gain = 116.070
+Time (s): cpu = 00:02:47 ; elapsed = 00:01:52 . Memory (MB): peak = 1849.270 ; gain = 63.629
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 23eb3c2e9
+Phase 9 Depositing Routes | Checksum: 14a137d59
 
-Time (s): cpu = 00:04:13 ; elapsed = 00:03:44 . Memory (MB): peak = 1815.789 ; gain = 116.070
+Time (s): cpu = 00:02:48 ; elapsed = 00:01:52 . Memory (MB): peak = 1849.270 ; gain = 63.629
 
 Phase 10 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=-4.009 | TNS=-757.616| WHS=0.081  | THS=0.000  |
+
+Phase 10.1 Update Timing
+Phase 10.1 Update Timing | Checksum: fbb44823
+
+Time (s): cpu = 00:02:48 ; elapsed = 00:01:53 . Memory (MB): peak = 1849.270 ; gain = 63.629
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-3.768 | TNS=-757.448| WHS=0.064  | THS=0.000  |
 
 WARNING: [Route 35-328] Router estimated timing not met.
 Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
-Phase 10 Post Router Timing | Checksum: 23eb3c2e9
+Phase 10 Post Router Timing | Checksum: fbb44823
 
-Time (s): cpu = 00:04:13 ; elapsed = 00:03:44 . Memory (MB): peak = 1815.789 ; gain = 116.070
+Time (s): cpu = 00:02:48 ; elapsed = 00:01:53 . Memory (MB): peak = 1849.270 ; gain = 63.629
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:04:13 ; elapsed = 00:03:44 . Memory (MB): peak = 1815.789 ; gain = 116.070
+Time (s): cpu = 00:02:48 ; elapsed = 00:01:53 . Memory (MB): peak = 1849.270 ; gain = 63.629
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-95 Infos, 45 Warnings, 0 Critical Warnings and 0 Errors encountered.
+101 Infos, 46 Warnings, 0 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:04:15 ; elapsed = 00:03:45 . Memory (MB): peak = 1815.789 ; gain = 116.070
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1815.789 ; gain = 0.000
+route_design: Time (s): cpu = 00:02:50 ; elapsed = 00:01:54 . Memory (MB): peak = 1849.270 ; gain = 63.629
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1849.270 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.397 . Memory (MB): peak = 1815.789 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.636 . Memory (MB): peak = 1849.270 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.runs/impl_1/dkong_wrapper_routed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file dkong_wrapper_drc_routed.rpt -pb dkong_wrapper_drc_routed.pb -rpx dkong_wrapper_drc_routed.rpx
 Command: report_drc -file dkong_wrapper_drc_routed.rpt -pb dkong_wrapper_drc_routed.pb -rpx dkong_wrapper_drc_routed.rpx
@@ -701,7 +731,7 @@ INFO: [Timing 38-35] Done setting XDC timing constraints.
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
-107 Infos, 45 Warnings, 0 Critical Warnings and 0 Errors encountered.
+113 Infos, 46 Warnings, 0 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
 INFO: [runtcl-4] Executing : report_route_status -file dkong_wrapper_route_status.rpt -pb dkong_wrapper_route_status.pb
 INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file dkong_wrapper_timing_summary_routed.rpt -pb dkong_wrapper_timing_summary_routed.pb -rpx dkong_wrapper_timing_summary_routed.rpx -warn_on_violation 
@@ -714,6 +744,11 @@ INFO: [runtcl-4] Executing : report_clock_utilization -file dkong_wrapper_clock_
 INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file dkong_wrapper_bus_skew_routed.rpt -pb dkong_wrapper_bus_skew_routed.pb -rpx dkong_wrapper_bus_skew_routed.rpx
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
 INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [Memdata 28-167] Found XPM memory block dkong_i/smartconnect_0/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the dkong_i/smartconnect_0/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block dkong_i/smartconnect_0/inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the dkong_i/smartconnect_0/inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block dkong_i/smartconnect_0/inst/s00_nodes/s00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the dkong_i/smartconnect_0/inst/s00_nodes/s00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block dkong_i/smartconnect_0/inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the dkong_i/smartconnect_0/inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block dkong_i/smartconnect_0/inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the dkong_i/smartconnect_0/inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
 Command: write_bitstream -force dkong_wrapper.bit
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
@@ -748,9 +783,9 @@ WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_
 WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/sou/rom_3h/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/sou/rom_3h/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/ADDRARDADDR[11] (net: dkong_i/dkong_system_wrapper_0/inst/inst/sou/rom_3h/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/use_p2.p2_b/p2_o_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/sou/rom_3h/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/sou/rom_3h/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/sou/rom_3h/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[9]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/use_p2.p2_b/p2_o_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/sou/rom_3h/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/sou/rom_3h/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/ADDRARDADDR[13] (net: dkong_i/dkong_system_wrapper_0/inst/inst/sou/rom_3h/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[10]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/use_p2.p2_b/p2_o_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/ADDRARDADDR[8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[10]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/ADDRARDADDR[8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[11]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/ADDRARDADDR[8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[12]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/ADDRARDADDR[8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/rd_n_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/ADDRARDADDR[8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/wr_n_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg/ADDRARDADDR[13] (net: dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/ADDRARDADDR[9]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[10]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg/ADDRARDADDR[13] (net: dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/ADDRARDADDR[9]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[11]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg/ADDRARDADDR[13] (net: dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/ADDRARDADDR[9]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[12]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
@@ -774,9 +809,9 @@ Creating bitstream...
 Writing bitstream ./dkong_wrapper.bit...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
-INFO: [Common 17-186] 'C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Tue Mar 31 13:37:32 2020. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.1/doc/webtalk_introduction.html.
+INFO: [Common 17-186] 'C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Wed Apr  1 13:13:37 2020. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.1/doc/webtalk_introduction.html.
 INFO: [Common 17-83] Releasing license: Implementation
-127 Infos, 87 Warnings, 1 Critical Warnings and 0 Errors encountered.
+138 Infos, 88 Warnings, 1 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:18 ; elapsed = 00:00:15 . Memory (MB): peak = 2140.703 ; gain = 324.914
-INFO: [Common 17-206] Exiting Vivado at Tue Mar 31 13:37:32 2020...
+write_bitstream: Time (s): cpu = 00:00:21 ; elapsed = 00:00:19 . Memory (MB): peak = 2241.609 ; gain = 392.340
+INFO: [Common 17-206] Exiting Vivado at Wed Apr  1 13:13:37 2020...

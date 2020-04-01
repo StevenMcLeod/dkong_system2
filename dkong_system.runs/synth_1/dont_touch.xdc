@@ -36,8 +36,8 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==tile_3p_rom || 
 # IP: ip/tile_2n_prom/tile_2n_prom.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==tile_2n_prom || ORIG_REF_NAME==tile_2n_prom} -quiet] -quiet
 
-# IP: ip/cpu_program_rom/cpu_program_rom.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==cpu_program_rom || ORIG_REF_NAME==cpu_program_rom} -quiet] -quiet
+# IP: ip/cpu_program_rom_dp/cpu_program_rom_dp.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==cpu_program_rom_dp || ORIG_REF_NAME==cpu_program_rom_dp} -quiet] -quiet
 
 # IP: ip/framedoubler_mem/framedoubler_mem.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==framedoubler_mem || ORIG_REF_NAME==framedoubler_mem} -quiet] -quiet
@@ -81,8 +81,8 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==dkong_dkong_sys
 # IP: ip/tile_2n_prom/tile_2n_prom.xci
 #dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==tile_2n_prom || ORIG_REF_NAME==tile_2n_prom} -quiet] -quiet
 
-# IP: ip/cpu_program_rom/cpu_program_rom.xci
-#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==cpu_program_rom || ORIG_REF_NAME==cpu_program_rom} -quiet] -quiet
+# IP: ip/cpu_program_rom_dp/cpu_program_rom_dp.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==cpu_program_rom_dp || ORIG_REF_NAME==cpu_program_rom_dp} -quiet] -quiet
 
 # IP: bd/dkong/ip/dkong_processing_system7_0_0/dkong_processing_system7_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==dkong_processing_system7_0_0 || ORIG_REF_NAME==dkong_processing_system7_0_0} -quiet] -quiet
@@ -120,6 +120,18 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==dkong_demux2_0_
 # IP: bd/dkong/ip/dkong_demux2_3_0/dkong_demux2_3_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==dkong_demux2_3_0 || ORIG_REF_NAME==dkong_demux2_3_0} -quiet] -quiet
 
+# IP: bd/dkong/ip/dkong_axi_bram_ctrl_0_2/dkong_axi_bram_ctrl_0_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==dkong_axi_bram_ctrl_0_2 || ORIG_REF_NAME==dkong_axi_bram_ctrl_0_2} -quiet] -quiet
+
+# IP: bd/dkong/ip/dkong_smartconnect_0_0/dkong_smartconnect_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==dkong_smartconnect_0_0 || ORIG_REF_NAME==dkong_smartconnect_0_0} -quiet] -quiet
+
+# IP: bd/dkong/ip/dkong_proc_sys_reset_1_1/dkong_proc_sys_reset_1_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==dkong_proc_sys_reset_1_1 || ORIG_REF_NAME==dkong_proc_sys_reset_1_1} -quiet] -quiet
+
+# IP: bd/dkong/ip/dkong_xlslice_0_0/dkong_xlslice_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==dkong_xlslice_0_0 || ORIG_REF_NAME==dkong_xlslice_0_0} -quiet] -quiet
+
 # XDC: ip/sou_3f_rom/sou_3f_rom_ooc.xdc
 
 # XDC: ip/sou_3h_rom/sou_3h_rom_ooc.xdc
@@ -142,7 +154,7 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==dkong_demux2_3_
 
 # XDC: ip/tile_2n_prom/tile_2n_prom_ooc.xdc
 
-# XDC: ip/cpu_program_rom/cpu_program_rom_ooc.xdc
+# XDC: ip/cpu_program_rom_dp/cpu_program_rom_dp_ooc.xdc
 
 # XDC: ip/framedoubler_mem/framedoubler_mem_ooc.xdc
 
@@ -168,7 +180,7 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==dkong_demux2_3_
 
 # XDC: ip/tile_2n_prom/tile_2n_prom_ooc.xdc
 
-# XDC: ip/cpu_program_rom/cpu_program_rom_ooc.xdc
+# XDC: ip/cpu_program_rom_dp/cpu_program_rom_dp_ooc.xdc
 
 # XDC: ip/framedoubler_mem/framedoubler_mem_ooc.xdc
 

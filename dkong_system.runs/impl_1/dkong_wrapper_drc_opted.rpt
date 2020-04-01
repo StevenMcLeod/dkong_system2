@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Tue Mar 31 13:32:57 2020
+| Date         : Wed Apr  1 13:10:30 2020
 | Host         : Steven-Win10-2 running 64-bit major release  (build 9200)
 | Command      : report_drc -file dkong_wrapper_drc_opted.rpt -pb dkong_wrapper_drc_opted.pb -rpx dkong_wrapper_drc_opted.rpx
 | Design       : dkong_wrapper
@@ -177,17 +177,17 @@ Related violations: <none>
 
 REQP-1840#7 Warning
 RAMB18 async control check  
-The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/ADDRARDADDR[8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[10]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/ADDRARDADDR[8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[11]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#8 Warning
 RAMB18 async control check  
-The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/ADDRARDADDR[8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[11]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/ADDRARDADDR[8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/rd_n_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#9 Warning
 RAMB18 async control check  
-The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/ADDRARDADDR[8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[12]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/ADDRARDADDR[8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/wr_n_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#10 Warning

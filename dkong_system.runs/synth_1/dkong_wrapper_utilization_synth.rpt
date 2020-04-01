@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Tue Mar 31 13:32:10 2020
+| Date         : Wed Apr  1 13:08:55 2020
 | Host         : Steven-Win10-2 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file dkong_wrapper_utilization_synth.rpt -pb dkong_wrapper_utilization_synth.pb
 | Design       : dkong_wrapper
@@ -157,7 +157,9 @@ Table of Contents
 +--------------------------------+------+
 |            Ref Name            | Used |
 +--------------------------------+------+
+| dkong_smartconnect_0_0         |    1 |
 | dkong_processing_system7_0_0   |    1 |
+| dkong_proc_sys_reset_1_1       |    1 |
 | dkong_proc_sys_reset_1_0       |    1 |
 | dkong_proc_sys_reset_0_0       |    1 |
 | dkong_mux4_0_0                 |    1 |
@@ -169,6 +171,7 @@ Table of Contents
 | dkong_demux2_0_1               |    1 |
 | dkong_demux2_0_0               |    1 |
 | dkong_clk_wiz_0_0              |    1 |
+| dkong_axi_bram_ctrl_0_2        |    1 |
 +--------------------------------+------+
 
 

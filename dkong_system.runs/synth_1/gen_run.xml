@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1585686200">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1585771685">
   <File Type="PA-TCL" Name="dkong_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="dkong_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="dkong_wrapper_reports.tcl"/>
@@ -88,7 +88,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/ip/cpu_program_rom/cpu_program_rom.xci">
+    <File Path="$PSRCDIR/sources_1/ip/cpu_program_rom_dp/cpu_program_rom_dp.xci">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -408,6 +408,14 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/ip/cpu_program_rom/cpu_program_rom.xci">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/ip/obj_7e_rom.xcix">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -423,6 +431,20 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/ip/obj_7c_rom.xcix">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/sou_3f_rom.xcix">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/sou_3h_rom.xcix">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -589,29 +611,22 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/ip/sou_3h_rom.xcix">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PPRDIR/../z80_system_sources/coe/s_3i_b.bin.coe">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/ip/sou_3f_rom.xcix">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PPRDIR/../z80_system_sources/coe/s_3j_b.bin.coe">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/cpu_program_rom_dp.xcix">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
@@ -631,6 +646,7 @@
       </FileInfo>
     </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/imports/vga_tutorial_students/zedboard_master.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
@@ -646,10 +662,13 @@
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="dkong_framedoubler_slow_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="dkong_demux2_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="dkong_demux2_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="dkong_mux4_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="dkong_demux2_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="dkong_demux2_0_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="dkong_demux2_3_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="dkong_proc_sys_reset_1_1"/>
   <BlockFileSet Type="BlockSrcs" Name="dkong_demux2_0_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="dkong_demux2_3_0"/>
   <BlockFileSet Type="BlockSrcs" Name="dkong_dkong_system_wrapper_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="dkong_processing_system7_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="dkong_smartconnect_0_0"/>
 </GenRun>
