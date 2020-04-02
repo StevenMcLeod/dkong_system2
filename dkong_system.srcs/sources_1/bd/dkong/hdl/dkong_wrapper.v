@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Tue Mar 31 13:22:49 2020
+//Date        : Thu Apr  2 13:44:04 2020
 //Host        : Steven-Win10-2 running 64-bit major release  (build 9200)
 //Command     : generate_target dkong_wrapper.bd
 //Design      : dkong_wrapper
@@ -10,7 +10,8 @@
 `timescale 1 ps / 1 ps
 
 module dkong_wrapper
-   (BTNC,
+   (BANKSEL,
+    BTNC,
     BTND,
     BTNL,
     BTNR,
@@ -27,6 +28,7 @@ module dkong_wrapper
     VGA_HS,
     VGA_R,
     VGA_VS);
+  input [1:0]BANKSEL;
   input [0:0]BTNC;
   input [0:0]BTND;
   input [0:0]BTNL;
@@ -45,6 +47,7 @@ module dkong_wrapper
   output [3:0]VGA_R;
   output VGA_VS;
 
+  wire [1:0]BANKSEL;
   wire [0:0]BTNC;
   wire [0:0]BTND;
   wire [0:0]BTNL;
@@ -64,7 +67,8 @@ module dkong_wrapper
   wire VGA_VS;
 
   dkong dkong_i
-       (.BTNC(BTNC),
+       (.BANKSEL(BANKSEL),
+        .BTNC(BTNC),
         .BTND(BTND),
         .BTNL(BTNL),
         .BTNR(BTNR),

@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Tue Mar 31 12:46:35 2020
+// Date        : Wed Apr  1 16:48:35 2020
 // Host        : Steven-Win10-2 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top dkong_processing_system7_0_0 -prefix
-//               dkong_processing_system7_0_0_ dkong_processing_system7_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim
+//               C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_processing_system7_0_0/dkong_processing_system7_0_0_sim_netlist.v
 // Design      : dkong_processing_system7_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -15,17 +15,13 @@
 (* CHECK_LICENSE_TYPE = "dkong_processing_system7_0_0,processing_system7_v5_5_processing_system7,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "processing_system7_v5_5_processing_system7,Vivado 2019.1" *) 
 (* NotValidForBitStream *)
 module dkong_processing_system7_0_0
-   (UART0_TX,
-    UART0_RX,
-    FCLK_CLK0,
+   (FCLK_CLK0,
     FCLK_RESET0_N,
     MIO,
     PS_SRSTB,
     PS_CLK,
     PS_PORB);
-  (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 UART_0 TxD" *) output UART0_TX;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 UART_0 RxD" *) input UART0_RX;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 FCLK_CLK0 CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME FCLK_CLK0, FREQ_HZ 1e+08, PHASE 0.000, CLK_DOMAIN dkong_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *) output FCLK_CLK0;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 FCLK_CLK0 CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME FCLK_CLK0, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN dkong_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *) output FCLK_CLK0;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 FCLK_RESET0_N RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME FCLK_RESET0_N, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) output FCLK_RESET0_N;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO MIO" *) inout [53:0]MIO;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB" *) inout PS_SRSTB;
@@ -38,8 +34,6 @@ module dkong_processing_system7_0_0
   wire PS_CLK;
   wire PS_PORB;
   wire PS_SRSTB;
-  wire UART0_RX;
-  wire UART0_TX;
   wire NLW_inst_CAN0_PHY_TX_UNCONNECTED;
   wire NLW_inst_CAN1_PHY_TX_UNCONNECTED;
   wire NLW_inst_DDR_CAS_n_UNCONNECTED;
@@ -251,6 +245,7 @@ module dkong_processing_system7_0_0
   wire NLW_inst_TTC1_WAVE2_OUT_UNCONNECTED;
   wire NLW_inst_UART0_DTRN_UNCONNECTED;
   wire NLW_inst_UART0_RTSN_UNCONNECTED;
+  wire NLW_inst_UART0_TX_UNCONNECTED;
   wire NLW_inst_UART1_DTRN_UNCONNECTED;
   wire NLW_inst_UART1_RTSN_UNCONNECTED;
   wire NLW_inst_UART1_TX_UNCONNECTED;
@@ -433,7 +428,7 @@ module dkong_processing_system7_0_0
   (* C_USE_S_AXI_HP2 = "0" *) 
   (* C_USE_S_AXI_HP3 = "0" *) 
   (* HW_HANDOFF = "dkong_processing_system7_0_0.hwdef" *) 
-  (* POWER = "<PROCESSOR name={system} numA9Cores={2} clockFreq={666.666666} load={0.5} /><MEMORY name={code} memType={} dataWidth={} clockFreq={533.333} readRate={0.5} writeRate={0.5} /><IO interface={UART} ioStandard={} bidis={0} ioBank={} clockFreq={100.000000} usageRate={0.5} /><PLL domain={Processor} vco={1333.333} /><PLL domain={Memory} vco={1066.667} /><PLL domain={IO} vco={1600.000} />/>" *) 
+  (* POWER = "<PROCESSOR name={system} numA9Cores={2} clockFreq={666.666666} load={0.5} /><MEMORY name={code} memType={} dataWidth={} clockFreq={533.333} readRate={0.5} writeRate={0.5} /><PLL domain={Processor} vco={1333.333} /><PLL domain={Memory} vco={1066.667} /><PLL domain={IO} vco={1600.000} />/>" *) 
   (* USE_TRACE_DATA_EDGE_DETECTOR = "0" *) 
   dkong_processing_system7_0_0_processing_system7_v5_5_processing_system7 inst
        (.CAN0_PHY_RX(1'b0),
@@ -1103,8 +1098,8 @@ module dkong_processing_system7_0_0
         .UART0_DTRN(NLW_inst_UART0_DTRN_UNCONNECTED),
         .UART0_RIN(1'b0),
         .UART0_RTSN(NLW_inst_UART0_RTSN_UNCONNECTED),
-        .UART0_RX(UART0_RX),
-        .UART0_TX(UART0_TX),
+        .UART0_RX(1'b1),
+        .UART0_TX(NLW_inst_UART0_TX_UNCONNECTED),
         .UART1_CTSN(1'b0),
         .UART1_DCDN(1'b0),
         .UART1_DSRN(1'b0),
@@ -1141,8 +1136,8 @@ endmodule
 (* C_USE_DEFAULT_ACP_USER_VAL = "0" *) (* C_USE_M_AXI_GP0 = "0" *) (* C_USE_M_AXI_GP1 = "0" *) 
 (* C_USE_S_AXI_ACP = "0" *) (* C_USE_S_AXI_GP0 = "0" *) (* C_USE_S_AXI_GP1 = "0" *) 
 (* C_USE_S_AXI_HP0 = "0" *) (* C_USE_S_AXI_HP1 = "0" *) (* C_USE_S_AXI_HP2 = "0" *) 
-(* C_USE_S_AXI_HP3 = "0" *) (* HW_HANDOFF = "dkong_processing_system7_0_0.hwdef" *) (* POWER = "<PROCESSOR name={system} numA9Cores={2} clockFreq={666.666666} load={0.5} /><MEMORY name={code} memType={} dataWidth={} clockFreq={533.333} readRate={0.5} writeRate={0.5} /><IO interface={UART} ioStandard={} bidis={0} ioBank={} clockFreq={100.000000} usageRate={0.5} /><PLL domain={Processor} vco={1333.333} /><PLL domain={Memory} vco={1066.667} /><PLL domain={IO} vco={1600.000} />/>" *) 
-(* USE_TRACE_DATA_EDGE_DETECTOR = "0" *) 
+(* C_USE_S_AXI_HP3 = "0" *) (* HW_HANDOFF = "dkong_processing_system7_0_0.hwdef" *) (* ORIG_REF_NAME = "processing_system7_v5_5_processing_system7" *) 
+(* POWER = "<PROCESSOR name={system} numA9Cores={2} clockFreq={666.666666} load={0.5} /><MEMORY name={code} memType={} dataWidth={} clockFreq={533.333} readRate={0.5} writeRate={0.5} /><PLL domain={Processor} vco={1333.333} /><PLL domain={Memory} vco={1066.667} /><PLL domain={IO} vco={1600.000} />/>" *) (* USE_TRACE_DATA_EDGE_DETECTOR = "0" *) 
 module dkong_processing_system7_0_0_processing_system7_v5_5_processing_system7
    (CAN0_PHY_TX,
     CAN0_PHY_RX,

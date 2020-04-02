@@ -239,8 +239,8 @@ set_property PACKAGE_PIN G22 [get_ports {DIPSW[1]}];  # "SW1"
 #set_property PACKAGE_PIN H22 [get_ports {DIPSW[2]}];  # "SW2"
 #set_property PACKAGE_PIN F21 [get_ports {DIPSW[3]}];  # "SW3"
 #set_property PACKAGE_PIN H19 [get_ports {DIPSW[4]}];  # "SW4"
-#set_property PACKAGE_PIN H18 [get_ports {DIPSW[5]}];  # "SW5"
-#set_property PACKAGE_PIN H17 [get_ports {DIPSW[6]}];  # "SW6"
+set_property PACKAGE_PIN H18 [get_ports {BANKSEL[0]}];  # "SW5"
+set_property PACKAGE_PIN H17 [get_ports {BANKSEL[1]}];  # "SW6"
 set_property PACKAGE_PIN M15 [get_ports {INMODE}];  # "SW7"
 
 ## ----------------------------------------------------------------------------

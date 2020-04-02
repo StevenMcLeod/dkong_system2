@@ -58,8 +58,6 @@ AXI_GP1_THREAD_ID_WIDTH=12,C_NUM_F2P_INTR_INPUTS=1,C_IRQ_F2P_MODE=DIRECT,C_DQ_WI
 ,C_GP1_EN_MODIFIABLE_TXN=1}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module dkong_processing_system7_0_0 (
-  UART0_TX,
-  UART0_RX,
   FCLK_CLK0,
   FCLK_RESET0_N,
   MIO,
@@ -68,11 +66,7 @@ module dkong_processing_system7_0_0 (
   PS_PORB
 );
 
-(* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 UART_0 TxD" *)
-output wire UART0_TX;
-(* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 UART_0 RxD" *)
-input wire UART0_RX;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME FCLK_CLK0, FREQ_HZ 1e+08, PHASE 0.000, CLK_DOMAIN dkong_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME FCLK_CLK0, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN dkong_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 FCLK_CLK0 CLK" *)
 output wire FCLK_CLK0;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME FCLK_RESET0_N, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
@@ -275,12 +269,12 @@ inout wire PS_PORB;
     .SPI1_SS_T(),
     .UART0_DTRN(),
     .UART0_RTSN(),
-    .UART0_TX(UART0_TX),
+    .UART0_TX(),
     .UART0_CTSN(1'B0),
     .UART0_DCDN(1'B0),
     .UART0_DSRN(1'B0),
     .UART0_RIN(1'B0),
-    .UART0_RX(UART0_RX),
+    .UART0_RX(1'B1),
     .UART1_DTRN(),
     .UART1_RTSN(),
     .UART1_TX(),

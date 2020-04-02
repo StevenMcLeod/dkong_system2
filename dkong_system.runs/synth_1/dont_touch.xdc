@@ -3,41 +3,44 @@
 
 # XDC: imports/vga_tutorial_students/zedboard_master.xdc
 
-# IP: ip/sou_3f_rom/sou_3f_rom.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==sou_3f_rom || ORIG_REF_NAME==sou_3f_rom} -quiet] -quiet
-
-# IP: ip/sou_3h_rom/sou_3h_rom.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==sou_3h_rom || ORIG_REF_NAME==sou_3h_rom} -quiet] -quiet
-
-# IP: ip/palette_2f_prom/palette_2f_prom.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==palette_2f_prom || ORIG_REF_NAME==palette_2f_prom} -quiet] -quiet
-
-# IP: ip/palette_2e_prom/palette_2e_prom.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==palette_2e_prom || ORIG_REF_NAME==palette_2e_prom} -quiet] -quiet
-
-# IP: ip/obj_7f_rom/obj_7f_rom.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==obj_7f_rom || ORIG_REF_NAME==obj_7f_rom} -quiet] -quiet
-
-# IP: ip/obj_7e_rom/obj_7e_rom.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==obj_7e_rom || ORIG_REF_NAME==obj_7e_rom} -quiet] -quiet
-
-# IP: ip/obj_7d_rom/obj_7d_rom.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==obj_7d_rom || ORIG_REF_NAME==obj_7d_rom} -quiet] -quiet
-
-# IP: ip/obj_7c_rom/obj_7c_rom.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==obj_7c_rom || ORIG_REF_NAME==obj_7c_rom} -quiet] -quiet
-
-# IP: ip/tile_3n_rom/tile_3n_rom.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==tile_3n_rom || ORIG_REF_NAME==tile_3n_rom} -quiet] -quiet
-
-# IP: ip/tile_3p_rom/tile_3p_rom.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==tile_3p_rom || ORIG_REF_NAME==tile_3p_rom} -quiet] -quiet
-
-# IP: ip/tile_2n_prom/tile_2n_prom.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==tile_2n_prom || ORIG_REF_NAME==tile_2n_prom} -quiet] -quiet
-
 # IP: ip/cpu_program_rom/cpu_program_rom.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==cpu_program_rom || ORIG_REF_NAME==cpu_program_rom} -quiet] -quiet
+
+# IP: ip/sou_3f_banked_rom/sou_3f_banked_rom.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==sou_3f_banked_rom || ORIG_REF_NAME==sou_3f_banked_rom} -quiet] -quiet
+
+# IP: ip/sou_3h_banked_rom/sou_3h_banked_rom.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==sou_3h_banked_rom || ORIG_REF_NAME==sou_3h_banked_rom} -quiet] -quiet
+
+# IP: ip/palette_2f_banked_prom/palette_2f_banked_prom.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==palette_2f_banked_prom || ORIG_REF_NAME==palette_2f_banked_prom} -quiet] -quiet
+
+# IP: ip/palette_2e_banked_prom/palette_2e_banked_prom.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==palette_2e_banked_prom || ORIG_REF_NAME==palette_2e_banked_prom} -quiet] -quiet
+
+# IP: ip/obj_7f_banked_rom/obj_7f_banked_rom.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==obj_7f_banked_rom || ORIG_REF_NAME==obj_7f_banked_rom} -quiet] -quiet
+
+# IP: ip/obj_7e_banked_rom/obj_7e_banked_rom.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==obj_7e_banked_rom || ORIG_REF_NAME==obj_7e_banked_rom} -quiet] -quiet
+
+# IP: ip/obj_7d_banked_rom/obj_7d_banked_rom.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==obj_7d_banked_rom || ORIG_REF_NAME==obj_7d_banked_rom} -quiet] -quiet
+
+# IP: ip/obj_7c_banked_rom/obj_7c_banked_rom.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==obj_7c_banked_rom || ORIG_REF_NAME==obj_7c_banked_rom} -quiet] -quiet
+
+# IP: ip/tile_3n_banked_rom/tile_3n_banked_rom.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==tile_3n_banked_rom || ORIG_REF_NAME==tile_3n_banked_rom} -quiet] -quiet
+
+# IP: ip/tile_3p_banked_rom/tile_3p_banked_rom.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==tile_3p_banked_rom || ORIG_REF_NAME==tile_3p_banked_rom} -quiet] -quiet
+
+# IP: ip/tile_2n_banked_prom/tile_2n_banked_prom.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==tile_2n_banked_prom || ORIG_REF_NAME==tile_2n_banked_prom} -quiet] -quiet
+
+# IP: ip/cpu_program_banked_rom/cpu_program_banked_rom.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==cpu_program_banked_rom || ORIG_REF_NAME==cpu_program_banked_rom} -quiet] -quiet
 
 # IP: ip/framedoubler_mem/framedoubler_mem.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==framedoubler_mem || ORIG_REF_NAME==framedoubler_mem} -quiet] -quiet
@@ -48,41 +51,44 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==dkong || ORIG_R
 # IP: bd/dkong/ip/dkong_dkong_system_wrapper_0_0/dkong_dkong_system_wrapper_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==dkong_dkong_system_wrapper_0_0 || ORIG_REF_NAME==dkong_dkong_system_wrapper_0_0} -quiet] -quiet
 
-# IP: ip/sou_3f_rom/sou_3f_rom.xci
-#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==sou_3f_rom || ORIG_REF_NAME==sou_3f_rom} -quiet] -quiet
-
-# IP: ip/sou_3h_rom/sou_3h_rom.xci
-#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==sou_3h_rom || ORIG_REF_NAME==sou_3h_rom} -quiet] -quiet
-
-# IP: ip/palette_2f_prom/palette_2f_prom.xci
-#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==palette_2f_prom || ORIG_REF_NAME==palette_2f_prom} -quiet] -quiet
-
-# IP: ip/palette_2e_prom/palette_2e_prom.xci
-#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==palette_2e_prom || ORIG_REF_NAME==palette_2e_prom} -quiet] -quiet
-
-# IP: ip/obj_7f_rom/obj_7f_rom.xci
-#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==obj_7f_rom || ORIG_REF_NAME==obj_7f_rom} -quiet] -quiet
-
-# IP: ip/obj_7e_rom/obj_7e_rom.xci
-#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==obj_7e_rom || ORIG_REF_NAME==obj_7e_rom} -quiet] -quiet
-
-# IP: ip/obj_7d_rom/obj_7d_rom.xci
-#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==obj_7d_rom || ORIG_REF_NAME==obj_7d_rom} -quiet] -quiet
-
-# IP: ip/obj_7c_rom/obj_7c_rom.xci
-#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==obj_7c_rom || ORIG_REF_NAME==obj_7c_rom} -quiet] -quiet
-
-# IP: ip/tile_3n_rom/tile_3n_rom.xci
-#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==tile_3n_rom || ORIG_REF_NAME==tile_3n_rom} -quiet] -quiet
-
-# IP: ip/tile_3p_rom/tile_3p_rom.xci
-#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==tile_3p_rom || ORIG_REF_NAME==tile_3p_rom} -quiet] -quiet
-
-# IP: ip/tile_2n_prom/tile_2n_prom.xci
-#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==tile_2n_prom || ORIG_REF_NAME==tile_2n_prom} -quiet] -quiet
-
 # IP: ip/cpu_program_rom/cpu_program_rom.xci
 #dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==cpu_program_rom || ORIG_REF_NAME==cpu_program_rom} -quiet] -quiet
+
+# IP: ip/sou_3f_banked_rom/sou_3f_banked_rom.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==sou_3f_banked_rom || ORIG_REF_NAME==sou_3f_banked_rom} -quiet] -quiet
+
+# IP: ip/sou_3h_banked_rom/sou_3h_banked_rom.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==sou_3h_banked_rom || ORIG_REF_NAME==sou_3h_banked_rom} -quiet] -quiet
+
+# IP: ip/palette_2f_banked_prom/palette_2f_banked_prom.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==palette_2f_banked_prom || ORIG_REF_NAME==palette_2f_banked_prom} -quiet] -quiet
+
+# IP: ip/palette_2e_banked_prom/palette_2e_banked_prom.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==palette_2e_banked_prom || ORIG_REF_NAME==palette_2e_banked_prom} -quiet] -quiet
+
+# IP: ip/obj_7f_banked_rom/obj_7f_banked_rom.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==obj_7f_banked_rom || ORIG_REF_NAME==obj_7f_banked_rom} -quiet] -quiet
+
+# IP: ip/obj_7e_banked_rom/obj_7e_banked_rom.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==obj_7e_banked_rom || ORIG_REF_NAME==obj_7e_banked_rom} -quiet] -quiet
+
+# IP: ip/obj_7d_banked_rom/obj_7d_banked_rom.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==obj_7d_banked_rom || ORIG_REF_NAME==obj_7d_banked_rom} -quiet] -quiet
+
+# IP: ip/obj_7c_banked_rom/obj_7c_banked_rom.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==obj_7c_banked_rom || ORIG_REF_NAME==obj_7c_banked_rom} -quiet] -quiet
+
+# IP: ip/tile_3n_banked_rom/tile_3n_banked_rom.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==tile_3n_banked_rom || ORIG_REF_NAME==tile_3n_banked_rom} -quiet] -quiet
+
+# IP: ip/tile_3p_banked_rom/tile_3p_banked_rom.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==tile_3p_banked_rom || ORIG_REF_NAME==tile_3p_banked_rom} -quiet] -quiet
+
+# IP: ip/tile_2n_banked_prom/tile_2n_banked_prom.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==tile_2n_banked_prom || ORIG_REF_NAME==tile_2n_banked_prom} -quiet] -quiet
+
+# IP: ip/cpu_program_banked_rom/cpu_program_banked_rom.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==cpu_program_banked_rom || ORIG_REF_NAME==cpu_program_banked_rom} -quiet] -quiet
 
 # IP: bd/dkong/ip/dkong_processing_system7_0_0/dkong_processing_system7_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==dkong_processing_system7_0_0 || ORIG_REF_NAME==dkong_processing_system7_0_0} -quiet] -quiet
@@ -120,55 +126,59 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==dkong_demux2_0_
 # IP: bd/dkong/ip/dkong_demux2_3_0/dkong_demux2_3_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==dkong_demux2_3_0 || ORIG_REF_NAME==dkong_demux2_3_0} -quiet] -quiet
 
-# XDC: ip/sou_3f_rom/sou_3f_rom_ooc.xdc
-
-# XDC: ip/sou_3h_rom/sou_3h_rom_ooc.xdc
-
-# XDC: ip/palette_2f_prom/palette_2f_prom_ooc.xdc
-
-# XDC: ip/palette_2e_prom/palette_2e_prom_ooc.xdc
-
-# XDC: ip/obj_7f_rom/obj_7f_rom_ooc.xdc
-
-# XDC: ip/obj_7e_rom/obj_7e_rom_ooc.xdc
-
-# XDC: ip/obj_7d_rom/obj_7d_rom_ooc.xdc
-
-# XDC: ip/obj_7c_rom/obj_7c_rom_ooc.xdc
-
-# XDC: ip/tile_3n_rom/tile_3n_rom_ooc.xdc
-
-# XDC: ip/tile_3p_rom/tile_3p_rom_ooc.xdc
-
-# XDC: ip/tile_2n_prom/tile_2n_prom_ooc.xdc
-
 # XDC: ip/cpu_program_rom/cpu_program_rom_ooc.xdc
+
+# XDC: ip/sou_3f_banked_rom/sou_3f_banked_rom_ooc.xdc
+
+# XDC: ip/sou_3h_banked_rom/sou_3h_banked_rom_ooc.xdc
+
+# XDC: ip/palette_2f_banked_prom/palette_2f_banked_prom_ooc.xdc
+
+# XDC: ip/palette_2e_banked_prom/palette_2e_banked_prom_ooc.xdc
+
+# XDC: ip/obj_7f_banked_rom/obj_7f_banked_rom_ooc.xdc
+
+# XDC: ip/obj_7e_banked_rom/obj_7e_banked_rom_ooc.xdc
+
+# XDC: ip/obj_7d_banked_rom/obj_7d_banked_rom_ooc.xdc
+
+# XDC: ip/obj_7c_banked_rom/obj_7c_banked_rom_ooc.xdc
+
+# XDC: ip/tile_3n_banked_rom/tile_3n_banked_rom_ooc.xdc
+
+# XDC: ip/tile_3p_banked_rom/tile_3p_banked_rom_ooc.xdc
+
+# XDC: ip/tile_2n_banked_prom/tile_2n_banked_prom_ooc.xdc
+
+# XDC: ip/cpu_program_banked_rom/cpu_program_banked_rom_ooc.xdc
 
 # XDC: ip/framedoubler_mem/framedoubler_mem_ooc.xdc
 
-# XDC: ip/sou_3f_rom/sou_3f_rom_ooc.xdc
-
-# XDC: ip/sou_3h_rom/sou_3h_rom_ooc.xdc
-
-# XDC: ip/palette_2f_prom/palette_2f_prom_ooc.xdc
-
-# XDC: ip/palette_2e_prom/palette_2e_prom_ooc.xdc
-
-# XDC: ip/obj_7f_rom/obj_7f_rom_ooc.xdc
-
-# XDC: ip/obj_7e_rom/obj_7e_rom_ooc.xdc
-
-# XDC: ip/obj_7d_rom/obj_7d_rom_ooc.xdc
-
-# XDC: ip/obj_7c_rom/obj_7c_rom_ooc.xdc
-
-# XDC: ip/tile_3n_rom/tile_3n_rom_ooc.xdc
-
-# XDC: ip/tile_3p_rom/tile_3p_rom_ooc.xdc
-
-# XDC: ip/tile_2n_prom/tile_2n_prom_ooc.xdc
-
 # XDC: ip/cpu_program_rom/cpu_program_rom_ooc.xdc
+
+# XDC: ip/sou_3f_banked_rom/sou_3f_banked_rom_ooc.xdc
+
+# XDC: ip/sou_3h_banked_rom/sou_3h_banked_rom_ooc.xdc
+
+# XDC: ip/palette_2f_banked_prom/palette_2f_banked_prom_ooc.xdc
+
+# XDC: ip/palette_2e_banked_prom/palette_2e_banked_prom_ooc.xdc
+
+# XDC: ip/obj_7f_banked_rom/obj_7f_banked_rom_ooc.xdc
+
+# XDC: ip/obj_7e_banked_rom/obj_7e_banked_rom_ooc.xdc
+
+# XDC: ip/obj_7d_banked_rom/obj_7d_banked_rom_ooc.xdc
+
+# XDC: ip/obj_7c_banked_rom/obj_7c_banked_rom_ooc.xdc
+
+# XDC: ip/tile_3n_banked_rom/tile_3n_banked_rom_ooc.xdc
+
+# XDC: ip/tile_3p_banked_rom/tile_3p_banked_rom_ooc.xdc
+
+# XDC: ip/tile_2n_banked_prom/tile_2n_banked_prom_ooc.xdc
+
+# XDC: ip/cpu_program_banked_rom/cpu_program_banked_rom_ooc.xdc
 
 # XDC: ip/framedoubler_mem/framedoubler_mem_ooc.xdc
 

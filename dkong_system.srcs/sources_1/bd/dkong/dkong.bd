@@ -1,11 +1,12 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xE3F082753F206480",
+      "boundary_crc": "0xFFB760FF458D3D31",
       "device": "xc7z020clg484-1",
       "name": "dkong",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2019.1"
+      "tool_version": "2019.1",
+      "validated": "true"
     },
     "design_tree": {
       "processing_system7_0": "",
@@ -24,7 +25,13 @@
     "interface_ports": {
       "FIXED_IO": {
         "mode": "Master",
-        "vlnv": "xilinx.com:display_processing_system7:fixedio_rtl:1.0"
+        "vlnv": "xilinx.com:display_processing_system7:fixedio_rtl:1.0",
+        "parameters": {
+          "CAN_DEBUG": {
+            "value": "false",
+            "value_src": "default"
+          }
+        }
       }
     },
     "ports": {
@@ -85,6 +92,11 @@
       "BTNC": {
         "direction": "I",
         "left": "0",
+        "right": "0"
+      },
+      "BANKSEL": {
+        "direction": "I",
+        "left": "1",
         "right": "0"
       }
     },
@@ -157,7 +169,7 @@
             "value": "111.111115"
           },
           "PCW_ACT_UART_PERIPHERAL_FREQMHZ": {
-            "value": "100.000000"
+            "value": "10.000000"
           },
           "PCW_ACT_WDT_PERIPHERAL_FREQMHZ": {
             "value": "111.111115"
@@ -181,13 +193,13 @@
             "value": "0"
           },
           "PCW_EN_EMIO_UART0": {
-            "value": "1"
+            "value": "0"
           },
           "PCW_EN_GPIO": {
             "value": "0"
           },
           "PCW_EN_UART0": {
-            "value": "1"
+            "value": "0"
           },
           "PCW_FPGA0_PERIPHERAL_FREQMHZ": {
             "value": "100"
@@ -207,20 +219,14 @@
           "PCW_MIO_TREE_SIGNALS": {
             "value": "unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned"
           },
-          "PCW_UART0_GRP_FULL_ENABLE": {
-            "value": "0"
-          },
           "PCW_UART0_PERIPHERAL_ENABLE": {
-            "value": "1"
-          },
-          "PCW_UART0_UART0_IO": {
-            "value": "EMIO"
+            "value": "0"
           },
           "PCW_UART_PERIPHERAL_FREQMHZ": {
             "value": "100"
           },
           "PCW_UART_PERIPHERAL_VALID": {
-            "value": "1"
+            "value": "0"
           },
           "PCW_UIPARAM_ACT_DDR_FREQ_MHZ": {
             "value": "533.333374"
@@ -386,14 +392,40 @@
         "ports": {
           "in_rst_n": {
             "type": "rst",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
           },
           "out_rst_n": {
             "type": "rst",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
           },
           "masterclk": {
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              },
+              "FREQ_HZ": {
+                "value": "61505681",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "in_pixclk": {
             "direction": "I"
@@ -417,7 +449,21 @@
             "right": "0"
           },
           "out_pixclk": {
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              },
+              "FREQ_HZ": {
+                "value": "25174418",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "out_r": {
             "direction": "O",
@@ -591,6 +637,9 @@
         "vlnv": "xilinx.com:module_ref:dkong_system_wrapper:1.0",
         "xci_name": "dkong_dkong_system_wrapper_0_0",
         "parameters": {
+          "DEBUG_BANKSEL_ENA": {
+            "value": "1"
+          },
           "IN0_ENA": {
             "value": "1"
           },
@@ -609,19 +658,47 @@
         "ports": {
           "rst_n": {
             "type": "rst",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
           },
           "masterclk": {
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              },
+              "FREQ_HZ": {
+                "value": "61505681",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "soundclk": {
-            "direction": "I"
-          },
-          "ser_in": {
-            "direction": "I"
-          },
-          "ser_out": {
-            "direction": "O"
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              },
+              "FREQ_HZ": {
+                "value": "5987278",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "pixelclk": {
             "direction": "O"
@@ -703,6 +780,11 @@
           "debug_wait": {
             "direction": "I"
           },
+          "debug_banksel": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
           "debug_ahi": {
             "direction": "O",
             "left": "7",
@@ -781,24 +863,6 @@
         "ports": [
           "dkong_system_wrapper_0/debug_ahi",
           "mux4_0/inb"
-        ]
-      },
-      "dkong_system_wrapper_0_debug_cpu_sig": {
-        "ports": [
-          "dkong_system_wrapper_0/debug_cpu_sig",
-          "mux4_0/ind"
-        ]
-      },
-      "dkong_system_wrapper_0_ser_out": {
-        "ports": [
-          "dkong_system_wrapper_0/ser_out",
-          "processing_system7_0/UART0_RX"
-        ]
-      },
-      "processing_system7_0_UART0_TX": {
-        "ports": [
-          "processing_system7_0/UART0_TX",
-          "dkong_system_wrapper_0/ser_in"
         ]
       },
       "clk_wiz_0_vgaclk": {
@@ -998,6 +1062,18 @@
         "ports": [
           "clk_wiz_0/soundclk",
           "dkong_system_wrapper_0/soundclk"
+        ]
+      },
+      "debug_banksel_0_1": {
+        "ports": [
+          "BANKSEL",
+          "dkong_system_wrapper_0/debug_banksel"
+        ]
+      },
+      "dkong_system_wrapper_0_debug_enables": {
+        "ports": [
+          "dkong_system_wrapper_0/debug_enables",
+          "mux4_0/ind"
         ]
       }
     }

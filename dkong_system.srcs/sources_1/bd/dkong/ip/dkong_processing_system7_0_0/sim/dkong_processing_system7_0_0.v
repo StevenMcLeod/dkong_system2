@@ -56,8 +56,6 @@
 `timescale 1ns/1ps
 
 module dkong_processing_system7_0_0 (
-UART0_TX, 
-UART0_RX, 
 FCLK_CLK0, 
 FCLK_RESET0_N, 
 MIO, 
@@ -65,8 +63,6 @@ PS_SRSTB,
 PS_CLK, 
 PS_PORB 
 );
-output UART0_TX;
-input UART0_RX;
 output FCLK_CLK0;
 output FCLK_RESET0_N;
 input [53 : 0] MIO;

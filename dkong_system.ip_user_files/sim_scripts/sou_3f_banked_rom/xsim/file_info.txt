@@ -1,0 +1,2 @@
+sou_3f_banked_rom.v,verilog,xil_defaultlib,../../../ip/sou_3f_banked_rom/sim/sou_3f_banked_rom.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

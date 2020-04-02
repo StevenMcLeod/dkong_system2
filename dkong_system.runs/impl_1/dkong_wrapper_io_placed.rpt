@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date                      : Tue Mar 31 13:33:25 2020
+| Date                      : Thu Apr  2 13:55:14 2020
 | Host                      : Steven-Win10-2 running 64-bit major release  (build 9200)
 | Command                   : report_io -file dkong_wrapper_io_placed.rpt
 | Design                    : dkong_wrapper
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|            87 |
+|            89 |
 +---------------+
 
 
@@ -249,8 +249,8 @@ Table of Contents
 | H14        |                   |            | GND                     | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | H15        |                   | High Range | IO_0_34                 | User IO     |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | H16        |                   |            | GND                     | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
-| H17        |                   | High Range | IO_0_35                 | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
-| H18        |                   | High Range | IO_25_35                | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| H17        | BANKSEL[1]        | High Range | IO_0_35                 | INPUT       | LVCMOS18    |      35 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
+| H18        | BANKSEL[0]        | High Range | IO_25_35                | INPUT       | LVCMOS18    |      35 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | H19        |                   | High Range | IO_L19P_T3_35           | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | H20        |                   | High Range | IO_L19N_T3_VREF_35      | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | H21        |                   | High Range | VCCO_35                 | VCCO        |             |      35 |            |      |                     |                      |    1.80 |            |           |          |      |                  |              |                   |              |

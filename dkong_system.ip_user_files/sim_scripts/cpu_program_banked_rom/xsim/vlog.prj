@@ -1,0 +1,6 @@
+verilog xil_defaultlib  \
+"../../../ip/cpu_program_banked_rom/sim/cpu_program_banked_rom.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

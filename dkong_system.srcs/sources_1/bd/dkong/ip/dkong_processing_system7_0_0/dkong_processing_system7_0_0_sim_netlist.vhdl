@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Tue Mar 31 12:46:35 2020
+-- Date        : Wed Apr  1 16:48:35 2020
 -- Host        : Steven-Win10-2 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top dkong_processing_system7_0_0 -prefix
---               dkong_processing_system7_0_0_ dkong_processing_system7_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim
+--               C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_processing_system7_0_0/dkong_processing_system7_0_0_sim_netlist.vhdl
 -- Design      : dkong_processing_system7_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -814,8 +814,10 @@ entity dkong_processing_system7_0_0_processing_system7_v5_5_processing_system7 i
   attribute C_USE_S_AXI_HP3 of dkong_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 0;
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of dkong_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is "dkong_processing_system7_0_0.hwdef";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of dkong_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is "processing_system7_v5_5_processing_system7";
   attribute POWER : string;
-  attribute POWER of dkong_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is "<PROCESSOR name={system} numA9Cores={2} clockFreq={666.666666} load={0.5} /><MEMORY name={code} memType={} dataWidth={} clockFreq={533.333} readRate={0.5} writeRate={0.5} /><IO interface={UART} ioStandard={} bidis={0} ioBank={} clockFreq={100.000000} usageRate={0.5} /><PLL domain={Processor} vco={1333.333} /><PLL domain={Memory} vco={1066.667} /><PLL domain={IO} vco={1600.000} />/>";
+  attribute POWER of dkong_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is "<PROCESSOR name={system} numA9Cores={2} clockFreq={666.666666} load={0.5} /><MEMORY name={code} memType={} dataWidth={} clockFreq={533.333} readRate={0.5} writeRate={0.5} /><PLL domain={Processor} vco={1333.333} /><PLL domain={Memory} vco={1066.667} /><PLL domain={IO} vco={1600.000} />/>";
   attribute USE_TRACE_DATA_EDGE_DETECTOR : integer;
   attribute USE_TRACE_DATA_EDGE_DETECTOR of dkong_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 0;
 end dkong_processing_system7_0_0_processing_system7_v5_5_processing_system7;
@@ -3357,8 +3359,6 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity dkong_processing_system7_0_0 is
   port (
-    UART0_TX : out STD_LOGIC;
-    UART0_RX : in STD_LOGIC;
     FCLK_CLK0 : out STD_LOGIC;
     FCLK_RESET0_N : out STD_LOGIC;
     MIO : inout STD_LOGIC_VECTOR ( 53 downto 0 );
@@ -3588,6 +3588,7 @@ architecture STRUCTURE of dkong_processing_system7_0_0 is
   signal NLW_inst_TTC1_WAVE2_OUT_UNCONNECTED : STD_LOGIC;
   signal NLW_inst_UART0_DTRN_UNCONNECTED : STD_LOGIC;
   signal NLW_inst_UART0_RTSN_UNCONNECTED : STD_LOGIC;
+  signal NLW_inst_UART0_TX_UNCONNECTED : STD_LOGIC;
   signal NLW_inst_UART1_DTRN_UNCONNECTED : STD_LOGIC;
   signal NLW_inst_UART1_RTSN_UNCONNECTED : STD_LOGIC;
   signal NLW_inst_UART1_TX_UNCONNECTED : STD_LOGIC;
@@ -3826,21 +3827,19 @@ architecture STRUCTURE of dkong_processing_system7_0_0 is
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of inst : label is "dkong_processing_system7_0_0.hwdef";
   attribute POWER : string;
-  attribute POWER of inst : label is "<PROCESSOR name={system} numA9Cores={2} clockFreq={666.666666} load={0.5} /><MEMORY name={code} memType={} dataWidth={} clockFreq={533.333} readRate={0.5} writeRate={0.5} /><IO interface={UART} ioStandard={} bidis={0} ioBank={} clockFreq={100.000000} usageRate={0.5} /><PLL domain={Processor} vco={1333.333} /><PLL domain={Memory} vco={1066.667} /><PLL domain={IO} vco={1600.000} />/>";
+  attribute POWER of inst : label is "<PROCESSOR name={system} numA9Cores={2} clockFreq={666.666666} load={0.5} /><MEMORY name={code} memType={} dataWidth={} clockFreq={533.333} readRate={0.5} writeRate={0.5} /><PLL domain={Processor} vco={1333.333} /><PLL domain={Memory} vco={1066.667} /><PLL domain={IO} vco={1600.000} />/>";
   attribute USE_TRACE_DATA_EDGE_DETECTOR : integer;
   attribute USE_TRACE_DATA_EDGE_DETECTOR of inst : label is 0;
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of FCLK_CLK0 : signal is "xilinx.com:signal:clock:1.0 FCLK_CLK0 CLK";
   attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of FCLK_CLK0 : signal is "XIL_INTERFACENAME FCLK_CLK0, FREQ_HZ 1e+08, PHASE 0.000, CLK_DOMAIN dkong_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of FCLK_CLK0 : signal is "XIL_INTERFACENAME FCLK_CLK0, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN dkong_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of FCLK_RESET0_N : signal is "xilinx.com:signal:reset:1.0 FCLK_RESET0_N RST";
   attribute X_INTERFACE_PARAMETER of FCLK_RESET0_N : signal is "XIL_INTERFACENAME FCLK_RESET0_N, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of PS_CLK : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_CLK";
   attribute X_INTERFACE_INFO of PS_PORB : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB";
   attribute X_INTERFACE_PARAMETER of PS_PORB : signal is "XIL_INTERFACENAME FIXED_IO, CAN_DEBUG false";
   attribute X_INTERFACE_INFO of PS_SRSTB : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB";
-  attribute X_INTERFACE_INFO of UART0_RX : signal is "xilinx.com:interface:uart:1.0 UART_0 RxD";
-  attribute X_INTERFACE_INFO of UART0_TX : signal is "xilinx.com:interface:uart:1.0 UART_0 TxD";
   attribute X_INTERFACE_INFO of MIO : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO MIO";
 begin
 inst: entity work.dkong_processing_system7_0_0_processing_system7_v5_5_processing_system7
@@ -4512,8 +4511,8 @@ inst: entity work.dkong_processing_system7_0_0_processing_system7_v5_5_processin
       UART0_DTRN => NLW_inst_UART0_DTRN_UNCONNECTED,
       UART0_RIN => '0',
       UART0_RTSN => NLW_inst_UART0_RTSN_UNCONNECTED,
-      UART0_RX => UART0_RX,
-      UART0_TX => UART0_TX,
+      UART0_RX => '1',
+      UART0_TX => NLW_inst_UART0_TX_UNCONNECTED,
       UART1_CTSN => '0',
       UART1_DCDN => '0',
       UART1_DSRN => '0',

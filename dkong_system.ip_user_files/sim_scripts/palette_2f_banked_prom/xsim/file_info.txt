@@ -1,0 +1,2 @@
+palette_2f_banked_prom.v,verilog,xil_defaultlib,../../../ip/palette_2f_banked_prom/sim/palette_2f_banked_prom.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

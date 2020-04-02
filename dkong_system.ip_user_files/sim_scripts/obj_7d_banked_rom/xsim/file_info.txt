@@ -1,0 +1,2 @@
+obj_7d_banked_rom.v,verilog,xil_defaultlib,../../../ip/obj_7d_banked_rom/sim/obj_7d_banked_rom.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

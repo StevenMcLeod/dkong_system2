@@ -1,0 +1,6 @@
+verilog xil_defaultlib  \
+"../../../ip/tile_2n_banked_prom/sim/tile_2n_banked_prom.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

@@ -4,6 +4,7 @@ proc init_gui { IPINST } {
   #Adding Page
   set Page_0 [ipgui::add_page $IPINST -name "Page 0"]
   ipgui::add_param $IPINST -name "CLKS_PER_BIT" -parent ${Page_0}
+  ipgui::add_param $IPINST -name "DEBUG_BANKSEL_ENA" -parent ${Page_0}
   ipgui::add_param $IPINST -name "DEBUG_WAIT_ENA" -parent ${Page_0}
   ipgui::add_param $IPINST -name "IN0_ENA" -parent ${Page_0}
   ipgui::add_param $IPINST -name "IN1_ENA" -parent ${Page_0}
@@ -18,6 +19,15 @@ proc update_PARAM_VALUE.CLKS_PER_BIT { PARAM_VALUE.CLKS_PER_BIT } {
 
 proc validate_PARAM_VALUE.CLKS_PER_BIT { PARAM_VALUE.CLKS_PER_BIT } {
 	# Procedure called to validate CLKS_PER_BIT
+	return true
+}
+
+proc update_PARAM_VALUE.DEBUG_BANKSEL_ENA { PARAM_VALUE.DEBUG_BANKSEL_ENA } {
+	# Procedure called to update DEBUG_BANKSEL_ENA when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.DEBUG_BANKSEL_ENA { PARAM_VALUE.DEBUG_BANKSEL_ENA } {
+	# Procedure called to validate DEBUG_BANKSEL_ENA
 	return true
 }
 
@@ -66,6 +76,11 @@ proc update_MODELPARAM_VALUE.CLKS_PER_BIT { MODELPARAM_VALUE.CLKS_PER_BIT PARAM_
 proc update_MODELPARAM_VALUE.DEBUG_WAIT_ENA { MODELPARAM_VALUE.DEBUG_WAIT_ENA PARAM_VALUE.DEBUG_WAIT_ENA } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
 	set_property value [get_property value ${PARAM_VALUE.DEBUG_WAIT_ENA}] ${MODELPARAM_VALUE.DEBUG_WAIT_ENA}
+}
+
+proc update_MODELPARAM_VALUE.DEBUG_BANKSEL_ENA { MODELPARAM_VALUE.DEBUG_BANKSEL_ENA PARAM_VALUE.DEBUG_BANKSEL_ENA } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.DEBUG_BANKSEL_ENA}] ${MODELPARAM_VALUE.DEBUG_BANKSEL_ENA}
 }
 
 proc update_MODELPARAM_VALUE.IN0_ENA { MODELPARAM_VALUE.IN0_ENA PARAM_VALUE.IN0_ENA } {

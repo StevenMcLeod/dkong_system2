@@ -677,8 +677,6 @@
 
 //MODULE DECLARATION
  module dkong_processing_system7_0_0 (
-  UART0_TX,
-  UART0_RX,
   FCLK_CLK0,
   FCLK_RESET0_N,
   MIO,
@@ -748,8 +746,6 @@
 
 //INPUT AND OUTPUT PORTS
 
-      output  UART0_TX;
-      input  UART0_RX;
       output  FCLK_CLK0;
       output  FCLK_RESET0_N;
       inout  [53 : 0] MIO;
@@ -759,7 +755,6 @@
 
 //REG DECLARATIONS
 
-      reg UART0_TX;
       reg FCLK_CLK0;
       reg FCLK_RESET0_N;
       string ip_name;

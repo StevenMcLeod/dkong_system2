@@ -57,6 +57,10 @@ set_property src_info {type:XDC file:1 line:237 export:INPUT save:INPUT read:REA
 set_property PACKAGE_PIN F22 [get_ports {DIPSW[0]}];  # "SW0"
 set_property src_info {type:XDC file:1 line:238 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN G22 [get_ports {DIPSW[1]}];  # "SW1"
+set_property src_info {type:XDC file:1 line:242 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN H18 [get_ports {BANKSEL[0]}];  # "SW5"
+set_property src_info {type:XDC file:1 line:243 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN H17 [get_ports {BANKSEL[1]}];  # "SW6"
 set_property src_info {type:XDC file:1 line:244 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN M15 [get_ports {INMODE}];  # "SW7"
 set_property src_info {type:XDC file:1 line:362 export:INPUT save:INPUT read:READ} [current_design]

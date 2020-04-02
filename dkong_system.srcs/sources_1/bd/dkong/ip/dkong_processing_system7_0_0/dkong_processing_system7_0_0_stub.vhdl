@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Tue Mar 31 12:46:35 2020
+-- Date        : Wed Apr  1 16:48:35 2020
 -- Host        : Steven-Win10-2 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub -rename_top dkong_processing_system7_0_0 -prefix
---               dkong_processing_system7_0_0_ dkong_processing_system7_0_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub
+--               C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_processing_system7_0_0/dkong_processing_system7_0_0_stub.vhdl
 -- Design      : dkong_processing_system7_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg484-1
@@ -14,8 +14,6 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity dkong_processing_system7_0_0 is
   Port ( 
-    UART0_TX : out STD_LOGIC;
-    UART0_RX : in STD_LOGIC;
     FCLK_CLK0 : out STD_LOGIC;
     FCLK_RESET0_N : out STD_LOGIC;
     MIO : inout STD_LOGIC_VECTOR ( 53 downto 0 );
@@ -30,7 +28,7 @@ architecture stub of dkong_processing_system7_0_0 is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "UART0_TX,UART0_RX,FCLK_CLK0,FCLK_RESET0_N,MIO[53:0],PS_SRSTB,PS_CLK,PS_PORB";
+attribute black_box_pad_pin of stub : architecture is "FCLK_CLK0,FCLK_RESET0_N,MIO[53:0],PS_SRSTB,PS_CLK,PS_PORB";
 attribute X_CORE_INFO : string;
 attribute X_CORE_INFO of stub : architecture is "processing_system7_v5_5_processing_system7,Vivado 2019.1";
 begin

@@ -80,18 +80,19 @@ set rc [catch {
   add_files -quiet C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.runs/synth_1/dkong_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  read_ip -quiet c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/sou_3f_rom/sou_3f_rom.xci
-  read_ip -quiet c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/sou_3h_rom/sou_3h_rom.xci
-  read_ip -quiet C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/palette_2f_prom/palette_2f_prom.xci
-  read_ip -quiet C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/palette_2e_prom/palette_2e_prom.xci
-  read_ip -quiet C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/obj_7f_rom/obj_7f_rom.xci
-  read_ip -quiet C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/obj_7e_rom/obj_7e_rom.xci
-  read_ip -quiet C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/obj_7d_rom/obj_7d_rom.xci
-  read_ip -quiet C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/obj_7c_rom/obj_7c_rom.xci
-  read_ip -quiet C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/tile_3n_rom/tile_3n_rom.xci
-  read_ip -quiet C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/tile_3p_rom/tile_3p_rom.xci
-  read_ip -quiet C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/tile_2n_prom/tile_2n_prom.xci
   read_ip -quiet C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/cpu_program_rom/cpu_program_rom.xci
+  read_ip -quiet c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/sou_3f_banked_rom/sou_3f_banked_rom.xci
+  read_ip -quiet c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/sou_3h_banked_rom/sou_3h_banked_rom.xci
+  read_ip -quiet c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/palette_2f_banked_prom/palette_2f_banked_prom.xci
+  read_ip -quiet c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/palette_2e_banked_prom/palette_2e_banked_prom.xci
+  read_ip -quiet c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/obj_7f_banked_rom/obj_7f_banked_rom.xci
+  read_ip -quiet c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/obj_7e_banked_rom/obj_7e_banked_rom.xci
+  read_ip -quiet c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/obj_7d_banked_rom/obj_7d_banked_rom.xci
+  read_ip -quiet c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/obj_7c_banked_rom/obj_7c_banked_rom.xci
+  read_ip -quiet c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/tile_3n_banked_rom/tile_3n_banked_rom.xci
+  read_ip -quiet c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/tile_3p_banked_rom/tile_3p_banked_rom.xci
+  read_ip -quiet c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/tile_2n_banked_prom/tile_2n_banked_prom.xci
+  read_ip -quiet c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/cpu_program_banked_rom/cpu_program_banked_rom.xci
   read_ip -quiet C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/framedoubler_mem/framedoubler_mem.xci
   add_files C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/dkong.bd
   set_param project.isImplRun false
