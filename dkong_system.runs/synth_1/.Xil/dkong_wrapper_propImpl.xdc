@@ -1,4 +1,16 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/constrs_1/imports/vga_tutorial_students/zedboard_master.xdc rfile:../../../dkong_system.srcs/constrs_1/imports/vga_tutorial_students/zedboard_master.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:D:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/constrs_1/imports/vga_tutorial_students/zedboard_master.xdc rfile:../../../dkong_system.srcs/constrs_1/imports/vga_tutorial_students/zedboard_master.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:71 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN Y8  [get_ports {SDATA_O}];  # "AC-GPIO0"
+set_property src_info {type:XDC file:1 line:73 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN AA6 [get_ports {BCLK_O}];  # "AC-GPIO2"
+set_property src_info {type:XDC file:1 line:74 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN Y6  [get_ports {LRCLK_O}];  # "AC-GPIO3"
+set_property src_info {type:XDC file:1 line:75 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN AB2 [get_ports {MCLK_O}];  # "AC-MCLK"
+set_property src_info {type:XDC file:1 line:76 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN AB4 [get_ports {iic_rtl_scl_io}];  # "AC-SCK"
+set_property src_info {type:XDC file:1 line:77 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN AB5 [get_ports {iic_rtl_sda_io}];  # "AC-SDA"
 set_property src_info {type:XDC file:1 line:175 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN T22 [get_ports {LD[0]}];  # "LD0"
 set_property src_info {type:XDC file:1 line:176 export:INPUT save:INPUT read:READ} [current_design]
@@ -65,3 +77,5 @@ set_property src_info {type:XDC file:1 line:367 export:INPUT save:INPUT read:REA
 set_property IOSTANDARD LVCMOS18 [get_ports -of_objects [get_iobanks 34]];
 set_property src_info {type:XDC file:1 line:372 export:INPUT save:INPUT read:READ} [current_design]
 set_property IOSTANDARD LVCMOS18 [get_ports -of_objects [get_iobanks 35]];
+set_property src_info {type:XDC file:1 line:375 export:INPUT save:INPUT read:READ} [current_design]
+set_property IOSTANDARD LVCMOS33 [get_ports -of_objects [get_iobanks 13]];

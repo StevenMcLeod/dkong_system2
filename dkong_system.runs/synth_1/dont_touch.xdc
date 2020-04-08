@@ -120,6 +120,27 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==dkong_demux2_0_
 # IP: bd/dkong/ip/dkong_demux2_3_0/dkong_demux2_3_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==dkong_demux2_3_0 || ORIG_REF_NAME==dkong_demux2_3_0} -quiet] -quiet
 
+# IP: bd/dkong/ip/dkong_xlconcat_0_0/dkong_xlconcat_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==dkong_xlconcat_0_0 || ORIG_REF_NAME==dkong_xlconcat_0_0} -quiet] -quiet
+
+# IP: bd/dkong/ip/dkong_audio_joiner_0_0/dkong_audio_joiner_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==dkong_audio_joiner_0_0 || ORIG_REF_NAME==dkong_audio_joiner_0_0} -quiet] -quiet
+
+# IP: bd/dkong/ip/dkong_axi_dma_0_0/dkong_axi_dma_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==dkong_axi_dma_0_0 || ORIG_REF_NAME==dkong_axi_dma_0_0} -quiet] -quiet
+
+# IP: bd/dkong/ip/dkong_smartconnect_0_0/dkong_smartconnect_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==dkong_smartconnect_0_0 || ORIG_REF_NAME==dkong_smartconnect_0_0} -quiet] -quiet
+
+# IP: bd/dkong/ip/dkong_smartconnect_1_0/dkong_smartconnect_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==dkong_smartconnect_1_0 || ORIG_REF_NAME==dkong_smartconnect_1_0} -quiet] -quiet
+
+# IP: bd/dkong/ip/dkong_I2S_0_0/dkong_I2S_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==dkong_I2S_0_0 || ORIG_REF_NAME==dkong_I2S_0_0} -quiet] -quiet
+
+# IP: bd/dkong/ip/dkong_axi_iic_0_0/dkong_axi_iic_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==dkong_axi_iic_0_0 || ORIG_REF_NAME==dkong_axi_iic_0_0} -quiet] -quiet
+
 # XDC: ip/sou_3f_rom/sou_3f_rom_ooc.xdc
 
 # XDC: ip/sou_3h_rom/sou_3h_rom_ooc.xdc

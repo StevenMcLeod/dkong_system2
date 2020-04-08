@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Tue Mar 31 13:37:13 2020
-| Host         : Steven-Win10-2 running 64-bit major release  (build 9200)
+| Date         : Tue Apr  7 23:34:41 2020
+| Host         : DESKTOP-3NJN4P8 running 64-bit major release  (build 9200)
 | Command      : report_drc -file dkong_wrapper_drc_routed.rpt -pb dkong_wrapper_drc_routed.pb -rpx dkong_wrapper_drc_routed.rpx
 | Design       : dkong_wrapper
 | Device       : xc7z020clg484-1
@@ -24,13 +24,15 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 42
+             Violations found: 44
 +-----------+----------+----------------------------+------------+
 | Rule      | Severity | Description                | Violations |
 +-----------+----------+----------------------------+------------+
 | CHECK-3   | Warning  | Report rule limit reached  | 2          |
 | REQP-1839 | Warning  | RAMB36 async control check | 20         |
 | REQP-1840 | Warning  | RAMB18 async control check | 20         |
+| RTSTAT-10 | Warning  | No routable loads          | 1          |
+| REQP-181  | Advisory | writefirst                 | 1          |
 +-----------+----------+----------------------------+------------+
 
 2. REPORT DETAILS
@@ -177,17 +179,17 @@ Related violations: <none>
 
 REQP-1840#7 Warning
 RAMB18 async control check  
-The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/ADDRARDADDR[8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[10]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/ADDRARDADDR[8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[12]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#8 Warning
 RAMB18 async control check  
-The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/ADDRARDADDR[8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[11]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/ADDRARDADDR[8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/rd_n_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#9 Warning
 RAMB18 async control check  
-The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/ADDRARDADDR[8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/i_tv80_core/A_reg[12]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg/ADDRARDADDR[12] (net: dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/ADDRARDADDR[8]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/wr_n_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#10 Warning
@@ -243,6 +245,16 @@ Related violations: <none>
 REQP-1840#20 Warning
 RAMB18 async control check  
 The RAMB18E1 dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg has an input control pin dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/mem_reg/ADDRARDADDR[13] (net: dkong_i/dkong_system_wrapper_0/inst/inst/vid/sprite/objram/ADDRARDADDR[9]) which is driven by a register (dkong_i/dkong_system_wrapper_0/inst/inst/mycpu/wr_n_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+RTSTAT-10#1 Warning
+No routable loads  
+15 net(s) have no routable loads. The problem bus(es) and/or net(s) are dkong_i/smartconnect_0/inst/m00_nodes/m00_ar_node/inst/mi_handler_m_sc_areset_pipe, dkong_i/smartconnect_0/inst/m00_nodes/m00_aw_node/inst/mi_handler_m_sc_areset_pipe, dkong_i/smartconnect_0/inst/m00_nodes/m00_b_node/inst/mi_handler_m_sc_areset_pipe, dkong_i/smartconnect_0/inst/m00_nodes/m00_r_node/inst/mi_handler_m_sc_areset_pipe, dkong_i/smartconnect_0/inst/m00_nodes/m00_w_node/inst/mi_handler_m_sc_areset_pipe, dkong_i/smartconnect_0/inst/m01_nodes/m01_ar_node/inst/mi_handler_m_sc_areset_pipe, dkong_i/smartconnect_0/inst/m01_nodes/m01_aw_node/inst/mi_handler_m_sc_areset_pipe, dkong_i/smartconnect_0/inst/m01_nodes/m01_b_node/inst/mi_handler_m_sc_areset_pipe, dkong_i/smartconnect_0/inst/m01_nodes/m01_r_node/inst/mi_handler_m_sc_areset_pipe, dkong_i/smartconnect_0/inst/m01_nodes/m01_w_node/inst/mi_handler_m_sc_areset_pipe, dkong_i/smartconnect_0/inst/s00_nodes/s00_ar_node/inst/mi_handler_m_sc_areset_pipe, dkong_i/smartconnect_0/inst/s00_nodes/s00_aw_node/inst/mi_handler_m_sc_areset_pipe, dkong_i/smartconnect_0/inst/s00_nodes/s00_b_node/inst/mi_handler_m_sc_areset_pipe, dkong_i/smartconnect_0/inst/s00_nodes/s00_r_node/inst/mi_handler_m_sc_areset_pipe, dkong_i/smartconnect_0/inst/s00_nodes/s00_w_node/inst/mi_handler_m_sc_areset_pipe (the first 15 of 15 listed).
+Related violations: <none>
+
+REQP-181#1 Advisory
+writefirst  
+Synchronous clocking is detected for BRAM (dkong_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg) in SDP mode with WRITE_FIRST write-mode. This is the preferred mode for best power characteristics, however it may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
 Related violations: <none>
 
 

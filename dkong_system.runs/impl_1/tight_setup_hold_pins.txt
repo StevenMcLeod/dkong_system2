@@ -1,60 +1,406 @@
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
 |       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
-| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                                dkong_i/dkong_system_wrapper_0/inst/inst/sou/i8035_int_ram/outreg_reg[2]/D|
-| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                                dkong_i/dkong_system_wrapper_0/inst/inst/sou/i8035_int_ram/outreg_reg[3]/D|
-| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                       dkong_i/dkong_system_wrapper_0/inst/inst/sou/i8035_int_ram/mem_reg_0_63_5_5/SP/ADR2|
-| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                       dkong_i/dkong_system_wrapper_0/inst/inst/sou/i8035_int_ram/mem_reg_0_63_6_6/SP/ADR2|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[0][28]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[6][28]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[3][28]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[4][28]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[5][28]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[7][28]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[1][28]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[2][28]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[0][31]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[4][31]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[5][31]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[0][30]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[0][12]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[0][15]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[2][30]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[5][30]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[2][31]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[6][31]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[7][31]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[4][12]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[3][31]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[1][31]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[6][15]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[6][30]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[7][12]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[1][12]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[6][12]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[3][12]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[4][30]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[5][12]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[3][15]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[4][15]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[1][15]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[7][15]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[2][15]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[5][15]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[1][30]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[7][30]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[3][30]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[0][11]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[2][12]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[0][14]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[0][29]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[6][29]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[5][29]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[4][29]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[4][14]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[1][11]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[6][11]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[7][11]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[5][11]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[3][11]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[4][11]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[2][14]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[1][14]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[5][14]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[7][14]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[0][13]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                     dkong_i/I2S_0/inst/FIFO_0_reg[0][9]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[0][10]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[2][11]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[7][29]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[3][14]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[6][14]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[1][29]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[2][29]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[3][29]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[4][13]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[1][13]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[6][13]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[5][13]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[3][10]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                     dkong_i/I2S_0/inst/FIFO_0_reg[2][9]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[2][13]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                     dkong_i/I2S_0/inst/FIFO_0_reg[3][9]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[0][27]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[6][10]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[7][10]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[7][13]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                     dkong_i/I2S_0/inst/FIFO_0_reg[1][9]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[5][10]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                     dkong_i/I2S_0/inst/FIFO_0_reg[4][9]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[3][13]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                     dkong_i/I2S_0/inst/FIFO_0_reg[7][9]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[2][27]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[0][25]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[1][10]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                     dkong_i/I2S_0/inst/FIFO_0_reg[5][9]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                     dkong_i/I2S_0/inst/FIFO_0_reg[6][9]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[1][27]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[6][27]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[7][27]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[4][27]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[0][26]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[4][10]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[6][25]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[2][10]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[4][25]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[7][26]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[5][27]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[7][25]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[3][25]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[1][26]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[3][26]/D|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |dkong_i/axi_iic_0/U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[1].cs_out_i_reg[1]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |dkong_i/axi_iic_0/U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[23].ce_out_i_reg[23]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |dkong_i/axi_iic_0/U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[34].ce_out_i_reg[34]/R|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[6][26]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[3][27]/D|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                    dkong_i/axi_iic_0/U0/X_IIC/WRITE_FIFO_CTRL_I/Addr_Counters[3].FDRE_I/D|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |dkong_i/axi_iic_0/U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg[26]/R|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[4][26]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[2][26]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[2][25]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[1][25]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[5][26]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[5][25]/D|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                    dkong_i/axi_iic_0/U0/X_IIC/WRITE_FIFO_CTRL_I/Addr_Counters[2].FDRE_I/D|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                    dkong_i/axi_iic_0/U0/X_IIC/WRITE_FIFO_CTRL_I/Addr_Counters[1].FDRE_I/D|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |dkong_i/axi_iic_0/U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg[25]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |dkong_i/axi_iic_0/U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[30].ce_out_i_reg[30]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |dkong_i/axi_iic_0/U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[20].ce_out_i_reg[20]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |dkong_i/axi_iic_0/U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].cs_out_i_reg[0]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |dkong_i/axi_iic_0/U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[19].ce_out_i_reg[19]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |dkong_i/axi_iic_0/U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[18].ce_out_i_reg[18]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |dkong_i/axi_iic_0/U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[31].ce_out_i_reg[31]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |dkong_i/axi_iic_0/U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[29].ce_out_i_reg[29]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |dkong_i/axi_iic_0/U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg[24]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |dkong_i/axi_iic_0/U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[2].cs_out_i_reg[2]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |dkong_i/axi_iic_0/U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[28].ce_out_i_reg[28]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |dkong_i/axi_iic_0/U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[22].ce_out_i_reg[22]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |dkong_i/axi_iic_0/U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[32].ce_out_i_reg[32]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |dkong_i/axi_iic_0/U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg[27]/R|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                     dkong_i/I2S_0/inst/FIFO_0_reg[0][8]/D|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |dkong_i/axi_iic_0/U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[21].ce_out_i_reg[21]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |dkong_i/axi_iic_0/U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[7].ce_out_i_reg[7]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |dkong_i/axi_iic_0/U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |dkong_i/axi_iic_0/U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |dkong_i/axi_iic_0/U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[17].ce_out_i_reg[17]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |dkong_i/axi_iic_0/U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[33].ce_out_i_reg[33]/R|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[0][24]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[7][24]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[1][24]/D|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                      dkong_i/axi_iic_0/U0/X_IIC/WRITE_FIFO_CTRL_I/FIFO_RAM[1].SRL16E_I/CE|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                      dkong_i/axi_iic_0/U0/X_IIC/WRITE_FIFO_CTRL_I/FIFO_RAM[0].SRL16E_I/CE|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                     dkong_i/I2S_0/inst/FIFO_0_reg[7][8]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[3][24]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                     dkong_i/I2S_0/inst/FIFO_0_reg[3][8]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                     dkong_i/I2S_0/inst/FIFO_0_reg[1][8]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[4][24]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                     dkong_i/I2S_0/inst/FIFO_0_reg[6][8]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                     dkong_i/I2S_0/inst/FIFO_0_reg[5][8]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[6][24]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                     dkong_i/I2S_0/inst/FIFO_0_reg[4][8]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[2][24]/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                    dkong_i/I2S_0/inst/FIFO_0_reg[5][24]/D|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                    dkong_i/axi_iic_0/U0/X_IIC/WRITE_FIFO_CTRL_I/Addr_Counters[0].FDRE_I/D|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                       dkong_i/axi_iic_0/U0/X_IIC/WRITE_FIFO_CTRL_I/FIFO_RAM[1].SRL16E_I/D|
+| soundclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                                     dkong_i/I2S_0/inst/FIFO_0_reg[2][8]/D|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/adr_i_reg[0]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_thdsta_i_reg[0]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_thdsta_i_reg[1]/S|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_thdsta_i_reg[2]/S|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_thdsta_i_reg[5]/S|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                  dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/cr_i_reg[0]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                  dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/cr_i_reg[1]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                  dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/cr_i_reg[7]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_tsudat_i_reg[5]/S|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_tsudat_i_reg[6]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_tsudat_i_reg[9]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_tsudat_i_reg[3]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                       dkong_i/axi_iic_0/U0/X_IIC/WRITE_FIFO_CTRL_I/FIFO_RAM[0].SRL16E_I/D|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_tsusto_i_reg[8]/S|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_tsusto_i_reg[9]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                  dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/cr_i_reg[3]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/FIFO_GEN_DTR.Tx_fifo_rst_reg/S|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/RD_FIFO_CNTRL.Rc_fifo_rd_reg/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                             dkong_i/axi_iic_0/U0/X_IIC/Rc_fifo_rd_d_reg/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                             dkong_i/axi_iic_0/U0/X_IIC/Tx_fifo_wr_d_reg/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_tsusta_i_reg[0]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_tsusta_i_reg[1]/S|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_tsusta_i_reg[2]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_tsudat_i_reg[7]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_tsudat_i_reg[8]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_tsudat_i_reg[2]/S|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_tsudat_i_reg[4]/S|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_tsudat_i_reg[0]/S|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_tsudat_i_reg[1]/S|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                        dkong_i/axi_iic_0/U0/X_IIC/X_AXI_IPIF_SSP1/X_SOFT_RESET/RESET_FLOPS[0].RST_FLOPS/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                  dkong_i/axi_iic_0/U0/X_IIC/X_AXI_IPIF_SSP1/X_SOFT_RESET/reset_trig_reg/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                       dkong_i/I2S_0/inst/FSM_sequential_I2SState_reg[0]/D|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                       dkong_i/I2S_0/inst/FSM_sequential_I2SState_reg[2]/D|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                       dkong_i/I2S_0/inst/FSM_sequential_I2SState_reg[1]/D|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |dkong_i/axi_iic_0/U0/X_IIC/X_AXI_IPIF_SSP1/X_INTERRUPT_CONTROL/GEN_IP_IRPT_STATUS_REG[2].GEN_REG_STATUS.ip_irpt_status_reg_reg[2]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                               dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/msms_set_i_reg/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |dkong_i/axi_iic_0/U0/X_IIC/X_AXI_IPIF_SSP1/X_INTERRUPT_CONTROL/GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                        dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/GPO_GEN.gpo_i_reg[31]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                  dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/sr_i_reg[7]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                             dkong_i/axi_iic_0/U0/X_IIC/Rc_fifo_wr_d_reg/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                  dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/sr_i_reg[5]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                  dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/sr_i_reg[0]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                  dkong_i/axi_iic_0/U0/X_IIC/READ_FIFO_I/Data_Exists_DFF/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                  dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/sr_i_reg[1]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                  dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/sr_i_reg[2]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                  dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_thigh_i_reg[0]/S|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                  dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_thigh_i_reg[7]/S|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                  dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_thigh_i_reg[9]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                  dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_thigh_i_reg[1]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_thddat_i_reg[8]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_thddat_i_reg[0]/S|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_thddat_i_reg[1]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_thddat_i_reg[9]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_thddat_i_reg[2]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_thddat_i_reg[7]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_thddat_i_reg[5]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                     dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/IIC2Bus_IntrEvent_reg[1]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                  dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/FIFO_GEN_DTR.Tx_fifo_rd_reg/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |dkong_i/axi_iic_0/U0/X_IIC/X_AXI_IPIF_SSP1/X_INTERRUPT_CONTROL/GEN_IP_IRPT_STATUS_REG[6].GEN_REG_STATUS.ip_irpt_status_reg_reg[6]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                        dkong_i/axi_iic_0/U0/X_IIC/X_AXI_IPIF_SSP1/X_INTERRUPT_CONTROL/irpt_wrack_d1_reg/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                     dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/IIC2Bus_IntrEvent_reg[2]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |dkong_i/axi_iic_0/U0/X_IIC/X_AXI_IPIF_SSP1/X_INTERRUPT_CONTROL/GEN_IP_IRPT_STATUS_REG[1].GEN_REG_STATUS.ip_irpt_status_reg_reg[1]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                             dkong_i/axi_iic_0/U0/X_IIC/Tx_fifo_rd_d_reg/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                  dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/sr_i_reg[4]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                   dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_tbuf_i_reg[1]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                   dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_tbuf_i_reg[3]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                   dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_tbuf_i_reg[4]/S|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                   dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_tbuf_i_reg[6]/S|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                   dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_tbuf_i_reg[7]/S|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                   dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_tbuf_i_reg[2]/S|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                   dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_tbuf_i_reg[0]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_tsusta_i_reg[4]/S|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_tsusta_i_reg[8]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                   dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_tlow_i_reg[0]/S|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                   dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_tlow_i_reg[5]/S|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                   dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_tlow_i_reg[1]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                   dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_tlow_i_reg[2]/S|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_thdsta_i_reg[3]/S|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_thdsta_i_reg[6]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_thdsta_i_reg[7]/S|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_thdsta_i_reg[8]/S|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_thdsta_i_reg[4]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_thdsta_i_reg[9]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                   dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_tbuf_i_reg[5]/S|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                   dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_tbuf_i_reg[9]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                   dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_tbuf_i_reg[8]/S|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_thddat_i_reg[6]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_thddat_i_reg[4]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                dkong_i/axi_iic_0/U0/X_IIC/X_AXI_IPIF_SSP1/X_INTERRUPT_CONTROL/ip_irpt_enable_reg_reg[7]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                dkong_i/axi_iic_0/U0/X_IIC/X_AXI_IPIF_SSP1/X_INTERRUPT_CONTROL/ip_irpt_enable_reg_reg[1]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                dkong_i/axi_iic_0/U0/X_IIC/X_AXI_IPIF_SSP1/X_INTERRUPT_CONTROL/ip_irpt_enable_reg_reg[3]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                dkong_i/axi_iic_0/U0/X_IIC/X_AXI_IPIF_SSP1/X_INTERRUPT_CONTROL/ip_irpt_enable_reg_reg[2]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                dkong_i/axi_iic_0/U0/X_IIC/X_AXI_IPIF_SSP1/X_INTERRUPT_CONTROL/ip_irpt_enable_reg_reg[0]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                  dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/cr_i_reg[5]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                  dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/cr_i_reg[4]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_tsusto_i_reg[1]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_tsusto_i_reg[2]/S|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_tsusto_i_reg[3]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_tsusto_i_reg[4]/S|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_tsusto_i_reg[7]/S|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_tsusto_i_reg[5]/S|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_tsusto_i_reg[6]/S|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_tsusto_i_reg[0]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                dkong_i/axi_iic_0/U0/X_IIC/X_AXI_IPIF_SSP1/X_INTERRUPT_CONTROL/ip_irpt_enable_reg_reg[6]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                dkong_i/axi_iic_0/U0/X_IIC/X_AXI_IPIF_SSP1/X_INTERRUPT_CONTROL/ip_irpt_enable_reg_reg[4]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                dkong_i/axi_iic_0/U0/X_IIC/X_AXI_IPIF_SSP1/X_INTERRUPT_CONTROL/ip_irpt_enable_reg_reg[5]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_tsusta_i_reg[6]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                  dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/cr_i_reg[6]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |dkong_i/axi_iic_0/U0/X_IIC/X_AXI_IPIF_SSP1/X_INTERRUPT_CONTROL/GEN_IP_IRPT_STATUS_REG[3].GEN_REG_STATUS.ip_irpt_status_reg_reg[3]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |dkong_i/axi_iic_0/U0/X_IIC/X_AXI_IPIF_SSP1/X_INTERRUPT_CONTROL/GEN_IP_IRPT_STATUS_REG[4].GEN_REG_STATUS.ip_irpt_status_reg_reg[4]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/adr_i_reg[1]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/adr_i_reg[6]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/adr_i_reg[3]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/adr_i_reg[4]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/adr_i_reg[2]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/adr_i_reg[5]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                   dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_tlow_i_reg[3]/S|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                   dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_tlow_i_reg[6]/S|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                   dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_tlow_i_reg[7]/S|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                   dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_tlow_i_reg[8]/S|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                   dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_tlow_i_reg[9]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                  dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/cr_i_reg[2]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                     dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/IIC2Bus_IntrEvent_reg[5]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                  dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/sr_i_reg[3]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                  dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/RD_FIFO_CNTRL.ro_prev_i_reg/D|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                     dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/IIC2Bus_IntrEvent_reg[6]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                     dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/IIC2Bus_IntrEvent_reg[0]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                  dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/FIFO_GEN_DTR.Tx_fifo_wr_reg/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                     dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/IIC2Bus_IntrEvent_reg[4]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                           dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/new_rcv_dta_d1_reg/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/RD_FIFO_CNTRL.Rc_fifo_wr_reg/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                  dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/msms_d1_reg/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                     dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/IIC2Bus_IntrEvent_reg[3]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                   dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_tlow_i_reg[4]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |            dkong_i/axi_iic_0/U0/X_IIC/X_AXI_IPIF_SSP1/X_INTERRUPT_CONTROL/ipif_glbl_irpt_enable_reg_reg/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                          dkong_i/axi_iic_0/U0/X_IIC/READ_FIFO_I/Addr_Counters[1].FDRE_I/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                          dkong_i/axi_iic_0/U0/X_IIC/READ_FIFO_I/Addr_Counters[2].FDRE_I/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                          dkong_i/axi_iic_0/U0/X_IIC/READ_FIFO_I/Addr_Counters[0].FDRE_I/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                          dkong_i/axi_iic_0/U0/X_IIC/READ_FIFO_I/Addr_Counters[3].FDRE_I/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_tsusta_i_reg[9]/S|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_tsusta_i_reg[3]/S|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_tsusta_i_reg[7]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_tsusta_i_reg[5]/S|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                  dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_thigh_i_reg[3]/S|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                  dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_thigh_i_reg[5]/S|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                  dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_thigh_i_reg[6]/S|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                  dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_thigh_i_reg[8]/S|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                  dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_thigh_i_reg[4]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                  dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_thigh_i_reg[2]/S|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                          dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/RD_FIFO_CNTRL.rc_fifo_pirq_i_reg[7]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                          dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/RD_FIFO_CNTRL.rc_fifo_pirq_i_reg[6]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                          dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/RD_FIFO_CNTRL.rc_fifo_pirq_i_reg[4]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                          dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/RD_FIFO_CNTRL.rc_fifo_pirq_i_reg[5]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                        dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/FIFO_GEN_DTR.IIC2Bus_IntrEvent_reg[7]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |dkong_i/axi_iic_0/U0/X_IIC/X_AXI_IPIF_SSP1/X_INTERRUPT_CONTROL/GEN_IP_IRPT_STATUS_REG[7].GEN_REG_STATUS.ip_irpt_status_reg_reg[7]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |dkong_i/axi_iic_0/U0/X_IIC/X_AXI_IPIF_SSP1/X_INTERRUPT_CONTROL/GEN_IP_IRPT_STATUS_REG[5].GEN_REG_STATUS.ip_irpt_status_reg_reg[5]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                 dkong_i/axi_iic_0/U0/X_IIC/REG_INTERFACE_I/timing_param_thddat_i_reg[3]/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                              dkong_i/axi_iic_0/U0/X_IIC/X_AXI_IPIF_SSP1/X_SOFT_RESET/sw_rst_cond_d1_reg/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                        dkong_i/axi_iic_0/U0/X_IIC/X_AXI_IPIF_SSP1/X_SOFT_RESET/RESET_FLOPS[2].RST_FLOPS/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                        dkong_i/axi_iic_0/U0/X_IIC/X_AXI_IPIF_SSP1/X_SOFT_RESET/RESET_FLOPS[3].RST_FLOPS/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                        dkong_i/axi_iic_0/U0/X_IIC/X_AXI_IPIF_SSP1/X_SOFT_RESET/RESET_FLOPS[1].RST_FLOPS/R|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                      dkong_i/I2S_0/inst/FSM_sequential_FIFOState_reg[1]/D|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                      dkong_i/I2S_0/inst/FSM_sequential_FIFOState_reg[2]/D|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                            dkong_i/axi_iic_0/U0/X_IIC/WRITE_FIFO_CTRL_I/Data_Exists_DFF/D|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                                                      dkong_i/I2S_0/inst/FSM_sequential_FIFOState_reg[0]/D|
+| coreclk_dkong_clk_wiz_0_0 |               clk_fpga_0 |                   dkong_i/axi_iic_0/U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/rst_reg/D|
 | coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                                dkong_i/dkong_system_wrapper_0/inst/inst/sou/i8035_int_ram/outreg_reg[7]/D|
 | coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                                dkong_i/dkong_system_wrapper_0/inst/inst/sou/i8035_int_ram/outreg_reg[6]/D|
-| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                       dkong_i/dkong_system_wrapper_0/inst/inst/sou/i8035_int_ram/mem_reg_0_63_7_7/SP/ADR2|
-| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                       dkong_i/dkong_system_wrapper_0/inst/inst/sou/i8035_int_ram/mem_reg_0_63_4_4/SP/ADR2|
-| coreclk_dkong_clk_wiz_0_0 | vgaclk_dkong_clk_wiz_0_0 |                                          dkong_i/framedoubler_slow_0/inst/outclk_frame_in_parity_reg[0]/D|
-| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                          dkong_i/dkong_system_wrapper_0/inst/inst/sou/i8035_int_ram/mem_reg_0_63_3_3/SP/I|
-| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                        dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/cond_branch_b/take_branch_q_reg/D|
-| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                                      dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/psw_b/sp_q_reg[2]/D|
-| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                         dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/pmem_ctrl_b/pmem_addr_q_reg[3]/D|
-| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                                     dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/psw_b/psw_q_reg[1]/D|
+| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                                dkong_i/dkong_system_wrapper_0/inst/inst/sou/i8035_int_ram/outreg_reg[2]/D|
+| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                                dkong_i/dkong_system_wrapper_0/inst/inst/sou/i8035_int_ram/outreg_reg[3]/D|
 | coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                             dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/alu_b/accu_shadow_q_reg[3]/D|
-| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                          dkong_i/dkong_system_wrapper_0/inst/inst/sou/i8035_int_ram/mem_reg_0_63_1_1/SP/I|
-| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                   dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/pmem_ctrl_b/program_counter_q_reg[5]/D|
-| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                              dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/decoder_b/int_b/int_q_reg/D|
-| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                  dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/pmem_ctrl_b/program_counter_q_reg[10]/D|
-| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                         dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/dmem_ctrl_b/dmem_addr_q_reg[5]/D|
-| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                   dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/pmem_ctrl_b/program_counter_q_reg[3]/D|
+| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                          dkong_i/dkong_system_wrapper_0/inst/inst/sou/i8035_int_ram/mem_reg_0_63_3_3/SP/I|
+| coreclk_dkong_clk_wiz_0_0 | vgaclk_dkong_clk_wiz_0_0 |                                          dkong_i/framedoubler_slow_0/inst/outclk_frame_in_parity_reg[0]/D|
+| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                                      dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/psw_b/sp_q_reg[2]/D|
 | coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                     dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/use_timer.timer_b/counter_q_reg[3]/D|
-| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                       dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/use_timer.timer_b/overflow_q_reg/D|
-| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                         dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/dmem_ctrl_b/dmem_addr_q_reg[2]/D|
-| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                                dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/use_p1.p1_b/p1_q_reg[3]/D|
-| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                                dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/alu_b/temp_req_q_reg[3]/D|
-| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                             dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/alu_b/accumulator_q_reg[3]/D|
-| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                   dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/pmem_ctrl_b/program_counter_q_reg[2]/D|
-| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                       dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/use_db_bus.db_bus_b/bus_q_reg[3]/D|
-| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                         dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/dmem_ctrl_b/dmem_addr_q_reg[3]/D|
+| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                        dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/cond_branch_b/take_branch_q_reg/D|
 | coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                  dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/pmem_ctrl_b/program_counter_q_reg[11]/D|
-| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                                dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/use_p2.p2_b/p2_q_reg[3]/D|
+| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                                     dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/psw_b/psw_q_reg[1]/D|
+| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                   dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/pmem_ctrl_b/program_counter_q_reg[3]/D|
+| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                   dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/pmem_ctrl_b/program_counter_q_reg[2]/D|
+| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                          dkong_i/dkong_system_wrapper_0/inst/inst/sou/i8035_int_ram/mem_reg_0_63_1_1/SP/I|
 | coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                     dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/use_timer.timer_b/counter_q_reg[1]/D|
+| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                          dkong_i/dkong_system_wrapper_0/inst/inst/sou/i8035_int_ram/mem_reg_0_63_2_2/SP/I|
+| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                   dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/pmem_ctrl_b/program_counter_q_reg[5]/D|
+| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                       dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/use_db_bus.db_bus_b/bus_q_reg[3]/D|
 | coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                     dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/use_timer.timer_b/counter_q_reg[2]/D|
-| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                   dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/pmem_ctrl_b/program_counter_q_reg[1]/D|
+| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                                dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/use_p2.p2_b/p2_q_reg[3]/D|
+| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                  dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/pmem_ctrl_b/program_counter_q_reg[10]/D|
+| coreclk_dkong_clk_wiz_0_0 |analogclk_dkong_clk_wiz_0_0 |                                                                       dkong_i/I2S_0/inst/AudioClock_reg/D|
+| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                     dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/use_timer.timer_b/counter_q_reg[5]/D|
 | coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                             dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/use_timer.timer_b/t1_q_reg/D|
-| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                                dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/use_p1.p1_b/p1_q_reg[2]/D|
-| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                         dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/dmem_ctrl_b/dmem_addr_q_reg[1]/D|
-| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                                dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/alu_b/temp_req_q_reg[2]/D|
-| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                    dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/use_timer.timer_b/counter_q_reg[6]/CE|
 | coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                    dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/use_timer.timer_b/counter_q_reg[4]/CE|
+| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                    dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/use_timer.timer_b/counter_q_reg[6]/CE|
+| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                    dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/use_timer.timer_b/counter_q_reg[7]/CE|
 | coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                    dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/use_timer.timer_b/counter_q_reg[0]/CE|
 | coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                    dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/use_timer.timer_b/counter_q_reg[1]/CE|
 | coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                    dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/use_timer.timer_b/counter_q_reg[5]/CE|
-| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                    dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/use_timer.timer_b/counter_q_reg[7]/CE|
+| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                              dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/decoder_b/int_b/int_q_reg/D|
+| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                       dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/use_timer.timer_b/overflow_q_reg/D|
 | coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                    dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/use_timer.timer_b/counter_q_reg[3]/CE|
-| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                                      dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/psw_b/sp_q_reg[1]/D|
 | coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                    dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/use_timer.timer_b/counter_q_reg[2]/CE|
-| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                          dkong_i/dkong_system_wrapper_0/inst/inst/sou/i8035_int_ram/mem_reg_0_63_0_0/SP/I|
-| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                       dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/use_db_bus.db_bus_b/bus_q_reg[1]/D|
-| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                                dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/use_p1.p1_b/p1_q_reg[1]/D|
-| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                   dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/pmem_ctrl_b/program_counter_q_reg[9]/D|
 | coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                                      dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/psw_b/sp_q_reg[0]/D|
-| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                                dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/use_p2.p2_b/p2_q_reg[1]/D|
+| coreclk_dkong_clk_wiz_0_0 |analogclk_dkong_clk_wiz_0_0 |                                                                     dkong_i/I2S_0/inst/MCLK_Cnt_reg[25]/R|
+| coreclk_dkong_clk_wiz_0_0 |analogclk_dkong_clk_wiz_0_0 |                                                                     dkong_i/I2S_0/inst/MCLK_Cnt_reg[17]/R|
+| coreclk_dkong_clk_wiz_0_0 |analogclk_dkong_clk_wiz_0_0 |                                                                     dkong_i/I2S_0/inst/MCLK_Cnt_reg[18]/R|
+| coreclk_dkong_clk_wiz_0_0 |analogclk_dkong_clk_wiz_0_0 |                                                                     dkong_i/I2S_0/inst/MCLK_Cnt_reg[28]/R|
 | coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                   dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/pmem_ctrl_b/program_counter_q_reg[8]/D|
-| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                       dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/use_db_bus.db_bus_b/bus_q_reg[0]/D|
+| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                                dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/use_p2.p2_b/p2_q_reg[1]/D|
+| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                                      dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/psw_b/sp_q_reg[1]/D|
+| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                   dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/pmem_ctrl_b/program_counter_q_reg[9]/D|
+| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                       dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/use_db_bus.db_bus_b/bus_q_reg[1]/D|
+| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                   dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/pmem_ctrl_b/program_counter_q_reg[1]/D|
+| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                                dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/alu_b/temp_req_q_reg[1]/D|
+| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                             dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/alu_b/accumulator_q_reg[1]/D|
+| coreclk_dkong_clk_wiz_0_0 |analogclk_dkong_clk_wiz_0_0 |                                                                     dkong_i/I2S_0/inst/MCLK_Cnt_reg[10]/R|
+| coreclk_dkong_clk_wiz_0_0 |analogclk_dkong_clk_wiz_0_0 |                                                                      dkong_i/I2S_0/inst/MCLK_Cnt_reg[7]/R|
+| coreclk_dkong_clk_wiz_0_0 |analogclk_dkong_clk_wiz_0_0 |                                                                      dkong_i/I2S_0/inst/MCLK_Cnt_reg[9]/R|
+| coreclk_dkong_clk_wiz_0_0 |analogclk_dkong_clk_wiz_0_0 |                                                                      dkong_i/I2S_0/inst/MCLK_Cnt_reg[1]/R|
+| coreclk_dkong_clk_wiz_0_0 |analogclk_dkong_clk_wiz_0_0 |                                                                     dkong_i/I2S_0/inst/MCLK_Cnt_reg[30]/R|
+| coreclk_dkong_clk_wiz_0_0 |analogclk_dkong_clk_wiz_0_0 |                                                                     dkong_i/I2S_0/inst/MCLK_Cnt_reg[23]/R|
+| coreclk_dkong_clk_wiz_0_0 |analogclk_dkong_clk_wiz_0_0 |                                                                      dkong_i/I2S_0/inst/MCLK_Cnt_reg[6]/R|
+| coreclk_dkong_clk_wiz_0_0 |analogclk_dkong_clk_wiz_0_0 |                                                                     dkong_i/I2S_0/inst/MCLK_Cnt_reg[19]/R|
+| coreclk_dkong_clk_wiz_0_0 |analogclk_dkong_clk_wiz_0_0 |                                                                      dkong_i/I2S_0/inst/MCLK_Cnt_reg[0]/R|
+| coreclk_dkong_clk_wiz_0_0 |analogclk_dkong_clk_wiz_0_0 |                                                                     dkong_i/I2S_0/inst/MCLK_Cnt_reg[12]/R|
+| coreclk_dkong_clk_wiz_0_0 |analogclk_dkong_clk_wiz_0_0 |                                                                     dkong_i/I2S_0/inst/MCLK_Cnt_reg[24]/R|
+| coreclk_dkong_clk_wiz_0_0 |analogclk_dkong_clk_wiz_0_0 |                                                                     dkong_i/I2S_0/inst/MCLK_Cnt_reg[26]/R|
+| coreclk_dkong_clk_wiz_0_0 |analogclk_dkong_clk_wiz_0_0 |                                                                     dkong_i/I2S_0/inst/MCLK_Cnt_reg[11]/R|
+| coreclk_dkong_clk_wiz_0_0 |analogclk_dkong_clk_wiz_0_0 |                                                                     dkong_i/I2S_0/inst/MCLK_Cnt_reg[29]/R|
+| coreclk_dkong_clk_wiz_0_0 |analogclk_dkong_clk_wiz_0_0 |                                                                     dkong_i/I2S_0/inst/MCLK_Cnt_reg[21]/R|
+| coreclk_dkong_clk_wiz_0_0 |analogclk_dkong_clk_wiz_0_0 |                                                                     dkong_i/I2S_0/inst/MCLK_Cnt_reg[27]/R|
+| coreclk_dkong_clk_wiz_0_0 |analogclk_dkong_clk_wiz_0_0 |                                                                     dkong_i/I2S_0/inst/MCLK_Cnt_reg[31]/R|
+| coreclk_dkong_clk_wiz_0_0 |analogclk_dkong_clk_wiz_0_0 |                                                                     dkong_i/I2S_0/inst/MCLK_Cnt_reg[22]/R|
+| coreclk_dkong_clk_wiz_0_0 |analogclk_dkong_clk_wiz_0_0 |                                                                     dkong_i/I2S_0/inst/MCLK_Cnt_reg[20]/R|
+| coreclk_dkong_clk_wiz_0_0 |analogclk_dkong_clk_wiz_0_0 |                                                                     dkong_i/I2S_0/inst/MCLK_Cnt_reg[16]/R|
+| coreclk_dkong_clk_wiz_0_0 |analogclk_dkong_clk_wiz_0_0 |                                                                      dkong_i/I2S_0/inst/MCLK_Cnt_reg[2]/R|
+| coreclk_dkong_clk_wiz_0_0 |analogclk_dkong_clk_wiz_0_0 |                                                                     dkong_i/I2S_0/inst/MCLK_Cnt_reg[14]/R|
+| coreclk_dkong_clk_wiz_0_0 |analogclk_dkong_clk_wiz_0_0 |                                                                     dkong_i/I2S_0/inst/MCLK_Cnt_reg[15]/R|
+| coreclk_dkong_clk_wiz_0_0 |analogclk_dkong_clk_wiz_0_0 |                                                                     dkong_i/I2S_0/inst/MCLK_Cnt_reg[13]/R|
+| coreclk_dkong_clk_wiz_0_0 |analogclk_dkong_clk_wiz_0_0 |                                                                      dkong_i/I2S_0/inst/MCLK_Cnt_reg[8]/R|
+| coreclk_dkong_clk_wiz_0_0 |analogclk_dkong_clk_wiz_0_0 |                                                                      dkong_i/I2S_0/inst/MCLK_Cnt_reg[3]/R|
+| coreclk_dkong_clk_wiz_0_0 |analogclk_dkong_clk_wiz_0_0 |                                                                      dkong_i/I2S_0/inst/MCLK_Cnt_reg[4]/R|
+| coreclk_dkong_clk_wiz_0_0 |analogclk_dkong_clk_wiz_0_0 |                                                                      dkong_i/I2S_0/inst/MCLK_Cnt_reg[5]/R|
+| coreclk_dkong_clk_wiz_0_0 |soundclk_dkong_clk_wiz_0_0 |                                dkong_i/dkong_system_wrapper_0/inst/inst/sou/cpu/use_p2.p2_b/p2_q_reg[0]/D|
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+

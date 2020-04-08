@@ -60,42 +60,41 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {HDL-1065} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param chipscope.maxJobs 4
+  set_param chipscope.maxJobs 3
   set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7z020clg484-1
   set_property board_part em.avnet.com:zed:part0:1.4 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.cache/wt [current_project]
-  set_property parent.project_path C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.xpr [current_project]
-  set_property ip_output_repo C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.cache/ip [current_project]
+  set_property webtalk.parent_dir D:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.cache/wt [current_project]
+  set_property parent.project_path D:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.xpr [current_project]
+  set_property ip_output_repo D:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
-  add_files -quiet C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.runs/synth_1/dkong_wrapper.dcp
+  set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
+  add_files -quiet D:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.runs/synth_1/dkong_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  read_ip -quiet c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/sou_3f_rom/sou_3f_rom.xci
-  read_ip -quiet c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/sou_3h_rom/sou_3h_rom.xci
-  read_ip -quiet C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/palette_2f_prom/palette_2f_prom.xci
-  read_ip -quiet C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/palette_2e_prom/palette_2e_prom.xci
-  read_ip -quiet C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/obj_7f_rom/obj_7f_rom.xci
-  read_ip -quiet C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/obj_7e_rom/obj_7e_rom.xci
-  read_ip -quiet C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/obj_7d_rom/obj_7d_rom.xci
-  read_ip -quiet C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/obj_7c_rom/obj_7c_rom.xci
-  read_ip -quiet C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/tile_3n_rom/tile_3n_rom.xci
-  read_ip -quiet C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/tile_3p_rom/tile_3p_rom.xci
-  read_ip -quiet C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/tile_2n_prom/tile_2n_prom.xci
-  read_ip -quiet C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/cpu_program_rom/cpu_program_rom.xci
-  read_ip -quiet C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/framedoubler_mem/framedoubler_mem.xci
-  add_files C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/dkong.bd
+  read_ip -quiet D:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/ip/sou_3f_rom/sou_3f_rom.xci
+  read_ip -quiet D:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/ip/sou_3h_rom/sou_3h_rom.xci
+  read_ip -quiet D:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/ip/palette_2f_prom/palette_2f_prom.xci
+  read_ip -quiet D:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/ip/palette_2e_prom/palette_2e_prom.xci
+  read_ip -quiet D:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/ip/obj_7f_rom/obj_7f_rom.xci
+  read_ip -quiet D:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/ip/obj_7e_rom/obj_7e_rom.xci
+  read_ip -quiet D:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/ip/obj_7d_rom/obj_7d_rom.xci
+  read_ip -quiet D:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/ip/obj_7c_rom/obj_7c_rom.xci
+  read_ip -quiet D:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/ip/tile_3n_rom/tile_3n_rom.xci
+  read_ip -quiet D:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/ip/tile_3p_rom/tile_3p_rom.xci
+  read_ip -quiet D:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/ip/tile_2n_prom/tile_2n_prom.xci
+  read_ip -quiet D:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/ip/cpu_program_rom/cpu_program_rom.xci
+  read_ip -quiet D:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/ip/framedoubler_mem/framedoubler_mem.xci
+  add_files D:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/dkong.bd
   set_param project.isImplRun false
-  read_xdc C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/constrs_1/imports/vga_tutorial_students/zedboard_master.xdc
+  read_xdc D:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/constrs_1/imports/vga_tutorial_students/zedboard_master.xdc
   set_param project.isImplRun true
   link_design -top dkong_wrapper -part xc7z020clg484-1
   set_param project.isImplRun false
@@ -178,7 +177,7 @@ start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
-  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+  set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
   catch { write_mem_info -force dkong_wrapper.mmi }
   write_bitstream -force dkong_wrapper.bit 
   catch { write_sysdef -hwdef dkong_wrapper.hwdef -bitfile dkong_wrapper.bit -meminfo dkong_wrapper.mmi -file dkong_wrapper.sysdef }

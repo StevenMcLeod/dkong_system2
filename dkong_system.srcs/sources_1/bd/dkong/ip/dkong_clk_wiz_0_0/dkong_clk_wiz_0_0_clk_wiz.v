@@ -59,6 +59,7 @@
 // __vgaclk____25.174______0.000______50.0______583.934____590.341
 // _coreclk____61.506______0.000______50.0______509.339____590.341
 // soundclk_____5.987______0.000______50.0______719.770____590.341
+// analogclk_____5.638______0.000______50.0______726.042____590.341
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -74,6 +75,7 @@ module dkong_clk_wiz_0_0_clk_wiz
   output        vgaclk,
   output        coreclk,
   output        soundclk,
+  output        analogclk,
   input         clk_in1
  );
   // Input buffering
@@ -97,7 +99,7 @@ wire clk_in2_dkong_clk_wiz_0_0;
   wire        vgaclk_dkong_clk_wiz_0_0;
   wire        coreclk_dkong_clk_wiz_0_0;
   wire        soundclk_dkong_clk_wiz_0_0;
-  wire        clk_out4_dkong_clk_wiz_0_0;
+  wire        analogclk_dkong_clk_wiz_0_0;
   wire        clk_out5_dkong_clk_wiz_0_0;
   wire        clk_out6_dkong_clk_wiz_0_0;
   wire        clk_out7_dkong_clk_wiz_0_0;
@@ -112,7 +114,6 @@ wire clk_in2_dkong_clk_wiz_0_0;
     wire clkout0b_unused;
    wire clkout1b_unused;
    wire clkout2b_unused;
-   wire clkout3_unused;
    wire clkout3b_unused;
    wire clkout4_unused;
   wire        clkout5_unused;
@@ -141,6 +142,10 @@ wire clk_in2_dkong_clk_wiz_0_0;
     .CLKOUT2_PHASE        (0.000),
     .CLKOUT2_DUTY_CYCLE   (0.500),
     .CLKOUT2_USE_FINE_PS  ("FALSE"),
+    .CLKOUT3_DIVIDE       (120),
+    .CLKOUT3_PHASE        (0.000),
+    .CLKOUT3_DUTY_CYCLE   (0.500),
+    .CLKOUT3_USE_FINE_PS  ("FALSE"),
     .CLKIN1_PERIOD        (10.000))
   mmcm_adv_inst
     // Output clocks
@@ -153,7 +158,7 @@ wire clk_in2_dkong_clk_wiz_0_0;
     .CLKOUT1B            (clkout1b_unused),
     .CLKOUT2             (soundclk_dkong_clk_wiz_0_0),
     .CLKOUT2B            (clkout2b_unused),
-    .CLKOUT3             (clkout3_unused),
+    .CLKOUT3             (analogclk_dkong_clk_wiz_0_0),
     .CLKOUT3B            (clkout3b_unused),
     .CLKOUT4             (clkout4_unused),
     .CLKOUT5             (clkout5_unused),
@@ -210,6 +215,10 @@ wire clk_in2_dkong_clk_wiz_0_0;
   BUFG clkout3_buf
    (.O   (soundclk),
     .I   (soundclk_dkong_clk_wiz_0_0));
+
+  BUFG clkout4_buf
+   (.O   (analogclk),
+    .I   (analogclk_dkong_clk_wiz_0_0));
 
 
 

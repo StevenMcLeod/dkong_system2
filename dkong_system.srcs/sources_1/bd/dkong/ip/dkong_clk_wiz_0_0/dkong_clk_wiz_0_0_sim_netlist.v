@@ -1,8 +1,8 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Tue Mar 31 12:46:32 2020
-// Host        : Steven-Win10-2 running 64-bit major release  (build 9200)
+// Date        : Tue Apr  7 20:50:11 2020
+// Host        : DESKTOP-3NJN4P8 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top dkong_clk_wiz_0_0 -prefix
 //               dkong_clk_wiz_0_0_ dkong_clk_wiz_0_0_sim_netlist.v
 // Design      : dkong_clk_wiz_0_0
@@ -17,19 +17,23 @@ module dkong_clk_wiz_0_0
    (vgaclk,
     coreclk,
     soundclk,
+    analogclk,
     clk_in1);
   output vgaclk;
   output coreclk;
   output soundclk;
+  output analogclk;
   input clk_in1;
 
+  wire analogclk;
   (* IBUF_LOW_PWR *) wire clk_in1;
   wire coreclk;
   wire soundclk;
   wire vgaclk;
 
   dkong_clk_wiz_0_0_dkong_clk_wiz_0_0_clk_wiz inst
-       (.clk_in1(clk_in1),
+       (.analogclk(analogclk),
+        .clk_in1(clk_in1),
         .coreclk(coreclk),
         .soundclk(soundclk),
         .vgaclk(vgaclk));
@@ -39,12 +43,16 @@ module dkong_clk_wiz_0_0_dkong_clk_wiz_0_0_clk_wiz
    (vgaclk,
     coreclk,
     soundclk,
+    analogclk,
     clk_in1);
   output vgaclk;
   output coreclk;
   output soundclk;
+  output analogclk;
   input clk_in1;
 
+  wire analogclk;
+  wire analogclk_dkong_clk_wiz_0_0;
   wire clk_in1;
   wire clk_in1_dkong_clk_wiz_0_0;
   wire clkfbout_buf_dkong_clk_wiz_0_0;
@@ -61,7 +69,6 @@ module dkong_clk_wiz_0_0_dkong_clk_wiz_0_0_clk_wiz
   wire NLW_mmcm_adv_inst_CLKOUT0B_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED;
-  wire NLW_mmcm_adv_inst_CLKOUT3_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT3B_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT4_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT5_UNCONNECTED;
@@ -97,6 +104,10 @@ module dkong_clk_wiz_0_0_dkong_clk_wiz_0_0_clk_wiz
        (.I(soundclk_dkong_clk_wiz_0_0),
         .O(soundclk));
   (* BOX_TYPE = "PRIMITIVE" *) 
+  BUFG clkout4_buf
+       (.I(analogclk_dkong_clk_wiz_0_0),
+        .O(analogclk));
+  (* BOX_TYPE = "PRIMITIVE" *) 
   MMCME2_ADV #(
     .BANDWIDTH("OPTIMIZED"),
     .CLKFBOUT_MULT_F(54.125000),
@@ -116,7 +127,7 @@ module dkong_clk_wiz_0_0_dkong_clk_wiz_0_0_clk_wiz
     .CLKOUT2_DUTY_CYCLE(0.500000),
     .CLKOUT2_PHASE(0.000000),
     .CLKOUT2_USE_FINE_PS("FALSE"),
-    .CLKOUT3_DIVIDE(1),
+    .CLKOUT3_DIVIDE(120),
     .CLKOUT3_DUTY_CYCLE(0.500000),
     .CLKOUT3_PHASE(0.000000),
     .CLKOUT3_USE_FINE_PS("FALSE"),
@@ -161,7 +172,7 @@ module dkong_clk_wiz_0_0_dkong_clk_wiz_0_0_clk_wiz
         .CLKOUT1B(NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED),
         .CLKOUT2(soundclk_dkong_clk_wiz_0_0),
         .CLKOUT2B(NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED),
-        .CLKOUT3(NLW_mmcm_adv_inst_CLKOUT3_UNCONNECTED),
+        .CLKOUT3(analogclk_dkong_clk_wiz_0_0),
         .CLKOUT3B(NLW_mmcm_adv_inst_CLKOUT3B_UNCONNECTED),
         .CLKOUT4(NLW_mmcm_adv_inst_CLKOUT4_UNCONNECTED),
         .CLKOUT5(NLW_mmcm_adv_inst_CLKOUT5_UNCONNECTED),

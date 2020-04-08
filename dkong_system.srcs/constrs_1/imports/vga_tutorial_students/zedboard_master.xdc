@@ -68,13 +68,13 @@
 # ---------------------------------------------------------------------------- 
 #set_property PACKAGE_PIN AB1 [get_ports {AC_ADR0}];  # "AC-ADR0"
 #set_property PACKAGE_PIN Y5  [get_ports {AC_ADR1}];  # "AC-ADR1"
-#set_property PACKAGE_PIN Y8  [get_ports {SDATA_O}];  # "AC-GPIO0"
+set_property PACKAGE_PIN Y8  [get_ports {SDATA_O}];  # "AC-GPIO0"
 #set_property PACKAGE_PIN AA7 [get_ports {SDATA_I}];  # "AC-GPIO1"
-#set_property PACKAGE_PIN AA6 [get_ports {BCLK_O}];  # "AC-GPIO2"
-#set_property PACKAGE_PIN Y6  [get_ports {LRCLK_O}];  # "AC-GPIO3"
-#set_property PACKAGE_PIN AB2 [get_ports {MCLK_O}];  # "AC-MCLK"
-#set_property PACKAGE_PIN AB4 [get_ports {iic_rtl_scl_io}];  # "AC-SCK"
-#set_property PACKAGE_PIN AB5 [get_ports {iic_rtl_sda_io}];  # "AC-SDA"
+set_property PACKAGE_PIN AA6 [get_ports {BCLK_O}];  # "AC-GPIO2"
+set_property PACKAGE_PIN Y6  [get_ports {LRCLK_O}];  # "AC-GPIO3"
+set_property PACKAGE_PIN AB2 [get_ports {MCLK_O}];  # "AC-MCLK"
+set_property PACKAGE_PIN AB4 [get_ports {iic_rtl_scl_io}];  # "AC-SCK"
+set_property PACKAGE_PIN AB5 [get_ports {iic_rtl_sda_io}];  # "AC-SDA"
 
 # ----------------------------------------------------------------------------
 # Clock Source - Bank 13
@@ -372,4 +372,4 @@ set_property IOSTANDARD LVCMOS18 [get_ports -of_objects [get_iobanks 34]];
 set_property IOSTANDARD LVCMOS18 [get_ports -of_objects [get_iobanks 35]];
 
 # Note that the bank voltage for IO Bank 13 is fixed to 3.3V on ZedBoard. 
-#set_property IOSTANDARD LVCMOS33 [get_ports -of_objects [get_iobanks 13]];
+set_property IOSTANDARD LVCMOS33 [get_ports -of_objects [get_iobanks 13]];

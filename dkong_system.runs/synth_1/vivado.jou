@@ -2,11 +2,11 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Tue Mar 31 13:31:40 2020
-# Process ID: 8364
-# Current directory: C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.runs/synth_1
+# Start of session at: Tue Apr  7 23:29:07 2020
+# Process ID: 18288
+# Current directory: D:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.runs/synth_1
 # Command line: vivado.exe -log dkong_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source dkong_wrapper.tcl
-# Log file: C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.runs/synth_1/dkong_wrapper.vds
-# Journal file: C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.runs/synth_1\vivado.jou
+# Log file: D:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.runs/synth_1/dkong_wrapper.vds
+# Journal file: D:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source dkong_wrapper.tcl -notrace

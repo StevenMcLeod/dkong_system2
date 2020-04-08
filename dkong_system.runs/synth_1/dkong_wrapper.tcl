@@ -17,49 +17,96 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param chipscope.maxJobs 4
+set_param chipscope.maxJobs 3
 set_param xicom.use_bs_reader 1
-set_msg_config -id {HDL-1065} -limit 10000
 create_project -in_memory -part xc7z020clg484-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.cache/wt [current_project]
-set_property parent.project_path C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.xpr [current_project]
-set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+set_property webtalk.parent_dir D:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.cache/wt [current_project]
+set_property parent.project_path D:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.xpr [current_project]
+set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part em.avnet.com:zed:part0:1.4 [current_project]
-set_property ip_output_repo c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.cache/ip [current_project]
+set_property ip_output_repo d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-add_files C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/coe/prog_rom.bin.coe
-add_files C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/coe/v_3pt.bin.coe
-add_files C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/coe/v_5h_b.bin.coe
-add_files C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/coe/v-5e.bpr.coe
-add_files C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/coe/c-2k.bpr.coe
-add_files C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/coe/c-2j.bpr.coe
-add_files C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/bin/c_5et_g.bin.coe
-add_files C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/coe/l_4m_b.bin.coe
-add_files C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/coe/l_4n_b.bin.coe
-add_files C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/coe/l_4r_b.bin.coe
-add_files C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/coe/l_4s_b.bin.coe
-add_files c:/Users/Steven/Documents/HDL/vivado/z80_system_sources/coe/s_3i_b.bin.coe
-add_files c:/Users/Steven/Documents/HDL/vivado/z80_system_sources/coe/s_3j_b.bin.coe
-read_verilog -library xil_defaultlib C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/hdl/dkong_wrapper.v
-add_files C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/dkong.bd
-set_property used_in_implementation false [get_files -all c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_processing_system7_0_0/dkong_processing_system7_0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_proc_sys_reset_0_0/dkong_proc_sys_reset_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_proc_sys_reset_0_0/dkong_proc_sys_reset_0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_proc_sys_reset_0_0/dkong_proc_sys_reset_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_clk_wiz_0_0/dkong_clk_wiz_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_clk_wiz_0_0/dkong_clk_wiz_0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_clk_wiz_0_0/dkong_clk_wiz_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_proc_sys_reset_1_0/dkong_proc_sys_reset_1_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_proc_sys_reset_1_0/dkong_proc_sys_reset_1_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_proc_sys_reset_1_0/dkong_proc_sys_reset_1_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/dkong_ooc.xdc]
+add_files D:/Documents/University/ENSC452/Folder/z80_system_sources/coe/prog_rom.bin.coe
+add_files D:/Documents/University/ENSC452/Folder/z80_system_sources/coe/v_3pt.bin.coe
+add_files D:/Documents/University/ENSC452/Folder/z80_system_sources/coe/v_5h_b.bin.coe
+add_files D:/Documents/University/ENSC452/Folder/z80_system_sources/coe/v-5e.bpr.coe
+add_files D:/Documents/University/ENSC452/Folder/z80_system_sources/coe/c-2k.bpr.coe
+add_files D:/Documents/University/ENSC452/Folder/z80_system_sources/coe/c-2j.bpr.coe
+add_files D:/Documents/University/ENSC452/Folder/z80_system_sources/bin/c_5et_g.bin.coe
+add_files D:/Documents/University/ENSC452/Folder/z80_system_sources/coe/l_4m_b.bin.coe
+add_files D:/Documents/University/ENSC452/Folder/z80_system_sources/coe/l_4n_b.bin.coe
+add_files D:/Documents/University/ENSC452/Folder/z80_system_sources/coe/l_4r_b.bin.coe
+add_files D:/Documents/University/ENSC452/Folder/z80_system_sources/coe/l_4s_b.bin.coe
+add_files D:/Documents/University/ENSC452/Folder/z80_system_sources/coe/s_3i_b.bin.coe
+add_files D:/Documents/University/ENSC452/Folder/z80_system_sources/coe/s_3j_b.bin.coe
+read_verilog -library xil_defaultlib D:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/hdl/dkong_wrapper.v
+add_files D:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/dkong.bd
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_processing_system7_0_0/dkong_processing_system7_0_0.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_proc_sys_reset_0_0/dkong_proc_sys_reset_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_proc_sys_reset_0_0/dkong_proc_sys_reset_0_0.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_proc_sys_reset_0_0/dkong_proc_sys_reset_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_clk_wiz_0_0/dkong_clk_wiz_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_clk_wiz_0_0/dkong_clk_wiz_0_0.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_clk_wiz_0_0/dkong_clk_wiz_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_proc_sys_reset_1_0/dkong_proc_sys_reset_1_0_board.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_proc_sys_reset_1_0/dkong_proc_sys_reset_1_0.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_proc_sys_reset_1_0/dkong_proc_sys_reset_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_axi_dma_0_0/dkong_axi_dma_0_0.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_axi_dma_0_0/dkong_axi_dma_0_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_axi_dma_0_0/dkong_axi_dma_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_0_0/ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_0_0/bd_0/ip/ip_1/bd_09d9_psr_aclk_0_board.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_0_0/bd_0/ip/ip_1/bd_09d9_psr_aclk_0.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_0_0/bd_0/ip/ip_2/bd_09d9_arinsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_0_0/bd_0/ip/ip_3/bd_09d9_rinsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_0_0/bd_0/ip/ip_4/bd_09d9_awinsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_0_0/bd_0/ip/ip_5/bd_09d9_winsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_0_0/bd_0/ip/ip_6/bd_09d9_binsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_0_0/bd_0/ip/ip_7/bd_09d9_aroutsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_0_0/bd_0/ip/ip_8/bd_09d9_routsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_0_0/bd_0/ip/ip_9/bd_09d9_awoutsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_0_0/bd_0/ip/ip_10/bd_09d9_woutsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_0_0/bd_0/ip/ip_11/bd_09d9_boutsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_0_0/bd_0/ip/ip_12/bd_09d9_arni_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_0_0/bd_0/ip/ip_13/bd_09d9_rni_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_0_0/bd_0/ip/ip_14/bd_09d9_awni_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_0_0/bd_0/ip/ip_15/bd_09d9_wni_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_0_0/bd_0/ip/ip_16/bd_09d9_bni_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_0_0/bd_0/ip/ip_20/bd_09d9_s00a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_0_0/bd_0/ip/ip_21/bd_09d9_sarn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_0_0/bd_0/ip/ip_22/bd_09d9_srn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_0_0/bd_0/ip/ip_23/bd_09d9_sawn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_0_0/bd_0/ip/ip_24/bd_09d9_swn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_0_0/bd_0/ip/ip_25/bd_09d9_sbn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_0_0/bd_0/ip/ip_26/bd_09d9_m00s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_0_0/bd_0/ip/ip_27/bd_09d9_m00arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_0_0/bd_0/ip/ip_28/bd_09d9_m00rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_0_0/bd_0/ip/ip_29/bd_09d9_m00awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_0_0/bd_0/ip/ip_30/bd_09d9_m00wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_0_0/bd_0/ip/ip_31/bd_09d9_m00bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_0_0/bd_0/ip/ip_33/bd_09d9_m01s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_0_0/bd_0/ip/ip_34/bd_09d9_m01arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_0_0/bd_0/ip/ip_35/bd_09d9_m01rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_0_0/bd_0/ip/ip_36/bd_09d9_m01awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_0_0/bd_0/ip/ip_37/bd_09d9_m01wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_0_0/bd_0/ip/ip_38/bd_09d9_m01bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_1_0/ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_1_0/bd_0/ip/ip_1/bd_c988_psr_aclk_0_board.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_1_0/bd_0/ip/ip_1/bd_c988_psr_aclk_0.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_1_0/bd_0/ip/ip_5/bd_c988_s00a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_1_0/bd_0/ip/ip_6/bd_c988_sarn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_1_0/bd_0/ip/ip_7/bd_c988_srn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_smartconnect_1_0/bd_0/ip/ip_8/bd_c988_m00s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_axi_iic_0_0/dkong_axi_iic_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all d:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_axi_iic_0_0/dkong_axi_iic_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all D:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/sources_1/bd/dkong/dkong_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -69,8 +116,8 @@ set_property used_in_implementation false [get_files -all C:/Users/Steven/Docume
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/constrs_1/imports/vga_tutorial_students/zedboard_master.xdc
-set_property used_in_implementation false [get_files C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/constrs_1/imports/vga_tutorial_students/zedboard_master.xdc]
+read_xdc D:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/constrs_1/imports/vga_tutorial_students/zedboard_master.xdc
+set_property used_in_implementation false [get_files D:/Documents/University/ENSC452/Folder/dkong_system/dkong_system.srcs/constrs_1/imports/vga_tutorial_students/zedboard_master.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
