@@ -47,18 +47,18 @@ add_files C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/coe/l_4r_b.bin
 add_files C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/coe/l_4s_b.bin.coe
 add_files C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/coe/s_3i_b.bin.coe
 add_files C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/coe/s_3j_b.bin.coe
-add_files c:/Users/Steven/Documents/HDL/vivado/z80_system_sources/coe/banked/prog_rom.bin.coe
-add_files c:/Users/Steven/Documents/HDL/vivado/z80_system_sources/coe/banked/v_7c.bin.coe
-add_files c:/Users/Steven/Documents/HDL/vivado/z80_system_sources/coe/banked/v_7d.bin.coe
-add_files c:/Users/Steven/Documents/HDL/vivado/z80_system_sources/coe/banked/v_7e.bin.coe
-add_files c:/Users/Steven/Documents/HDL/vivado/z80_system_sources/coe/banked/v_7f.bin.coe
-add_files c:/Users/Steven/Documents/HDL/vivado/z80_system_sources/coe/banked/c_2e.bpr.coe
-add_files c:/Users/Steven/Documents/HDL/vivado/z80_system_sources/coe/banked/c_2f.bpr.coe
-add_files c:/Users/Steven/Documents/HDL/vivado/z80_system_sources/coe/banked/s_3f.bin.coe
-add_files c:/Users/Steven/Documents/HDL/vivado/z80_system_sources/coe/banked/s_3h.bin.coe
-add_files c:/Users/Steven/Documents/HDL/vivado/z80_system_sources/coe/banked/v_3n.bin.coe
-add_files c:/Users/Steven/Documents/HDL/vivado/z80_system_sources/coe/banked/v_3p.bin.coe
-add_files c:/Users/Steven/Documents/HDL/vivado/z80_system_sources/coe/banked/v_5e.bpr.coe
+add_files C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/coe/banked/prog_rom.bin.coe
+add_files C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/coe/banked/v_7c.bin.coe
+add_files C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/coe/banked/v_7d.bin.coe
+add_files C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/coe/banked/v_7e.bin.coe
+add_files C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/coe/banked/v_7f.bin.coe
+add_files C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/coe/banked/c_2e.bpr.coe
+add_files C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/coe/banked/c_2f.bpr.coe
+add_files C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/coe/banked/s_3f.bin.coe
+add_files C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/coe/banked/s_3h.bin.coe
+add_files C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/coe/banked/v_3n.bin.coe
+add_files C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/coe/banked/v_3p.bin.coe
+add_files C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/coe/banked/v_5e.bpr.coe
 read_verilog -library xil_defaultlib C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/hdl/dkong_wrapper.v
 add_files C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/dkong.bd
 set_property used_in_implementation false [get_files -all c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_processing_system7_0_0/dkong_processing_system7_0_0.xdc]

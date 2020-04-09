@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Thu Apr  2 13:44:17 2020
-# Process ID: 31468
+# Start of session at: Thu Apr  2 21:34:14 2020
+# Process ID: 18820
 # Current directory: C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.runs/dkong_dkong_system_wrapper_0_0_synth_1
 # Command line: vivado.exe -log dkong_dkong_system_wrapper_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source dkong_dkong_system_wrapper_0_0.tcl
 # Log file: C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.runs/dkong_dkong_system_wrapper_0_0_synth_1/dkong_dkong_system_wrapper_0_0.vds
@@ -18,22 +18,22 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 24440 
+INFO: Helper process launched with PID 26576 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 715.590 ; gain = 177.691
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 716.551 ; gain = 178.168
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'dkong_dkong_system_wrapper_0_0' [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_dkong_system_wrapper_0_0/synth/dkong_dkong_system_wrapper_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'dkong_system_wrapper' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/wrappers/dkong_system_wrapper.v:1]
 	Parameter CLKS_PER_BIT bound to: 1 - type: integer 
 	Parameter DEBUG_WAIT_ENA bound to: 0 - type: integer 
-	Parameter DEBUG_BANKSEL_ENA bound to: 1 - type: integer 
+	Parameter DEBUG_BANKSEL_ENA bound to: 0 - type: integer 
 	Parameter IN0_ENA bound to: 1 - type: integer 
 	Parameter IN1_ENA bound to: 1 - type: integer 
 	Parameter IN2_ENA bound to: 1 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'dkong_system' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/dkong_system.sv:4]
 	Parameter CLKS_PER_BIT bound to: 1 - type: integer 
 	Parameter DEBUG_WAIT_ENA bound to: 0 - type: integer 
-	Parameter DEBUG_BANKSEL_ENA bound to: 1 - type: integer 
+	Parameter DEBUG_BANKSEL_ENA bound to: 0 - type: integer 
 	Parameter IN0_ENA bound to: 1 - type: integer 
 	Parameter IN1_ENA bound to: 1 - type: integer 
 	Parameter IN2_ENA bound to: 1 - type: integer 
@@ -450,8 +450,8 @@ INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_3' declared at 'c:/Users/Steven/Do
 INFO: [Synth 8-256] done synthesizing module 'tile_3n_banked_rom' (26#1) [c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/tile_3n_banked_rom/synth/tile_3n_banked_rom.vhd:68]
 INFO: [Synth 8-6155] done synthesizing module 'tilegen' (27#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/video/tilegen.sv:1]
 INFO: [Synth 8-6157] synthesizing module 'spritegen' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/video/spritegen.sv:1]
-	Parameter SPRITE_ADD_F0 bound to: 8'b11111000 
-	Parameter SPRITE_ADD_F1 bound to: 8'b11111010 
+	Parameter SPRITE_ADD_F0 bound to: 8'b11111010 
+	Parameter SPRITE_ADD_F1 bound to: 8'b11111000 
 INFO: [Synth 8-6157] synthesizing module 'ram__parameterized1' [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/ram.sv:1]
 	Parameter ADDR_W bound to: 6 - type: integer 
 	Parameter DATA_W bound to: 9 - type: integer 
@@ -1163,7 +1163,6 @@ INFO: [Synth 8-256] done synthesizing module 'sou_3f_banked_rom' (52#1) [c:/User
 INFO: [Synth 8-6155] done synthesizing module 'dkong_sound' (53#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/sound/dkong_sound.sv:23]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/dkong_system.sv:478]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/dkong_system.sv:516]
-WARNING: [Synth 8-3848] Net oport_bus[dslave] in module/entity dkong_system does not have driver. [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/dkong_system.sv:134]
 INFO: [Synth 8-6155] done synthesizing module 'dkong_system' (54#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/dkong_system.sv:4]
 WARNING: [Synth 8-7023] instance 'inst' of module 'dkong_system' has 36 connections declared, but only 34 given [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/wrappers/dkong_system_wrapper.v:61]
 INFO: [Synth 8-6155] done synthesizing module 'dkong_system_wrapper' (55#1) [C:/Users/Steven/Documents/HDL/vivado/z80_system_sources/hdl/wrappers/dkong_system_wrapper.v:1]
@@ -1270,7 +1269,7 @@ WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized40 ha
 WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized40 has unconnected port ADDRB[9]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:07:36 ; elapsed = 00:07:38 . Memory (MB): peak = 1993.449 ; gain = 1455.551
+Finished RTL Elaboration : Time (s): cpu = 00:07:29 ; elapsed = 00:07:31 . Memory (MB): peak = 1993.262 ; gain = 1454.879
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1283,10 +1282,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:07:37 ; elapsed = 00:07:39 . Memory (MB): peak = 1993.449 ; gain = 1455.551
+Finished Handling Custom Attributes : Time (s): cpu = 00:07:30 ; elapsed = 00:07:32 . Memory (MB): peak = 1993.262 ; gain = 1454.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:07:37 ; elapsed = 00:07:39 . Memory (MB): peak = 1993.449 ; gain = 1455.551
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:07:30 ; elapsed = 00:07:32 . Memory (MB): peak = 1993.262 ; gain = 1454.879
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 59 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -1298,20 +1297,20 @@ Parsing XDC File [C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system
 Finished Parsing XDC File [C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.runs/dkong_dkong_system_wrapper_0_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1993.449 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1993.262 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.281 . Memory (MB): peak = 1993.449 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.276 . Memory (MB): peak = 1993.262 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:07:49 ; elapsed = 00:07:52 . Memory (MB): peak = 1993.449 ; gain = 1455.551
+Finished Constraint Validation : Time (s): cpu = 00:07:42 ; elapsed = 00:07:45 . Memory (MB): peak = 1993.262 ; gain = 1454.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:07:49 ; elapsed = 00:07:52 . Memory (MB): peak = 1993.449 ; gain = 1455.551
+Finished Loading Part and Timing Information : Time (s): cpu = 00:07:42 ; elapsed = 00:07:45 . Memory (MB): peak = 1993.262 ; gain = 1454.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -1329,7 +1328,7 @@ Applied set_property DONT_TOUCH = true for inst/inst/vid/tile/rom_3p. (constrain
 Applied set_property DONT_TOUCH = true for inst/inst/vid/tile/prom_2n. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for inst/inst/cpu_rom/inst. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:07:49 ; elapsed = 00:07:52 . Memory (MB): peak = 1993.449 ; gain = 1455.551
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:07:42 ; elapsed = 00:07:45 . Memory (MB): peak = 1993.262 ; gain = 1454.879
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5587] ROM size for "MCycles" is below threshold of ROM address width. It will be mapped to LUTs
 INFO: [Synth 8-5546] ROM "Read_To_Acc" won't be mapped to RAM because it is too sparse
@@ -1380,7 +1379,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'mstate_q_reg' using encodi
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'int_state_q_reg' using encoding 'one-hot' in module 't48_int'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:07:55 ; elapsed = 00:07:58 . Memory (MB): peak = 1993.449 ; gain = 1455.551
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:07:47 ; elapsed = 00:07:51 . Memory (MB): peak = 1993.262 ; gain = 1454.879
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1395,7 +1394,7 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input     16 Bit       Adders := 8     
 	   2 Input     14 Bit       Adders := 1     
-	   2 Input     11 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 2     
 	   2 Input     10 Bit       Adders := 1     
 	   2 Input      9 Bit       Adders := 3     
 	   3 Input      9 Bit       Adders := 2     
@@ -1408,9 +1407,10 @@ Detailed RTL Component Info :
 	   3 Input      2 Bit       Adders := 1     
 	   2 Input      2 Bit       Adders := 1     
 +---XORs : 
-	   2 Input     10 Bit         XORs := 1     
+	   2 Input      9 Bit         XORs := 1     
 	   2 Input      8 Bit         XORs := 4     
 	   2 Input      4 Bit         XORs := 2     
+	   2 Input      3 Bit         XORs := 1     
 	   2 Input      1 Bit         XORs := 3     
 +---XORs : 
 	                9 Bit    Wide XORs := 1     
@@ -1421,7 +1421,7 @@ Detailed RTL Component Info :
 	               12 Bit    Registers := 2     
 	               10 Bit    Registers := 1     
 	                9 Bit    Registers := 3     
-	                8 Bit    Registers := 41    
+	                8 Bit    Registers := 42    
 	                7 Bit    Registers := 4     
 	                6 Bit    Registers := 3     
 	                5 Bit    Registers := 3     
@@ -1449,11 +1449,12 @@ Detailed RTL Component Info :
 	   2 Input      9 Bit        Muxes := 5     
 	   8 Input      8 Bit        Muxes := 1     
 	   5 Input      8 Bit        Muxes := 2     
-	   2 Input      8 Bit        Muxes := 113   
+	   2 Input      8 Bit        Muxes := 115   
 	   6 Input      8 Bit        Muxes := 4     
 	   4 Input      8 Bit        Muxes := 15    
 	   9 Input      8 Bit        Muxes := 1     
 	  21 Input      8 Bit        Muxes := 1     
+	   3 Input      8 Bit        Muxes := 1     
 	   2 Input      7 Bit        Muxes := 30    
 	   9 Input      7 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 4     
@@ -1479,7 +1480,7 @@ Detailed RTL Component Info :
 	  22 Input      3 Bit        Muxes := 4     
 	  58 Input      3 Bit        Muxes := 4     
 	   4 Input      2 Bit        Muxes := 5     
-	   2 Input      2 Bit        Muxes := 20    
+	   2 Input      2 Bit        Muxes := 22    
 	   3 Input      2 Bit        Muxes := 2     
 	   8 Input      2 Bit        Muxes := 2     
 	  51 Input      2 Bit        Muxes := 1     
@@ -1487,7 +1488,7 @@ Detailed RTL Component Info :
 	  58 Input      2 Bit        Muxes := 5     
 	   5 Input      2 Bit        Muxes := 2     
 	  21 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 387   
+	   2 Input      1 Bit        Muxes := 389   
 	   4 Input      1 Bit        Muxes := 55    
 	   3 Input      1 Bit        Muxes := 25    
 	   5 Input      1 Bit        Muxes := 28    
@@ -1700,8 +1701,11 @@ Detailed RTL Component Info :
 	   4 Input      8 Bit        Muxes := 1     
 Module tilegen 
 Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 1     
 +---XORs : 
-	   2 Input     10 Bit         XORs := 1     
+	   2 Input      9 Bit         XORs := 1     
+	   2 Input      3 Bit         XORs := 1     
 +---Registers : 
 	                8 Bit    Registers := 2     
 	                4 Bit    Registers := 1     
@@ -1756,7 +1760,7 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input     16 Bit        Muxes := 4     
 	   2 Input     10 Bit        Muxes := 1     
-	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 4     
 	   2 Input      6 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 4     
 Module paletter 
@@ -1939,18 +1943,20 @@ Detailed RTL Component Info :
 Module dkong_system 
 Detailed RTL Component Info : 
 +---Registers : 
-	                8 Bit    Registers := 6     
+	                8 Bit    Registers := 7     
 	                5 Bit    Registers := 1     
 	                2 Bit    Registers := 2     
 	                1 Bit    Registers := 12    
 +---Muxes : 
 	  21 Input      8 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 2     
+	   3 Input      8 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 3     
 	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 2     
 	  21 Input      2 Bit        Muxes := 1     
 	  20 Input      1 Bit        Muxes := 9     
-	   2 Input      1 Bit        Muxes := 13    
+	   2 Input      1 Bit        Muxes := 15    
 	   5 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
@@ -1979,26 +1985,32 @@ INFO: [Synth 8-5546] ROM "audio_irq" won't be mapped to RAM because it is too sp
 INFO: [Synth 8-5546] ROM "dma_rdy" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/inst/mycpu/i_tv80_core /INT_s_reg)
 INFO: [Synth 8-3886] merging instance 'inst/inst/dsw0_reg[0]' (FDRE) to 'inst/inst/dsw0_reg[7]'
-INFO: [Synth 8-3886] merging instance 'inst/inst/in2_reg[0]' (FDR) to 'inst/inst/in2_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/inst/in2_reg[0]' (FDR) to 'inst/inst/in1_reg[7]'
 INFO: [Synth 8-3886] merging instance 'inst/inst/dsw0_reg[1]' (FDRE) to 'inst/inst/dsw0_reg[7]'
-INFO: [Synth 8-3886] merging instance 'inst/inst/in2_reg[1]' (FDR) to 'inst/inst/in2_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/inst/in2_reg[1]' (FDR) to 'inst/inst/in1_reg[7]'
 INFO: [Synth 8-3886] merging instance 'inst/inst/dsw0_reg[2]' (FDRE) to 'inst/inst/dsw0_reg[7]'
 INFO: [Synth 8-3886] merging instance 'inst/inst/dsw0_reg[3]' (FDRE) to 'inst/inst/dsw0_reg[7]'
 INFO: [Synth 8-3886] merging instance 'inst/inst/dsw0_reg[4]' (FDRE) to 'inst/inst/dsw0_reg[7]'
-INFO: [Synth 8-3886] merging instance 'inst/inst/in2_reg[4]' (FDR) to 'inst/inst/in2_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/inst/in2_reg[4]' (FDR) to 'inst/inst/in1_reg[7]'
 INFO: [Synth 8-3886] merging instance 'inst/inst/dsw0_reg[5]' (FDRE) to 'inst/inst/dsw0_reg[7]'
-INFO: [Synth 8-3886] merging instance 'inst/inst/in2_reg[5]' (FDR) to 'inst/inst/in0_reg[7]'
-INFO: [Synth 8-3886] merging instance 'inst/inst/in1_reg[5]' (FDR) to 'inst/inst/in0_reg[7]'
-INFO: [Synth 8-3886] merging instance 'inst/inst/in0_reg[5]' (FDR) to 'inst/inst/in0_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/inst/in2_reg[5]' (FDR) to 'inst/inst/in1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/inst/in1_reg[5]' (FDR) to 'inst/inst/in1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/inst/in0_reg[5]' (FDR) to 'inst/inst/in1_reg[7]'
 INFO: [Synth 8-3886] merging instance 'inst/inst/dsw0_reg[6]' (FDRE) to 'inst/inst/dsw0_reg[7]'
-INFO: [Synth 8-3886] merging instance 'inst/inst/in1_reg[6]' (FDR) to 'inst/inst/in0_reg[7]'
-INFO: [Synth 8-3886] merging instance 'inst/inst/in0_reg[6]' (FDR) to 'inst/inst/in0_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/inst/in1_reg[6]' (FDR) to 'inst/inst/in1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/inst/in0_reg[6]' (FDR) to 'inst/inst/in1_reg[7]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/inst/dsw0_reg[7] )
 INFO: [Synth 8-3886] merging instance 'inst/inst/in1_reg[7]' (FDR) to 'inst/inst/in0_reg[7]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/inst/in0_reg[7] )
+INFO: [Synth 8-3886] merging instance 'inst/inst/oport_bus_reg[dslave][2]' (FDRE) to 'inst/inst/oport_bus_reg[dslave][3]'
+INFO: [Synth 8-3886] merging instance 'inst/inst/oport_bus_reg[dslave][3]' (FDRE) to 'inst/inst/oport_bus_reg[dslave][4]'
+INFO: [Synth 8-3886] merging instance 'inst/inst/oport_bus_reg[dslave][4]' (FDRE) to 'inst/inst/oport_bus_reg[dslave][5]'
+INFO: [Synth 8-3886] merging instance 'inst/inst/oport_bus_reg[dslave][5]' (FDRE) to 'inst/inst/oport_bus_reg[dslave][6]'
+INFO: [Synth 8-3886] merging instance 'inst/inst/oport_bus_reg[dslave][6]' (FDRE) to 'inst/inst/oport_bus_reg[dslave][7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/inst/oport_bus_reg[dslave][7] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/inst/io_bus_reg[dslave][5] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:08:35 ; elapsed = 00:08:40 . Memory (MB): peak = 1993.449 ; gain = 1455.551
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:08:30 ; elapsed = 00:08:34 . Memory (MB): peak = 1993.262 ; gain = 1454.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -2057,13 +2069,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:08:41 ; elapsed = 00:08:46 . Memory (MB): peak = 1993.449 ; gain = 1455.551
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:08:36 ; elapsed = 00:08:40 . Memory (MB): peak = 1993.262 ; gain = 1454.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:08:42 ; elapsed = 00:08:46 . Memory (MB): peak = 1993.449 ; gain = 1455.551
+Finished Timing Optimization : Time (s): cpu = 00:08:36 ; elapsed = 00:08:40 . Memory (MB): peak = 1993.262 ; gain = 1454.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -2107,7 +2119,7 @@ INFO: [Synth 8-6837] The timing for the instance inst/inst/vid/sprite/objram/mem
 INFO: [Synth 8-6837] The timing for the instance inst/inst/vid/sprite/linebuffer/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance inst/inst/cpu_ram/ram_imp/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:08:43 ; elapsed = 00:08:48 . Memory (MB): peak = 1993.449 ; gain = 1455.551
+Finished Technology Mapping : Time (s): cpu = 00:08:38 ; elapsed = 00:08:42 . Memory (MB): peak = 1993.262 ; gain = 1454.879
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2133,7 +2145,7 @@ INFO: [Synth 8-5365] Flop inst/inst/mycpu/mreq_n_reg is being inverted and renam
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:08:45 ; elapsed = 00:08:49 . Memory (MB): peak = 1993.449 ; gain = 1455.551
+Finished IO Insertion : Time (s): cpu = 00:08:39 ; elapsed = 00:08:44 . Memory (MB): peak = 1993.262 ; gain = 1454.879
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -2146,7 +2158,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:08:45 ; elapsed = 00:08:49 . Memory (MB): peak = 1993.449 ; gain = 1455.551
+Finished Renaming Generated Instances : Time (s): cpu = 00:08:39 ; elapsed = 00:08:44 . Memory (MB): peak = 1993.262 ; gain = 1454.879
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2158,25 +2170,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:08:45 ; elapsed = 00:08:50 . Memory (MB): peak = 1993.449 ; gain = 1455.551
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:08:40 ; elapsed = 00:08:44 . Memory (MB): peak = 1993.262 ; gain = 1454.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:08:45 ; elapsed = 00:08:50 . Memory (MB): peak = 1993.449 ; gain = 1455.551
+Finished Renaming Generated Ports : Time (s): cpu = 00:08:40 ; elapsed = 00:08:44 . Memory (MB): peak = 1993.262 ; gain = 1454.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:08:45 ; elapsed = 00:08:50 . Memory (MB): peak = 1993.449 ; gain = 1455.551
+Finished Handling Custom Attributes : Time (s): cpu = 00:08:40 ; elapsed = 00:08:44 . Memory (MB): peak = 1993.262 ; gain = 1454.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:08:45 ; elapsed = 00:08:50 . Memory (MB): peak = 1993.449 ; gain = 1455.551
+Finished Renaming Generated Nets : Time (s): cpu = 00:08:40 ; elapsed = 00:08:44 . Memory (MB): peak = 1993.262 ; gain = 1454.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -2192,13 +2204,13 @@ Report Cell Usage:
 +------+------------+------+
 |      |Cell        |Count |
 +------+------------+------+
-|1     |CARRY4      |    59|
-|2     |LUT1        |    30|
-|3     |LUT2        |   225|
-|4     |LUT3        |   388|
-|5     |LUT4        |   216|
-|6     |LUT5        |   500|
-|7     |LUT6        |  1205|
+|1     |CARRY4      |    65|
+|2     |LUT1        |    28|
+|3     |LUT2        |   226|
+|4     |LUT3        |   374|
+|5     |LUT4        |   231|
+|6     |LUT5        |   538|
+|7     |LUT6        |  1210|
 |8     |MUXF7       |    74|
 |9     |MUXF8       |     7|
 |10    |RAM32M      |     8|
@@ -2261,7 +2273,7 @@ Report Cell Usage:
 |67    |RAMB36E1_9  |     1|
 |68    |FDCE        |   265|
 |69    |FDPE        |    81|
-|70    |FDRE        |   449|
+|70    |FDRE        |   451|
 |71    |FDSE        |    19|
 +------+------------+------+
 
@@ -2269,9 +2281,9 @@ Report Instance Areas:
 +------+-------------------------------------------------------+-----------------------------------------------+------+
 |      |Instance                                               |Module                                         |Cells |
 +------+-------------------------------------------------------+-----------------------------------------------+------+
-|1     |top                                                    |                                               |  3606|
-|2     |  inst                                                 |dkong_system_wrapper                           |  3606|
-|3     |    inst                                               |dkong_system                                   |  3606|
+|1     |top                                                    |                                               |  3657|
+|2     |  inst                                                 |dkong_system_wrapper                           |  3657|
+|3     |    inst                                               |dkong_system                                   |  3657|
 |4     |      cpu_ram                                          |z80ram                                         |     1|
 |5     |        ram_imp                                        |ram                                            |     1|
 |6     |      cpu_rom                                          |program_rom_wrapper_banked                     |    44|
@@ -2313,11 +2325,11 @@ Report Instance Areas:
 |42    |                    \prim_init.ram                     |blk_mem_gen_prim_wrapper_init__parameterized7  |     2|
 |43    |                  \ramloop[9].ram.r                    |blk_mem_gen_prim_width__parameterized8         |     2|
 |44    |                    \prim_init.ram                     |blk_mem_gen_prim_wrapper_init__parameterized8  |     2|
-|45    |      dmac                                             |fakedma                                        |   433|
-|46    |      mycpu                                            |tv80s                                          |  1702|
-|47    |        i_tv80_core                                    |tv80_core                                      |  1685|
+|45    |      dmac                                             |fakedma                                        |   457|
+|46    |      mycpu                                            |tv80s                                          |  1705|
+|47    |        i_tv80_core                                    |tv80_core                                      |  1688|
 |48    |          i_reg                                        |tv80_reg                                       |   415|
-|49    |      sou                                              |dkong_sound                                    |   829|
+|49    |      sou                                              |dkong_sound                                    |   858|
 |50    |        rom_3h                                         |sou_3h_banked_rom                              |    18|
 |51    |          U0                                           |blk_mem_gen_v8_4_3__parameterized19            |    18|
 |52    |            inst_blk_mem_gen                           |blk_mem_gen_v8_4_3_synth__parameterized9       |    18|
@@ -2348,22 +2360,22 @@ Report Instance Areas:
 |77    |                    \prim_init.ram                     |blk_mem_gen_prim_wrapper_init__parameterized40 |     1|
 |78    |                  \ramloop[3].ram.r                    |blk_mem_gen_prim_width__parameterized41        |     2|
 |79    |                    \prim_init.ram                     |blk_mem_gen_prim_wrapper_init__parameterized41 |     2|
-|80    |        cpu                                            |t48_core                                       |   769|
-|81    |          alu_b                                        |t48_alu                                        |    41|
-|82    |          clock_ctrl_b                                 |t48_clock_ctrl                                 |   100|
+|80    |        cpu                                            |t48_core                                       |   798|
+|81    |          alu_b                                        |t48_alu                                        |    42|
+|82    |          clock_ctrl_b                                 |t48_clock_ctrl                                 |   120|
 |83    |          cond_branch_b                                |t48_cond_branch                                |     1|
-|84    |          decoder_b                                    |t48_decoder                                    |   491|
-|85    |            int_b                                      |t48_int                                        |   108|
-|86    |          dmem_ctrl_b                                  |t48_dmem_ctrl                                  |     7|
-|87    |          pmem_ctrl_b                                  |t48_pmem_ctrl                                  |    52|
+|84    |          decoder_b                                    |t48_decoder                                    |   499|
+|85    |            int_b                                      |t48_int                                        |   106|
+|86    |          dmem_ctrl_b                                  |t48_dmem_ctrl                                  |     6|
+|87    |          pmem_ctrl_b                                  |t48_pmem_ctrl                                  |    53|
 |88    |          psw_b                                        |t48_psw                                        |     9|
 |89    |          \use_db_bus.db_bus_b                         |t48_db_bus                                     |     8|
 |90    |          \use_p1.p1_b                                 |t48_p1                                         |     8|
 |91    |          \use_p2.p2_b                                 |t48_p2                                         |    21|
 |92    |          \use_timer.timer_b                           |t48_timer                                      |    31|
 |93    |        i8035_int_ram                                  |ram__parameterized3                            |    16|
-|94    |      vid                                              |dkong_video                                    |   514|
-|95    |        pal                                            |paletter                                       |    14|
+|94    |      vid                                              |dkong_video                                    |   507|
+|95    |        pal                                            |paletter                                       |    16|
 |96    |          prom_2e                                      |palette_2e_banked_prom                         |     1|
 |97    |            U0                                         |blk_mem_gen_v8_4_3__parameterized15            |     1|
 |98    |              inst_blk_mem_gen                         |blk_mem_gen_v8_4_3_synth__parameterized7       |     1|
@@ -2378,7 +2390,7 @@ Report Instance Areas:
 |107   |                  \valid.cstr                          |blk_mem_gen_generic_cstr__parameterized8       |     1|
 |108   |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width__parameterized33        |     1|
 |109   |                      \prim_init.ram                   |blk_mem_gen_prim_wrapper_init__parameterized33 |     1|
-|110   |        sprite                                         |spritegen                                      |   357|
+|110   |        sprite                                         |spritegen                                      |   349|
 |111   |          rom_7c                                       |obj_7c_banked_rom                              |    14|
 |112   |            U0                                         |blk_mem_gen_v8_4_3__parameterized7             |    14|
 |113   |              inst_blk_mem_gen                         |blk_mem_gen_v8_4_3_synth__parameterized3       |    14|
@@ -2424,7 +2436,7 @@ Report Instance Areas:
 |153   |                    \ramloop[1].ram.r                  |blk_mem_gen_prim_width__parameterized31        |     1|
 |154   |                      \prim_init.ram                   |blk_mem_gen_prim_wrapper_init__parameterized31 |     1|
 |155   |          linebuffer                                   |ram__parameterized2                            |    30|
-|156   |          objram                                       |ram__parameterized0_2                          |     9|
+|156   |          objram                                       |ram__parameterized0_2                          |     1|
 |157   |          scratchpad                                   |ram__parameterized1                            |    54|
 |158   |        tile                                           |tilegen                                        |    83|
 |159   |          prom_2n                                      |tile_2n_banked_prom                            |     1|
@@ -2467,35 +2479,35 @@ Report Instance Areas:
 |196   |          tileram                                      |ram__parameterized0                            |    12|
 +------+-------------------------------------------------------+-----------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:08:45 ; elapsed = 00:08:50 . Memory (MB): peak = 1993.449 ; gain = 1455.551
+Finished Writing Synthesis Report : Time (s): cpu = 00:08:40 ; elapsed = 00:08:44 . Memory (MB): peak = 1993.262 ; gain = 1454.879
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 1904 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:59 ; elapsed = 00:08:40 . Memory (MB): peak = 1993.449 ; gain = 1455.551
-Synthesis Optimization Complete : Time (s): cpu = 00:08:45 ; elapsed = 00:08:50 . Memory (MB): peak = 1993.449 ; gain = 1455.551
+Synthesis finished with 0 errors, 0 critical warnings and 1906 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:01 ; elapsed = 00:08:35 . Memory (MB): peak = 1993.262 ; gain = 1454.879
+Synthesis Optimization Complete : Time (s): cpu = 00:08:40 ; elapsed = 00:08:44 . Memory (MB): peak = 1993.262 ; gain = 1454.879
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 228 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-17] Analyzing 234 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1993.449 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1993.262 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 25 instances were transformed.
   RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 8 instances
   RAM64X1S => RAM64X1S (RAMS64E): 17 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-214 Infos, 110 Warnings, 0 Critical Warnings and 0 Errors encountered.
+220 Infos, 109 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:08:53 ; elapsed = 00:08:59 . Memory (MB): peak = 1993.449 ; gain = 1702.027
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1993.449 ; gain = 0.000
+synth_design: Time (s): cpu = 00:08:48 ; elapsed = 00:08:53 . Memory (MB): peak = 1993.262 ; gain = 1701.516
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1993.262 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.runs/dkong_dkong_system_wrapper_0_0_synth_1/dkong_dkong_system_wrapper_0_0.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
 INFO: [Coretcl 2-1174] Renamed 195 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1993.449 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1993.262 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.runs/dkong_dkong_system_wrapper_0_0_synth_1/dkong_dkong_system_wrapper_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file dkong_dkong_system_wrapper_0_0_utilization_synth.rpt -pb dkong_dkong_system_wrapper_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Apr  2 13:53:25 2020...
+INFO: [Common 17-206] Exiting Vivado at Thu Apr  2 21:43:13 2020...

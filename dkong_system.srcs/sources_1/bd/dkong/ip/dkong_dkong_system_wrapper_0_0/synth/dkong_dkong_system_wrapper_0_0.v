@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "dkong_system_wrapper,Vivado 2019.1" *)
 (* CHECK_LICENSE_TYPE = "dkong_dkong_system_wrapper_0_0,dkong_system_wrapper,{}" *)
-(* CORE_GENERATION_INFO = "dkong_dkong_system_wrapper_0_0,dkong_system_wrapper,{x_ipProduct=Vivado 2019.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=dkong_system_wrapper,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,CLKS_PER_BIT=1,DEBUG_WAIT_ENA=0,DEBUG_BANKSEL_ENA=1,IN0_ENA=1,IN1_ENA=1,IN2_ENA=1}" *)
+(* CORE_GENERATION_INFO = "dkong_dkong_system_wrapper_0_0,dkong_system_wrapper,{x_ipProduct=Vivado 2019.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=dkong_system_wrapper,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,CLKS_PER_BIT=1,DEBUG_WAIT_ENA=0,DEBUG_BANKSEL_ENA=0,IN0_ENA=1,IN1_ENA=1,IN2_ENA=1}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module dkong_dkong_system_wrapper_0_0 (
@@ -132,7 +132,7 @@ output wire [7 : 0] debug_enables;
   dkong_system_wrapper #(
     .CLKS_PER_BIT(1),
     .DEBUG_WAIT_ENA(0),
-    .DEBUG_BANKSEL_ENA(1),
+    .DEBUG_BANKSEL_ENA(0),
     .IN0_ENA(1),
     .IN1_ENA(1),
     .IN2_ENA(1)

@@ -1,0 +1,5 @@
+vhdl xil_defaultlib  \
+"../../../bd/dkong/ip/dkong_proc_sys_reset_0_0/sim/dkong_proc_sys_reset_0_0.vhd" \
+"../../../bd/dkong/ip/dkong_proc_sys_reset_1_0/sim/dkong_proc_sys_reset_1_0.vhd" \
+
+nosort

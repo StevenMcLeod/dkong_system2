@@ -39,13 +39,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="65"/>
-    <Option Name="WTModelSimExportSim" Val="65"/>
-    <Option Name="WTQuestaExportSim" Val="65"/>
-    <Option Name="WTIesExportSim" Val="65"/>
-    <Option Name="WTVcsExportSim" Val="65"/>
-    <Option Name="WTRivieraExportSim" Val="65"/>
-    <Option Name="WTActivehdlExportSim" Val="65"/>
+    <Option Name="WTXSimExportSim" Val="72"/>
+    <Option Name="WTModelSimExportSim" Val="72"/>
+    <Option Name="WTQuestaExportSim" Val="72"/>
+    <Option Name="WTIesExportSim" Val="72"/>
+    <Option Name="WTVcsExportSim" Val="72"/>
+    <Option Name="WTRivieraExportSim" Val="72"/>
+    <Option Name="WTActivehdlExportSim" Val="72"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -540,32 +540,32 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="dkong.bd" FileRelPathName="ip/dkong_processing_system7_0_0/dkong_processing_system7_0_0.xci">
-          <Proxy FileSetName="dkong_processing_system7_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="dkong.bd" FileRelPathName="ip/dkong_mux4_0_0/dkong_mux4_0_0.xci">
-          <Proxy FileSetName="dkong_mux4_0_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="dkong.bd" FileRelPathName="ip/dkong_dkong_system_wrapper_0_0/dkong_dkong_system_wrapper_0_0.xci">
           <Proxy FileSetName="dkong_dkong_system_wrapper_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="dkong.bd" FileRelPathName="ip/dkong_framedoubler_slow_0_0/dkong_framedoubler_slow_0_0.xci">
-          <Proxy FileSetName="dkong_framedoubler_slow_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="dkong.bd" FileRelPathName="ip/dkong_demux2_0_2/dkong_demux2_0_2.xci">
-          <Proxy FileSetName="dkong_demux2_0_2"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="dkong.bd" FileRelPathName="ip/dkong_demux2_3_0/dkong_demux2_3_0.xci">
-          <Proxy FileSetName="dkong_demux2_3_0"/>
+        <CompFileExtendedInfo CompFileName="dkong.bd" FileRelPathName="ip/dkong_processing_system7_0_0/dkong_processing_system7_0_0.xci">
+          <Proxy FileSetName="dkong_processing_system7_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="dkong.bd" FileRelPathName="ip/dkong_demux2_0_1/dkong_demux2_0_1.xci">
           <Proxy FileSetName="dkong_demux2_0_1"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="dkong.bd" FileRelPathName="ip/dkong_demux2_0_0/dkong_demux2_0_0.xci">
-          <Proxy FileSetName="dkong_demux2_0_0"/>
+        <CompFileExtendedInfo CompFileName="dkong.bd" FileRelPathName="ip/dkong_framedoubler_slow_0_0/dkong_framedoubler_slow_0_0.xci">
+          <Proxy FileSetName="dkong_framedoubler_slow_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="dkong.bd" FileRelPathName="ip/dkong_demux2_0_3/dkong_demux2_0_3.xci">
           <Proxy FileSetName="dkong_demux2_0_3"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="dkong.bd" FileRelPathName="ip/dkong_demux2_3_0/dkong_demux2_3_0.xci">
+          <Proxy FileSetName="dkong_demux2_3_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="dkong.bd" FileRelPathName="ip/dkong_demux2_0_2/dkong_demux2_0_2.xci">
+          <Proxy FileSetName="dkong_demux2_0_2"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="dkong.bd" FileRelPathName="ip/dkong_demux2_0_0/dkong_demux2_0_0.xci">
+          <Proxy FileSetName="dkong_demux2_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="dkong.bd" FileRelPathName="ip/dkong_mux4_0_0/dkong_mux4_0_0.xci">
+          <Proxy FileSetName="dkong_mux4_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/dkong/hdl/dkong_wrapper.v">
@@ -994,12 +994,6 @@
         <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
     </FileSet>
-    <FileSet Name="dkong_framedoubler_slow_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/dkong_framedoubler_slow_0_0">
-      <Config>
-        <Option Name="TopModule" Val="dkong_framedoubler_slow_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
     <FileSet Name="dkong_demux2_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/dkong_demux2_0_0">
       <Config>
         <Option Name="TopModule" Val="dkong_demux2_0_0"/>
@@ -1048,6 +1042,12 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
+    <FileSet Name="dkong_framedoubler_slow_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/dkong_framedoubler_slow_0_0">
+      <Config>
+        <Option Name="TopModule" Val="dkong_framedoubler_slow_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
   </FileSets>
   <Simulators>
     <Simulator Name="XSim">
@@ -1069,15 +1069,6 @@
   </Simulators>
   <Runs Version="1" Minor="10">
     <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z020clg484-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="dkong_framedoubler_slow_0_0_synth_1" Type="Ft3:Synth" SrcSet="dkong_framedoubler_slow_0_0" Part="xc7z020clg484-1" ConstrsSet="dkong_framedoubler_slow_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/dkong_framedoubler_slow_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
@@ -1142,6 +1133,15 @@
     </Run>
     <Run Id="dkong_processing_system7_0_0_synth_1" Type="Ft3:Synth" SrcSet="dkong_processing_system7_0_0" Part="xc7z020clg484-1" ConstrsSet="dkong_processing_system7_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/dkong_processing_system7_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="dkong_dkong_system_wrapper_0_0_synth_1" Type="Ft3:Synth" SrcSet="dkong_dkong_system_wrapper_0_0" Part="xc7z020clg484-1" ConstrsSet="dkong_dkong_system_wrapper_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/dkong_dkong_system_wrapper_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
           <Desc>Vivado Synthesis Defaults</Desc>
         </StratHandle>
@@ -1151,7 +1151,7 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="dkong_dkong_system_wrapper_0_0_synth_1" Type="Ft3:Synth" SrcSet="dkong_dkong_system_wrapper_0_0" Part="xc7z020clg484-1" ConstrsSet="dkong_dkong_system_wrapper_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/dkong_dkong_system_wrapper_0_0_synth_1" IncludeInArchive="true">
+    <Run Id="dkong_framedoubler_slow_0_0_synth_1" Type="Ft3:Synth" SrcSet="dkong_framedoubler_slow_0_0" Part="xc7z020clg484-1" ConstrsSet="dkong_framedoubler_slow_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/dkong_framedoubler_slow_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -1176,22 +1176,6 @@
         <Step Id="write_bitstream"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="dkong_framedoubler_slow_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="dkong_framedoubler_slow_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="dkong_framedoubler_slow_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
@@ -1293,6 +1277,22 @@
     </Run>
     <Run Id="dkong_processing_system7_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="dkong_processing_system7_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="dkong_processing_system7_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="dkong_dkong_system_wrapper_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="dkong_dkong_system_wrapper_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="dkong_dkong_system_wrapper_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
           <Desc>Default settings for Implementation.</Desc>
         </StratHandle>
@@ -1309,7 +1309,7 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="dkong_dkong_system_wrapper_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="dkong_dkong_system_wrapper_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="dkong_dkong_system_wrapper_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="dkong_framedoubler_slow_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="dkong_framedoubler_slow_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="dkong_framedoubler_slow_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
           <Desc>Default settings for Implementation.</Desc>

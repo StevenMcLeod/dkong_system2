@@ -277,7 +277,7 @@ proc create_root_design { parentCell } {
      return 1
    }
     set_property -dict [ list \
-   CONFIG.DEBUG_BANKSEL_ENA {1} \
+   CONFIG.DEBUG_BANKSEL_ENA {0} \
    CONFIG.IN0_ENA {1} \
    CONFIG.IN1_ENA {1} \
    CONFIG.IN2_ENA {1} \

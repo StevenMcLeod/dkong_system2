@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Thu Apr  2 13:59:14 2020
+| Date             : Thu Apr  2 22:25:09 2020
 | Host             : Steven-Win10-2 running 64-bit major release  (build 9200)
 | Command          : report_power -file dkong_wrapper_power_routed.rpt -pb dkong_wrapper_power_summary_routed.pb -rpx dkong_wrapper_power_routed.rpx
 | Design           : dkong_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.896        |
+| Total On-Chip Power (W)  | 0.894        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.770        |
+| Dynamic (W)              | 0.769        |
 | Device Static (W)        | 0.125        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 74.7         |
@@ -53,21 +53,21 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.005 |        8 |       --- |             --- |
-| Slice Logic              |     0.004 |     4492 |       --- |             --- |
-|   LUT as Logic           |     0.004 |     2501 |     53200 |            4.70 |
-|   CARRY4                 |    <0.001 |       63 |     13300 |            0.47 |
+| Slice Logic              |     0.004 |     4520 |       --- |             --- |
+|   LUT as Logic           |     0.004 |     2551 |     53200 |            4.80 |
+|   CARRY4                 |    <0.001 |       69 |     13300 |            0.52 |
 |   LUT as Distributed RAM |    <0.001 |       49 |     17400 |            0.28 |
-|   Register               |    <0.001 |      968 |    106400 |            0.91 |
+|   Register               |    <0.001 |      972 |    106400 |            0.91 |
 |   F7/F8 Muxes            |    <0.001 |      129 |     53200 |            0.24 |
-|   Others                 |     0.000 |      371 |       --- |             --- |
+|   Others                 |     0.000 |      343 |       --- |             --- |
 |   LUT as Shift Register  |     0.000 |        2 |     17400 |            0.01 |
-| Signals                  |     0.005 |     3743 |       --- |             --- |
-| Block RAM                |     0.017 |       88 |       140 |           62.86 |
+| Signals                  |     0.005 |     3787 |       --- |             --- |
+| Block RAM                |     0.014 |       88 |       140 |           62.86 |
 | MMCM                     |     0.099 |        1 |         4 |           25.00 |
-| I/O                      |     0.006 |       32 |       200 |           16.00 |
+| I/O                      |     0.006 |       30 |       200 |           15.00 |
 | PS7                      |     0.635 |        1 |       --- |             --- |
 | Static Power             |     0.125 |          |           |                 |
-| Total                    |     0.896 |          |           |                 |
+| Total                    |     0.894 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -77,7 +77,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.041 |       0.029 |      0.013 |
+| Vccint    |       1.000 |     0.040 |       0.028 |      0.013 |
 | Vccaux    |       1.800 |     0.068 |       0.055 |      0.012 |
 | Vcco33    |       3.300 |     0.003 |       0.002 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -158,12 +158,12 @@ Table of Contents
 +----------------------------+-----------+
 | Name                       | Power (W) |
 +----------------------------+-----------+
-| dkong_wrapper              |     0.770 |
-|   dkong_i                  |     0.764 |
+| dkong_wrapper              |     0.769 |
+|   dkong_i                  |     0.763 |
 |     clk_wiz_0              |     0.100 |
 |       inst                 |     0.100 |
-|     dkong_system_wrapper_0 |     0.026 |
-|       inst                 |     0.026 |
+|     dkong_system_wrapper_0 |     0.025 |
+|       inst                 |     0.025 |
 |     framedoubler_slow_0    |     0.002 |
 |       inst                 |     0.002 |
 |     processing_system7_0   |     0.635 |

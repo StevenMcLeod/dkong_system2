@@ -87,37 +87,37 @@ read_vhdl -library xil_defaultlib {
 read_ip -quiet C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/cpu_program_rom/cpu_program_rom.xci
 set_property used_in_implementation false [get_files -all c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/cpu_program_rom/cpu_program_rom_ooc.xdc]
 
-read_ip -quiet c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/sou_3f_banked_rom/sou_3f_banked_rom.xci
+read_ip -quiet C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/sou_3f_banked_rom/sou_3f_banked_rom.xci
 set_property used_in_implementation false [get_files -all c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/sou_3f_banked_rom/sou_3f_banked_rom_ooc.xdc]
 
-read_ip -quiet c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/sou_3h_banked_rom/sou_3h_banked_rom.xci
+read_ip -quiet C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/sou_3h_banked_rom/sou_3h_banked_rom.xci
 set_property used_in_implementation false [get_files -all c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/sou_3h_banked_rom/sou_3h_banked_rom_ooc.xdc]
 
-read_ip -quiet c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/palette_2f_banked_prom/palette_2f_banked_prom.xci
+read_ip -quiet C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/palette_2f_banked_prom/palette_2f_banked_prom.xci
 set_property used_in_implementation false [get_files -all c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/palette_2f_banked_prom/palette_2f_banked_prom_ooc.xdc]
 
-read_ip -quiet c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/palette_2e_banked_prom/palette_2e_banked_prom.xci
+read_ip -quiet C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/palette_2e_banked_prom/palette_2e_banked_prom.xci
 set_property used_in_implementation false [get_files -all c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/palette_2e_banked_prom/palette_2e_banked_prom_ooc.xdc]
 
-read_ip -quiet c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/obj_7f_banked_rom/obj_7f_banked_rom.xci
+read_ip -quiet C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/obj_7f_banked_rom/obj_7f_banked_rom.xci
 set_property used_in_implementation false [get_files -all c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/obj_7f_banked_rom/obj_7f_banked_rom_ooc.xdc]
 
-read_ip -quiet c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/obj_7e_banked_rom/obj_7e_banked_rom.xci
+read_ip -quiet C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/obj_7e_banked_rom/obj_7e_banked_rom.xci
 set_property used_in_implementation false [get_files -all c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/obj_7e_banked_rom/obj_7e_banked_rom_ooc.xdc]
 
-read_ip -quiet c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/obj_7d_banked_rom/obj_7d_banked_rom.xci
+read_ip -quiet C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/obj_7d_banked_rom/obj_7d_banked_rom.xci
 set_property used_in_implementation false [get_files -all c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/obj_7d_banked_rom/obj_7d_banked_rom_ooc.xdc]
 
-read_ip -quiet c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/obj_7c_banked_rom/obj_7c_banked_rom.xci
+read_ip -quiet C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/obj_7c_banked_rom/obj_7c_banked_rom.xci
 set_property used_in_implementation false [get_files -all c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/obj_7c_banked_rom/obj_7c_banked_rom_ooc.xdc]
 
-read_ip -quiet c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/tile_3n_banked_rom/tile_3n_banked_rom.xci
+read_ip -quiet C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/tile_3n_banked_rom/tile_3n_banked_rom.xci
 set_property used_in_implementation false [get_files -all c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/tile_3n_banked_rom/tile_3n_banked_rom_ooc.xdc]
 
-read_ip -quiet c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/tile_3p_banked_rom/tile_3p_banked_rom.xci
+read_ip -quiet C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/tile_3p_banked_rom/tile_3p_banked_rom.xci
 set_property used_in_implementation false [get_files -all c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/tile_3p_banked_rom/tile_3p_banked_rom_ooc.xdc]
 
-read_ip -quiet c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/tile_2n_banked_prom/tile_2n_banked_prom.xci
+read_ip -quiet C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/tile_2n_banked_prom/tile_2n_banked_prom.xci
 set_property used_in_implementation false [get_files -all c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/tile_2n_banked_prom/tile_2n_banked_prom_ooc.xdc]
 
 read_ip -quiet c:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/ip/cpu_program_banked_rom/cpu_program_banked_rom.xci

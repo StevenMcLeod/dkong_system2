@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Tue Mar 31 13:24:46 2020
+// Date        : Thu Apr  2 22:18:47 2020
 // Host        : Steven-Win10-2 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               C:/Users/Steven/Documents/HDL/vivado/dkong_system/dkong_system.srcs/sources_1/bd/dkong/ip/dkong_framedoubler_slow_0_0/dkong_framedoubler_slow_0_0_sim_netlist.v
@@ -157,7 +157,7 @@ module dkong_framedoubler_slow_0_0_framedoubler_mem
   (* C_HAS_ENB = "0" *) 
   (* C_HAS_INJECTERR = "0" *) 
   (* C_HAS_MEM_OUTPUT_REGS_A = "0" *) 
-  (* C_HAS_MEM_OUTPUT_REGS_B = "1" *) 
+  (* C_HAS_MEM_OUTPUT_REGS_B = "0" *) 
   (* C_HAS_MUX_OUTPUT_REGS_A = "0" *) 
   (* C_HAS_MUX_OUTPUT_REGS_B = "0" *) 
   (* C_HAS_REGCEA = "0" *) 
@@ -345,7 +345,7 @@ module dkong_framedoubler_slow_0_0_framedoubler_mem__1
   (* C_HAS_ENB = "0" *) 
   (* C_HAS_INJECTERR = "0" *) 
   (* C_HAS_MEM_OUTPUT_REGS_A = "0" *) 
-  (* C_HAS_MEM_OUTPUT_REGS_B = "1" *) 
+  (* C_HAS_MEM_OUTPUT_REGS_B = "0" *) 
   (* C_HAS_MUX_OUTPUT_REGS_A = "0" *) 
   (* C_HAS_MUX_OUTPUT_REGS_B = "0" *) 
   (* C_HAS_REGCEA = "0" *) 
@@ -3223,31 +3223,30 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_mux__parameterized0
   wire \doutb[7]_INST_0_i_6_n_0 ;
   wire [111:0]doutb_array;
   wire [3:0]sel_pipe;
-  wire [3:0]sel_pipe_d1;
 
   MUXF8 \doutb[0]_INST_0 
        (.I0(\doutb[0]_INST_0_i_1_n_0 ),
         .I1(\doutb[0]_INST_0_i_2_n_0 ),
         .O(doutb[0]),
-        .S(sel_pipe_d1[3]));
+        .S(sel_pipe[3]));
   MUXF7 \doutb[0]_INST_0_i_1 
        (.I0(\doutb[0]_INST_0_i_3_n_0 ),
         .I1(\doutb[0]_INST_0_i_4_n_0 ),
         .O(\doutb[0]_INST_0_i_1_n_0 ),
-        .S(sel_pipe_d1[2]));
+        .S(sel_pipe[2]));
   MUXF7 \doutb[0]_INST_0_i_2 
        (.I0(\doutb[0]_INST_0_i_5_n_0 ),
         .I1(\doutb[0]_INST_0_i_6_n_0 ),
         .O(\doutb[0]_INST_0_i_2_n_0 ),
-        .S(sel_pipe_d1[2]));
+        .S(sel_pipe[2]));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \doutb[0]_INST_0_i_3 
        (.I0(doutb_array[24]),
         .I1(doutb_array[16]),
-        .I2(sel_pipe_d1[1]),
+        .I2(sel_pipe[1]),
         .I3(doutb_array[8]),
-        .I4(sel_pipe_d1[0]),
+        .I4(sel_pipe[0]),
         .I5(doutb_array[0]),
         .O(\doutb[0]_INST_0_i_3_n_0 ));
   LUT6 #(
@@ -3255,9 +3254,9 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_mux__parameterized0
     \doutb[0]_INST_0_i_4 
        (.I0(doutb_array[56]),
         .I1(doutb_array[48]),
-        .I2(sel_pipe_d1[1]),
+        .I2(sel_pipe[1]),
         .I3(doutb_array[40]),
-        .I4(sel_pipe_d1[0]),
+        .I4(sel_pipe[0]),
         .I5(doutb_array[32]),
         .O(\doutb[0]_INST_0_i_4_n_0 ));
   LUT6 #(
@@ -3265,42 +3264,42 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_mux__parameterized0
     \doutb[0]_INST_0_i_5 
        (.I0(doutb_array[88]),
         .I1(doutb_array[80]),
-        .I2(sel_pipe_d1[1]),
+        .I2(sel_pipe[1]),
         .I3(doutb_array[72]),
-        .I4(sel_pipe_d1[0]),
+        .I4(sel_pipe[0]),
         .I5(doutb_array[64]),
         .O(\doutb[0]_INST_0_i_5_n_0 ));
   LUT4 #(
     .INIT(16'h00E2)) 
     \doutb[0]_INST_0_i_6 
        (.I0(doutb_array[96]),
-        .I1(sel_pipe_d1[0]),
+        .I1(sel_pipe[0]),
         .I2(doutb_array[104]),
-        .I3(sel_pipe_d1[1]),
+        .I3(sel_pipe[1]),
         .O(\doutb[0]_INST_0_i_6_n_0 ));
   MUXF8 \doutb[1]_INST_0 
        (.I0(\doutb[1]_INST_0_i_1_n_0 ),
         .I1(\doutb[1]_INST_0_i_2_n_0 ),
         .O(doutb[1]),
-        .S(sel_pipe_d1[3]));
+        .S(sel_pipe[3]));
   MUXF7 \doutb[1]_INST_0_i_1 
        (.I0(\doutb[1]_INST_0_i_3_n_0 ),
         .I1(\doutb[1]_INST_0_i_4_n_0 ),
         .O(\doutb[1]_INST_0_i_1_n_0 ),
-        .S(sel_pipe_d1[2]));
+        .S(sel_pipe[2]));
   MUXF7 \doutb[1]_INST_0_i_2 
        (.I0(\doutb[1]_INST_0_i_5_n_0 ),
         .I1(\doutb[1]_INST_0_i_6_n_0 ),
         .O(\doutb[1]_INST_0_i_2_n_0 ),
-        .S(sel_pipe_d1[2]));
+        .S(sel_pipe[2]));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \doutb[1]_INST_0_i_3 
        (.I0(doutb_array[25]),
         .I1(doutb_array[17]),
-        .I2(sel_pipe_d1[1]),
+        .I2(sel_pipe[1]),
         .I3(doutb_array[9]),
-        .I4(sel_pipe_d1[0]),
+        .I4(sel_pipe[0]),
         .I5(doutb_array[1]),
         .O(\doutb[1]_INST_0_i_3_n_0 ));
   LUT6 #(
@@ -3308,9 +3307,9 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_mux__parameterized0
     \doutb[1]_INST_0_i_4 
        (.I0(doutb_array[57]),
         .I1(doutb_array[49]),
-        .I2(sel_pipe_d1[1]),
+        .I2(sel_pipe[1]),
         .I3(doutb_array[41]),
-        .I4(sel_pipe_d1[0]),
+        .I4(sel_pipe[0]),
         .I5(doutb_array[33]),
         .O(\doutb[1]_INST_0_i_4_n_0 ));
   LUT6 #(
@@ -3318,42 +3317,42 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_mux__parameterized0
     \doutb[1]_INST_0_i_5 
        (.I0(doutb_array[89]),
         .I1(doutb_array[81]),
-        .I2(sel_pipe_d1[1]),
+        .I2(sel_pipe[1]),
         .I3(doutb_array[73]),
-        .I4(sel_pipe_d1[0]),
+        .I4(sel_pipe[0]),
         .I5(doutb_array[65]),
         .O(\doutb[1]_INST_0_i_5_n_0 ));
   LUT4 #(
     .INIT(16'h00E2)) 
     \doutb[1]_INST_0_i_6 
        (.I0(doutb_array[97]),
-        .I1(sel_pipe_d1[0]),
+        .I1(sel_pipe[0]),
         .I2(doutb_array[105]),
-        .I3(sel_pipe_d1[1]),
+        .I3(sel_pipe[1]),
         .O(\doutb[1]_INST_0_i_6_n_0 ));
   MUXF8 \doutb[2]_INST_0 
        (.I0(\doutb[2]_INST_0_i_1_n_0 ),
         .I1(\doutb[2]_INST_0_i_2_n_0 ),
         .O(doutb[2]),
-        .S(sel_pipe_d1[3]));
+        .S(sel_pipe[3]));
   MUXF7 \doutb[2]_INST_0_i_1 
        (.I0(\doutb[2]_INST_0_i_3_n_0 ),
         .I1(\doutb[2]_INST_0_i_4_n_0 ),
         .O(\doutb[2]_INST_0_i_1_n_0 ),
-        .S(sel_pipe_d1[2]));
+        .S(sel_pipe[2]));
   MUXF7 \doutb[2]_INST_0_i_2 
        (.I0(\doutb[2]_INST_0_i_5_n_0 ),
         .I1(\doutb[2]_INST_0_i_6_n_0 ),
         .O(\doutb[2]_INST_0_i_2_n_0 ),
-        .S(sel_pipe_d1[2]));
+        .S(sel_pipe[2]));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \doutb[2]_INST_0_i_3 
        (.I0(doutb_array[26]),
         .I1(doutb_array[18]),
-        .I2(sel_pipe_d1[1]),
+        .I2(sel_pipe[1]),
         .I3(doutb_array[10]),
-        .I4(sel_pipe_d1[0]),
+        .I4(sel_pipe[0]),
         .I5(doutb_array[2]),
         .O(\doutb[2]_INST_0_i_3_n_0 ));
   LUT6 #(
@@ -3361,9 +3360,9 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_mux__parameterized0
     \doutb[2]_INST_0_i_4 
        (.I0(doutb_array[58]),
         .I1(doutb_array[50]),
-        .I2(sel_pipe_d1[1]),
+        .I2(sel_pipe[1]),
         .I3(doutb_array[42]),
-        .I4(sel_pipe_d1[0]),
+        .I4(sel_pipe[0]),
         .I5(doutb_array[34]),
         .O(\doutb[2]_INST_0_i_4_n_0 ));
   LUT6 #(
@@ -3371,42 +3370,42 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_mux__parameterized0
     \doutb[2]_INST_0_i_5 
        (.I0(doutb_array[90]),
         .I1(doutb_array[82]),
-        .I2(sel_pipe_d1[1]),
+        .I2(sel_pipe[1]),
         .I3(doutb_array[74]),
-        .I4(sel_pipe_d1[0]),
+        .I4(sel_pipe[0]),
         .I5(doutb_array[66]),
         .O(\doutb[2]_INST_0_i_5_n_0 ));
   LUT4 #(
     .INIT(16'h00E2)) 
     \doutb[2]_INST_0_i_6 
        (.I0(doutb_array[98]),
-        .I1(sel_pipe_d1[0]),
+        .I1(sel_pipe[0]),
         .I2(doutb_array[106]),
-        .I3(sel_pipe_d1[1]),
+        .I3(sel_pipe[1]),
         .O(\doutb[2]_INST_0_i_6_n_0 ));
   MUXF8 \doutb[3]_INST_0 
        (.I0(\doutb[3]_INST_0_i_1_n_0 ),
         .I1(\doutb[3]_INST_0_i_2_n_0 ),
         .O(doutb[3]),
-        .S(sel_pipe_d1[3]));
+        .S(sel_pipe[3]));
   MUXF7 \doutb[3]_INST_0_i_1 
        (.I0(\doutb[3]_INST_0_i_3_n_0 ),
         .I1(\doutb[3]_INST_0_i_4_n_0 ),
         .O(\doutb[3]_INST_0_i_1_n_0 ),
-        .S(sel_pipe_d1[2]));
+        .S(sel_pipe[2]));
   MUXF7 \doutb[3]_INST_0_i_2 
        (.I0(\doutb[3]_INST_0_i_5_n_0 ),
         .I1(\doutb[3]_INST_0_i_6_n_0 ),
         .O(\doutb[3]_INST_0_i_2_n_0 ),
-        .S(sel_pipe_d1[2]));
+        .S(sel_pipe[2]));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \doutb[3]_INST_0_i_3 
        (.I0(doutb_array[27]),
         .I1(doutb_array[19]),
-        .I2(sel_pipe_d1[1]),
+        .I2(sel_pipe[1]),
         .I3(doutb_array[11]),
-        .I4(sel_pipe_d1[0]),
+        .I4(sel_pipe[0]),
         .I5(doutb_array[3]),
         .O(\doutb[3]_INST_0_i_3_n_0 ));
   LUT6 #(
@@ -3414,9 +3413,9 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_mux__parameterized0
     \doutb[3]_INST_0_i_4 
        (.I0(doutb_array[59]),
         .I1(doutb_array[51]),
-        .I2(sel_pipe_d1[1]),
+        .I2(sel_pipe[1]),
         .I3(doutb_array[43]),
-        .I4(sel_pipe_d1[0]),
+        .I4(sel_pipe[0]),
         .I5(doutb_array[35]),
         .O(\doutb[3]_INST_0_i_4_n_0 ));
   LUT6 #(
@@ -3424,42 +3423,42 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_mux__parameterized0
     \doutb[3]_INST_0_i_5 
        (.I0(doutb_array[91]),
         .I1(doutb_array[83]),
-        .I2(sel_pipe_d1[1]),
+        .I2(sel_pipe[1]),
         .I3(doutb_array[75]),
-        .I4(sel_pipe_d1[0]),
+        .I4(sel_pipe[0]),
         .I5(doutb_array[67]),
         .O(\doutb[3]_INST_0_i_5_n_0 ));
   LUT4 #(
     .INIT(16'h00E2)) 
     \doutb[3]_INST_0_i_6 
        (.I0(doutb_array[99]),
-        .I1(sel_pipe_d1[0]),
+        .I1(sel_pipe[0]),
         .I2(doutb_array[107]),
-        .I3(sel_pipe_d1[1]),
+        .I3(sel_pipe[1]),
         .O(\doutb[3]_INST_0_i_6_n_0 ));
   MUXF8 \doutb[4]_INST_0 
        (.I0(\doutb[4]_INST_0_i_1_n_0 ),
         .I1(\doutb[4]_INST_0_i_2_n_0 ),
         .O(doutb[4]),
-        .S(sel_pipe_d1[3]));
+        .S(sel_pipe[3]));
   MUXF7 \doutb[4]_INST_0_i_1 
        (.I0(\doutb[4]_INST_0_i_3_n_0 ),
         .I1(\doutb[4]_INST_0_i_4_n_0 ),
         .O(\doutb[4]_INST_0_i_1_n_0 ),
-        .S(sel_pipe_d1[2]));
+        .S(sel_pipe[2]));
   MUXF7 \doutb[4]_INST_0_i_2 
        (.I0(\doutb[4]_INST_0_i_5_n_0 ),
         .I1(\doutb[4]_INST_0_i_6_n_0 ),
         .O(\doutb[4]_INST_0_i_2_n_0 ),
-        .S(sel_pipe_d1[2]));
+        .S(sel_pipe[2]));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \doutb[4]_INST_0_i_3 
        (.I0(doutb_array[28]),
         .I1(doutb_array[20]),
-        .I2(sel_pipe_d1[1]),
+        .I2(sel_pipe[1]),
         .I3(doutb_array[12]),
-        .I4(sel_pipe_d1[0]),
+        .I4(sel_pipe[0]),
         .I5(doutb_array[4]),
         .O(\doutb[4]_INST_0_i_3_n_0 ));
   LUT6 #(
@@ -3467,9 +3466,9 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_mux__parameterized0
     \doutb[4]_INST_0_i_4 
        (.I0(doutb_array[60]),
         .I1(doutb_array[52]),
-        .I2(sel_pipe_d1[1]),
+        .I2(sel_pipe[1]),
         .I3(doutb_array[44]),
-        .I4(sel_pipe_d1[0]),
+        .I4(sel_pipe[0]),
         .I5(doutb_array[36]),
         .O(\doutb[4]_INST_0_i_4_n_0 ));
   LUT6 #(
@@ -3477,42 +3476,42 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_mux__parameterized0
     \doutb[4]_INST_0_i_5 
        (.I0(doutb_array[92]),
         .I1(doutb_array[84]),
-        .I2(sel_pipe_d1[1]),
+        .I2(sel_pipe[1]),
         .I3(doutb_array[76]),
-        .I4(sel_pipe_d1[0]),
+        .I4(sel_pipe[0]),
         .I5(doutb_array[68]),
         .O(\doutb[4]_INST_0_i_5_n_0 ));
   LUT4 #(
     .INIT(16'h00E2)) 
     \doutb[4]_INST_0_i_6 
        (.I0(doutb_array[100]),
-        .I1(sel_pipe_d1[0]),
+        .I1(sel_pipe[0]),
         .I2(doutb_array[108]),
-        .I3(sel_pipe_d1[1]),
+        .I3(sel_pipe[1]),
         .O(\doutb[4]_INST_0_i_6_n_0 ));
   MUXF8 \doutb[5]_INST_0 
        (.I0(\doutb[5]_INST_0_i_1_n_0 ),
         .I1(\doutb[5]_INST_0_i_2_n_0 ),
         .O(doutb[5]),
-        .S(sel_pipe_d1[3]));
+        .S(sel_pipe[3]));
   MUXF7 \doutb[5]_INST_0_i_1 
        (.I0(\doutb[5]_INST_0_i_3_n_0 ),
         .I1(\doutb[5]_INST_0_i_4_n_0 ),
         .O(\doutb[5]_INST_0_i_1_n_0 ),
-        .S(sel_pipe_d1[2]));
+        .S(sel_pipe[2]));
   MUXF7 \doutb[5]_INST_0_i_2 
        (.I0(\doutb[5]_INST_0_i_5_n_0 ),
         .I1(\doutb[5]_INST_0_i_6_n_0 ),
         .O(\doutb[5]_INST_0_i_2_n_0 ),
-        .S(sel_pipe_d1[2]));
+        .S(sel_pipe[2]));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \doutb[5]_INST_0_i_3 
        (.I0(doutb_array[29]),
         .I1(doutb_array[21]),
-        .I2(sel_pipe_d1[1]),
+        .I2(sel_pipe[1]),
         .I3(doutb_array[13]),
-        .I4(sel_pipe_d1[0]),
+        .I4(sel_pipe[0]),
         .I5(doutb_array[5]),
         .O(\doutb[5]_INST_0_i_3_n_0 ));
   LUT6 #(
@@ -3520,9 +3519,9 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_mux__parameterized0
     \doutb[5]_INST_0_i_4 
        (.I0(doutb_array[61]),
         .I1(doutb_array[53]),
-        .I2(sel_pipe_d1[1]),
+        .I2(sel_pipe[1]),
         .I3(doutb_array[45]),
-        .I4(sel_pipe_d1[0]),
+        .I4(sel_pipe[0]),
         .I5(doutb_array[37]),
         .O(\doutb[5]_INST_0_i_4_n_0 ));
   LUT6 #(
@@ -3530,42 +3529,42 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_mux__parameterized0
     \doutb[5]_INST_0_i_5 
        (.I0(doutb_array[93]),
         .I1(doutb_array[85]),
-        .I2(sel_pipe_d1[1]),
+        .I2(sel_pipe[1]),
         .I3(doutb_array[77]),
-        .I4(sel_pipe_d1[0]),
+        .I4(sel_pipe[0]),
         .I5(doutb_array[69]),
         .O(\doutb[5]_INST_0_i_5_n_0 ));
   LUT4 #(
     .INIT(16'h00E2)) 
     \doutb[5]_INST_0_i_6 
        (.I0(doutb_array[101]),
-        .I1(sel_pipe_d1[0]),
+        .I1(sel_pipe[0]),
         .I2(doutb_array[109]),
-        .I3(sel_pipe_d1[1]),
+        .I3(sel_pipe[1]),
         .O(\doutb[5]_INST_0_i_6_n_0 ));
   MUXF8 \doutb[6]_INST_0 
        (.I0(\doutb[6]_INST_0_i_1_n_0 ),
         .I1(\doutb[6]_INST_0_i_2_n_0 ),
         .O(doutb[6]),
-        .S(sel_pipe_d1[3]));
+        .S(sel_pipe[3]));
   MUXF7 \doutb[6]_INST_0_i_1 
        (.I0(\doutb[6]_INST_0_i_3_n_0 ),
         .I1(\doutb[6]_INST_0_i_4_n_0 ),
         .O(\doutb[6]_INST_0_i_1_n_0 ),
-        .S(sel_pipe_d1[2]));
+        .S(sel_pipe[2]));
   MUXF7 \doutb[6]_INST_0_i_2 
        (.I0(\doutb[6]_INST_0_i_5_n_0 ),
         .I1(\doutb[6]_INST_0_i_6_n_0 ),
         .O(\doutb[6]_INST_0_i_2_n_0 ),
-        .S(sel_pipe_d1[2]));
+        .S(sel_pipe[2]));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \doutb[6]_INST_0_i_3 
        (.I0(doutb_array[30]),
         .I1(doutb_array[22]),
-        .I2(sel_pipe_d1[1]),
+        .I2(sel_pipe[1]),
         .I3(doutb_array[14]),
-        .I4(sel_pipe_d1[0]),
+        .I4(sel_pipe[0]),
         .I5(doutb_array[6]),
         .O(\doutb[6]_INST_0_i_3_n_0 ));
   LUT6 #(
@@ -3573,9 +3572,9 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_mux__parameterized0
     \doutb[6]_INST_0_i_4 
        (.I0(doutb_array[62]),
         .I1(doutb_array[54]),
-        .I2(sel_pipe_d1[1]),
+        .I2(sel_pipe[1]),
         .I3(doutb_array[46]),
-        .I4(sel_pipe_d1[0]),
+        .I4(sel_pipe[0]),
         .I5(doutb_array[38]),
         .O(\doutb[6]_INST_0_i_4_n_0 ));
   LUT6 #(
@@ -3583,42 +3582,42 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_mux__parameterized0
     \doutb[6]_INST_0_i_5 
        (.I0(doutb_array[94]),
         .I1(doutb_array[86]),
-        .I2(sel_pipe_d1[1]),
+        .I2(sel_pipe[1]),
         .I3(doutb_array[78]),
-        .I4(sel_pipe_d1[0]),
+        .I4(sel_pipe[0]),
         .I5(doutb_array[70]),
         .O(\doutb[6]_INST_0_i_5_n_0 ));
   LUT4 #(
     .INIT(16'h00E2)) 
     \doutb[6]_INST_0_i_6 
        (.I0(doutb_array[102]),
-        .I1(sel_pipe_d1[0]),
+        .I1(sel_pipe[0]),
         .I2(doutb_array[110]),
-        .I3(sel_pipe_d1[1]),
+        .I3(sel_pipe[1]),
         .O(\doutb[6]_INST_0_i_6_n_0 ));
   MUXF8 \doutb[7]_INST_0 
        (.I0(\doutb[7]_INST_0_i_1_n_0 ),
         .I1(\doutb[7]_INST_0_i_2_n_0 ),
         .O(doutb[7]),
-        .S(sel_pipe_d1[3]));
+        .S(sel_pipe[3]));
   MUXF7 \doutb[7]_INST_0_i_1 
        (.I0(\doutb[7]_INST_0_i_3_n_0 ),
         .I1(\doutb[7]_INST_0_i_4_n_0 ),
         .O(\doutb[7]_INST_0_i_1_n_0 ),
-        .S(sel_pipe_d1[2]));
+        .S(sel_pipe[2]));
   MUXF7 \doutb[7]_INST_0_i_2 
        (.I0(\doutb[7]_INST_0_i_5_n_0 ),
         .I1(\doutb[7]_INST_0_i_6_n_0 ),
         .O(\doutb[7]_INST_0_i_2_n_0 ),
-        .S(sel_pipe_d1[2]));
+        .S(sel_pipe[2]));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \doutb[7]_INST_0_i_3 
        (.I0(doutb_array[31]),
         .I1(doutb_array[23]),
-        .I2(sel_pipe_d1[1]),
+        .I2(sel_pipe[1]),
         .I3(doutb_array[15]),
-        .I4(sel_pipe_d1[0]),
+        .I4(sel_pipe[0]),
         .I5(doutb_array[7]),
         .O(\doutb[7]_INST_0_i_3_n_0 ));
   LUT6 #(
@@ -3626,9 +3625,9 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_mux__parameterized0
     \doutb[7]_INST_0_i_4 
        (.I0(doutb_array[63]),
         .I1(doutb_array[55]),
-        .I2(sel_pipe_d1[1]),
+        .I2(sel_pipe[1]),
         .I3(doutb_array[47]),
-        .I4(sel_pipe_d1[0]),
+        .I4(sel_pipe[0]),
         .I5(doutb_array[39]),
         .O(\doutb[7]_INST_0_i_4_n_0 ));
   LUT6 #(
@@ -3636,51 +3635,19 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_mux__parameterized0
     \doutb[7]_INST_0_i_5 
        (.I0(doutb_array[95]),
         .I1(doutb_array[87]),
-        .I2(sel_pipe_d1[1]),
+        .I2(sel_pipe[1]),
         .I3(doutb_array[79]),
-        .I4(sel_pipe_d1[0]),
+        .I4(sel_pipe[0]),
         .I5(doutb_array[71]),
         .O(\doutb[7]_INST_0_i_5_n_0 ));
   LUT4 #(
     .INIT(16'h00E2)) 
     \doutb[7]_INST_0_i_6 
        (.I0(doutb_array[103]),
-        .I1(sel_pipe_d1[0]),
+        .I1(sel_pipe[0]),
         .I2(doutb_array[111]),
-        .I3(sel_pipe_d1[1]),
+        .I3(sel_pipe[1]),
         .O(\doutb[7]_INST_0_i_6_n_0 ));
-  FDRE #(
-    .INIT(1'b0)) 
-    \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[0] 
-       (.C(clkb),
-        .CE(1'b1),
-        .D(sel_pipe[0]),
-        .Q(sel_pipe_d1[0]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[1] 
-       (.C(clkb),
-        .CE(1'b1),
-        .D(sel_pipe[1]),
-        .Q(sel_pipe_d1[1]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[2] 
-       (.C(clkb),
-        .CE(1'b1),
-        .D(sel_pipe[2]),
-        .Q(sel_pipe_d1[2]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[3] 
-       (.C(clkb),
-        .CE(1'b1),
-        .D(sel_pipe[3]),
-        .Q(sel_pipe_d1[3]),
-        .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \no_softecc_sel_reg.ce_pri.sel_pipe_reg[0] 
@@ -3779,31 +3746,30 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_mux__parameterized0_6
   wire \doutb[7]_INST_0_i_6_n_0 ;
   wire [111:0]doutb_array;
   wire [3:0]sel_pipe;
-  wire [3:0]sel_pipe_d1;
 
   MUXF8 \doutb[0]_INST_0 
        (.I0(\doutb[0]_INST_0_i_1_n_0 ),
         .I1(\doutb[0]_INST_0_i_2_n_0 ),
         .O(doutb[0]),
-        .S(sel_pipe_d1[3]));
+        .S(sel_pipe[3]));
   MUXF7 \doutb[0]_INST_0_i_1 
        (.I0(\doutb[0]_INST_0_i_3_n_0 ),
         .I1(\doutb[0]_INST_0_i_4_n_0 ),
         .O(\doutb[0]_INST_0_i_1_n_0 ),
-        .S(sel_pipe_d1[2]));
+        .S(sel_pipe[2]));
   MUXF7 \doutb[0]_INST_0_i_2 
        (.I0(\doutb[0]_INST_0_i_5_n_0 ),
         .I1(\doutb[0]_INST_0_i_6_n_0 ),
         .O(\doutb[0]_INST_0_i_2_n_0 ),
-        .S(sel_pipe_d1[2]));
+        .S(sel_pipe[2]));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \doutb[0]_INST_0_i_3 
        (.I0(doutb_array[24]),
         .I1(doutb_array[16]),
-        .I2(sel_pipe_d1[1]),
+        .I2(sel_pipe[1]),
         .I3(doutb_array[8]),
-        .I4(sel_pipe_d1[0]),
+        .I4(sel_pipe[0]),
         .I5(doutb_array[0]),
         .O(\doutb[0]_INST_0_i_3_n_0 ));
   LUT6 #(
@@ -3811,9 +3777,9 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_mux__parameterized0_6
     \doutb[0]_INST_0_i_4 
        (.I0(doutb_array[56]),
         .I1(doutb_array[48]),
-        .I2(sel_pipe_d1[1]),
+        .I2(sel_pipe[1]),
         .I3(doutb_array[40]),
-        .I4(sel_pipe_d1[0]),
+        .I4(sel_pipe[0]),
         .I5(doutb_array[32]),
         .O(\doutb[0]_INST_0_i_4_n_0 ));
   LUT6 #(
@@ -3821,42 +3787,42 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_mux__parameterized0_6
     \doutb[0]_INST_0_i_5 
        (.I0(doutb_array[88]),
         .I1(doutb_array[80]),
-        .I2(sel_pipe_d1[1]),
+        .I2(sel_pipe[1]),
         .I3(doutb_array[72]),
-        .I4(sel_pipe_d1[0]),
+        .I4(sel_pipe[0]),
         .I5(doutb_array[64]),
         .O(\doutb[0]_INST_0_i_5_n_0 ));
   LUT4 #(
     .INIT(16'h00E2)) 
     \doutb[0]_INST_0_i_6 
        (.I0(doutb_array[96]),
-        .I1(sel_pipe_d1[0]),
+        .I1(sel_pipe[0]),
         .I2(doutb_array[104]),
-        .I3(sel_pipe_d1[1]),
+        .I3(sel_pipe[1]),
         .O(\doutb[0]_INST_0_i_6_n_0 ));
   MUXF8 \doutb[1]_INST_0 
        (.I0(\doutb[1]_INST_0_i_1_n_0 ),
         .I1(\doutb[1]_INST_0_i_2_n_0 ),
         .O(doutb[1]),
-        .S(sel_pipe_d1[3]));
+        .S(sel_pipe[3]));
   MUXF7 \doutb[1]_INST_0_i_1 
        (.I0(\doutb[1]_INST_0_i_3_n_0 ),
         .I1(\doutb[1]_INST_0_i_4_n_0 ),
         .O(\doutb[1]_INST_0_i_1_n_0 ),
-        .S(sel_pipe_d1[2]));
+        .S(sel_pipe[2]));
   MUXF7 \doutb[1]_INST_0_i_2 
        (.I0(\doutb[1]_INST_0_i_5_n_0 ),
         .I1(\doutb[1]_INST_0_i_6_n_0 ),
         .O(\doutb[1]_INST_0_i_2_n_0 ),
-        .S(sel_pipe_d1[2]));
+        .S(sel_pipe[2]));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \doutb[1]_INST_0_i_3 
        (.I0(doutb_array[25]),
         .I1(doutb_array[17]),
-        .I2(sel_pipe_d1[1]),
+        .I2(sel_pipe[1]),
         .I3(doutb_array[9]),
-        .I4(sel_pipe_d1[0]),
+        .I4(sel_pipe[0]),
         .I5(doutb_array[1]),
         .O(\doutb[1]_INST_0_i_3_n_0 ));
   LUT6 #(
@@ -3864,9 +3830,9 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_mux__parameterized0_6
     \doutb[1]_INST_0_i_4 
        (.I0(doutb_array[57]),
         .I1(doutb_array[49]),
-        .I2(sel_pipe_d1[1]),
+        .I2(sel_pipe[1]),
         .I3(doutb_array[41]),
-        .I4(sel_pipe_d1[0]),
+        .I4(sel_pipe[0]),
         .I5(doutb_array[33]),
         .O(\doutb[1]_INST_0_i_4_n_0 ));
   LUT6 #(
@@ -3874,42 +3840,42 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_mux__parameterized0_6
     \doutb[1]_INST_0_i_5 
        (.I0(doutb_array[89]),
         .I1(doutb_array[81]),
-        .I2(sel_pipe_d1[1]),
+        .I2(sel_pipe[1]),
         .I3(doutb_array[73]),
-        .I4(sel_pipe_d1[0]),
+        .I4(sel_pipe[0]),
         .I5(doutb_array[65]),
         .O(\doutb[1]_INST_0_i_5_n_0 ));
   LUT4 #(
     .INIT(16'h00E2)) 
     \doutb[1]_INST_0_i_6 
        (.I0(doutb_array[97]),
-        .I1(sel_pipe_d1[0]),
+        .I1(sel_pipe[0]),
         .I2(doutb_array[105]),
-        .I3(sel_pipe_d1[1]),
+        .I3(sel_pipe[1]),
         .O(\doutb[1]_INST_0_i_6_n_0 ));
   MUXF8 \doutb[2]_INST_0 
        (.I0(\doutb[2]_INST_0_i_1_n_0 ),
         .I1(\doutb[2]_INST_0_i_2_n_0 ),
         .O(doutb[2]),
-        .S(sel_pipe_d1[3]));
+        .S(sel_pipe[3]));
   MUXF7 \doutb[2]_INST_0_i_1 
        (.I0(\doutb[2]_INST_0_i_3_n_0 ),
         .I1(\doutb[2]_INST_0_i_4_n_0 ),
         .O(\doutb[2]_INST_0_i_1_n_0 ),
-        .S(sel_pipe_d1[2]));
+        .S(sel_pipe[2]));
   MUXF7 \doutb[2]_INST_0_i_2 
        (.I0(\doutb[2]_INST_0_i_5_n_0 ),
         .I1(\doutb[2]_INST_0_i_6_n_0 ),
         .O(\doutb[2]_INST_0_i_2_n_0 ),
-        .S(sel_pipe_d1[2]));
+        .S(sel_pipe[2]));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \doutb[2]_INST_0_i_3 
        (.I0(doutb_array[26]),
         .I1(doutb_array[18]),
-        .I2(sel_pipe_d1[1]),
+        .I2(sel_pipe[1]),
         .I3(doutb_array[10]),
-        .I4(sel_pipe_d1[0]),
+        .I4(sel_pipe[0]),
         .I5(doutb_array[2]),
         .O(\doutb[2]_INST_0_i_3_n_0 ));
   LUT6 #(
@@ -3917,9 +3883,9 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_mux__parameterized0_6
     \doutb[2]_INST_0_i_4 
        (.I0(doutb_array[58]),
         .I1(doutb_array[50]),
-        .I2(sel_pipe_d1[1]),
+        .I2(sel_pipe[1]),
         .I3(doutb_array[42]),
-        .I4(sel_pipe_d1[0]),
+        .I4(sel_pipe[0]),
         .I5(doutb_array[34]),
         .O(\doutb[2]_INST_0_i_4_n_0 ));
   LUT6 #(
@@ -3927,42 +3893,42 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_mux__parameterized0_6
     \doutb[2]_INST_0_i_5 
        (.I0(doutb_array[90]),
         .I1(doutb_array[82]),
-        .I2(sel_pipe_d1[1]),
+        .I2(sel_pipe[1]),
         .I3(doutb_array[74]),
-        .I4(sel_pipe_d1[0]),
+        .I4(sel_pipe[0]),
         .I5(doutb_array[66]),
         .O(\doutb[2]_INST_0_i_5_n_0 ));
   LUT4 #(
     .INIT(16'h00E2)) 
     \doutb[2]_INST_0_i_6 
        (.I0(doutb_array[98]),
-        .I1(sel_pipe_d1[0]),
+        .I1(sel_pipe[0]),
         .I2(doutb_array[106]),
-        .I3(sel_pipe_d1[1]),
+        .I3(sel_pipe[1]),
         .O(\doutb[2]_INST_0_i_6_n_0 ));
   MUXF8 \doutb[3]_INST_0 
        (.I0(\doutb[3]_INST_0_i_1_n_0 ),
         .I1(\doutb[3]_INST_0_i_2_n_0 ),
         .O(doutb[3]),
-        .S(sel_pipe_d1[3]));
+        .S(sel_pipe[3]));
   MUXF7 \doutb[3]_INST_0_i_1 
        (.I0(\doutb[3]_INST_0_i_3_n_0 ),
         .I1(\doutb[3]_INST_0_i_4_n_0 ),
         .O(\doutb[3]_INST_0_i_1_n_0 ),
-        .S(sel_pipe_d1[2]));
+        .S(sel_pipe[2]));
   MUXF7 \doutb[3]_INST_0_i_2 
        (.I0(\doutb[3]_INST_0_i_5_n_0 ),
         .I1(\doutb[3]_INST_0_i_6_n_0 ),
         .O(\doutb[3]_INST_0_i_2_n_0 ),
-        .S(sel_pipe_d1[2]));
+        .S(sel_pipe[2]));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \doutb[3]_INST_0_i_3 
        (.I0(doutb_array[27]),
         .I1(doutb_array[19]),
-        .I2(sel_pipe_d1[1]),
+        .I2(sel_pipe[1]),
         .I3(doutb_array[11]),
-        .I4(sel_pipe_d1[0]),
+        .I4(sel_pipe[0]),
         .I5(doutb_array[3]),
         .O(\doutb[3]_INST_0_i_3_n_0 ));
   LUT6 #(
@@ -3970,9 +3936,9 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_mux__parameterized0_6
     \doutb[3]_INST_0_i_4 
        (.I0(doutb_array[59]),
         .I1(doutb_array[51]),
-        .I2(sel_pipe_d1[1]),
+        .I2(sel_pipe[1]),
         .I3(doutb_array[43]),
-        .I4(sel_pipe_d1[0]),
+        .I4(sel_pipe[0]),
         .I5(doutb_array[35]),
         .O(\doutb[3]_INST_0_i_4_n_0 ));
   LUT6 #(
@@ -3980,42 +3946,42 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_mux__parameterized0_6
     \doutb[3]_INST_0_i_5 
        (.I0(doutb_array[91]),
         .I1(doutb_array[83]),
-        .I2(sel_pipe_d1[1]),
+        .I2(sel_pipe[1]),
         .I3(doutb_array[75]),
-        .I4(sel_pipe_d1[0]),
+        .I4(sel_pipe[0]),
         .I5(doutb_array[67]),
         .O(\doutb[3]_INST_0_i_5_n_0 ));
   LUT4 #(
     .INIT(16'h00E2)) 
     \doutb[3]_INST_0_i_6 
        (.I0(doutb_array[99]),
-        .I1(sel_pipe_d1[0]),
+        .I1(sel_pipe[0]),
         .I2(doutb_array[107]),
-        .I3(sel_pipe_d1[1]),
+        .I3(sel_pipe[1]),
         .O(\doutb[3]_INST_0_i_6_n_0 ));
   MUXF8 \doutb[4]_INST_0 
        (.I0(\doutb[4]_INST_0_i_1_n_0 ),
         .I1(\doutb[4]_INST_0_i_2_n_0 ),
         .O(doutb[4]),
-        .S(sel_pipe_d1[3]));
+        .S(sel_pipe[3]));
   MUXF7 \doutb[4]_INST_0_i_1 
        (.I0(\doutb[4]_INST_0_i_3_n_0 ),
         .I1(\doutb[4]_INST_0_i_4_n_0 ),
         .O(\doutb[4]_INST_0_i_1_n_0 ),
-        .S(sel_pipe_d1[2]));
+        .S(sel_pipe[2]));
   MUXF7 \doutb[4]_INST_0_i_2 
        (.I0(\doutb[4]_INST_0_i_5_n_0 ),
         .I1(\doutb[4]_INST_0_i_6_n_0 ),
         .O(\doutb[4]_INST_0_i_2_n_0 ),
-        .S(sel_pipe_d1[2]));
+        .S(sel_pipe[2]));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \doutb[4]_INST_0_i_3 
        (.I0(doutb_array[28]),
         .I1(doutb_array[20]),
-        .I2(sel_pipe_d1[1]),
+        .I2(sel_pipe[1]),
         .I3(doutb_array[12]),
-        .I4(sel_pipe_d1[0]),
+        .I4(sel_pipe[0]),
         .I5(doutb_array[4]),
         .O(\doutb[4]_INST_0_i_3_n_0 ));
   LUT6 #(
@@ -4023,9 +3989,9 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_mux__parameterized0_6
     \doutb[4]_INST_0_i_4 
        (.I0(doutb_array[60]),
         .I1(doutb_array[52]),
-        .I2(sel_pipe_d1[1]),
+        .I2(sel_pipe[1]),
         .I3(doutb_array[44]),
-        .I4(sel_pipe_d1[0]),
+        .I4(sel_pipe[0]),
         .I5(doutb_array[36]),
         .O(\doutb[4]_INST_0_i_4_n_0 ));
   LUT6 #(
@@ -4033,42 +3999,42 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_mux__parameterized0_6
     \doutb[4]_INST_0_i_5 
        (.I0(doutb_array[92]),
         .I1(doutb_array[84]),
-        .I2(sel_pipe_d1[1]),
+        .I2(sel_pipe[1]),
         .I3(doutb_array[76]),
-        .I4(sel_pipe_d1[0]),
+        .I4(sel_pipe[0]),
         .I5(doutb_array[68]),
         .O(\doutb[4]_INST_0_i_5_n_0 ));
   LUT4 #(
     .INIT(16'h00E2)) 
     \doutb[4]_INST_0_i_6 
        (.I0(doutb_array[100]),
-        .I1(sel_pipe_d1[0]),
+        .I1(sel_pipe[0]),
         .I2(doutb_array[108]),
-        .I3(sel_pipe_d1[1]),
+        .I3(sel_pipe[1]),
         .O(\doutb[4]_INST_0_i_6_n_0 ));
   MUXF8 \doutb[5]_INST_0 
        (.I0(\doutb[5]_INST_0_i_1_n_0 ),
         .I1(\doutb[5]_INST_0_i_2_n_0 ),
         .O(doutb[5]),
-        .S(sel_pipe_d1[3]));
+        .S(sel_pipe[3]));
   MUXF7 \doutb[5]_INST_0_i_1 
        (.I0(\doutb[5]_INST_0_i_3_n_0 ),
         .I1(\doutb[5]_INST_0_i_4_n_0 ),
         .O(\doutb[5]_INST_0_i_1_n_0 ),
-        .S(sel_pipe_d1[2]));
+        .S(sel_pipe[2]));
   MUXF7 \doutb[5]_INST_0_i_2 
        (.I0(\doutb[5]_INST_0_i_5_n_0 ),
         .I1(\doutb[5]_INST_0_i_6_n_0 ),
         .O(\doutb[5]_INST_0_i_2_n_0 ),
-        .S(sel_pipe_d1[2]));
+        .S(sel_pipe[2]));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \doutb[5]_INST_0_i_3 
        (.I0(doutb_array[29]),
         .I1(doutb_array[21]),
-        .I2(sel_pipe_d1[1]),
+        .I2(sel_pipe[1]),
         .I3(doutb_array[13]),
-        .I4(sel_pipe_d1[0]),
+        .I4(sel_pipe[0]),
         .I5(doutb_array[5]),
         .O(\doutb[5]_INST_0_i_3_n_0 ));
   LUT6 #(
@@ -4076,9 +4042,9 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_mux__parameterized0_6
     \doutb[5]_INST_0_i_4 
        (.I0(doutb_array[61]),
         .I1(doutb_array[53]),
-        .I2(sel_pipe_d1[1]),
+        .I2(sel_pipe[1]),
         .I3(doutb_array[45]),
-        .I4(sel_pipe_d1[0]),
+        .I4(sel_pipe[0]),
         .I5(doutb_array[37]),
         .O(\doutb[5]_INST_0_i_4_n_0 ));
   LUT6 #(
@@ -4086,42 +4052,42 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_mux__parameterized0_6
     \doutb[5]_INST_0_i_5 
        (.I0(doutb_array[93]),
         .I1(doutb_array[85]),
-        .I2(sel_pipe_d1[1]),
+        .I2(sel_pipe[1]),
         .I3(doutb_array[77]),
-        .I4(sel_pipe_d1[0]),
+        .I4(sel_pipe[0]),
         .I5(doutb_array[69]),
         .O(\doutb[5]_INST_0_i_5_n_0 ));
   LUT4 #(
     .INIT(16'h00E2)) 
     \doutb[5]_INST_0_i_6 
        (.I0(doutb_array[101]),
-        .I1(sel_pipe_d1[0]),
+        .I1(sel_pipe[0]),
         .I2(doutb_array[109]),
-        .I3(sel_pipe_d1[1]),
+        .I3(sel_pipe[1]),
         .O(\doutb[5]_INST_0_i_6_n_0 ));
   MUXF8 \doutb[6]_INST_0 
        (.I0(\doutb[6]_INST_0_i_1_n_0 ),
         .I1(\doutb[6]_INST_0_i_2_n_0 ),
         .O(doutb[6]),
-        .S(sel_pipe_d1[3]));
+        .S(sel_pipe[3]));
   MUXF7 \doutb[6]_INST_0_i_1 
        (.I0(\doutb[6]_INST_0_i_3_n_0 ),
         .I1(\doutb[6]_INST_0_i_4_n_0 ),
         .O(\doutb[6]_INST_0_i_1_n_0 ),
-        .S(sel_pipe_d1[2]));
+        .S(sel_pipe[2]));
   MUXF7 \doutb[6]_INST_0_i_2 
        (.I0(\doutb[6]_INST_0_i_5_n_0 ),
         .I1(\doutb[6]_INST_0_i_6_n_0 ),
         .O(\doutb[6]_INST_0_i_2_n_0 ),
-        .S(sel_pipe_d1[2]));
+        .S(sel_pipe[2]));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \doutb[6]_INST_0_i_3 
        (.I0(doutb_array[30]),
         .I1(doutb_array[22]),
-        .I2(sel_pipe_d1[1]),
+        .I2(sel_pipe[1]),
         .I3(doutb_array[14]),
-        .I4(sel_pipe_d1[0]),
+        .I4(sel_pipe[0]),
         .I5(doutb_array[6]),
         .O(\doutb[6]_INST_0_i_3_n_0 ));
   LUT6 #(
@@ -4129,9 +4095,9 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_mux__parameterized0_6
     \doutb[6]_INST_0_i_4 
        (.I0(doutb_array[62]),
         .I1(doutb_array[54]),
-        .I2(sel_pipe_d1[1]),
+        .I2(sel_pipe[1]),
         .I3(doutb_array[46]),
-        .I4(sel_pipe_d1[0]),
+        .I4(sel_pipe[0]),
         .I5(doutb_array[38]),
         .O(\doutb[6]_INST_0_i_4_n_0 ));
   LUT6 #(
@@ -4139,42 +4105,42 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_mux__parameterized0_6
     \doutb[6]_INST_0_i_5 
        (.I0(doutb_array[94]),
         .I1(doutb_array[86]),
-        .I2(sel_pipe_d1[1]),
+        .I2(sel_pipe[1]),
         .I3(doutb_array[78]),
-        .I4(sel_pipe_d1[0]),
+        .I4(sel_pipe[0]),
         .I5(doutb_array[70]),
         .O(\doutb[6]_INST_0_i_5_n_0 ));
   LUT4 #(
     .INIT(16'h00E2)) 
     \doutb[6]_INST_0_i_6 
        (.I0(doutb_array[102]),
-        .I1(sel_pipe_d1[0]),
+        .I1(sel_pipe[0]),
         .I2(doutb_array[110]),
-        .I3(sel_pipe_d1[1]),
+        .I3(sel_pipe[1]),
         .O(\doutb[6]_INST_0_i_6_n_0 ));
   MUXF8 \doutb[7]_INST_0 
        (.I0(\doutb[7]_INST_0_i_1_n_0 ),
         .I1(\doutb[7]_INST_0_i_2_n_0 ),
         .O(doutb[7]),
-        .S(sel_pipe_d1[3]));
+        .S(sel_pipe[3]));
   MUXF7 \doutb[7]_INST_0_i_1 
        (.I0(\doutb[7]_INST_0_i_3_n_0 ),
         .I1(\doutb[7]_INST_0_i_4_n_0 ),
         .O(\doutb[7]_INST_0_i_1_n_0 ),
-        .S(sel_pipe_d1[2]));
+        .S(sel_pipe[2]));
   MUXF7 \doutb[7]_INST_0_i_2 
        (.I0(\doutb[7]_INST_0_i_5_n_0 ),
         .I1(\doutb[7]_INST_0_i_6_n_0 ),
         .O(\doutb[7]_INST_0_i_2_n_0 ),
-        .S(sel_pipe_d1[2]));
+        .S(sel_pipe[2]));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \doutb[7]_INST_0_i_3 
        (.I0(doutb_array[31]),
         .I1(doutb_array[23]),
-        .I2(sel_pipe_d1[1]),
+        .I2(sel_pipe[1]),
         .I3(doutb_array[15]),
-        .I4(sel_pipe_d1[0]),
+        .I4(sel_pipe[0]),
         .I5(doutb_array[7]),
         .O(\doutb[7]_INST_0_i_3_n_0 ));
   LUT6 #(
@@ -4182,9 +4148,9 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_mux__parameterized0_6
     \doutb[7]_INST_0_i_4 
        (.I0(doutb_array[63]),
         .I1(doutb_array[55]),
-        .I2(sel_pipe_d1[1]),
+        .I2(sel_pipe[1]),
         .I3(doutb_array[47]),
-        .I4(sel_pipe_d1[0]),
+        .I4(sel_pipe[0]),
         .I5(doutb_array[39]),
         .O(\doutb[7]_INST_0_i_4_n_0 ));
   LUT6 #(
@@ -4192,51 +4158,19 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_mux__parameterized0_6
     \doutb[7]_INST_0_i_5 
        (.I0(doutb_array[95]),
         .I1(doutb_array[87]),
-        .I2(sel_pipe_d1[1]),
+        .I2(sel_pipe[1]),
         .I3(doutb_array[79]),
-        .I4(sel_pipe_d1[0]),
+        .I4(sel_pipe[0]),
         .I5(doutb_array[71]),
         .O(\doutb[7]_INST_0_i_5_n_0 ));
   LUT4 #(
     .INIT(16'h00E2)) 
     \doutb[7]_INST_0_i_6 
        (.I0(doutb_array[103]),
-        .I1(sel_pipe_d1[0]),
+        .I1(sel_pipe[0]),
         .I2(doutb_array[111]),
-        .I3(sel_pipe_d1[1]),
+        .I3(sel_pipe[1]),
         .O(\doutb[7]_INST_0_i_6_n_0 ));
-  FDRE #(
-    .INIT(1'b0)) 
-    \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[0] 
-       (.C(clkb),
-        .CE(1'b1),
-        .D(sel_pipe[0]),
-        .Q(sel_pipe_d1[0]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[1] 
-       (.C(clkb),
-        .CE(1'b1),
-        .D(sel_pipe[1]),
-        .Q(sel_pipe_d1[1]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[2] 
-       (.C(clkb),
-        .CE(1'b1),
-        .D(sel_pipe[2]),
-        .Q(sel_pipe_d1[2]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[3] 
-       (.C(clkb),
-        .CE(1'b1),
-        .D(sel_pipe[3]),
-        .Q(sel_pipe_d1[3]),
-        .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \no_softecc_sel_reg.ce_pri.sel_pipe_reg[0] 
@@ -5404,8 +5338,8 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -5604,7 +5538,7 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -5655,8 +5589,8 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper_34
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -5855,7 +5789,7 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper_34
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -5906,8 +5840,8 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized0
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -6106,7 +6040,7 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized0
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -6157,8 +6091,8 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized0_29
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -6357,7 +6291,7 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized0_29
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -6408,8 +6342,8 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized1
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -6608,7 +6542,7 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized1
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -6659,8 +6593,8 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized10
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -6859,7 +6793,7 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized10
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -6910,8 +6844,8 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized10_32
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -7110,7 +7044,7 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized10_32
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -7161,8 +7095,8 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized11
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -7361,7 +7295,7 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized11
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -7412,8 +7346,8 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized11_31
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -7612,7 +7546,7 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized11_31
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -7663,8 +7597,8 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized12
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -7863,7 +7797,7 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized12
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -7914,8 +7848,8 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized12_30
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -8114,7 +8048,7 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized12_30
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -8165,8 +8099,8 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized1_28
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -8365,7 +8299,7 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized1_28
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -8416,8 +8350,8 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized2
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -8616,7 +8550,7 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized2
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -8667,8 +8601,8 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized2_27
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -8867,7 +8801,7 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized2_27
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -8918,8 +8852,8 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized3
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -9118,7 +9052,7 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized3
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -9169,8 +9103,8 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized3_26
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -9369,7 +9303,7 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized3_26
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -9420,8 +9354,8 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized4
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -9620,7 +9554,7 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized4
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -9671,8 +9605,8 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized4_25
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -9871,7 +9805,7 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized4_25
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -9922,8 +9856,8 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized5
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -10122,7 +10056,7 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized5
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -10173,8 +10107,8 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized5_24
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -10373,7 +10307,7 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized5_24
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -10424,8 +10358,8 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized6
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -10624,7 +10558,7 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized6
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -10675,8 +10609,8 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized6_23
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -10875,7 +10809,7 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized6_23
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -10926,8 +10860,8 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized7
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -11126,7 +11060,7 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized7
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -11177,8 +11111,8 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized7_22
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -11377,7 +11311,7 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized7_22
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -11428,8 +11362,8 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized8
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -11628,7 +11562,7 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized8
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -11679,8 +11613,8 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized8_21
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -11879,7 +11813,7 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized8_21
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -11930,8 +11864,8 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized9
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -12130,7 +12064,7 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized9
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -12181,8 +12115,8 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized9_33
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -12381,7 +12315,7 @@ module dkong_framedoubler_slow_0_0_blk_mem_gen_prim_wrapper__parameterized9_33
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
         .REGCEAREGCE(1'b0),
-        .REGCEB(1'b1),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -12471,7 +12405,7 @@ endmodule
 (* C_EN_SHUTDOWN_PIN = "0" *) (* C_EN_SLEEP_PIN = "0" *) (* C_EST_POWER_SUMMARY = "Estimated Power for IP     :     4.53475 mW" *) 
 (* C_FAMILY = "zynq" *) (* C_HAS_AXI_ID = "0" *) (* C_HAS_ENA = "0" *) 
 (* C_HAS_ENB = "0" *) (* C_HAS_INJECTERR = "0" *) (* C_HAS_MEM_OUTPUT_REGS_A = "0" *) 
-(* C_HAS_MEM_OUTPUT_REGS_B = "1" *) (* C_HAS_MUX_OUTPUT_REGS_A = "0" *) (* C_HAS_MUX_OUTPUT_REGS_B = "0" *) 
+(* C_HAS_MEM_OUTPUT_REGS_B = "0" *) (* C_HAS_MUX_OUTPUT_REGS_A = "0" *) (* C_HAS_MUX_OUTPUT_REGS_B = "0" *) 
 (* C_HAS_REGCEA = "0" *) (* C_HAS_REGCEB = "0" *) (* C_HAS_RSTA = "0" *) 
 (* C_HAS_RSTB = "0" *) (* C_HAS_SOFTECC_INPUT_REGS_A = "0" *) (* C_HAS_SOFTECC_OUTPUT_REGS_B = "0" *) 
 (* C_INITA_VAL = "0" *) (* C_INITB_VAL = "0" *) (* C_INIT_FILE = "framedoubler_mem.mem" *) 
@@ -12718,7 +12652,7 @@ endmodule
 (* C_EN_SHUTDOWN_PIN = "0" *) (* C_EN_SLEEP_PIN = "0" *) (* C_EST_POWER_SUMMARY = "Estimated Power for IP     :     4.53475 mW" *) 
 (* C_FAMILY = "zynq" *) (* C_HAS_AXI_ID = "0" *) (* C_HAS_ENA = "0" *) 
 (* C_HAS_ENB = "0" *) (* C_HAS_INJECTERR = "0" *) (* C_HAS_MEM_OUTPUT_REGS_A = "0" *) 
-(* C_HAS_MEM_OUTPUT_REGS_B = "1" *) (* C_HAS_MUX_OUTPUT_REGS_A = "0" *) (* C_HAS_MUX_OUTPUT_REGS_B = "0" *) 
+(* C_HAS_MEM_OUTPUT_REGS_B = "0" *) (* C_HAS_MUX_OUTPUT_REGS_A = "0" *) (* C_HAS_MUX_OUTPUT_REGS_B = "0" *) 
 (* C_HAS_REGCEA = "0" *) (* C_HAS_REGCEB = "0" *) (* C_HAS_RSTA = "0" *) 
 (* C_HAS_RSTB = "0" *) (* C_HAS_SOFTECC_INPUT_REGS_A = "0" *) (* C_HAS_SOFTECC_OUTPUT_REGS_B = "0" *) 
 (* C_INITA_VAL = "0" *) (* C_INITB_VAL = "0" *) (* C_INIT_FILE = "framedoubler_mem.mem" *) 

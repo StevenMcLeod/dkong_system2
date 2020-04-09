@@ -14,13 +14,13 @@
       "clk_wiz_0": "",
       "proc_sys_reset_1": "",
       "mux4_0": "",
-      "framedoubler_slow_0": "",
       "demux2_0": "",
       "demux2_1": "",
       "demux2_2": "",
       "demux2_3": "",
       "demux2_4": "",
-      "dkong_system_wrapper_0": ""
+      "dkong_system_wrapper_0": "",
+      "framedoubler_slow_0": ""
     },
     "interface_ports": {
       "FIXED_IO": {
@@ -381,113 +381,6 @@
           }
         }
       },
-      "framedoubler_slow_0": {
-        "vlnv": "xilinx.com:module_ref:framedoubler_slow:1.0",
-        "xci_name": "dkong_framedoubler_slow_0_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "framedoubler_slow",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "in_rst_n": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "constant"
-              }
-            }
-          },
-          "out_rst_n": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "constant"
-              }
-            }
-          },
-          "masterclk": {
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "/clk_wiz_0_clk_out1",
-                "value_src": "ip_prop"
-              },
-              "FREQ_HZ": {
-                "value": "61505681",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              }
-            }
-          },
-          "in_pixclk": {
-            "direction": "I"
-          },
-          "in_valid": {
-            "direction": "I"
-          },
-          "in_r": {
-            "direction": "I",
-            "left": "2",
-            "right": "0"
-          },
-          "in_g": {
-            "direction": "I",
-            "left": "2",
-            "right": "0"
-          },
-          "in_b": {
-            "direction": "I",
-            "left": "1",
-            "right": "0"
-          },
-          "out_pixclk": {
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "/clk_wiz_0_clk_out1",
-                "value_src": "ip_prop"
-              },
-              "FREQ_HZ": {
-                "value": "25174418",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              }
-            }
-          },
-          "out_r": {
-            "direction": "O",
-            "left": "3",
-            "right": "0"
-          },
-          "out_g": {
-            "direction": "O",
-            "left": "3",
-            "right": "0"
-          },
-          "out_b": {
-            "direction": "O",
-            "left": "3",
-            "right": "0"
-          },
-          "hsync": {
-            "direction": "O"
-          },
-          "vsync": {
-            "direction": "O"
-          }
-        }
-      },
       "demux2_0": {
         "vlnv": "xilinx.com:module_ref:demux2:1.0",
         "xci_name": "dkong_demux2_0_0",
@@ -638,7 +531,7 @@
         "xci_name": "dkong_dkong_system_wrapper_0_0",
         "parameters": {
           "DEBUG_BANKSEL_ENA": {
-            "value": "1"
+            "value": "0"
           },
           "IN0_ENA": {
             "value": "1"
@@ -816,6 +709,113 @@
             "right": "0"
           }
         }
+      },
+      "framedoubler_slow_0": {
+        "vlnv": "xilinx.com:module_ref:framedoubler_slow:1.0",
+        "xci_name": "dkong_framedoubler_slow_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "framedoubler_slow",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "in_rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "out_rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "masterclk": {
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              },
+              "FREQ_HZ": {
+                "value": "61505681",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "in_pixclk": {
+            "direction": "I"
+          },
+          "in_valid": {
+            "direction": "I"
+          },
+          "in_r": {
+            "direction": "I",
+            "left": "2",
+            "right": "0"
+          },
+          "in_g": {
+            "direction": "I",
+            "left": "2",
+            "right": "0"
+          },
+          "in_b": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "out_pixclk": {
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              },
+              "FREQ_HZ": {
+                "value": "25174418",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "out_r": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "out_g": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "out_b": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "hsync": {
+            "direction": "O"
+          },
+          "vsync": {
+            "direction": "O"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -849,8 +849,8 @@
       "proc_sys_reset_0_peripheral_aresetn": {
         "ports": [
           "proc_sys_reset_0/peripheral_aresetn",
-          "framedoubler_slow_0/in_rst_n",
-          "dkong_system_wrapper_0/rst_n"
+          "dkong_system_wrapper_0/rst_n",
+          "framedoubler_slow_0/in_rst_n"
         ]
       },
       "dkong_system_wrapper_0_debug_alo": {
@@ -882,8 +882,8 @@
         "ports": [
           "clk_wiz_0/coreclk",
           "proc_sys_reset_0/slowest_sync_clk",
-          "framedoubler_slow_0/masterclk",
-          "dkong_system_wrapper_0/masterclk"
+          "dkong_system_wrapper_0/masterclk",
+          "framedoubler_slow_0/masterclk"
         ]
       },
       "proc_sys_reset_1_peripheral_aresetn": {

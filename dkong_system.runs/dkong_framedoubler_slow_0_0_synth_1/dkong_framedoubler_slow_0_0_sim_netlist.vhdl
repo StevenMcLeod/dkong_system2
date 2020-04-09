@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Tue Mar 31 13:24:46 2020
+-- Date        : Thu Apr  2 22:18:46 2020
 -- Host        : Steven-Win10-2 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 --               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ dkong_framedoubler_slow_0_0_sim_netlist.vhdl
@@ -783,28 +783,27 @@ architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen
   signal \doutb[7]_INST_0_i_5_n_0\ : STD_LOGIC;
   signal \doutb[7]_INST_0_i_6_n_0\ : STD_LOGIC;
   signal sel_pipe : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal sel_pipe_d1 : STD_LOGIC_VECTOR ( 3 downto 0 );
 begin
 \doutb[0]_INST_0\: unisim.vcomponents.MUXF8
      port map (
       I0 => \doutb[0]_INST_0_i_1_n_0\,
       I1 => \doutb[0]_INST_0_i_2_n_0\,
       O => doutb(0),
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[0]_INST_0_i_1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[0]_INST_0_i_3_n_0\,
       I1 => \doutb[0]_INST_0_i_4_n_0\,
       O => \doutb[0]_INST_0_i_1_n_0\,
-      S => sel_pipe_d1(2)
+      S => sel_pipe(2)
     );
 \doutb[0]_INST_0_i_2\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[0]_INST_0_i_5_n_0\,
       I1 => \doutb[0]_INST_0_i_6_n_0\,
       O => \doutb[0]_INST_0_i_2_n_0\,
-      S => sel_pipe_d1(2)
+      S => sel_pipe(2)
     );
 \doutb[0]_INST_0_i_3\: unisim.vcomponents.LUT6
     generic map(
@@ -813,9 +812,9 @@ begin
         port map (
       I0 => doutb_array(24),
       I1 => doutb_array(16),
-      I2 => sel_pipe_d1(1),
+      I2 => sel_pipe(1),
       I3 => doutb_array(8),
-      I4 => sel_pipe_d1(0),
+      I4 => sel_pipe(0),
       I5 => doutb_array(0),
       O => \doutb[0]_INST_0_i_3_n_0\
     );
@@ -826,9 +825,9 @@ begin
         port map (
       I0 => doutb_array(56),
       I1 => doutb_array(48),
-      I2 => sel_pipe_d1(1),
+      I2 => sel_pipe(1),
       I3 => doutb_array(40),
-      I4 => sel_pipe_d1(0),
+      I4 => sel_pipe(0),
       I5 => doutb_array(32),
       O => \doutb[0]_INST_0_i_4_n_0\
     );
@@ -839,9 +838,9 @@ begin
         port map (
       I0 => doutb_array(88),
       I1 => doutb_array(80),
-      I2 => sel_pipe_d1(1),
+      I2 => sel_pipe(1),
       I3 => doutb_array(72),
-      I4 => sel_pipe_d1(0),
+      I4 => sel_pipe(0),
       I5 => doutb_array(64),
       O => \doutb[0]_INST_0_i_5_n_0\
     );
@@ -851,9 +850,9 @@ begin
     )
         port map (
       I0 => doutb_array(96),
-      I1 => sel_pipe_d1(0),
+      I1 => sel_pipe(0),
       I2 => doutb_array(104),
-      I3 => sel_pipe_d1(1),
+      I3 => sel_pipe(1),
       O => \doutb[0]_INST_0_i_6_n_0\
     );
 \doutb[1]_INST_0\: unisim.vcomponents.MUXF8
@@ -861,21 +860,21 @@ begin
       I0 => \doutb[1]_INST_0_i_1_n_0\,
       I1 => \doutb[1]_INST_0_i_2_n_0\,
       O => doutb(1),
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[1]_INST_0_i_1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[1]_INST_0_i_3_n_0\,
       I1 => \doutb[1]_INST_0_i_4_n_0\,
       O => \doutb[1]_INST_0_i_1_n_0\,
-      S => sel_pipe_d1(2)
+      S => sel_pipe(2)
     );
 \doutb[1]_INST_0_i_2\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[1]_INST_0_i_5_n_0\,
       I1 => \doutb[1]_INST_0_i_6_n_0\,
       O => \doutb[1]_INST_0_i_2_n_0\,
-      S => sel_pipe_d1(2)
+      S => sel_pipe(2)
     );
 \doutb[1]_INST_0_i_3\: unisim.vcomponents.LUT6
     generic map(
@@ -884,9 +883,9 @@ begin
         port map (
       I0 => doutb_array(25),
       I1 => doutb_array(17),
-      I2 => sel_pipe_d1(1),
+      I2 => sel_pipe(1),
       I3 => doutb_array(9),
-      I4 => sel_pipe_d1(0),
+      I4 => sel_pipe(0),
       I5 => doutb_array(1),
       O => \doutb[1]_INST_0_i_3_n_0\
     );
@@ -897,9 +896,9 @@ begin
         port map (
       I0 => doutb_array(57),
       I1 => doutb_array(49),
-      I2 => sel_pipe_d1(1),
+      I2 => sel_pipe(1),
       I3 => doutb_array(41),
-      I4 => sel_pipe_d1(0),
+      I4 => sel_pipe(0),
       I5 => doutb_array(33),
       O => \doutb[1]_INST_0_i_4_n_0\
     );
@@ -910,9 +909,9 @@ begin
         port map (
       I0 => doutb_array(89),
       I1 => doutb_array(81),
-      I2 => sel_pipe_d1(1),
+      I2 => sel_pipe(1),
       I3 => doutb_array(73),
-      I4 => sel_pipe_d1(0),
+      I4 => sel_pipe(0),
       I5 => doutb_array(65),
       O => \doutb[1]_INST_0_i_5_n_0\
     );
@@ -922,9 +921,9 @@ begin
     )
         port map (
       I0 => doutb_array(97),
-      I1 => sel_pipe_d1(0),
+      I1 => sel_pipe(0),
       I2 => doutb_array(105),
-      I3 => sel_pipe_d1(1),
+      I3 => sel_pipe(1),
       O => \doutb[1]_INST_0_i_6_n_0\
     );
 \doutb[2]_INST_0\: unisim.vcomponents.MUXF8
@@ -932,21 +931,21 @@ begin
       I0 => \doutb[2]_INST_0_i_1_n_0\,
       I1 => \doutb[2]_INST_0_i_2_n_0\,
       O => doutb(2),
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[2]_INST_0_i_1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[2]_INST_0_i_3_n_0\,
       I1 => \doutb[2]_INST_0_i_4_n_0\,
       O => \doutb[2]_INST_0_i_1_n_0\,
-      S => sel_pipe_d1(2)
+      S => sel_pipe(2)
     );
 \doutb[2]_INST_0_i_2\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[2]_INST_0_i_5_n_0\,
       I1 => \doutb[2]_INST_0_i_6_n_0\,
       O => \doutb[2]_INST_0_i_2_n_0\,
-      S => sel_pipe_d1(2)
+      S => sel_pipe(2)
     );
 \doutb[2]_INST_0_i_3\: unisim.vcomponents.LUT6
     generic map(
@@ -955,9 +954,9 @@ begin
         port map (
       I0 => doutb_array(26),
       I1 => doutb_array(18),
-      I2 => sel_pipe_d1(1),
+      I2 => sel_pipe(1),
       I3 => doutb_array(10),
-      I4 => sel_pipe_d1(0),
+      I4 => sel_pipe(0),
       I5 => doutb_array(2),
       O => \doutb[2]_INST_0_i_3_n_0\
     );
@@ -968,9 +967,9 @@ begin
         port map (
       I0 => doutb_array(58),
       I1 => doutb_array(50),
-      I2 => sel_pipe_d1(1),
+      I2 => sel_pipe(1),
       I3 => doutb_array(42),
-      I4 => sel_pipe_d1(0),
+      I4 => sel_pipe(0),
       I5 => doutb_array(34),
       O => \doutb[2]_INST_0_i_4_n_0\
     );
@@ -981,9 +980,9 @@ begin
         port map (
       I0 => doutb_array(90),
       I1 => doutb_array(82),
-      I2 => sel_pipe_d1(1),
+      I2 => sel_pipe(1),
       I3 => doutb_array(74),
-      I4 => sel_pipe_d1(0),
+      I4 => sel_pipe(0),
       I5 => doutb_array(66),
       O => \doutb[2]_INST_0_i_5_n_0\
     );
@@ -993,9 +992,9 @@ begin
     )
         port map (
       I0 => doutb_array(98),
-      I1 => sel_pipe_d1(0),
+      I1 => sel_pipe(0),
       I2 => doutb_array(106),
-      I3 => sel_pipe_d1(1),
+      I3 => sel_pipe(1),
       O => \doutb[2]_INST_0_i_6_n_0\
     );
 \doutb[3]_INST_0\: unisim.vcomponents.MUXF8
@@ -1003,21 +1002,21 @@ begin
       I0 => \doutb[3]_INST_0_i_1_n_0\,
       I1 => \doutb[3]_INST_0_i_2_n_0\,
       O => doutb(3),
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[3]_INST_0_i_1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[3]_INST_0_i_3_n_0\,
       I1 => \doutb[3]_INST_0_i_4_n_0\,
       O => \doutb[3]_INST_0_i_1_n_0\,
-      S => sel_pipe_d1(2)
+      S => sel_pipe(2)
     );
 \doutb[3]_INST_0_i_2\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[3]_INST_0_i_5_n_0\,
       I1 => \doutb[3]_INST_0_i_6_n_0\,
       O => \doutb[3]_INST_0_i_2_n_0\,
-      S => sel_pipe_d1(2)
+      S => sel_pipe(2)
     );
 \doutb[3]_INST_0_i_3\: unisim.vcomponents.LUT6
     generic map(
@@ -1026,9 +1025,9 @@ begin
         port map (
       I0 => doutb_array(27),
       I1 => doutb_array(19),
-      I2 => sel_pipe_d1(1),
+      I2 => sel_pipe(1),
       I3 => doutb_array(11),
-      I4 => sel_pipe_d1(0),
+      I4 => sel_pipe(0),
       I5 => doutb_array(3),
       O => \doutb[3]_INST_0_i_3_n_0\
     );
@@ -1039,9 +1038,9 @@ begin
         port map (
       I0 => doutb_array(59),
       I1 => doutb_array(51),
-      I2 => sel_pipe_d1(1),
+      I2 => sel_pipe(1),
       I3 => doutb_array(43),
-      I4 => sel_pipe_d1(0),
+      I4 => sel_pipe(0),
       I5 => doutb_array(35),
       O => \doutb[3]_INST_0_i_4_n_0\
     );
@@ -1052,9 +1051,9 @@ begin
         port map (
       I0 => doutb_array(91),
       I1 => doutb_array(83),
-      I2 => sel_pipe_d1(1),
+      I2 => sel_pipe(1),
       I3 => doutb_array(75),
-      I4 => sel_pipe_d1(0),
+      I4 => sel_pipe(0),
       I5 => doutb_array(67),
       O => \doutb[3]_INST_0_i_5_n_0\
     );
@@ -1064,9 +1063,9 @@ begin
     )
         port map (
       I0 => doutb_array(99),
-      I1 => sel_pipe_d1(0),
+      I1 => sel_pipe(0),
       I2 => doutb_array(107),
-      I3 => sel_pipe_d1(1),
+      I3 => sel_pipe(1),
       O => \doutb[3]_INST_0_i_6_n_0\
     );
 \doutb[4]_INST_0\: unisim.vcomponents.MUXF8
@@ -1074,21 +1073,21 @@ begin
       I0 => \doutb[4]_INST_0_i_1_n_0\,
       I1 => \doutb[4]_INST_0_i_2_n_0\,
       O => doutb(4),
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[4]_INST_0_i_1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[4]_INST_0_i_3_n_0\,
       I1 => \doutb[4]_INST_0_i_4_n_0\,
       O => \doutb[4]_INST_0_i_1_n_0\,
-      S => sel_pipe_d1(2)
+      S => sel_pipe(2)
     );
 \doutb[4]_INST_0_i_2\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[4]_INST_0_i_5_n_0\,
       I1 => \doutb[4]_INST_0_i_6_n_0\,
       O => \doutb[4]_INST_0_i_2_n_0\,
-      S => sel_pipe_d1(2)
+      S => sel_pipe(2)
     );
 \doutb[4]_INST_0_i_3\: unisim.vcomponents.LUT6
     generic map(
@@ -1097,9 +1096,9 @@ begin
         port map (
       I0 => doutb_array(28),
       I1 => doutb_array(20),
-      I2 => sel_pipe_d1(1),
+      I2 => sel_pipe(1),
       I3 => doutb_array(12),
-      I4 => sel_pipe_d1(0),
+      I4 => sel_pipe(0),
       I5 => doutb_array(4),
       O => \doutb[4]_INST_0_i_3_n_0\
     );
@@ -1110,9 +1109,9 @@ begin
         port map (
       I0 => doutb_array(60),
       I1 => doutb_array(52),
-      I2 => sel_pipe_d1(1),
+      I2 => sel_pipe(1),
       I3 => doutb_array(44),
-      I4 => sel_pipe_d1(0),
+      I4 => sel_pipe(0),
       I5 => doutb_array(36),
       O => \doutb[4]_INST_0_i_4_n_0\
     );
@@ -1123,9 +1122,9 @@ begin
         port map (
       I0 => doutb_array(92),
       I1 => doutb_array(84),
-      I2 => sel_pipe_d1(1),
+      I2 => sel_pipe(1),
       I3 => doutb_array(76),
-      I4 => sel_pipe_d1(0),
+      I4 => sel_pipe(0),
       I5 => doutb_array(68),
       O => \doutb[4]_INST_0_i_5_n_0\
     );
@@ -1135,9 +1134,9 @@ begin
     )
         port map (
       I0 => doutb_array(100),
-      I1 => sel_pipe_d1(0),
+      I1 => sel_pipe(0),
       I2 => doutb_array(108),
-      I3 => sel_pipe_d1(1),
+      I3 => sel_pipe(1),
       O => \doutb[4]_INST_0_i_6_n_0\
     );
 \doutb[5]_INST_0\: unisim.vcomponents.MUXF8
@@ -1145,21 +1144,21 @@ begin
       I0 => \doutb[5]_INST_0_i_1_n_0\,
       I1 => \doutb[5]_INST_0_i_2_n_0\,
       O => doutb(5),
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[5]_INST_0_i_1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[5]_INST_0_i_3_n_0\,
       I1 => \doutb[5]_INST_0_i_4_n_0\,
       O => \doutb[5]_INST_0_i_1_n_0\,
-      S => sel_pipe_d1(2)
+      S => sel_pipe(2)
     );
 \doutb[5]_INST_0_i_2\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[5]_INST_0_i_5_n_0\,
       I1 => \doutb[5]_INST_0_i_6_n_0\,
       O => \doutb[5]_INST_0_i_2_n_0\,
-      S => sel_pipe_d1(2)
+      S => sel_pipe(2)
     );
 \doutb[5]_INST_0_i_3\: unisim.vcomponents.LUT6
     generic map(
@@ -1168,9 +1167,9 @@ begin
         port map (
       I0 => doutb_array(29),
       I1 => doutb_array(21),
-      I2 => sel_pipe_d1(1),
+      I2 => sel_pipe(1),
       I3 => doutb_array(13),
-      I4 => sel_pipe_d1(0),
+      I4 => sel_pipe(0),
       I5 => doutb_array(5),
       O => \doutb[5]_INST_0_i_3_n_0\
     );
@@ -1181,9 +1180,9 @@ begin
         port map (
       I0 => doutb_array(61),
       I1 => doutb_array(53),
-      I2 => sel_pipe_d1(1),
+      I2 => sel_pipe(1),
       I3 => doutb_array(45),
-      I4 => sel_pipe_d1(0),
+      I4 => sel_pipe(0),
       I5 => doutb_array(37),
       O => \doutb[5]_INST_0_i_4_n_0\
     );
@@ -1194,9 +1193,9 @@ begin
         port map (
       I0 => doutb_array(93),
       I1 => doutb_array(85),
-      I2 => sel_pipe_d1(1),
+      I2 => sel_pipe(1),
       I3 => doutb_array(77),
-      I4 => sel_pipe_d1(0),
+      I4 => sel_pipe(0),
       I5 => doutb_array(69),
       O => \doutb[5]_INST_0_i_5_n_0\
     );
@@ -1206,9 +1205,9 @@ begin
     )
         port map (
       I0 => doutb_array(101),
-      I1 => sel_pipe_d1(0),
+      I1 => sel_pipe(0),
       I2 => doutb_array(109),
-      I3 => sel_pipe_d1(1),
+      I3 => sel_pipe(1),
       O => \doutb[5]_INST_0_i_6_n_0\
     );
 \doutb[6]_INST_0\: unisim.vcomponents.MUXF8
@@ -1216,21 +1215,21 @@ begin
       I0 => \doutb[6]_INST_0_i_1_n_0\,
       I1 => \doutb[6]_INST_0_i_2_n_0\,
       O => doutb(6),
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[6]_INST_0_i_1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[6]_INST_0_i_3_n_0\,
       I1 => \doutb[6]_INST_0_i_4_n_0\,
       O => \doutb[6]_INST_0_i_1_n_0\,
-      S => sel_pipe_d1(2)
+      S => sel_pipe(2)
     );
 \doutb[6]_INST_0_i_2\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[6]_INST_0_i_5_n_0\,
       I1 => \doutb[6]_INST_0_i_6_n_0\,
       O => \doutb[6]_INST_0_i_2_n_0\,
-      S => sel_pipe_d1(2)
+      S => sel_pipe(2)
     );
 \doutb[6]_INST_0_i_3\: unisim.vcomponents.LUT6
     generic map(
@@ -1239,9 +1238,9 @@ begin
         port map (
       I0 => doutb_array(30),
       I1 => doutb_array(22),
-      I2 => sel_pipe_d1(1),
+      I2 => sel_pipe(1),
       I3 => doutb_array(14),
-      I4 => sel_pipe_d1(0),
+      I4 => sel_pipe(0),
       I5 => doutb_array(6),
       O => \doutb[6]_INST_0_i_3_n_0\
     );
@@ -1252,9 +1251,9 @@ begin
         port map (
       I0 => doutb_array(62),
       I1 => doutb_array(54),
-      I2 => sel_pipe_d1(1),
+      I2 => sel_pipe(1),
       I3 => doutb_array(46),
-      I4 => sel_pipe_d1(0),
+      I4 => sel_pipe(0),
       I5 => doutb_array(38),
       O => \doutb[6]_INST_0_i_4_n_0\
     );
@@ -1265,9 +1264,9 @@ begin
         port map (
       I0 => doutb_array(94),
       I1 => doutb_array(86),
-      I2 => sel_pipe_d1(1),
+      I2 => sel_pipe(1),
       I3 => doutb_array(78),
-      I4 => sel_pipe_d1(0),
+      I4 => sel_pipe(0),
       I5 => doutb_array(70),
       O => \doutb[6]_INST_0_i_5_n_0\
     );
@@ -1277,9 +1276,9 @@ begin
     )
         port map (
       I0 => doutb_array(102),
-      I1 => sel_pipe_d1(0),
+      I1 => sel_pipe(0),
       I2 => doutb_array(110),
-      I3 => sel_pipe_d1(1),
+      I3 => sel_pipe(1),
       O => \doutb[6]_INST_0_i_6_n_0\
     );
 \doutb[7]_INST_0\: unisim.vcomponents.MUXF8
@@ -1287,21 +1286,21 @@ begin
       I0 => \doutb[7]_INST_0_i_1_n_0\,
       I1 => \doutb[7]_INST_0_i_2_n_0\,
       O => doutb(7),
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[7]_INST_0_i_1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[7]_INST_0_i_3_n_0\,
       I1 => \doutb[7]_INST_0_i_4_n_0\,
       O => \doutb[7]_INST_0_i_1_n_0\,
-      S => sel_pipe_d1(2)
+      S => sel_pipe(2)
     );
 \doutb[7]_INST_0_i_2\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[7]_INST_0_i_5_n_0\,
       I1 => \doutb[7]_INST_0_i_6_n_0\,
       O => \doutb[7]_INST_0_i_2_n_0\,
-      S => sel_pipe_d1(2)
+      S => sel_pipe(2)
     );
 \doutb[7]_INST_0_i_3\: unisim.vcomponents.LUT6
     generic map(
@@ -1310,9 +1309,9 @@ begin
         port map (
       I0 => doutb_array(31),
       I1 => doutb_array(23),
-      I2 => sel_pipe_d1(1),
+      I2 => sel_pipe(1),
       I3 => doutb_array(15),
-      I4 => sel_pipe_d1(0),
+      I4 => sel_pipe(0),
       I5 => doutb_array(7),
       O => \doutb[7]_INST_0_i_3_n_0\
     );
@@ -1323,9 +1322,9 @@ begin
         port map (
       I0 => doutb_array(63),
       I1 => doutb_array(55),
-      I2 => sel_pipe_d1(1),
+      I2 => sel_pipe(1),
       I3 => doutb_array(47),
-      I4 => sel_pipe_d1(0),
+      I4 => sel_pipe(0),
       I5 => doutb_array(39),
       O => \doutb[7]_INST_0_i_4_n_0\
     );
@@ -1336,9 +1335,9 @@ begin
         port map (
       I0 => doutb_array(95),
       I1 => doutb_array(87),
-      I2 => sel_pipe_d1(1),
+      I2 => sel_pipe(1),
       I3 => doutb_array(79),
-      I4 => sel_pipe_d1(0),
+      I4 => sel_pipe(0),
       I5 => doutb_array(71),
       O => \doutb[7]_INST_0_i_5_n_0\
     );
@@ -1348,54 +1347,10 @@ begin
     )
         port map (
       I0 => doutb_array(103),
-      I1 => sel_pipe_d1(0),
+      I1 => sel_pipe(0),
       I2 => doutb_array(111),
-      I3 => sel_pipe_d1(1),
+      I3 => sel_pipe(1),
       O => \doutb[7]_INST_0_i_6_n_0\
-    );
-\no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[0]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clkb,
-      CE => '1',
-      D => sel_pipe(0),
-      Q => sel_pipe_d1(0),
-      R => '0'
-    );
-\no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[1]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clkb,
-      CE => '1',
-      D => sel_pipe(1),
-      Q => sel_pipe_d1(1),
-      R => '0'
-    );
-\no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[2]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clkb,
-      CE => '1',
-      D => sel_pipe(2),
-      Q => sel_pipe_d1(2),
-      R => '0'
-    );
-\no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[3]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clkb,
-      CE => '1',
-      D => sel_pipe(3),
-      Q => sel_pipe_d1(3),
-      R => '0'
     );
 \no_softecc_sel_reg.ce_pri.sel_pipe_reg[0]\: unisim.vcomponents.FDRE
     generic map(
@@ -1507,28 +1462,27 @@ architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen
   signal \doutb[7]_INST_0_i_5_n_0\ : STD_LOGIC;
   signal \doutb[7]_INST_0_i_6_n_0\ : STD_LOGIC;
   signal sel_pipe : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal sel_pipe_d1 : STD_LOGIC_VECTOR ( 3 downto 0 );
 begin
 \doutb[0]_INST_0\: unisim.vcomponents.MUXF8
      port map (
       I0 => \doutb[0]_INST_0_i_1_n_0\,
       I1 => \doutb[0]_INST_0_i_2_n_0\,
       O => doutb(0),
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[0]_INST_0_i_1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[0]_INST_0_i_3_n_0\,
       I1 => \doutb[0]_INST_0_i_4_n_0\,
       O => \doutb[0]_INST_0_i_1_n_0\,
-      S => sel_pipe_d1(2)
+      S => sel_pipe(2)
     );
 \doutb[0]_INST_0_i_2\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[0]_INST_0_i_5_n_0\,
       I1 => \doutb[0]_INST_0_i_6_n_0\,
       O => \doutb[0]_INST_0_i_2_n_0\,
-      S => sel_pipe_d1(2)
+      S => sel_pipe(2)
     );
 \doutb[0]_INST_0_i_3\: unisim.vcomponents.LUT6
     generic map(
@@ -1537,9 +1491,9 @@ begin
         port map (
       I0 => doutb_array(24),
       I1 => doutb_array(16),
-      I2 => sel_pipe_d1(1),
+      I2 => sel_pipe(1),
       I3 => doutb_array(8),
-      I4 => sel_pipe_d1(0),
+      I4 => sel_pipe(0),
       I5 => doutb_array(0),
       O => \doutb[0]_INST_0_i_3_n_0\
     );
@@ -1550,9 +1504,9 @@ begin
         port map (
       I0 => doutb_array(56),
       I1 => doutb_array(48),
-      I2 => sel_pipe_d1(1),
+      I2 => sel_pipe(1),
       I3 => doutb_array(40),
-      I4 => sel_pipe_d1(0),
+      I4 => sel_pipe(0),
       I5 => doutb_array(32),
       O => \doutb[0]_INST_0_i_4_n_0\
     );
@@ -1563,9 +1517,9 @@ begin
         port map (
       I0 => doutb_array(88),
       I1 => doutb_array(80),
-      I2 => sel_pipe_d1(1),
+      I2 => sel_pipe(1),
       I3 => doutb_array(72),
-      I4 => sel_pipe_d1(0),
+      I4 => sel_pipe(0),
       I5 => doutb_array(64),
       O => \doutb[0]_INST_0_i_5_n_0\
     );
@@ -1575,9 +1529,9 @@ begin
     )
         port map (
       I0 => doutb_array(96),
-      I1 => sel_pipe_d1(0),
+      I1 => sel_pipe(0),
       I2 => doutb_array(104),
-      I3 => sel_pipe_d1(1),
+      I3 => sel_pipe(1),
       O => \doutb[0]_INST_0_i_6_n_0\
     );
 \doutb[1]_INST_0\: unisim.vcomponents.MUXF8
@@ -1585,21 +1539,21 @@ begin
       I0 => \doutb[1]_INST_0_i_1_n_0\,
       I1 => \doutb[1]_INST_0_i_2_n_0\,
       O => doutb(1),
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[1]_INST_0_i_1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[1]_INST_0_i_3_n_0\,
       I1 => \doutb[1]_INST_0_i_4_n_0\,
       O => \doutb[1]_INST_0_i_1_n_0\,
-      S => sel_pipe_d1(2)
+      S => sel_pipe(2)
     );
 \doutb[1]_INST_0_i_2\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[1]_INST_0_i_5_n_0\,
       I1 => \doutb[1]_INST_0_i_6_n_0\,
       O => \doutb[1]_INST_0_i_2_n_0\,
-      S => sel_pipe_d1(2)
+      S => sel_pipe(2)
     );
 \doutb[1]_INST_0_i_3\: unisim.vcomponents.LUT6
     generic map(
@@ -1608,9 +1562,9 @@ begin
         port map (
       I0 => doutb_array(25),
       I1 => doutb_array(17),
-      I2 => sel_pipe_d1(1),
+      I2 => sel_pipe(1),
       I3 => doutb_array(9),
-      I4 => sel_pipe_d1(0),
+      I4 => sel_pipe(0),
       I5 => doutb_array(1),
       O => \doutb[1]_INST_0_i_3_n_0\
     );
@@ -1621,9 +1575,9 @@ begin
         port map (
       I0 => doutb_array(57),
       I1 => doutb_array(49),
-      I2 => sel_pipe_d1(1),
+      I2 => sel_pipe(1),
       I3 => doutb_array(41),
-      I4 => sel_pipe_d1(0),
+      I4 => sel_pipe(0),
       I5 => doutb_array(33),
       O => \doutb[1]_INST_0_i_4_n_0\
     );
@@ -1634,9 +1588,9 @@ begin
         port map (
       I0 => doutb_array(89),
       I1 => doutb_array(81),
-      I2 => sel_pipe_d1(1),
+      I2 => sel_pipe(1),
       I3 => doutb_array(73),
-      I4 => sel_pipe_d1(0),
+      I4 => sel_pipe(0),
       I5 => doutb_array(65),
       O => \doutb[1]_INST_0_i_5_n_0\
     );
@@ -1646,9 +1600,9 @@ begin
     )
         port map (
       I0 => doutb_array(97),
-      I1 => sel_pipe_d1(0),
+      I1 => sel_pipe(0),
       I2 => doutb_array(105),
-      I3 => sel_pipe_d1(1),
+      I3 => sel_pipe(1),
       O => \doutb[1]_INST_0_i_6_n_0\
     );
 \doutb[2]_INST_0\: unisim.vcomponents.MUXF8
@@ -1656,21 +1610,21 @@ begin
       I0 => \doutb[2]_INST_0_i_1_n_0\,
       I1 => \doutb[2]_INST_0_i_2_n_0\,
       O => doutb(2),
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[2]_INST_0_i_1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[2]_INST_0_i_3_n_0\,
       I1 => \doutb[2]_INST_0_i_4_n_0\,
       O => \doutb[2]_INST_0_i_1_n_0\,
-      S => sel_pipe_d1(2)
+      S => sel_pipe(2)
     );
 \doutb[2]_INST_0_i_2\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[2]_INST_0_i_5_n_0\,
       I1 => \doutb[2]_INST_0_i_6_n_0\,
       O => \doutb[2]_INST_0_i_2_n_0\,
-      S => sel_pipe_d1(2)
+      S => sel_pipe(2)
     );
 \doutb[2]_INST_0_i_3\: unisim.vcomponents.LUT6
     generic map(
@@ -1679,9 +1633,9 @@ begin
         port map (
       I0 => doutb_array(26),
       I1 => doutb_array(18),
-      I2 => sel_pipe_d1(1),
+      I2 => sel_pipe(1),
       I3 => doutb_array(10),
-      I4 => sel_pipe_d1(0),
+      I4 => sel_pipe(0),
       I5 => doutb_array(2),
       O => \doutb[2]_INST_0_i_3_n_0\
     );
@@ -1692,9 +1646,9 @@ begin
         port map (
       I0 => doutb_array(58),
       I1 => doutb_array(50),
-      I2 => sel_pipe_d1(1),
+      I2 => sel_pipe(1),
       I3 => doutb_array(42),
-      I4 => sel_pipe_d1(0),
+      I4 => sel_pipe(0),
       I5 => doutb_array(34),
       O => \doutb[2]_INST_0_i_4_n_0\
     );
@@ -1705,9 +1659,9 @@ begin
         port map (
       I0 => doutb_array(90),
       I1 => doutb_array(82),
-      I2 => sel_pipe_d1(1),
+      I2 => sel_pipe(1),
       I3 => doutb_array(74),
-      I4 => sel_pipe_d1(0),
+      I4 => sel_pipe(0),
       I5 => doutb_array(66),
       O => \doutb[2]_INST_0_i_5_n_0\
     );
@@ -1717,9 +1671,9 @@ begin
     )
         port map (
       I0 => doutb_array(98),
-      I1 => sel_pipe_d1(0),
+      I1 => sel_pipe(0),
       I2 => doutb_array(106),
-      I3 => sel_pipe_d1(1),
+      I3 => sel_pipe(1),
       O => \doutb[2]_INST_0_i_6_n_0\
     );
 \doutb[3]_INST_0\: unisim.vcomponents.MUXF8
@@ -1727,21 +1681,21 @@ begin
       I0 => \doutb[3]_INST_0_i_1_n_0\,
       I1 => \doutb[3]_INST_0_i_2_n_0\,
       O => doutb(3),
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[3]_INST_0_i_1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[3]_INST_0_i_3_n_0\,
       I1 => \doutb[3]_INST_0_i_4_n_0\,
       O => \doutb[3]_INST_0_i_1_n_0\,
-      S => sel_pipe_d1(2)
+      S => sel_pipe(2)
     );
 \doutb[3]_INST_0_i_2\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[3]_INST_0_i_5_n_0\,
       I1 => \doutb[3]_INST_0_i_6_n_0\,
       O => \doutb[3]_INST_0_i_2_n_0\,
-      S => sel_pipe_d1(2)
+      S => sel_pipe(2)
     );
 \doutb[3]_INST_0_i_3\: unisim.vcomponents.LUT6
     generic map(
@@ -1750,9 +1704,9 @@ begin
         port map (
       I0 => doutb_array(27),
       I1 => doutb_array(19),
-      I2 => sel_pipe_d1(1),
+      I2 => sel_pipe(1),
       I3 => doutb_array(11),
-      I4 => sel_pipe_d1(0),
+      I4 => sel_pipe(0),
       I5 => doutb_array(3),
       O => \doutb[3]_INST_0_i_3_n_0\
     );
@@ -1763,9 +1717,9 @@ begin
         port map (
       I0 => doutb_array(59),
       I1 => doutb_array(51),
-      I2 => sel_pipe_d1(1),
+      I2 => sel_pipe(1),
       I3 => doutb_array(43),
-      I4 => sel_pipe_d1(0),
+      I4 => sel_pipe(0),
       I5 => doutb_array(35),
       O => \doutb[3]_INST_0_i_4_n_0\
     );
@@ -1776,9 +1730,9 @@ begin
         port map (
       I0 => doutb_array(91),
       I1 => doutb_array(83),
-      I2 => sel_pipe_d1(1),
+      I2 => sel_pipe(1),
       I3 => doutb_array(75),
-      I4 => sel_pipe_d1(0),
+      I4 => sel_pipe(0),
       I5 => doutb_array(67),
       O => \doutb[3]_INST_0_i_5_n_0\
     );
@@ -1788,9 +1742,9 @@ begin
     )
         port map (
       I0 => doutb_array(99),
-      I1 => sel_pipe_d1(0),
+      I1 => sel_pipe(0),
       I2 => doutb_array(107),
-      I3 => sel_pipe_d1(1),
+      I3 => sel_pipe(1),
       O => \doutb[3]_INST_0_i_6_n_0\
     );
 \doutb[4]_INST_0\: unisim.vcomponents.MUXF8
@@ -1798,21 +1752,21 @@ begin
       I0 => \doutb[4]_INST_0_i_1_n_0\,
       I1 => \doutb[4]_INST_0_i_2_n_0\,
       O => doutb(4),
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[4]_INST_0_i_1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[4]_INST_0_i_3_n_0\,
       I1 => \doutb[4]_INST_0_i_4_n_0\,
       O => \doutb[4]_INST_0_i_1_n_0\,
-      S => sel_pipe_d1(2)
+      S => sel_pipe(2)
     );
 \doutb[4]_INST_0_i_2\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[4]_INST_0_i_5_n_0\,
       I1 => \doutb[4]_INST_0_i_6_n_0\,
       O => \doutb[4]_INST_0_i_2_n_0\,
-      S => sel_pipe_d1(2)
+      S => sel_pipe(2)
     );
 \doutb[4]_INST_0_i_3\: unisim.vcomponents.LUT6
     generic map(
@@ -1821,9 +1775,9 @@ begin
         port map (
       I0 => doutb_array(28),
       I1 => doutb_array(20),
-      I2 => sel_pipe_d1(1),
+      I2 => sel_pipe(1),
       I3 => doutb_array(12),
-      I4 => sel_pipe_d1(0),
+      I4 => sel_pipe(0),
       I5 => doutb_array(4),
       O => \doutb[4]_INST_0_i_3_n_0\
     );
@@ -1834,9 +1788,9 @@ begin
         port map (
       I0 => doutb_array(60),
       I1 => doutb_array(52),
-      I2 => sel_pipe_d1(1),
+      I2 => sel_pipe(1),
       I3 => doutb_array(44),
-      I4 => sel_pipe_d1(0),
+      I4 => sel_pipe(0),
       I5 => doutb_array(36),
       O => \doutb[4]_INST_0_i_4_n_0\
     );
@@ -1847,9 +1801,9 @@ begin
         port map (
       I0 => doutb_array(92),
       I1 => doutb_array(84),
-      I2 => sel_pipe_d1(1),
+      I2 => sel_pipe(1),
       I3 => doutb_array(76),
-      I4 => sel_pipe_d1(0),
+      I4 => sel_pipe(0),
       I5 => doutb_array(68),
       O => \doutb[4]_INST_0_i_5_n_0\
     );
@@ -1859,9 +1813,9 @@ begin
     )
         port map (
       I0 => doutb_array(100),
-      I1 => sel_pipe_d1(0),
+      I1 => sel_pipe(0),
       I2 => doutb_array(108),
-      I3 => sel_pipe_d1(1),
+      I3 => sel_pipe(1),
       O => \doutb[4]_INST_0_i_6_n_0\
     );
 \doutb[5]_INST_0\: unisim.vcomponents.MUXF8
@@ -1869,21 +1823,21 @@ begin
       I0 => \doutb[5]_INST_0_i_1_n_0\,
       I1 => \doutb[5]_INST_0_i_2_n_0\,
       O => doutb(5),
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[5]_INST_0_i_1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[5]_INST_0_i_3_n_0\,
       I1 => \doutb[5]_INST_0_i_4_n_0\,
       O => \doutb[5]_INST_0_i_1_n_0\,
-      S => sel_pipe_d1(2)
+      S => sel_pipe(2)
     );
 \doutb[5]_INST_0_i_2\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[5]_INST_0_i_5_n_0\,
       I1 => \doutb[5]_INST_0_i_6_n_0\,
       O => \doutb[5]_INST_0_i_2_n_0\,
-      S => sel_pipe_d1(2)
+      S => sel_pipe(2)
     );
 \doutb[5]_INST_0_i_3\: unisim.vcomponents.LUT6
     generic map(
@@ -1892,9 +1846,9 @@ begin
         port map (
       I0 => doutb_array(29),
       I1 => doutb_array(21),
-      I2 => sel_pipe_d1(1),
+      I2 => sel_pipe(1),
       I3 => doutb_array(13),
-      I4 => sel_pipe_d1(0),
+      I4 => sel_pipe(0),
       I5 => doutb_array(5),
       O => \doutb[5]_INST_0_i_3_n_0\
     );
@@ -1905,9 +1859,9 @@ begin
         port map (
       I0 => doutb_array(61),
       I1 => doutb_array(53),
-      I2 => sel_pipe_d1(1),
+      I2 => sel_pipe(1),
       I3 => doutb_array(45),
-      I4 => sel_pipe_d1(0),
+      I4 => sel_pipe(0),
       I5 => doutb_array(37),
       O => \doutb[5]_INST_0_i_4_n_0\
     );
@@ -1918,9 +1872,9 @@ begin
         port map (
       I0 => doutb_array(93),
       I1 => doutb_array(85),
-      I2 => sel_pipe_d1(1),
+      I2 => sel_pipe(1),
       I3 => doutb_array(77),
-      I4 => sel_pipe_d1(0),
+      I4 => sel_pipe(0),
       I5 => doutb_array(69),
       O => \doutb[5]_INST_0_i_5_n_0\
     );
@@ -1930,9 +1884,9 @@ begin
     )
         port map (
       I0 => doutb_array(101),
-      I1 => sel_pipe_d1(0),
+      I1 => sel_pipe(0),
       I2 => doutb_array(109),
-      I3 => sel_pipe_d1(1),
+      I3 => sel_pipe(1),
       O => \doutb[5]_INST_0_i_6_n_0\
     );
 \doutb[6]_INST_0\: unisim.vcomponents.MUXF8
@@ -1940,21 +1894,21 @@ begin
       I0 => \doutb[6]_INST_0_i_1_n_0\,
       I1 => \doutb[6]_INST_0_i_2_n_0\,
       O => doutb(6),
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[6]_INST_0_i_1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[6]_INST_0_i_3_n_0\,
       I1 => \doutb[6]_INST_0_i_4_n_0\,
       O => \doutb[6]_INST_0_i_1_n_0\,
-      S => sel_pipe_d1(2)
+      S => sel_pipe(2)
     );
 \doutb[6]_INST_0_i_2\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[6]_INST_0_i_5_n_0\,
       I1 => \doutb[6]_INST_0_i_6_n_0\,
       O => \doutb[6]_INST_0_i_2_n_0\,
-      S => sel_pipe_d1(2)
+      S => sel_pipe(2)
     );
 \doutb[6]_INST_0_i_3\: unisim.vcomponents.LUT6
     generic map(
@@ -1963,9 +1917,9 @@ begin
         port map (
       I0 => doutb_array(30),
       I1 => doutb_array(22),
-      I2 => sel_pipe_d1(1),
+      I2 => sel_pipe(1),
       I3 => doutb_array(14),
-      I4 => sel_pipe_d1(0),
+      I4 => sel_pipe(0),
       I5 => doutb_array(6),
       O => \doutb[6]_INST_0_i_3_n_0\
     );
@@ -1976,9 +1930,9 @@ begin
         port map (
       I0 => doutb_array(62),
       I1 => doutb_array(54),
-      I2 => sel_pipe_d1(1),
+      I2 => sel_pipe(1),
       I3 => doutb_array(46),
-      I4 => sel_pipe_d1(0),
+      I4 => sel_pipe(0),
       I5 => doutb_array(38),
       O => \doutb[6]_INST_0_i_4_n_0\
     );
@@ -1989,9 +1943,9 @@ begin
         port map (
       I0 => doutb_array(94),
       I1 => doutb_array(86),
-      I2 => sel_pipe_d1(1),
+      I2 => sel_pipe(1),
       I3 => doutb_array(78),
-      I4 => sel_pipe_d1(0),
+      I4 => sel_pipe(0),
       I5 => doutb_array(70),
       O => \doutb[6]_INST_0_i_5_n_0\
     );
@@ -2001,9 +1955,9 @@ begin
     )
         port map (
       I0 => doutb_array(102),
-      I1 => sel_pipe_d1(0),
+      I1 => sel_pipe(0),
       I2 => doutb_array(110),
-      I3 => sel_pipe_d1(1),
+      I3 => sel_pipe(1),
       O => \doutb[6]_INST_0_i_6_n_0\
     );
 \doutb[7]_INST_0\: unisim.vcomponents.MUXF8
@@ -2011,21 +1965,21 @@ begin
       I0 => \doutb[7]_INST_0_i_1_n_0\,
       I1 => \doutb[7]_INST_0_i_2_n_0\,
       O => doutb(7),
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[7]_INST_0_i_1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[7]_INST_0_i_3_n_0\,
       I1 => \doutb[7]_INST_0_i_4_n_0\,
       O => \doutb[7]_INST_0_i_1_n_0\,
-      S => sel_pipe_d1(2)
+      S => sel_pipe(2)
     );
 \doutb[7]_INST_0_i_2\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[7]_INST_0_i_5_n_0\,
       I1 => \doutb[7]_INST_0_i_6_n_0\,
       O => \doutb[7]_INST_0_i_2_n_0\,
-      S => sel_pipe_d1(2)
+      S => sel_pipe(2)
     );
 \doutb[7]_INST_0_i_3\: unisim.vcomponents.LUT6
     generic map(
@@ -2034,9 +1988,9 @@ begin
         port map (
       I0 => doutb_array(31),
       I1 => doutb_array(23),
-      I2 => sel_pipe_d1(1),
+      I2 => sel_pipe(1),
       I3 => doutb_array(15),
-      I4 => sel_pipe_d1(0),
+      I4 => sel_pipe(0),
       I5 => doutb_array(7),
       O => \doutb[7]_INST_0_i_3_n_0\
     );
@@ -2047,9 +2001,9 @@ begin
         port map (
       I0 => doutb_array(63),
       I1 => doutb_array(55),
-      I2 => sel_pipe_d1(1),
+      I2 => sel_pipe(1),
       I3 => doutb_array(47),
-      I4 => sel_pipe_d1(0),
+      I4 => sel_pipe(0),
       I5 => doutb_array(39),
       O => \doutb[7]_INST_0_i_4_n_0\
     );
@@ -2060,9 +2014,9 @@ begin
         port map (
       I0 => doutb_array(95),
       I1 => doutb_array(87),
-      I2 => sel_pipe_d1(1),
+      I2 => sel_pipe(1),
       I3 => doutb_array(79),
-      I4 => sel_pipe_d1(0),
+      I4 => sel_pipe(0),
       I5 => doutb_array(71),
       O => \doutb[7]_INST_0_i_5_n_0\
     );
@@ -2072,54 +2026,10 @@ begin
     )
         port map (
       I0 => doutb_array(103),
-      I1 => sel_pipe_d1(0),
+      I1 => sel_pipe(0),
       I2 => doutb_array(111),
-      I3 => sel_pipe_d1(1),
+      I3 => sel_pipe(1),
       O => \doutb[7]_INST_0_i_6_n_0\
-    );
-\no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[0]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clkb,
-      CE => '1',
-      D => sel_pipe(0),
-      Q => sel_pipe_d1(0),
-      R => '0'
-    );
-\no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[1]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clkb,
-      CE => '1',
-      D => sel_pipe(1),
-      Q => sel_pipe_d1(1),
-      R => '0'
-    );
-\no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[2]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clkb,
-      CE => '1',
-      D => sel_pipe(2),
-      Q => sel_pipe_d1(2),
-      R => '0'
-    );
-\no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[3]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clkb,
-      CE => '1',
-      D => sel_pipe(3),
-      Q => sel_pipe_d1(3),
-      R => '0'
     );
 \no_softecc_sel_reg.ce_pri.sel_pipe_reg[0]\: unisim.vcomponents.FDRE
     generic map(
@@ -2200,8 +2110,8 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen_
 begin
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -2408,7 +2318,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -2454,8 +2364,8 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen_
 begin
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -2662,7 +2572,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -2708,8 +2618,8 @@ architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen
 begin
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -2916,7 +2826,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -2962,8 +2872,8 @@ architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen
 begin
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -3170,7 +3080,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -3216,8 +3126,8 @@ architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen
 begin
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -3424,7 +3334,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -3470,8 +3380,8 @@ architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen
 begin
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -3678,7 +3588,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -3724,8 +3634,8 @@ architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen
 begin
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -3932,7 +3842,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -3978,8 +3888,8 @@ architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen
 begin
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -4186,7 +4096,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -4232,8 +4142,8 @@ architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen
 begin
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -4440,7 +4350,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -4486,8 +4396,8 @@ architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen
 begin
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -4694,7 +4604,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -4740,8 +4650,8 @@ architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen
 begin
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -4948,7 +4858,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -4994,8 +4904,8 @@ architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen
 begin
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -5202,7 +5112,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -5248,8 +5158,8 @@ architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen
 begin
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -5456,7 +5366,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -5502,8 +5412,8 @@ architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen
 begin
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -5710,7 +5620,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -5756,8 +5666,8 @@ architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen
 begin
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -5964,7 +5874,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -6010,8 +5920,8 @@ architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen
 begin
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -6218,7 +6128,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -6264,8 +6174,8 @@ architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen
 begin
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -6472,7 +6382,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -6518,8 +6428,8 @@ architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen
 begin
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -6726,7 +6636,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -6772,8 +6682,8 @@ architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen
 begin
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -6980,7 +6890,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -7026,8 +6936,8 @@ architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen
 begin
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -7234,7 +7144,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -7280,8 +7190,8 @@ architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen
 begin
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -7488,7 +7398,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -7534,8 +7444,8 @@ architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen
 begin
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -7742,7 +7652,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -7788,8 +7698,8 @@ architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen
 begin
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -7996,7 +7906,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -8042,8 +7952,8 @@ architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen
 begin
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -8250,7 +8160,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -8296,8 +8206,8 @@ architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen
 begin
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -8504,7 +8414,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -8550,8 +8460,8 @@ architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen
 begin
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -8758,7 +8668,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -8804,8 +8714,8 @@ architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen
 begin
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -9012,7 +8922,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -9058,8 +8968,8 @@ architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen
 begin
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -9266,7 +9176,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -10839,7 +10749,7 @@ entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen_v8_4_3 is
   attribute C_HAS_MEM_OUTPUT_REGS_A : integer;
   attribute C_HAS_MEM_OUTPUT_REGS_A of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen_v8_4_3 : entity is 0;
   attribute C_HAS_MEM_OUTPUT_REGS_B : integer;
-  attribute C_HAS_MEM_OUTPUT_REGS_B of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen_v8_4_3 : entity is 1;
+  attribute C_HAS_MEM_OUTPUT_REGS_B of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen_v8_4_3 : entity is 0;
   attribute C_HAS_MUX_OUTPUT_REGS_A : integer;
   attribute C_HAS_MUX_OUTPUT_REGS_A of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen_v8_4_3 : entity is 0;
   attribute C_HAS_MUX_OUTPUT_REGS_B : integer;
@@ -11153,7 +11063,7 @@ entity \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen_v8_4_3__1\ is
   attribute C_HAS_MEM_OUTPUT_REGS_A : integer;
   attribute C_HAS_MEM_OUTPUT_REGS_A of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen_v8_4_3__1\ : entity is 0;
   attribute C_HAS_MEM_OUTPUT_REGS_B : integer;
-  attribute C_HAS_MEM_OUTPUT_REGS_B of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen_v8_4_3__1\ : entity is 1;
+  attribute C_HAS_MEM_OUTPUT_REGS_B of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen_v8_4_3__1\ : entity is 0;
   attribute C_HAS_MUX_OUTPUT_REGS_A : integer;
   attribute C_HAS_MUX_OUTPUT_REGS_A of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen_v8_4_3__1\ : entity is 0;
   attribute C_HAS_MUX_OUTPUT_REGS_B : integer;
@@ -11442,7 +11352,7 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_framedoubler
   attribute C_HAS_MEM_OUTPUT_REGS_A : integer;
   attribute C_HAS_MEM_OUTPUT_REGS_A of U0 : label is 0;
   attribute C_HAS_MEM_OUTPUT_REGS_B : integer;
-  attribute C_HAS_MEM_OUTPUT_REGS_B of U0 : label is 1;
+  attribute C_HAS_MEM_OUTPUT_REGS_B of U0 : label is 0;
   attribute C_HAS_MUX_OUTPUT_REGS_A : integer;
   attribute C_HAS_MUX_OUTPUT_REGS_A of U0 : label is 0;
   attribute C_HAS_MUX_OUTPUT_REGS_B : integer;
@@ -11717,7 +11627,7 @@ architecture STRUCTURE of \decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_framedouble
   attribute C_HAS_MEM_OUTPUT_REGS_A : integer;
   attribute C_HAS_MEM_OUTPUT_REGS_A of U0 : label is 0;
   attribute C_HAS_MEM_OUTPUT_REGS_B : integer;
-  attribute C_HAS_MEM_OUTPUT_REGS_B of U0 : label is 1;
+  attribute C_HAS_MEM_OUTPUT_REGS_B of U0 : label is 0;
   attribute C_HAS_MUX_OUTPUT_REGS_A : integer;
   attribute C_HAS_MUX_OUTPUT_REGS_A of U0 : label is 0;
   attribute C_HAS_MUX_OUTPUT_REGS_B : integer;

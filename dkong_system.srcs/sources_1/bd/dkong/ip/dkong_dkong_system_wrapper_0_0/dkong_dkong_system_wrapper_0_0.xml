@@ -47,7 +47,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:9982d954</spirit:value>
+            <spirit:value>9:85737658</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -58,7 +58,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:9982d954</spirit:value>
+            <spirit:value>9:85737658</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -74,11 +74,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Apr 02 20:44:04 UTC 2020</spirit:value>
+            <spirit:value>Fri Apr 03 04:33:55 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:9982d954</spirit:value>
+            <spirit:value>9:85737658</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -90,7 +90,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:6a9e3861</spirit:value>
+            <spirit:value>9:5578cc63</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -106,11 +106,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Apr 02 20:44:04 UTC 2020</spirit:value>
+            <spirit:value>Fri Apr 03 04:33:55 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:6a9e3861</spirit:value>
+            <spirit:value>9:5578cc63</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -124,11 +124,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Apr 02 20:53:24 UTC 2020</spirit:value>
+            <spirit:value>Fri Apr 03 04:43:13 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:9982d954</spirit:value>
+            <spirit:value>9:85737658</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -635,7 +635,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>DEBUG_BANKSEL_ENA</spirit:name>
         <spirit:displayName>Debug Banksel Ena</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.DEBUG_BANKSEL_ENA">1</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.DEBUG_BANKSEL_ENA">0</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>IN0_ENA</spirit:name>
@@ -730,7 +730,7 @@
     <spirit:parameter>
       <spirit:name>DEBUG_BANKSEL_ENA</spirit:name>
       <spirit:displayName>Debug Banksel Ena</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.DEBUG_BANKSEL_ENA">1</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.DEBUG_BANKSEL_ENA">0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>IN0_ENA</spirit:name>
